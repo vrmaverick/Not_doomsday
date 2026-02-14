@@ -1,2 +1,2 @@
 # Not_doomsday
-Hackethon
+Hackathon
