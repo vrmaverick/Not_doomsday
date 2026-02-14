@@ -1,0 +1,181 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chennai, Tamil Nadu, India",
+        "count": 5,
+        "shareimage": "https://th-i.thgim.com/public/incoming/potm0j/article70606689.ece/alternates/LANDSCAPE_1200/PY23Haven_for_Birds_16.jpg",
+        "html": "<a href=\"https://www.thehindu.com/news/cities/puducherry/puducherry-government-issues-advisory-after-avian-influenza-detection-in-chennai-crow-samples/article70606562.ece\" title=\"Puducherry government issues advisory after avian influenza detection in Chennai crow samples\" target=\"_blank\">Puducherry government issues advisory after avian influenza detection in Chennai crow samples</a><br><br><a href=\"https://www.thehindu.com/newsletter/tamil-nadu-today/here-are-the-big-stories-from-tamil-nadu-today/article70615555.ece\" title=\"Here are the big stories from Tamil Nadu today\" target=\"_blank\">Here are the big stories from Tamil Nadu today</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2833,
+          13.0833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Antarctica",
+        "count": 2,
+        "shareimage": "https://s.yimg.com/ny/api/res/1.2/j2G0EOfL0FOvH6aTRhRmag--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzY7Y2Y9d2VicA--/https://media.zenfs.com/en/the_cool_down_737/f513f34e77a7f34f93bf7bb00ff3c2de",
+        "html": "<a href=\"https://www.yahoo.com/news/articles/researchers-stunned-documenting-first-kind-001500910.html\" title=\"Researchers stunned after documenting first - of - its - kind mass animal die - off : &apos; We let [ it ] slip out through our fingers &apos;\" target=\"_blank\">Researchers stunned after documenting first - of - its - kind mass animal die - off : &apos; We let [ it ] slip out through our fingers &apos;</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.3438,
+          -85.6221
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bhutan",
+        "count": 2,
+        "shareimage": "https://asianews.network/wp-content/uploads/2026/02/egg-6.jpg",
+        "html": "<a href=\"https://asianews.network/soaring-egg-prices-push-bhutanese-government-to-allow-limited-imports/\" title=\"Soaring egg prices push Bhutanese government to allow limited imports\" target=\"_blank\">Soaring egg prices push Bhutanese government to allow limited imports</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.5,
+          27.5
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tamil Nadu, Tamil Nadu, India",
+        "count": 1,
+        "shareimage": "https://th-i.thgim.com/public/news/national/tamil-nadu/kluea1/article70595010.ece/alternates/LANDSCAPE_1200/Jana%20Nayagan%20Vijay%20Pooja%20poster.jpg",
+        "html": "<a href=\"https://www.thehindu.com/newsletter/tamil-nadu-today/here-are-the-big-stories-from-tamil-nadu-today/article70615555.ece\" title=\"Here are the big stories from Tamil Nadu today\" target=\"_blank\">Here are the big stories from Tamil Nadu today</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0,
+          11.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Puducherry, Pondicherry, India",
+        "count": 1,
+        "shareimage": "https://th-i.thgim.com/public/incoming/potm0j/article70606689.ece/alternates/LANDSCAPE_1200/PY23Haven_for_Birds_16.jpg",
+        "html": "<a href=\"https://www.thehindu.com/news/cities/puducherry/puducherry-government-issues-advisory-after-avian-influenza-detection-in-chennai-crow-samples/article70606562.ece\" title=\"Puducherry government issues advisory after avian influenza detection in Chennai crow samples\" target=\"_blank\">Puducherry government issues advisory after avian influenza detection in Chennai crow samples</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.83,
+          11.93
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adyar, Tamil Nadu, India",
+        "count": 1,
+        "shareimage": "https://newstodaynet.com/wp-content/uploads/2026/02/108018037-3-1-1.png",
+        "html": "<a href=\"https://newstodaynet.com/2026/02/08/good-morning-with-filter-coffee-23/\" title=\"Good Morning With Filter Coffee - News Today\" target=\"_blank\">Good Morning With Filter Coffee - News Today</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2583,
+          13.0044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "India",
+        "count": 1,
+        "shareimage": "https://asianews.network/wp-content/uploads/2026/02/egg-6.jpg",
+        "html": "<a href=\"https://asianews.network/soaring-egg-prices-push-bhutanese-government-to-allow-limited-imports/\" title=\"Soaring egg prices push Bhutanese government to allow limited imports\" target=\"_blank\">Soaring egg prices push Bhutanese government to allow limited imports</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.0,
+          20.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Thimphu, Thimphu, Bhutan",
+        "count": 1,
+        "shareimage": "https://asianews.network/wp-content/uploads/2026/02/egg-6.jpg",
+        "html": "<a href=\"https://asianews.network/soaring-egg-prices-push-bhutanese-government-to-allow-limited-imports/\" title=\"Soaring egg prices push Bhutanese government to allow limited imports\" target=\"_blank\">Soaring egg prices push Bhutanese government to allow limited imports</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          89.6,
+          27.4833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "China",
+        "count": 1,
+        "shareimage": "https://s.yimg.com/ny/api/res/1.2/j2G0EOfL0FOvH6aTRhRmag--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzY7Y2Y9d2VicA--/https://media.zenfs.com/en/the_cool_down_737/f513f34e77a7f34f93bf7bb00ff3c2de",
+        "html": "<a href=\"https://www.yahoo.com/news/articles/researchers-stunned-documenting-first-kind-001500910.html\" title=\"Researchers stunned after documenting first - of - its - kind mass animal die - off : &apos; We let [ it ] slip out through our fingers &apos;\" target=\"_blank\">Researchers stunned after documenting first - of - its - kind mass animal die - off : &apos; We let [ it ] slip out through our fingers &apos;</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.0,
+          35.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "California, United States",
+        "count": 1,
+        "shareimage": "https://s.yimg.com/ny/api/res/1.2/j2G0EOfL0FOvH6aTRhRmag--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzY7Y2Y9d2VicA--/https://media.zenfs.com/en/the_cool_down_737/f513f34e77a7f34f93bf7bb00ff3c2de",
+        "html": "<a href=\"https://www.yahoo.com/news/articles/researchers-stunned-documenting-first-kind-001500910.html\" title=\"Researchers stunned after documenting first - of - its - kind mass animal die - off : &apos; We let [ it ] slip out through our fingers &apos;\" target=\"_blank\">Researchers stunned after documenting first - of - its - kind mass animal die - off : &apos; We let [ it ] slip out through our fingers &apos;</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.746,
+          36.17
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Netherlands",
+        "count": 1,
+        "shareimage": "https://s.yimg.com/ny/api/res/1.2/j2G0EOfL0FOvH6aTRhRmag--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzY7Y2Y9d2VicA--/https://media.zenfs.com/en/the_cool_down_737/f513f34e77a7f34f93bf7bb00ff3c2de",
+        "html": "<a href=\"https://www.yahoo.com/news/articles/researchers-stunned-documenting-first-kind-001500910.html\" title=\"Researchers stunned after documenting first - of - its - kind mass animal die - off : &apos; We let [ it ] slip out through our fingers &apos;\" target=\"_blank\">Researchers stunned after documenting first - of - its - kind mass animal die - off : &apos; We let [ it ] slip out through our fingers &apos;</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.75,
+          52.5
+        ]
+      }
+    }
+  ]
+}

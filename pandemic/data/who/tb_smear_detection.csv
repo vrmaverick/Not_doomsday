@@ -1,0 +1,364 @@
+indicator,indicator_code,country_code,region,region_code,year,value,value_str,low,high
+tb_smear_detection,MDG_0000000030,DNK,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,BRA,Americas,AMR,2000,70.0,70 [58-87],58.0,87.0
+tb_smear_detection,MDG_0000000030,TTO,Americas,AMR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,SWZ,Africa,AFR,2000,49.0,49 [41-62],41.0,62.0
+tb_smear_detection,MDG_0000000030,TJK,Europe,EUR,2000,20.0,20 [16-25],16.0,25.0
+tb_smear_detection,MDG_0000000030,BLR,Europe,EUR,2008,83.0,83 [69-100],69.0,100.0
+tb_smear_detection,MDG_0000000030,CYP,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,SEN,Africa,AFR,2008,40.0,40 [34-51],34.0,51.0
+tb_smear_detection,MDG_0000000030,BFA,Africa,AFR,2008,15.0,15 [12-19],12.0,19.0
+tb_smear_detection,MDG_0000000030,IDN,Western Pacific,WPR,2000,28.0,28 [23-35],23.0,35.0
+tb_smear_detection,MDG_0000000030,SVN,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,NPL,South-East Asia,SEAR,2008,64.0,64 [54-80],54.0,80.0
+tb_smear_detection,MDG_0000000030,SVN,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,NIC,Americas,AMR,2008,94.0,94 [78-110],78.0,110.0
+tb_smear_detection,MDG_0000000030,UKR,Europe,EUR,2000,85.0,85 [71-110],71.0,110.0
+tb_smear_detection,MDG_0000000030,MRT,Africa,AFR,2008,28.0,28 [23-35],23.0,35.0
+tb_smear_detection,MDG_0000000030,AZE,Europe,EUR,2008,48.0,48 [40-60],40.0,60.0
+tb_smear_detection,MDG_0000000030,PHL,Western Pacific,WPR,2000,53.0,53 [44-66],44.0,66.0
+tb_smear_detection,MDG_0000000030,ITA,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,MNG,Western Pacific,WPR,2000,57.0,57 [48-72],48.0,72.0
+tb_smear_detection,MDG_0000000030,RUS,Europe,EUR,2008,73.0,73 [61-86],61.0,86.0
+tb_smear_detection,MDG_0000000030,MHL,Western Pacific,WPR,2008,44.0,44 [37-45],37.0,45.0
+tb_smear_detection,MDG_0000000030,LBN,Eastern Mediterranean,EMR,2008,91.0,91 [76-100],76.0,100.0
+tb_smear_detection,MDG_0000000030,NRU,Western Pacific,WPR,2000,180.0,180 [150-200],150.0,200.0
+tb_smear_detection,MDG_0000000030,EST,Europe,EUR,2008,88.0,88 [73-100],73.0,100.0
+tb_smear_detection,MDG_0000000030,FIN,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,LBY,Eastern Mediterranean,EMR,2000,68.0,68 [57-85],57.0,85.0
+tb_smear_detection,MDG_0000000030,SRB,Europe,EUR,2008,170.0,170 [140-210],140.0,210.0
+tb_smear_detection,MDG_0000000030,RWA,Africa,AFR,2008,26.0,26 [22-32],22.0,32.0
+tb_smear_detection,MDG_0000000030,TKM,Europe,EUR,2000,80.0,80 [67-82],67.0,82.0
+tb_smear_detection,MDG_0000000030,BRN,Western Pacific,WPR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,USA,Americas,AMR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,STP,Africa,AFR,2008,59.0,59 [49-74],49.0,74.0
+tb_smear_detection,MDG_0000000030,BHR,Eastern Mediterranean,EMR,2008,86.0,86 [72-100],72.0,100.0
+tb_smear_detection,MDG_0000000030,AUS,Western Pacific,WPR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,OMN,Eastern Mediterranean,EMR,2000,95.0,95 [79-100],79.0,100.0
+tb_smear_detection,MDG_0000000030,GUY,Americas,AMR,2008,66.0,66 [55-83],55.0,83.0
+tb_smear_detection,MDG_0000000030,LKA,South-East Asia,SEAR,2000,72.0,72 [60-90],60.0,90.0
+tb_smear_detection,MDG_0000000030,LBR,Africa,AFR,2008,51.0,51 [43-64],43.0,64.0
+tb_smear_detection,MDG_0000000030,AGO,Africa,AFR,2000,46.0,46 [38-57],38.0,57.0
+tb_smear_detection,MDG_0000000030,CHN,Western Pacific,WPR,2008,72.0,72 [60-90],60.0,90.0
+tb_smear_detection,MDG_0000000030,DMA,Americas,AMR,2008,60.0,60 [50-75],50.0,75.0
+tb_smear_detection,MDG_0000000030,PRK,South-East Asia,SEAR,2008,70.0,70 [59-80],59.0,80.0
+tb_smear_detection,MDG_0000000030,DZA,Africa,AFR,2000,100.0,100 [86-130],86.0,130.0
+tb_smear_detection,MDG_0000000030,BOL,Americas,AMR,2008,77.0,77 [64-96],64.0,96.0
+tb_smear_detection,MDG_0000000030,GHA,Africa,AFR,2008,30.0,30 [25-38],25.0,38.0
+tb_smear_detection,MDG_0000000030,BLZ,Americas,AMR,2008,120.0,120 [100-150],100.0,150.0
+tb_smear_detection,MDG_0000000030,MLI,Africa,AFR,2000,14.0,14 [12-18],12.0,18.0
+tb_smear_detection,MDG_0000000030,NAM,Africa,AFR,2000,77.0,77 [64-87],64.0,87.0
+tb_smear_detection,MDG_0000000030,BDI,Africa,AFR,2008,29.0,29 [24-37],24.0,37.0
+tb_smear_detection,MDG_0000000030,AND,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,KNA,Americas,AMR,2000,0.0,0 [0-0],0.0,0.0
+tb_smear_detection,MDG_0000000030,ECU,Americas,AMR,2000,69.0,69 [57-86],57.0,86.0
+tb_smear_detection,MDG_0000000030,HND,Americas,AMR,2008,72.0,72 [60-89],60.0,89.0
+tb_smear_detection,MDG_0000000030,COK,Western Pacific,WPR,2000,0.0,0 [0-0],0.0,0.0
+tb_smear_detection,MDG_0000000030,SDN,Eastern Mediterranean,EMR,2008,40.0,40 [33-50],33.0,50.0
+tb_smear_detection,MDG_0000000030,JOR,Eastern Mediterranean,EMR,2008,91.0,91 [76-100],76.0,100.0
+tb_smear_detection,MDG_0000000030,SLV,Americas,AMR,2000,82.0,82 [68-100],68.0,100.0
+tb_smear_detection,MDG_0000000030,LBY,Eastern Mediterranean,EMR,2008,83.0,83 [69-100],69.0,100.0
+tb_smear_detection,MDG_0000000030,CYP,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,CZE,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,ZMB,Africa,AFR,2000,48.0,48 [40-60],40.0,60.0
+tb_smear_detection,MDG_0000000030,KAZ,Europe,EUR,2000,99.0,99 [82-110],82.0,110.0
+tb_smear_detection,MDG_0000000030,BRA,Americas,AMR,2008,75.0,75 [63-91],63.0,91.0
+tb_smear_detection,MDG_0000000030,DJI,Eastern Mediterranean,EMR,2000,56.0,56 [46-63],46.0,63.0
+tb_smear_detection,MDG_0000000030,MMR,South-East Asia,SEAR,2008,43.0,43 [35-53],35.0,53.0
+tb_smear_detection,MDG_0000000030,SEN,Africa,AFR,2000,45.0,45 [37-56],37.0,56.0
+tb_smear_detection,MDG_0000000030,MDA,Europe,EUR,2000,38.0,38 [32-48],32.0,48.0
+tb_smear_detection,MDG_0000000030,ISR,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,ALB,Europe,EUR,2000,64.0,64 [53-73],53.0,73.0
+tb_smear_detection,MDG_0000000030,GIN,Africa,AFR,2008,40.0,40 [33-50],33.0,50.0
+tb_smear_detection,MDG_0000000030,PRY,Americas,AMR,2000,62.0,62 [52-78],52.0,78.0
+tb_smear_detection,MDG_0000000030,JAM,Americas,AMR,2008,78.0,78 [65-98],65.0,98.0
+tb_smear_detection,MDG_0000000030,COM,Africa,AFR,2008,52.0,52 [44-65],44.0,65.0
+tb_smear_detection,MDG_0000000030,KHM,Western Pacific,WPR,2000,44.0,44 [37-55],37.0,55.0
+tb_smear_detection,MDG_0000000030,CAN,Americas,AMR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,TUR,Europe,EUR,2008,81.0,81 [68-100],68.0,100.0
+tb_smear_detection,MDG_0000000030,CIV,Africa,AFR,2000,31.0,31 [26-39],26.0,39.0
+tb_smear_detection,MDG_0000000030,MHL,Western Pacific,WPR,2000,17.0,17 [14-22],14.0,22.0
+tb_smear_detection,MDG_0000000030,LBR,Africa,AFR,2000,27.0,27 [22-34],22.0,34.0
+tb_smear_detection,MDG_0000000030,ESP,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,TZA,Africa,AFR,2000,70.0,70 [61-79],61.0,79.0
+tb_smear_detection,MDG_0000000030,SLE,Africa,AFR,2000,28.0,28 [23-35],23.0,35.0
+tb_smear_detection,MDG_0000000030,VNM,Western Pacific,WPR,2000,67.0,67 [49-81],49.0,81.0
+tb_smear_detection,MDG_0000000030,SWZ,Africa,AFR,2008,51.0,51 [42-63],42.0,63.0
+tb_smear_detection,MDG_0000000030,TJK,Europe,EUR,2008,49.0,49 [41-62],41.0,62.0
+tb_smear_detection,MDG_0000000030,ISL,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,SLB,Western Pacific,WPR,2000,29.0,29 [24-36],24.0,36.0
+tb_smear_detection,MDG_0000000030,MAR,Eastern Mediterranean,EMR,2000,97.0,97 [81-110],81.0,110.0
+tb_smear_detection,MDG_0000000030,URY,Americas,AMR,2008,100.0,100 [85-110],85.0,110.0
+tb_smear_detection,MDG_0000000030,COD,Africa,AFR,2000,49.0,49 [40-61],40.0,61.0
+tb_smear_detection,MDG_0000000030,EST,Europe,EUR,2000,84.0,84 [70-100],70.0,100.0
+tb_smear_detection,MDG_0000000030,FRA,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,CHL,Americas,AMR,2008,100.0,100 [86-130],86.0,130.0
+tb_smear_detection,MDG_0000000030,TON,Western Pacific,WPR,2000,110.0,110 [93-130],93.0,130.0
+tb_smear_detection,MDG_0000000030,FSM,Western Pacific,WPR,2000,22.0,22 [19-28],19.0,28.0
+tb_smear_detection,MDG_0000000030,GTM,Americas,AMR,2000,48.0,48 [40-60],40.0,60.0
+tb_smear_detection,MDG_0000000030,PAK,Eastern Mediterranean,EMR,2000,2.3,2.3,1.9,2.9
+tb_smear_detection,MDG_0000000030,VEN,Americas,AMR,2000,75.0,75 [62-94],62.0,94.0
+tb_smear_detection,MDG_0000000030,ROU,Europe,EUR,2008,110.0,110 [90-140],90.0,140.0
+tb_smear_detection,MDG_0000000030,KGZ,Europe,EUR,2008,65.0,65 [54-81],54.0,81.0
+tb_smear_detection,MDG_0000000030,BTN,South-East Asia,SEAR,2008,64.0,64 [53-75],53.0,75.0
+tb_smear_detection,MDG_0000000030,BWA,Africa,AFR,2008,57.0,57 [48-72],48.0,72.0
+tb_smear_detection,MDG_0000000030,GHA,Africa,AFR,2000,32.0,32 [27-40],27.0,40.0
+tb_smear_detection,MDG_0000000030,USA,Americas,AMR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,UGA,Africa,AFR,2008,54.0,54 [45-68],45.0,68.0
+tb_smear_detection,MDG_0000000030,LCA,Americas,AMR,2000,53.0,53 [44-67],44.0,67.0
+tb_smear_detection,MDG_0000000030,GIN,Africa,AFR,2000,42.0,42 [35-53],35.0,53.0
+tb_smear_detection,MDG_0000000030,CHN,Western Pacific,WPR,2000,31.0,31 [26-39],26.0,39.0
+tb_smear_detection,MDG_0000000030,MLT,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,LCA,Americas,AMR,2008,130.0,130 [110-150],110.0,150.0
+tb_smear_detection,MDG_0000000030,ARM,Europe,EUR,2008,71.0,71 [59-89],59.0,89.0
+tb_smear_detection,MDG_0000000030,GRC,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,SYC,Africa,AFR,2008,27.0,27 [23-34],23.0,34.0
+tb_smear_detection,MDG_0000000030,SWE,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,ERI,Africa,AFR,2008,32.0,32 [26-40],26.0,40.0
+tb_smear_detection,MDG_0000000030,COG,Africa,AFR,2008,56.0,56 [46-69],46.0,69.0
+tb_smear_detection,MDG_0000000030,LAO,Western Pacific,WPR,2008,67.0,67 [56-84],56.0,84.0
+tb_smear_detection,MDG_0000000030,ROU,Europe,EUR,2000,90.0,90 [75-110],75.0,110.0
+tb_smear_detection,MDG_0000000030,CUB,Americas,AMR,2000,96.0,96 [80-100],80.0,100.0
+tb_smear_detection,MDG_0000000030,IND,South-East Asia,SEAR,2008,70.0,70 [53-80],53.0,80.0
+tb_smear_detection,MDG_0000000030,LAO,Western Pacific,WPR,2000,35.0,35 [29-44],29.0,44.0
+tb_smear_detection,MDG_0000000030,SOM,Eastern Mediterranean,EMR,2000,32.0,32 [27-40],27.0,40.0
+tb_smear_detection,MDG_0000000030,THA,South-East Asia,SEAR,2008,64.0,64 [54-81],54.0,81.0
+tb_smear_detection,MDG_0000000030,CIV,Africa,AFR,2008,42.0,42 [35-53],35.0,53.0
+tb_smear_detection,MDG_0000000030,MWI,Africa,AFR,2008,37.0,37 [31-46],31.0,46.0
+tb_smear_detection,MDG_0000000030,SYR,Eastern Mediterranean,EMR,2008,79.0,79 [66-98],66.0,98.0
+tb_smear_detection,MDG_0000000030,UZB,Europe,EUR,2008,48.0,48 [40-60],40.0,60.0
+tb_smear_detection,MDG_0000000030,STP,Africa,AFR,2000,34.0,34 [28-42],28.0,42.0
+tb_smear_detection,MDG_0000000030,VCT,Americas,AMR,2000,58.0,58 [48-72],48.0,72.0
+tb_smear_detection,MDG_0000000030,MDV,South-East Asia,SEAR,2000,67.0,67 [56-83],56.0,83.0
+tb_smear_detection,MDG_0000000030,MLI,Africa,AFR,2008,21.0,21 [17-26],17.0,26.0
+tb_smear_detection,MDG_0000000030,BEN,Africa,AFR,2000,73.0,73 [61-91],61.0,91.0
+tb_smear_detection,MDG_0000000030,FSM,Western Pacific,WPR,2008,75.0,75 [62-93],62.0,93.0
+tb_smear_detection,MDG_0000000030,EGY,Eastern Mediterranean,EMR,2008,78.0,78 [67-95],67.0,95.0
+tb_smear_detection,MDG_0000000030,ETH,Africa,AFR,2008,32.0,32 [27-40],27.0,40.0
+tb_smear_detection,MDG_0000000030,HTI,Americas,AMR,2000,45.0,45 [37-56],37.0,56.0
+tb_smear_detection,MDG_0000000030,HUN,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,SAU,Eastern Mediterranean,EMR,2000,61.0,61 [50-76],50.0,76.0
+tb_smear_detection,MDG_0000000030,GNB,Africa,AFR,2008,62.0,62 [52-78],52.0,78.0
+tb_smear_detection,MDG_0000000030,PHL,Western Pacific,WPR,2008,67.0,67 [56-84],56.0,84.0
+tb_smear_detection,MDG_0000000030,NAM,Africa,AFR,2008,71.0,71 [59-85],59.0,85.0
+tb_smear_detection,MDG_0000000030,NIC,Americas,AMR,2000,76.0,76 [63-95],63.0,95.0
+tb_smear_detection,MDG_0000000030,GNB,Africa,AFR,2000,38.0,38 [32-47],32.0,47.0
+tb_smear_detection,MDG_0000000030,UKR,Europe,EUR,2008,100.0,100 [85-130],85.0,130.0
+tb_smear_detection,MDG_0000000030,ITA,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,IRN,Eastern Mediterranean,EMR,2000,61.0,61 [51-76],51.0,76.0
+tb_smear_detection,MDG_0000000030,SVK,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,MNG,Western Pacific,WPR,2008,69.0,69 [57-83],57.0,83.0
+tb_smear_detection,MDG_0000000030,MEX,Americas,AMR,2000,66.0,66 [55-82],55.0,82.0
+tb_smear_detection,MDG_0000000030,BRN,Western Pacific,WPR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,ECU,Americas,AMR,2008,62.0,62 [52-78],52.0,78.0
+tb_smear_detection,MDG_0000000030,IRQ,Eastern Mediterranean,EMR,2000,48.0,48 [40-61],40.0,61.0
+tb_smear_detection,MDG_0000000030,BGR,Europe,EUR,2000,220.0,220 [190-250],190.0,250.0
+tb_smear_detection,MDG_0000000030,NLD,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,BLR,Europe,EUR,2000,110.0,110 [92-120],92.0,120.0
+tb_smear_detection,MDG_0000000030,CHL,Americas,AMR,2000,77.0,77 [64-96],64.0,96.0
+tb_smear_detection,MDG_0000000030,PRT,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,TGO,Africa,AFR,2008,14.0,14 [12-18],12.0,18.0
+tb_smear_detection,MDG_0000000030,COM,Africa,AFR,2000,51.0,51 [42-63],42.0,63.0
+tb_smear_detection,MDG_0000000030,MOZ,Africa,AFR,2008,47.0,47 [39-59],39.0,59.0
+tb_smear_detection,MDG_0000000030,LVA,Europe,EUR,2008,120.0,120 [97-120],97.0,120.0
+tb_smear_detection,MDG_0000000030,SLE,Africa,AFR,2008,31.0,31 [26-39],26.0,39.0
+tb_smear_detection,MDG_0000000030,ZWE,Africa,AFR,2000,39.0,39 [33-49],33.0,49.0
+tb_smear_detection,MDG_0000000030,PNG,Western Pacific,WPR,2000,29.0,29 [24-36],24.0,36.0
+tb_smear_detection,MDG_0000000030,CHE,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,NLD,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,TUN,Eastern Mediterranean,EMR,2000,120.0,120 [96-130],96.0,130.0
+tb_smear_detection,MDG_0000000030,NPL,South-East Asia,SEAR,2000,71.0,71 [59-89],59.0,89.0
+tb_smear_detection,MDG_0000000030,MOZ,Africa,AFR,2000,45.0,45 [38-56],38.0,56.0
+tb_smear_detection,MDG_0000000030,UZB,Europe,EUR,2000,39.0,39 [33-49],33.0,49.0
+tb_smear_detection,MDG_0000000030,SAU,Eastern Mediterranean,EMR,2008,86.0,86 [72-100],72.0,100.0
+tb_smear_detection,MDG_0000000030,SYR,Eastern Mediterranean,EMR,2000,89.0,89 [74-100],74.0,100.0
+tb_smear_detection,MDG_0000000030,BIH,Europe,EUR,2008,69.0,69 [58-77],58.0,77.0
+tb_smear_detection,MDG_0000000030,RUS,Europe,EUR,2000,49.0,49 [41-62],41.0,62.0
+tb_smear_detection,MDG_0000000030,SVK,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,NER,Africa,AFR,2000,33.0,33 [27-41],27.0,41.0
+tb_smear_detection,MDG_0000000030,TON,Western Pacific,WPR,2008,91.0,91 [76-110],76.0,110.0
+tb_smear_detection,MDG_0000000030,TUR,Europe,EUR,2000,36.0,36 [30-46],30.0,46.0
+tb_smear_detection,MDG_0000000030,HRV,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,QAT,Eastern Mediterranean,EMR,2008,81.0,81 [68-100],68.0,100.0
+tb_smear_detection,MDG_0000000030,PER,Americas,AMR,2000,84.0,84 [70-100],70.0,100.0
+tb_smear_detection,MDG_0000000030,RWA,Africa,AFR,2000,31.0,31 [26-39],26.0,39.0
+tb_smear_detection,MDG_0000000030,COG,Africa,AFR,2000,92.0,92 [77-110],77.0,110.0
+tb_smear_detection,MDG_0000000030,MKD,Europe,EUR,2000,52.0,52 [43-65],43.0,65.0
+tb_smear_detection,MDG_0000000030,NRU,Western Pacific,WPR,2008,340.0,340 [290-430],290.0,430.0
+tb_smear_detection,MDG_0000000030,VUT,Western Pacific,WPR,2000,68.0,68 [57-84],57.0,84.0
+tb_smear_detection,MDG_0000000030,KEN,Africa,AFR,2008,68.0,68 [57-85],57.0,85.0
+tb_smear_detection,MDG_0000000030,COD,Africa,AFR,2008,66.0,66 [55-83],55.0,83.0
+tb_smear_detection,MDG_0000000030,TZA,Africa,AFR,2008,70.0,70 [65-75],65.0,75.0
+tb_smear_detection,MDG_0000000030,KAZ,Europe,EUR,2008,74.0,74 [62-87],62.0,87.0
+tb_smear_detection,MDG_0000000030,ISR,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,COL,Americas,AMR,2008,79.0,79 [66-99],66.0,99.0
+tb_smear_detection,MDG_0000000030,IRQ,Eastern Mediterranean,EMR,2008,39.0,39 [33-49],33.0,49.0
+tb_smear_detection,MDG_0000000030,GNQ,Africa,AFR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,MRT,Africa,AFR,2000,40.0,40 [33-49],33.0,49.0
+tb_smear_detection,MDG_0000000030,GUY,Americas,AMR,2000,27.0,27 [22-34],22.0,34.0
+tb_smear_detection,MDG_0000000030,AUS,Western Pacific,WPR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,ARE,Eastern Mediterranean,EMR,2008,50.0,50 [42-63],42.0,63.0
+tb_smear_detection,MDG_0000000030,KEN,Africa,AFR,2000,53.0,53 [44-66],44.0,66.0
+tb_smear_detection,MDG_0000000030,IRN,Eastern Mediterranean,EMR,2008,78.0,78 [65-97],65.0,97.0
+tb_smear_detection,MDG_0000000030,PRT,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,ALB,Europe,EUR,2008,90.0,90 [75-100],75.0,100.0
+tb_smear_detection,MDG_0000000030,TKM,Europe,EUR,2008,130.0,130 [110-160],110.0,160.0
+tb_smear_detection,MDG_0000000030,BHR,Eastern Mediterranean,EMR,2000,80.0,80 [67-100],67.0,100.0
+tb_smear_detection,MDG_0000000030,BIH,Europe,EUR,2000,85.0,85 [71-110],71.0,110.0
+tb_smear_detection,MDG_0000000030,MAR,Eastern Mediterranean,EMR,2008,96.0,96 [80-110],80.0,110.0
+tb_smear_detection,MDG_0000000030,ETH,Africa,AFR,2000,33.0,33 [27-41],27.0,41.0
+tb_smear_detection,MDG_0000000030,SYC,Africa,AFR,2000,67.0,67 [56-84],56.0,84.0
+tb_smear_detection,MDG_0000000030,NGA,Africa,AFR,2008,24.0,24 [20-29],20.0,29.0
+tb_smear_detection,MDG_0000000030,BGR,Europe,EUR,2008,100.0,100 [86-110],86.0,110.0
+tb_smear_detection,MDG_0000000030,SDN,Eastern Mediterranean,EMR,2000,54.0,54 [45-67],45.0,67.0
+tb_smear_detection,MDG_0000000030,SWE,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,HTI,Americas,AMR,2008,60.0,60 [50-75],50.0,75.0
+tb_smear_detection,MDG_0000000030,BEL,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,DOM,Americas,AMR,2008,60.0,60 [50-75],50.0,75.0
+tb_smear_detection,MDG_0000000030,THA,South-East Asia,SEAR,2000,43.0,43 [36-54],36.0,54.0
+tb_smear_detection,MDG_0000000030,JPN,Western Pacific,WPR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,IRL,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,URY,Americas,AMR,2000,76.0,76 [64-95],64.0,95.0
+tb_smear_detection,MDG_0000000030,MDG,Africa,AFR,2008,57.0,57 [47-71],47.0,71.0
+tb_smear_detection,MDG_0000000030,IDN,Western Pacific,WPR,2008,80.0,80 [67-100],67.0,100.0
+tb_smear_detection,MDG_0000000030,OMN,Eastern Mediterranean,EMR,2008,95.0,95 [79-100],79.0,100.0
+tb_smear_detection,MDG_0000000030,AFG,Eastern Mediterranean,EMR,2008,61.0,61 [51-76],51.0,76.0
+tb_smear_detection,MDG_0000000030,MDV,South-East Asia,SEAR,2008,86.0,86 [71-91],71.0,91.0
+tb_smear_detection,MDG_0000000030,MDA,Europe,EUR,2008,79.0,79 [66-99],66.0,99.0
+tb_smear_detection,MDG_0000000030,ESP,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,GRC,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,TLS,South-East Asia,SEAR,2008,33.0,33 [27-41],27.0,41.0
+tb_smear_detection,MDG_0000000030,ERI,Africa,AFR,2000,34.0,34 [29-43],29.0,43.0
+tb_smear_detection,MDG_0000000030,ZAF,Africa,AFR,2000,69.0,69 [57-86],57.0,86.0
+tb_smear_detection,MDG_0000000030,BGD,South-East Asia,SEAR,2008,61.0,61 [51-76],51.0,76.0
+tb_smear_detection,MDG_0000000030,YEM,Eastern Mediterranean,EMR,2008,61.0,61 [51-76],51.0,76.0
+tb_smear_detection,MDG_0000000030,AND,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,SLB,Western Pacific,WPR,2008,46.0,46 [38-57],38.0,57.0
+tb_smear_detection,MDG_0000000030,KIR,Western Pacific,WPR,2008,86.0,86 [72-89],72.0,89.0
+tb_smear_detection,MDG_0000000030,BTN,South-East Asia,SEAR,2000,50.0,50 [42-63],42.0,63.0
+tb_smear_detection,MDG_0000000030,DJI,Eastern Mediterranean,EMR,2008,47.0,47 [39-59],39.0,59.0
+tb_smear_detection,MDG_0000000030,KIR,Western Pacific,WPR,2000,31.0,31 [26-39],26.0,39.0
+tb_smear_detection,MDG_0000000030,GBR,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,LTU,Europe,EUR,2008,120.0,120 [100-140],100.0,140.0
+tb_smear_detection,MDG_0000000030,LBN,Eastern Mediterranean,EMR,2000,91.0,91 [76-100],76.0,100.0
+tb_smear_detection,MDG_0000000030,SUR,Americas,AMR,2008,19.0,19 [16-23],16.0,23.0
+tb_smear_detection,MDG_0000000030,GEO,Europe,EUR,2000,39.0,39 [32-45],32.0,45.0
+tb_smear_detection,MDG_0000000030,KWT,Eastern Mediterranean,EMR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,GEO,Europe,EUR,2008,130.0,130 [110-140],110.0,140.0
+tb_smear_detection,MDG_0000000030,LSO,Africa,AFR,2008,69.0,69 [58-75],58.0,75.0
+tb_smear_detection,MDG_0000000030,NOR,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,IRL,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,VCT,Americas,AMR,2008,73.0,73 [61-91],61.0,91.0
+tb_smear_detection,MDG_0000000030,BHS,Americas,AMR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,HUN,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,NER,Africa,AFR,2008,40.0,40 [34-50],34.0,50.0
+tb_smear_detection,MDG_0000000030,BOL,Americas,AMR,2000,75.0,75 [62-94],62.0,94.0
+tb_smear_detection,MDG_0000000030,POL,Europe,EUR,2008,74.0,74 [61-92],61.0,92.0
+tb_smear_detection,MDG_0000000030,KOR,Western Pacific,WPR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,GAB,Africa,AFR,2008,54.0,54 [45-67],45.0,67.0
+tb_smear_detection,MDG_0000000030,VNM,Western Pacific,WPR,2008,62.0,62 [45-75],45.0,75.0
+tb_smear_detection,MDG_0000000030,ATG,Americas,AMR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,SMR,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,ARG,Americas,AMR,2000,57.0,57 [47-71],47.0,71.0
+tb_smear_detection,MDG_0000000030,BRB,Americas,AMR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,BEN,Africa,AFR,2008,67.0,67 [56-84],56.0,84.0
+tb_smear_detection,MDG_0000000030,IND,South-East Asia,SEAR,2000,45.0,45 [34-51],34.0,51.0
+tb_smear_detection,MDG_0000000030,CRI,Americas,AMR,2008,110.0,110 [88-130],88.0,130.0
+tb_smear_detection,MDG_0000000030,BLZ,Americas,AMR,2000,78.0,78 [65-97],65.0,97.0
+tb_smear_detection,MDG_0000000030,AUT,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,TTO,Americas,AMR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,CMR,Africa,AFR,2000,35.0,35 [29-44],29.0,44.0
+tb_smear_detection,MDG_0000000030,KWT,Eastern Mediterranean,EMR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,ATG,Americas,AMR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,CHE,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,MYS,Western Pacific,WPR,2008,76.0,76 [64-95],64.0,95.0
+tb_smear_detection,MDG_0000000030,KNA,Americas,AMR,2008,190.0,190 [160-230],160.0,230.0
+tb_smear_detection,MDG_0000000030,COK,Western Pacific,WPR,2008,100.0,100 [85-130],85.0,130.0
+tb_smear_detection,MDG_0000000030,BFA,Africa,AFR,2000,12.0,12 [10-15],10.0,15.0
+tb_smear_detection,MDG_0000000030,DNK,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,AZE,Europe,EUR,2000,33.0,33 [27-41],27.0,41.0
+tb_smear_detection,MDG_0000000030,BHS,Americas,AMR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,GMB,Africa,AFR,2008,54.0,54 [45-67],45.0,67.0
+tb_smear_detection,MDG_0000000030,SLV,Americas,AMR,2008,90.0,90 [75-100],75.0,100.0
+tb_smear_detection,MDG_0000000030,LUX,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,GRD,Americas,AMR,2000,0.0,0 [0-0],0.0,0.0
+tb_smear_detection,MDG_0000000030,MWI,Africa,AFR,2000,38.0,38 [32-48],32.0,48.0
+tb_smear_detection,MDG_0000000030,KHM,Western Pacific,WPR,2008,56.0,56 [47-70],47.0,70.0
+tb_smear_detection,MDG_0000000030,SGP,Western Pacific,WPR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,VUT,Western Pacific,WPR,2008,52.0,52 [44-65],44.0,65.0
+tb_smear_detection,MDG_0000000030,YEM,Eastern Mediterranean,EMR,2000,63.0,63 [53-79],53.0,79.0
+tb_smear_detection,MDG_0000000030,NGA,Africa,AFR,2000,12.0,12 [10-15],10.0,15.0
+tb_smear_detection,MDG_0000000030,SGP,Western Pacific,WPR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,CRI,Americas,AMR,2000,120.0,120 [97-150],97.0,150.0
+tb_smear_detection,MDG_0000000030,ARG,Americas,AMR,2008,72.0,72 [60-90],60.0,90.0
+tb_smear_detection,MDG_0000000030,ZAF,Africa,AFR,2008,68.0,68 [57-85],57.0,85.0
+tb_smear_detection,MDG_0000000030,CAN,Americas,AMR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,AGO,Africa,AFR,2008,77.0,77 [64-91],64.0,91.0
+tb_smear_detection,MDG_0000000030,VEN,Americas,AMR,2008,63.0,63 [53-79],53.0,79.0
+tb_smear_detection,MDG_0000000030,NZL,Western Pacific,WPR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,TUV,Western Pacific,WPR,2000,0.0,0 [0-0],0.0,0.0
+tb_smear_detection,MDG_0000000030,LKA,South-East Asia,SEAR,2008,73.0,73 [61-91],61.0,91.0
+tb_smear_detection,MDG_0000000030,DEU,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,CMR,Africa,AFR,2008,93.0,93 [78-120],78.0,120.0
+tb_smear_detection,MDG_0000000030,MEX,Americas,AMR,2008,100.0,100 [87-110],87.0,110.0
+tb_smear_detection,MDG_0000000030,MUS,Africa,AFR,2008,54.0,54 [45-68],45.0,68.0
+tb_smear_detection,MDG_0000000030,MLT,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,WSM,Western Pacific,WPR,2008,37.0,37 [31-47],31.0,47.0
+tb_smear_detection,MDG_0000000030,GRD,Americas,AMR,2008,210.0,210 [170-260],170.0,260.0
+tb_smear_detection,MDG_0000000030,QAT,Eastern Mediterranean,EMR,2000,72.0,72 [60-90],60.0,90.0
+tb_smear_detection,MDG_0000000030,ZWE,Africa,AFR,2008,24.0,24 [20-30],20.0,30.0
+tb_smear_detection,MDG_0000000030,PRK,South-East Asia,SEAR,2000,43.0,43 [36-54],36.0,54.0
+tb_smear_detection,MDG_0000000030,CAF,Africa,AFR,2008,68.0,68 [57-85],57.0,85.0
+tb_smear_detection,MDG_0000000030,GTM,Americas,AMR,2008,43.0,43 [36-53],36.0,53.0
+tb_smear_detection,MDG_0000000030,MYS,Western Pacific,WPR,2000,65.0,65 [54-81],54.0,81.0
+tb_smear_detection,MDG_0000000030,FJI,Western Pacific,WPR,2000,52.0,52 [44-65],44.0,65.0
+tb_smear_detection,MDG_0000000030,JOR,Eastern Mediterranean,EMR,2000,86.0,86 [72-100],72.0,100.0
+tb_smear_detection,MDG_0000000030,TGO,Africa,AFR,2000,9.0,9 [7-11],7.0,11.0
+tb_smear_detection,MDG_0000000030,LSO,Africa,AFR,2000,68.0,68 [57-73],57.0,73.0
+tb_smear_detection,MDG_0000000030,UGA,Africa,AFR,2000,49.0,49 [40-61],40.0,61.0
+tb_smear_detection,MDG_0000000030,FRA,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,NOR,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,PAK,Eastern Mediterranean,EMR,2008,58.0,58 [49-73],49.0,73.0
+tb_smear_detection,MDG_0000000030,KGZ,Europe,EUR,2000,57.0,57 [47-68],47.0,68.0
+tb_smear_detection,MDG_0000000030,TCD,Africa,AFR,2008,19.0,19 [16-23],16.0,23.0
+tb_smear_detection,MDG_0000000030,NZL,Western Pacific,WPR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,COL,Americas,AMR,2000,87.0,87 [72-110],72.0,110.0
+tb_smear_detection,MDG_0000000030,PRY,Americas,AMR,2008,81.0,81 [67-100],67.0,100.0
+tb_smear_detection,MDG_0000000030,KOR,Western Pacific,WPR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,DZA,Africa,AFR,2008,78.0,78 [65-98],65.0,98.0
+tb_smear_detection,MDG_0000000030,SOM,Eastern Mediterranean,EMR,2008,46.0,46 [38-58],38.0,58.0
+tb_smear_detection,MDG_0000000030,MMR,South-East Asia,SEAR,2000,19.0,19 [16-24],16.0,24.0
+tb_smear_detection,MDG_0000000030,WSM,Western Pacific,WPR,2000,64.0,64 [53-80],53.0,80.0
+tb_smear_detection,MDG_0000000030,LTU,Europe,EUR,2000,85.0,85 [71-95],71.0,95.0
+tb_smear_detection,MDG_0000000030,BWA,Africa,AFR,2000,66.0,66 [55-78],55.0,78.0
+tb_smear_detection,MDG_0000000030,BRB,Americas,AMR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,AFG,Eastern Mediterranean,EMR,2000,18.0,18 [15-22],15.0,22.0
+tb_smear_detection,MDG_0000000030,TUN,Eastern Mediterranean,EMR,2008,99.0,99 [82-110],82.0,110.0
+tb_smear_detection,MDG_0000000030,ARM,Europe,EUR,2000,93.0,93 [78-120],78.0,120.0
+tb_smear_detection,MDG_0000000030,CZE,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,MNE,Europe,EUR,2008,120.0,120 [100-130],100.0,130.0
+tb_smear_detection,MDG_0000000030,ISL,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,ARE,Eastern Mediterranean,EMR,2000,86.0,86 [71-100],71.0,100.0
+tb_smear_detection,MDG_0000000030,EGY,Eastern Mediterranean,EMR,2000,61.0,61 [52-74],52.0,74.0
+tb_smear_detection,MDG_0000000030,PNG,Western Pacific,WPR,2008,29.0,29 [24-34],24.0,34.0
+tb_smear_detection,MDG_0000000030,GBR,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,FJI,Western Pacific,WPR,2008,95.0,95 [79-120],79.0,120.0
+tb_smear_detection,MDG_0000000030,CUB,Americas,AMR,2008,130.0,130 [110-170],110.0,170.0
+tb_smear_detection,MDG_0000000030,MKD,Europe,EUR,2008,99.0,99 [82-110],82.0,110.0
+tb_smear_detection,MDG_0000000030,FIN,Europe,EUR,2000,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,CPV,Africa,AFR,2008,48.0,48 [40-60],40.0,60.0
+tb_smear_detection,MDG_0000000030,JAM,Americas,AMR,2000,95.0,95 [79-120],79.0,120.0
+tb_smear_detection,MDG_0000000030,BEL,Europe,EUR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,PAN,Americas,AMR,2000,58.0,58 [49-70],49.0,70.0
+tb_smear_detection,MDG_0000000030,PER,Americas,AMR,2008,93.0,93 [78-99],78.0,99.0
+tb_smear_detection,MDG_0000000030,ZMB,Africa,AFR,2008,52.0,52 [44-65],44.0,65.0
+tb_smear_detection,MDG_0000000030,BGD,South-East Asia,SEAR,2000,25.0,25 [21-31],21.0,31.0
+tb_smear_detection,MDG_0000000030,MUS,Africa,AFR,2000,71.0,71 [59-89],59.0,89.0
+tb_smear_detection,MDG_0000000030,DOM,Americas,AMR,2000,59.0,59 [49-73],49.0,73.0
+tb_smear_detection,MDG_0000000030,JPN,Western Pacific,WPR,2008,87.0,87 [77-100],77.0,100.0
+tb_smear_detection,MDG_0000000030,SUR,Americas,AMR,2000,18.0,18 [15-22],15.0,22.0
+tb_smear_detection,MDG_0000000030,PAN,Americas,AMR,2008,91.0,91 [76-96],76.0,96.0
+tb_smear_detection,MDG_0000000030,POL,Europe,EUR,2000,61.0,61 [51-75],51.0,75.0
+tb_smear_detection,MDG_0000000030,TUV,Western Pacific,WPR,2008,110.0,110 [95-140],95.0,140.0
+tb_smear_detection,MDG_0000000030,LVA,Europe,EUR,2000,94.0,94 [78-100],78.0,100.0
+tb_smear_detection,MDG_0000000030,HND,Americas,AMR,2000,84.0,84 [70-95],70.0,95.0

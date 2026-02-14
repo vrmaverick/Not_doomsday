@@ -1,0 +1,245 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Taiwan",
+        "count": 7,
+        "shareimage": "https://img.ltn.com.tw/Upload/news/600/2026/02/14/phpGtPV9w.jpg",
+        "html": "<a href=\"https://news.ltn.com.tw/news/life/breakingnews/5343428\" title=\"\u53f0\u7f8e\u5c0d\u7b49\u8cbf\u6613\u7f8e\u725b\u9032\u53e3 \u77f3\u5d07\u826f \uff1a \u654f\u611f\u54c1\u9805\u4ecd\u6709\u9650\u5236 - \u751f\u6d3b\" target=\"_blank\">\u53f0\u7f8e\u5c0d\u7b49\u8cbf\u6613\u7f8e\u725b\u9032\u53e3 \u77f3\u5d07\u826f \uff1a \u654f\u611f\u54c1\u9805\u4ecd\u6709\u9650\u5236 - \u751f\u6d3b</a><br><br><a href=\"https://udn.com/news/story/123025/9330450\" title=\"\u53f0\u7f8e\u5c0d\u7b49\u8cbf\u6613\u7f8e\u725b\u9032\u53e3 \u885b\u798f\u90e8 \uff1a \u654f\u611f\u54c1\u9805\u4ecd\u6709\u9650\u5236\" target=\"_blank\">\u53f0\u7f8e\u5c0d\u7b49\u8cbf\u6613\u7f8e\u725b\u9032\u53e3 \u885b\u798f\u90e8 \uff1a \u654f\u611f\u54c1\u9805\u4ecd\u6709\u9650\u5236</a><br><br><a href=\"https://www.cna.com.tw/news/aipl/202602130072.aspx\" title=\"\u53f0\u7f8e\u8cbf\u6613\u5354\u5b9a\u958b\u653e\u7f8e\u725b\u5167\u81df\u7b49 \u885b\u798f\u90e8\u5f37\u8abf4\u4e0d\u8b8a\" target=\"_blank\">\u53f0\u7f8e\u8cbf\u6613\u5354\u5b9a\u958b\u653e\u7f8e\u725b\u5167\u81df\u7b49 \u885b\u798f\u90e8\u5f37\u8abf4\u4e0d\u8b8a</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0,
+          24.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kenya",
+        "count": 3,
+        "shareimage": "https://www.dailynews.co.th/wp-content/uploads/2026/02/167.jpg",
+        "html": "<a href=\"https://www.dailynews.co.th/news/5581396/\" title=\" &quot; \u0e42\u0e23\u0e04\u0e04\u0e32\u0e25\u0e32 - \u0e2d\u0e32\u0e0b\u0e32\u0e23\u0e4c &quot; \u0e41\u0e1e\u0e23\u0e48\u0e23\u0e30\u0e1a\u0e32\u0e14\u0e43\u0e19\u0e40\u0e04\u0e19\u0e22\u0e32 \u0e04\u0e23\u0e48\u0e32\u0e0a\u0e35\u0e27\u0e34\u0e15\u0e1c\u0e39\u0e49\u0e04\u0e19\u0e21\u0e32\u0e01\u0e40\u0e1b\u0e47\u0e19\u0e1b\u0e23\u0e30\u0e27\u0e31\u0e15\u0e34\u0e01\u0e32\u0e23\u0e13\u0e4c\" target=\"_blank\"> &quot; \u0e42\u0e23\u0e04\u0e04\u0e32\u0e25\u0e32 - \u0e2d\u0e32\u0e0b\u0e32\u0e23\u0e4c &quot; \u0e41\u0e1e\u0e23\u0e48\u0e23\u0e30\u0e1a\u0e32\u0e14\u0e43\u0e19\u0e40\u0e04\u0e19\u0e22\u0e32 \u0e04\u0e23\u0e48\u0e32\u0e0a\u0e35\u0e27\u0e34\u0e15\u0e1c\u0e39\u0e49\u0e04\u0e19\u0e21\u0e32\u0e01\u0e40\u0e1b\u0e47\u0e19\u0e1b\u0e23\u0e30\u0e27\u0e31\u0e15\u0e34\u0e01\u0e32\u0e23\u0e13\u0e4c</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Phrae, Phrae, Thailand",
+        "count": 2,
+        "shareimage": "https://www.dailynews.co.th/wp-content/uploads/2026/02/167.jpg",
+        "html": "<a href=\"https://www.dailynews.co.th/news/5581396/\" title=\" &quot; \u0e42\u0e23\u0e04\u0e04\u0e32\u0e25\u0e32 - \u0e2d\u0e32\u0e0b\u0e32\u0e23\u0e4c &quot; \u0e41\u0e1e\u0e23\u0e48\u0e23\u0e30\u0e1a\u0e32\u0e14\u0e43\u0e19\u0e40\u0e04\u0e19\u0e22\u0e32 \u0e04\u0e23\u0e48\u0e32\u0e0a\u0e35\u0e27\u0e34\u0e15\u0e1c\u0e39\u0e49\u0e04\u0e19\u0e21\u0e32\u0e01\u0e40\u0e1b\u0e47\u0e19\u0e1b\u0e23\u0e30\u0e27\u0e31\u0e15\u0e34\u0e01\u0e32\u0e23\u0e13\u0e4c\" target=\"_blank\"> &quot; \u0e42\u0e23\u0e04\u0e04\u0e32\u0e25\u0e32 - \u0e2d\u0e32\u0e0b\u0e32\u0e23\u0e4c &quot; \u0e41\u0e1e\u0e23\u0e48\u0e23\u0e30\u0e1a\u0e32\u0e14\u0e43\u0e19\u0e40\u0e04\u0e19\u0e22\u0e32 \u0e04\u0e23\u0e48\u0e32\u0e0a\u0e35\u0e27\u0e34\u0e15\u0e1c\u0e39\u0e49\u0e04\u0e19\u0e21\u0e32\u0e01\u0e40\u0e1b\u0e47\u0e19\u0e1b\u0e23\u0e30\u0e27\u0e31\u0e15\u0e34\u0e01\u0e32\u0e23\u0e13\u0e4c</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.141,
+          18.1459
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Brazil",
+        "count": 1,
+        "shareimage": "https://newr7-r7-prod.web.arc-cdn.net/resizer/v2/SA5RP3XRLRHRLMWS2QTJJXYN4I.jpg?smart=true&auth=7282e617cd3e1d23a621b85fc61c1f3c8d2c3ab94627ad84db53241f444b30f9",
+        "html": "<a href=\"https://noticias.r7.com/saude/virus-nipah-chegou-ao-brasil-o-carnaval-e-motivo-de-preocupacao-12022026/\" title=\"V\u00edrus Nipah chegou ao Brasil ? O carnaval \u00e9 motivo de preocupao ?\" target=\"_blank\">V\u00edrus Nipah chegou ao Brasil ? O carnaval \u00e9 motivo de preocupao ?</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -55.0,
+          -10.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Singapore",
+        "count": 1,
+        "shareimage": "https://cassette.sphdigital.com.sg/image/zaobao/8f1d3561276ea27e30395fefdf6d9d44c80d67cf5401f2d2fefc023cf282154c",
+        "html": "<a href=\"https://www.zaobao.com.sg/news/singapore/story20260210-8419436\" title=\"\u4ece &quot; \u4e00\u5bb6\u4eba &quot; \u5230 &quot; \u5927\u5bb6\u4e00\u8d77 &quot; \u770b\u8d22\u653f\u9884\u7b97\u6848\u6807\u5fd7\u6f14\u53d8\" target=\"_blank\">\u4ece &quot; \u4e00\u5bb6\u4eba &quot; \u5230 &quot; \u5927\u5bb6\u4e00\u8d77 &quot; \u770b\u8d22\u653f\u9884\u7b97\u6848\u6807\u5fd7\u6f14\u53d8</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8,
+          1.3667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hopelchen, Campeche, Mexico",
+        "count": 1,
+        "shareimage": "https://i0.wp.com/i0.wp.com/newspack-yucatan.s3.amazonaws.com/uploads/2026/02/IMG-55779246-1.jpg?fit=416%2C600&ssl=1",
+        "html": "<a href=\"https://www.yucatan.com.mx/merida/2026/02/09/clave-contra-el-sarampion-llaman-a-completar-esquemas-de-triple-viral.html\" title=\"Clave contra el sarampi\u00f3n : llaman a completar esquemas de Triple Viral\" target=\"_blank\">Clave contra el sarampi\u00f3n : llaman a completar esquemas de Triple Viral</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.85,
+          19.7667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Campeche, Campeche, Mexico",
+        "count": 1,
+        "shareimage": "https://i0.wp.com/i0.wp.com/newspack-yucatan.s3.amazonaws.com/uploads/2026/02/IMG-55779246-1.jpg?fit=416%2C600&ssl=1",
+        "html": "<a href=\"https://www.yucatan.com.mx/merida/2026/02/09/clave-contra-el-sarampion-llaman-a-completar-esquemas-de-triple-viral.html\" title=\"Clave contra el sarampi\u00f3n : llaman a completar esquemas de Triple Viral\" target=\"_blank\">Clave contra el sarampi\u00f3n : llaman a completar esquemas de Triple Viral</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.5333,
+          19.85
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "India",
+        "count": 1,
+        "shareimage": "http://img.epochtimes.com.tw/upload/images/2026/02/08/829514_medium.jpg",
+        "html": "<a href=\"http://www.epochtimes.com.tw/n495639/%E9%81%8E%E5%B9%B4%E5%87%BA%E5%9C%8B%E7%95%B6%E5%BF%83%E7%AB%8B%E7%99%BE%E7%97%85%E6%AF%92%EF%BC%81-%E9%86%AB%E5%82%B36%E6%8B%9B%E4%BF%9D%E5%91%BD.html\" title=\"\u904e\u5e74\u51fa\u570b\u7576\u5fc3\u7acb\u767e\u75c5\u6bd2 \uff01 \u91ab\u50b36\u62db\u4fdd\u547d\" target=\"_blank\">\u904e\u5e74\u51fa\u570b\u7576\u5fc3\u7acb\u767e\u75c5\u6bd2 \uff01 \u91ab\u50b36\u62db\u4fdd\u547d</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.0,
+          20.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bangladesh",
+        "count": 1,
+        "shareimage": "http://img.epochtimes.com.tw/upload/images/2026/02/08/829514_medium.jpg",
+        "html": "<a href=\"http://www.epochtimes.com.tw/n495639/%E9%81%8E%E5%B9%B4%E5%87%BA%E5%9C%8B%E7%95%B6%E5%BF%83%E7%AB%8B%E7%99%BE%E7%97%85%E6%AF%92%EF%BC%81-%E9%86%AB%E5%82%B36%E6%8B%9B%E4%BF%9D%E5%91%BD.html\" title=\"\u904e\u5e74\u51fa\u570b\u7576\u5fc3\u7acb\u767e\u75c5\u6bd2 \uff01 \u91ab\u50b36\u62db\u4fdd\u547d\" target=\"_blank\">\u904e\u5e74\u51fa\u570b\u7576\u5fc3\u7acb\u767e\u75c5\u6bd2 \uff01 \u91ab\u50b36\u62db\u4fdd\u547d</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          90.0,
+          24.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "California, United States",
+        "count": 1,
+        "shareimage": "https://hips.hearstapps.com/hmg-prod/images/secretary-of-health-and-human-services-robert-f-kennedy-jr-news-photo-1770938063.pjpeg?crop=1xw:0.75013xh;center,top",
+        "html": "<a href=\"https://www.esquire.com/news-politics/politics/a70336549/new-york-illinois-california-who-rfk-jr/\" title=\"U . S . States Are Taking Steps to Defy the Reign of Secretary Snake Oil\" target=\"_blank\">U . S . States Are Taking Steps to Defy the Reign of Secretary Snake Oil</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.746,
+          36.17
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Spain",
+        "count": 1,
+        "shareimage": "https://www.teraz.sk/usercontent/socialmedia/ddf1d853390e377e85fd1453c5f61efab2d78de0.jpg?wm=tasr-teraz&v=2",
+        "html": "<a href=\"https://www.teraz.sk/zahranicie/africky-mor-osipanych-sa-rozsiril/940945-clanok.html\" title=\"Africk\u00fd mor o\u0161\u00edpan\u00fdch sa roz\u0161\u00edril mimo kontrolnej z\u00f3ny v Katal\u00e1nsku\" target=\"_blank\">Africk\u00fd mor o\u0161\u00edpan\u00fdch sa roz\u0161\u00edril mimo kontrolnej z\u00f3ny v Katal\u00e1nsku</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.0,
+          40.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Illinois, United States",
+        "count": 1,
+        "shareimage": "https://hips.hearstapps.com/hmg-prod/images/secretary-of-health-and-human-services-robert-f-kennedy-jr-news-photo-1770938063.pjpeg?crop=1xw:0.75013xh;center,top",
+        "html": "<a href=\"https://www.esquire.com/news-politics/politics/a70336549/new-york-illinois-california-who-rfk-jr/\" title=\"U . S . States Are Taking Steps to Defy the Reign of Secretary Snake Oil\" target=\"_blank\">U . S . States Are Taking Steps to Defy the Reign of Secretary Snake Oil</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.0022,
+          40.3363
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Madrid, Madrid, Spain",
+        "count": 1,
+        "shareimage": "https://www.teraz.sk/usercontent/socialmedia/ddf1d853390e377e85fd1453c5f61efab2d78de0.jpg?wm=tasr-teraz&v=2",
+        "html": "<a href=\"https://www.teraz.sk/zahranicie/africky-mor-osipanych-sa-rozsiril/940945-clanok.html\" title=\"Africk\u00fd mor o\u0161\u00edpan\u00fdch sa roz\u0161\u00edril mimo kontrolnej z\u00f3ny v Katal\u00e1nsku\" target=\"_blank\">Africk\u00fd mor o\u0161\u00edpan\u00fdch sa roz\u0161\u00edril mimo kontrolnej z\u00f3ny v Katal\u00e1nsku</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.6833,
+          40.4
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "New York, United States",
+        "count": 1,
+        "shareimage": "https://hips.hearstapps.com/hmg-prod/images/secretary-of-health-and-human-services-robert-f-kennedy-jr-news-photo-1770938063.pjpeg?crop=1xw:0.75013xh;center,top",
+        "html": "<a href=\"https://www.esquire.com/news-politics/politics/a70336549/new-york-illinois-california-who-rfk-jr/\" title=\"U . S . States Are Taking Steps to Defy the Reign of Secretary Snake Oil\" target=\"_blank\">U . S . States Are Taking Steps to Defy the Reign of Secretary Snake Oil</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.9384,
+          42.1497
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Toronto, Ontario, Canada",
+        "count": 1,
+        "shareimage": "https://www.dailynews.co.th/wp-content/uploads/2026/02/167.jpg",
+        "html": "<a href=\"https://www.dailynews.co.th/news/5581396/\" title=\" &quot; \u0e42\u0e23\u0e04\u0e04\u0e32\u0e25\u0e32 - \u0e2d\u0e32\u0e0b\u0e32\u0e23\u0e4c &quot; \u0e41\u0e1e\u0e23\u0e48\u0e23\u0e30\u0e1a\u0e32\u0e14\u0e43\u0e19\u0e40\u0e04\u0e19\u0e22\u0e32 \u0e04\u0e23\u0e48\u0e32\u0e0a\u0e35\u0e27\u0e34\u0e15\u0e1c\u0e39\u0e49\u0e04\u0e19\u0e21\u0e32\u0e01\u0e40\u0e1b\u0e47\u0e19\u0e1b\u0e23\u0e30\u0e27\u0e31\u0e15\u0e34\u0e01\u0e32\u0e23\u0e13\u0e4c\" target=\"_blank\"> &quot; \u0e42\u0e23\u0e04\u0e04\u0e32\u0e25\u0e32 - \u0e2d\u0e32\u0e0b\u0e32\u0e23\u0e4c &quot; \u0e41\u0e1e\u0e23\u0e48\u0e23\u0e30\u0e1a\u0e32\u0e14\u0e43\u0e19\u0e40\u0e04\u0e19\u0e22\u0e32 \u0e04\u0e23\u0e48\u0e32\u0e0a\u0e35\u0e27\u0e34\u0e15\u0e1c\u0e39\u0e49\u0e04\u0e19\u0e21\u0e32\u0e01\u0e40\u0e1b\u0e47\u0e19\u0e1b\u0e23\u0e30\u0e27\u0e31\u0e15\u0e34\u0e01\u0e32\u0e23\u0e13\u0e4c</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4167,
+          43.6667
+        ]
+      }
+    }
+  ]
+}

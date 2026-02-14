@@ -1,0 +1,229 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "New York, United States",
+        "count": 3,
+        "shareimage": "https://townsquare.media/site/854/files/2022/02/attachment-GettyImages-57292807.jpg?&q=75&format=natural",
+        "html": "<a href=\"https://hudsonvalleycountry.com/ixp/854/p/reason-why-birds-are-dying-across-hudson-valley-new-york/\" title=\"Shocking Reason Why Birds Are Dying In Hudson Valley , New York\" target=\"_blank\">Shocking Reason Why Birds Are Dying In Hudson Valley , New York</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.9384,
+          42.1497
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mexico",
+        "count": 2,
+        "shareimage": "https://blob.elmanana.com/images/2026/02/12/muereap26041027155663-dbdf9327-focus-0-0-608-342.jpg",
+        "html": "<a href=\"http://www.elmanana.com/noticias/nacional/vacunacion-contra-el-sarampion-en-escuelas-tras-muerte-en-durango/6092936\" title=\"Vacunaci\u00f3n contra el sarampi\u00f3n en escuelas tras muerte en Durango\" target=\"_blank\">Vacunaci\u00f3n contra el sarampi\u00f3n en escuelas tras muerte en Durango</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -102.0,
+          23.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Egypt",
+        "count": 2,
+        "shareimage": "",
+        "html": "<a href=\"http://www.cfi.net.cn/p20260211000970.html\" title=\"\u4e9a\u592a\u836f\u4e1a ( 002370 ): \u516c\u53f8\u53c2\u4e0e\u56fd\u5bb6\u7ec4\u7ec7\u96c6\u91c7\u836f\u54c1\u534f\u8bae\u671f\u6ee1\u54c1\u79cd\u63a5\u7eed\u91c7\u8d2d\u62df\u4e2d\u9009 - CFi . CN \u4e2d\u8d22\u7f51\" target=\"_blank\">\u4e9a\u592a\u836f\u4e1a ( 002370 ): \u516c\u53f8\u53c2\u4e0e\u56fd\u5bb6\u7ec4\u7ec7\u96c6\u91c7\u836f\u54c1\u534f\u8bae\u671f\u6ee1\u54c1\u79cd\u63a5\u7eed\u91c7\u8d2d\u62df\u4e2d\u9009 - CFi . CN \u4e2d\u8d22\u7f51</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.0,
+          27.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Orange County, New York, United States",
+        "count": 2,
+        "shareimage": "https://townsquare.media/site/706/files/2026/02/attachment-jess-11-1.jpg?&format=natural",
+        "html": "<a href=\"https://cnynews.com/ixp/706/p/bird-flu-safety-pets-orange-county/\" title=\"HV SPCA Warns Pet Owners About Bird Flu Risks\" target=\"_blank\">HV SPCA Warns Pet Owners About Bird Flu Risks</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.3163,
+          41.4168
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ukraine",
+        "count": 2,
+        "shareimage": "https://www.aljazeera.com/wp-content/uploads/2026/02/2026-02-07T172401Z_1209009826_RC25HJAEQ36D_RTRMADP_3_UKRAINE-CRISIS-COLD-KYIV-1770644873.jpg",
+        "html": "<a href=\"https://www.aljazeera.com/news/2026/2/10/in-ukraine-deaths-from-hypothermia-rise-as-russia-attacks-energy-system\" title=\"In Ukraine , deaths from hypothermia rise as Russia attacks energy system\" target=\"_blank\">In Ukraine , deaths from hypothermia rise as Russia attacks energy system</a><br><br><a href=\"https://pakistankakhudahafiz.com/in-ukraine-deaths-from-hypothermia-rise-as-russia-attacks-energy-system/\" title=\"In Ukraine , Deaths From Hypothermia Rise As Russia Attacks Energy System\" target=\"_blank\">In Ukraine , Deaths From Hypothermia Rise As Russia Attacks Energy System</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0,
+          49.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Russia",
+        "count": 2,
+        "shareimage": "https://www.aljazeera.com/wp-content/uploads/2026/02/2026-02-07T172401Z_1209009826_RC25HJAEQ36D_RTRMADP_3_UKRAINE-CRISIS-COLD-KYIV-1770644873.jpg",
+        "html": "<a href=\"https://www.aljazeera.com/news/2026/2/10/in-ukraine-deaths-from-hypothermia-rise-as-russia-attacks-energy-system\" title=\"In Ukraine , deaths from hypothermia rise as Russia attacks energy system\" target=\"_blank\">In Ukraine , deaths from hypothermia rise as Russia attacks energy system</a><br><br><a href=\"https://pakistankakhudahafiz.com/in-ukraine-deaths-from-hypothermia-rise-as-russia-attacks-energy-system/\" title=\"In Ukraine , Deaths From Hypothermia Rise As Russia Attacks Energy System\" target=\"_blank\">In Ukraine , Deaths From Hypothermia Rise As Russia Attacks Energy System</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.0,
+          60.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sweden",
+        "count": 2,
+        "shareimage": "https://blob.elmanana.com/images/2026/02/12/muereap26041027155663-dbdf9327-focus-0-0-608-342.jpg",
+        "html": "<a href=\"http://www.elmanana.com/noticias/nacional/vacunacion-contra-el-sarampion-en-escuelas-tras-muerte-en-durango/6092936\" title=\"Vacunaci\u00f3n contra el sarampi\u00f3n en escuelas tras muerte en Durango\" target=\"_blank\">Vacunaci\u00f3n contra el sarampi\u00f3n en escuelas tras muerte en Durango</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0,
+          62.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sinaloa, Tabasco, Mexico",
+        "count": 1,
+        "shareimage": "https://blob.elmanana.com/images/2026/02/12/muereap26041027155663-dbdf9327-focus-0-0-608-342.jpg",
+        "html": "<a href=\"http://www.elmanana.com/noticias/nacional/vacunacion-contra-el-sarampion-en-escuelas-tras-muerte-en-durango/6092936\" title=\"Vacunaci\u00f3n contra el sarampi\u00f3n en escuelas tras muerte en Durango\" target=\"_blank\">Vacunaci\u00f3n contra el sarampi\u00f3n en escuelas tras muerte en Durango</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.75,
+          18.4917
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Orange County, California, United States",
+        "count": 1,
+        "shareimage": "https://s.yimg.com/cv/apiv2/aolfp/images/og-image.png",
+        "html": "<a href=\"https://www.aol.co.uk/articles/flu-strain-rising-around-us-172310767.html\" title=\"A new flu strain is rising around the US \u2013 and it more severe for children\" target=\"_blank\">A new flu strain is rising around the US \u2013 and it more severe for children</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.768,
+          33.7
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "China",
+        "count": 1,
+        "shareimage": "",
+        "html": "<a href=\"http://www.cfi.net.cn/p20260211000970.html\" title=\"\u4e9a\u592a\u836f\u4e1a ( 002370 ): \u516c\u53f8\u53c2\u4e0e\u56fd\u5bb6\u7ec4\u7ec7\u96c6\u91c7\u836f\u54c1\u534f\u8bae\u671f\u6ee1\u54c1\u79cd\u63a5\u7eed\u91c7\u8d2d\u62df\u4e2d\u9009 - CFi . CN \u4e2d\u8d22\u7f51\" target=\"_blank\">\u4e9a\u592a\u836f\u4e1a ( 002370 ): \u516c\u53f8\u53c2\u4e0e\u56fd\u5bb6\u7ec4\u7ec7\u96c6\u91c7\u836f\u54c1\u534f\u8bae\u671f\u6ee1\u54c1\u79cd\u63a5\u7eed\u91c7\u8d2d\u62df\u4e2d\u9009 - CFi . CN \u4e2d\u8d22\u7f51</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.0,
+          35.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tennessee, United States",
+        "count": 1,
+        "shareimage": "https://s.yimg.com/cv/apiv2/aolfp/images/og-image.png",
+        "html": "<a href=\"https://www.aol.co.uk/articles/flu-strain-rising-around-us-172310767.html\" title=\"A new flu strain is rising around the US \u2013 and it more severe for children\" target=\"_blank\">A new flu strain is rising around the US \u2013 and it more severe for children</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.7489,
+          35.7449
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "France",
+        "count": 1,
+        "shareimage": "https://images.ladepeche.fr/api/v1/images/view/698d992efed27447a50a656b/hd/image.jpg?v=1",
+        "html": "<a href=\"https://www.ladepeche.fr/2026/02/12/les-surinfections-bacteriennes-apres-une-grippe-de-quoi-parle-t-on-13221320.php\" title=\"Les surinfections bact\u00e9riennes apr\u00e8s une grippe , de quoi parle - t - on ?\" target=\"_blank\">Les surinfections bact\u00e9riennes apr\u00e8s une grippe , de quoi parle - t - on ?</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.0,
+          46.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "United Kingdom",
+        "count": 1,
+        "shareimage": "https://cdn.politis.com.cy/thumbnails/423623/conversions/gymnastiki-seo.webp",
+        "html": "<a href=\"https://www.politis.com.cy/cyprus/igeia/985852/pakhisarkia-1-stoys-10-thanatoys-apo-loimwkseis-paghkosmios-sindeetai-me-to-auksimeno-varos\" title=\"\u03a0\u03b1\u03c7\u03c5\u03c3\u03b1\u03c1\u03ba\u03af\u03b1 : 1 \u03c3\u03c4\u03bf\u03c5\u03c2 10 \u03b8\u03b1\u03bd\u03ac\u03c4\u03bf\u03c5\u03c2 \u03b1\u03c0\u03cc \u03bb\u03bf\u03b9\u03bc\u03ce\u03be\u03b5\u03b9\u03c2 \u03c0\u03b1\u03b3\u03ba\u03bf\u03c3\u03bc\u03af\u03c9\u03c2 \u03c3\u03c5\u03bd\u03b4\u03ad\u03b5\u03c4\u03b1\u03b9 \u03bc\u03b5 \u03c4\u03bf \u03b1\u03c5\u03be\u03b7\u03bc\u03ad\u03bd\u03bf \u03b2\u03ac\u03c1\u03bf\u03c2\" target=\"_blank\">\u03a0\u03b1\u03c7\u03c5\u03c3\u03b1\u03c1\u03ba\u03af\u03b1 : 1 \u03c3\u03c4\u03bf\u03c5\u03c2 10 \u03b8\u03b1\u03bd\u03ac\u03c4\u03bf\u03c5\u03c2 \u03b1\u03c0\u03cc \u03bb\u03bf\u03b9\u03bc\u03ce\u03be\u03b5\u03b9\u03c2 \u03c0\u03b1\u03b3\u03ba\u03bf\u03c3\u03bc\u03af\u03c9\u03c2 \u03c3\u03c5\u03bd\u03b4\u03ad\u03b5\u03c4\u03b1\u03b9 \u03bc\u03b5 \u03c4\u03bf \u03b1\u03c5\u03be\u03b7\u03bc\u03ad\u03bd\u03bf \u03b2\u03ac\u03c1\u03bf\u03c2</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.0,
+          54.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Finland",
+        "count": 1,
+        "shareimage": "https://cdn.politis.com.cy/thumbnails/423623/conversions/gymnastiki-seo.webp",
+        "html": "<a href=\"https://www.politis.com.cy/cyprus/igeia/985852/pakhisarkia-1-stoys-10-thanatoys-apo-loimwkseis-paghkosmios-sindeetai-me-to-auksimeno-varos\" title=\"\u03a0\u03b1\u03c7\u03c5\u03c3\u03b1\u03c1\u03ba\u03af\u03b1 : 1 \u03c3\u03c4\u03bf\u03c5\u03c2 10 \u03b8\u03b1\u03bd\u03ac\u03c4\u03bf\u03c5\u03c2 \u03b1\u03c0\u03cc \u03bb\u03bf\u03b9\u03bc\u03ce\u03be\u03b5\u03b9\u03c2 \u03c0\u03b1\u03b3\u03ba\u03bf\u03c3\u03bc\u03af\u03c9\u03c2 \u03c3\u03c5\u03bd\u03b4\u03ad\u03b5\u03c4\u03b1\u03b9 \u03bc\u03b5 \u03c4\u03bf \u03b1\u03c5\u03be\u03b7\u03bc\u03ad\u03bd\u03bf \u03b2\u03ac\u03c1\u03bf\u03c2\" target=\"_blank\">\u03a0\u03b1\u03c7\u03c5\u03c3\u03b1\u03c1\u03ba\u03af\u03b1 : 1 \u03c3\u03c4\u03bf\u03c5\u03c2 10 \u03b8\u03b1\u03bd\u03ac\u03c4\u03bf\u03c5\u03c2 \u03b1\u03c0\u03cc \u03bb\u03bf\u03b9\u03bc\u03ce\u03be\u03b5\u03b9\u03c2 \u03c0\u03b1\u03b3\u03ba\u03bf\u03c3\u03bc\u03af\u03c9\u03c2 \u03c3\u03c5\u03bd\u03b4\u03ad\u03b5\u03c4\u03b1\u03b9 \u03bc\u03b5 \u03c4\u03bf \u03b1\u03c5\u03be\u03b7\u03bc\u03ad\u03bd\u03bf \u03b2\u03ac\u03c1\u03bf\u03c2</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.0,
+          64.0
+        ]
+      }
+    }
+  ]
+}

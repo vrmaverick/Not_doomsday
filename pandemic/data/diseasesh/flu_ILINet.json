@@ -1,0 +1,150 @@
+{
+  "updated": 1771075227451,
+  "source": "www.cdc.gov/flu",
+  "data": [
+    {
+      "week": "2021 - 40/52",
+      "age 0-4": 12678,
+      "age 5-24": 12417,
+      "age 25-49": 7051,
+      "age 50-64": 2979,
+      "age 64+": 2393,
+      "totalILI": 37518,
+      "totalPatients": 1983139,
+      "percentUnweightedILI": 1.9,
+      "percentWeightedILI": 1.9
+    },
+    {
+      "week": "2021 - 41/52",
+      "age 0-4": 12643,
+      "age 5-24": 11343,
+      "age 25-49": 6675,
+      "age 50-64": 2761,
+      "age 64+": 2289,
+      "totalILI": 35711,
+      "totalPatients": 1946994,
+      "percentUnweightedILI": 1.8,
+      "percentWeightedILI": 1.9
+    },
+    {
+      "week": "2021 - 42/52",
+      "age 0-4": 12094,
+      "age 5-24": 10898,
+      "age 25-49": 6113,
+      "age 50-64": 2761,
+      "age 64+": 2195,
+      "totalILI": 34061,
+      "totalPatients": 1892186,
+      "percentUnweightedILI": 1.8,
+      "percentWeightedILI": 1.8
+    },
+    {
+      "week": "2021 - 43/52",
+      "age 0-4": 12509,
+      "age 5-24": 11319,
+      "age 25-49": 6318,
+      "age 50-64": 2685,
+      "age 64+": 2196,
+      "totalILI": 35027,
+      "totalPatients": 1906427,
+      "percentUnweightedILI": 1.8,
+      "percentWeightedILI": 1.9
+    },
+    {
+      "week": "2021 - 44/52",
+      "age 0-4": 12854,
+      "age 5-24": 13834,
+      "age 25-49": 6569,
+      "age 50-64": 2724,
+      "age 64+": 2227,
+      "totalILI": 38208,
+      "totalPatients": 1888042,
+      "percentUnweightedILI": 2,
+      "percentWeightedILI": 2.1
+    },
+    {
+      "week": "2021 - 45/52",
+      "age 0-4": 14149,
+      "age 5-24": 15283,
+      "age 25-49": 7497,
+      "age 50-64": 3034,
+      "age 64+": 2567,
+      "totalILI": 42530,
+      "totalPatients": 1958344,
+      "percentUnweightedILI": 2.2,
+      "percentWeightedILI": 2.2
+    },
+    {
+      "week": "2021 - 46/52",
+      "age 0-4": 14335,
+      "age 5-24": 16513,
+      "age 25-49": 8106,
+      "age 50-64": 3441,
+      "age 64+": 2664,
+      "totalILI": 45059,
+      "totalPatients": 1988195,
+      "percentUnweightedILI": 2.3,
+      "percentWeightedILI": 2.3
+    },
+    {
+      "week": "2021 - 47/52",
+      "age 0-4": 14478,
+      "age 5-24": 12786,
+      "age 25-49": 7792,
+      "age 50-64": 3513,
+      "age 64+": 2960,
+      "totalILI": 41529,
+      "totalPatients": 1737346,
+      "percentUnweightedILI": 2.4,
+      "percentWeightedILI": 2.4
+    },
+    {
+      "week": "2021 - 48/52",
+      "age 0-4": 14411,
+      "age 5-24": 16175,
+      "age 25-49": 10539,
+      "age 50-64": 4539,
+      "age 64+": 3740,
+      "totalILI": 49404,
+      "totalPatients": 1976336,
+      "percentUnweightedILI": 2.5,
+      "percentWeightedILI": 2.5
+    },
+    {
+      "week": "2021 - 49/52",
+      "age 0-4": 14329,
+      "age 5-24": 18569,
+      "age 25-49": 10615,
+      "age 50-64": 4507,
+      "age 64+": 3603,
+      "totalILI": 51623,
+      "totalPatients": 1943903,
+      "percentUnweightedILI": 2.7,
+      "percentWeightedILI": 2.6
+    },
+    {
+      "week": "2021 - 50/52",
+      "age 0-4": 15309,
+      "age 5-24": 21285,
+      "age 25-49": 12505,
+      "age 50-64": 4786,
+      "age 64+": 3627,
+      "totalILI": 57512,
+      "totalPatients": 1912441,
+      "percentUnweightedILI": 3,
+      "percentWeightedILI": 3
+    },
+    {
+      "week": "2021 - 51/52",
+      "age 0-4": 17003,
+      "age 5-24": 22429,
+      "age 25-49": 20519,
+      "age 50-64": 7024,
+      "age 64+": 4758,
+      "totalILI": 71733,
+      "totalPatients": 1798259,
+      "percentUnweightedILI": 4,
+      "percentWeightedILI": 3.8
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "updated": 1771075227837,
+  "source": "www.cdc.gov/flu",
+  "data": [
+    {
+      "week": "2021 - 40/52",
+      "totalA": 37,
+      "totalB": 28,
+      "percentPositiveA": 0.07,
+      "percentPositiveB": 0.05,
+      "totalTests": 47126,
+      "percentPositive": 0.13
+    },
+    {
+      "week": "2021 - 41/52",
+      "totalA": 23,
+      "totalB": 29,
+      "percentPositiveA": 0.05,
+      "percentPositiveB": 0.06,
+      "totalTests": 43982,
+      "percentPositive": 0.11
+    },
+    {
+      "week": "2021 - 42/52",
+      "totalA": 23,
+      "totalB": 33,
+      "percentPositiveA": 0.04,
+      "percentPositiveB": 0.07,
+      "totalTests": 46377,
+      "percentPositive": 0.12
+    },
+    {
+      "week": "2021 - 43/52",
+      "totalA": 97,
+      "totalB": 32,
+      "percentPositiveA": 0.19,
+      "percentPositiveB": 0.06,
+      "totalTests": 49451,
+      "percentPositive": 0.26
+    },
+    {
+      "week": "2021 - 44/52",
+      "totalA": 120,
+      "totalB": 35,
+      "percentPositiveA": 0.22,
+      "percentPositiveB": 0.06,
+      "totalTests": 54049,
+      "percentPositive": 0.28
+    },
+    {
+      "week": "2021 - 45/52",
+      "totalA": 306,
+      "totalB": 36,
+      "percentPositiveA": 0.51,
+      "percentPositiveB": 0.06,
+      "totalTests": 59954,
+      "percentPositive": 0.57
+    },
+    {
+      "week": "2021 - 46/52",
+      "totalA": 675,
+      "totalB": 45,
+      "percentPositiveA": 0.97,
+      "percentPositiveB": 0.06,
+      "totalTests": 69214,
+      "percentPositive": 1.04
+    },
+    {
+      "week": "2021 - 47/52",
+      "totalA": 1212,
+      "totalB": 41,
+      "percentPositiveA": 1.78,
+      "percentPositiveB": 0.06,
+      "totalTests": 67974,
+      "percentPositive": 1.84
+    },
+    {
+      "week": "2021 - 48/52",
+      "totalA": 2263,
+      "totalB": 66,
+      "percentPositiveA": 2.8,
+      "percentPositiveB": 0.08,
+      "totalTests": 80728,
+      "percentPositive": 2.88
+    },
+    {
+      "week": "2021 - 49/52",
+      "totalA": 3432,
+      "totalB": 45,
+      "percentPositiveA": 3.74,
+      "percentPositiveB": 0.04,
+      "totalTests": 91717,
+      "percentPositive": 3.79
+    },
+    {
+      "week": "2021 - 50/52",
+      "totalA": 5460,
+      "totalB": 48,
+      "percentPositiveA": 5.63,
+      "percentPositiveB": 0.04,
+      "totalTests": 96859,
+      "percentPositive": 5.68
+    },
+    {
+      "week": "2021 - 51/52",
+      "totalA": 4337,
+      "totalB": 56,
+      "percentPositiveA": 6.13,
+      "percentPositiveB": 0.07,
+      "totalTests": 70660,
+      "percentPositive": 6.21
+    }
+  ]
+}
