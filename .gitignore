@@ -1,0 +1,6 @@
+.env
+# Virtual environments
+.venv/
+venv/
+ENV/
+.python-version
