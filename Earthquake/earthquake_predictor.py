@@ -19,11 +19,13 @@ Usage:
 """
 
 import os
+import sys
 import json
 import requests
 from dotenv import load_dotenv
 
-load_dotenv()  # reads .env file automatically
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
 
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 DEFAULT_MODEL = "llama-3.3-70b-versatile"
@@ -201,5 +203,14 @@ if __name__ == "__main__":
         for f in p.get("key_factors", []):
             print(f"  - {f}")
         print(f"\nModel used: {p['model']}")
+
+    # Save to shared context file
+    from context_manager import save_threat
+    save_threat(
+        threat_type="earthquake",
+        location=result["location"],
+        prediction=result["prediction"],
+        extra={"events_analyzed": result["events_analyzed"], "data_summary": result["data_summary"]},
+    )
 
     print("\n=== Test complete ===")
