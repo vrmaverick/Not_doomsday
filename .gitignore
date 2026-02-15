@@ -1,6 +1,7 @@
 .env
 # Virtual environments
 .venv/
+.venv/*
 venv/
 ENV/
 .python-version

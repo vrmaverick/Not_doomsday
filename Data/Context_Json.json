@@ -308,23 +308,23 @@
       "contents": {
         "location": "Boston, Massachusetts",
         "coordinates": {
-          "lat": 42.36,
-          "lng": -71.06
+          "lat": 42.3588336,
+          "lng": -71.0578303
         },
         "events_analyzed": 1,
         "prediction": {
           "risk_level": "LOW",
           "risk_score": 1,
           "confidence": 0.9,
-          "summary": "The region is experiencing normal background seismicity with a single minor event, indicating a low risk of significant earthquake activity. The decelerating frequency trend and lack of significant clustering or magnitude distribution concerns support this assessment.",
+          "summary": "The region is experiencing normal background seismicity with a single minor event, posing no significant threat. The decelerating frequency trend and lack of significant clustering or large events indicate a low risk of major seismic activity.",
           "key_factors": [
-            "single minor event",
-            "decelerating frequency trend",
-            "no significant clustering"
+            "Single minor event",
+            "Decelerating frequency trend",
+            "No significant clustering"
           ],
           "pattern_detected": "No notable seismic pattern detected",
           "recommendation": "No immediate action is required, but continued monitoring of seismic activity is recommended to ensure early detection of any potential changes in the region's seismicity.",
-          "raw_response": "{\n  \"risk_level\": \"LOW\",\n  \"risk_score\": 1,\n  \"confidence\": 0.9,\n  \"summary\": \"The region is experiencing normal background seismicity with a single minor event, indicating a low risk of significant earthquake activity. The decelerating frequency trend and lack of significant clustering or magnitude distribution concerns support this assessment.\",\n  \"key_factors\": [\"single minor event\", \"decelerating frequency trend\", \"no significant clustering\"],\n  \"pattern_detected\": \"No notable seismic pattern detected\",\n  \"recommendation\": \"No immediate action is required, but continued monitoring of seismic activity is recommended to ensure early detection of any potential changes in the region's seismicity.\"\n}",
+          "raw_response": "{\n  \"risk_level\": \"LOW\",\n  \"risk_score\": 1,\n  \"confidence\": 0.9,\n  \"summary\": \"The region is experiencing normal background seismicity with a single minor event, posing no significant threat. The decelerating frequency trend and lack of significant clustering or large events indicate a low risk of major seismic activity.\",\n  \"key_factors\": [\"Single minor event\", \"Decelerating frequency trend\", \"No significant clustering\"],\n  \"pattern_detected\": \"No notable seismic pattern detected\",\n  \"recommendation\": \"No immediate action is required, but continued monitoring of seismic activity is recommended to ensure early detection of any potential changes in the region's seismicity.\"\n}",
           "model": "llama-3.3-70b-versatile",
           "error": null
         },
@@ -369,31 +369,31 @@
           }
         }
       },
-      "saved_at": "2026-02-15T12:52:45.145862+00:00"
+      "saved_at": "2026-02-15T13:14:03.210880+00:00"
     },
     {
       "name": "flood",
       "contents": {
         "location": "Boston, Massachusetts",
         "coordinates": {
-          "lat": 42.36,
-          "lng": -71.06
+          "lat": 42.3588336,
+          "lng": -71.0578303
         },
         "days_analyzed": 60,
         "prediction": {
           "risk_level": "CRITICAL",
           "risk_score": 10,
           "confidence": 0.95,
-          "summary": "The region is at extreme risk of flooding due to significantly elevated forecast projections and multiple risk days ahead. The forecast max projections far exceed historical peaks, indicating a high likelihood of severe flooding.",
+          "summary": "The region is at extreme risk of flooding due to significantly elevated forecast projections and a large number of risk days. The forecast max exceeds historical peaks by a substantial margin, indicating a high likelihood of severe flooding.",
           "key_factors": [
             "Elevated forecast projections",
             "Multiple risk days",
-            "Rapid acceleration in discharge"
+            "Rapid acceleration in forecast"
           ],
-          "pattern_detected": "A notable increase in discharge is forecasted, with a rapid acceleration in the coming days, exceeding historical peaks by a significant margin.",
-          "forecast_outlook": "The outlook for the coming days is dire, with forecast max projections indicating a high likelihood of severe flooding. The region should prepare for extreme discharge levels and potential flooding.",
-          "recommendation": "Immediate action is recommended to prepare for potential flooding, including evacuation plans, flood protection measures, and emergency response preparations. Closely monitor the forecast and be prepared to respond to rapidly changing conditions.",
-          "raw_response": "{\n  \"risk_level\": \"CRITICAL\",\n  \"risk_score\": 10,\n  \"confidence\": 0.95,\n  \"summary\": \"The region is at extreme risk of flooding due to significantly elevated forecast projections and multiple risk days ahead. The forecast max projections far exceed historical peaks, indicating a high likelihood of severe flooding.\",\n  \"key_factors\": [\"Elevated forecast projections\", \"Multiple risk days\", \"Rapid acceleration in discharge\"],\n  \"pattern_detected\": \"A notable increase in discharge is forecasted, with a rapid acceleration in the coming days, exceeding historical peaks by a significant margin.\",\n  \"forecast_outlook\": \"The outlook for the coming days is dire, with forecast max projections indicating a high likelihood of severe flooding. The region should prepare for extreme discharge levels and potential flooding.\",\n  \"recommendation\": \"Immediate action is recommended to prepare for potential flooding, including evacuation plans, flood protection measures, and emergency response preparations. Closely monitor the forecast and be prepared to respond to rapidly changing conditions.\"\n}",
+          "pattern_detected": "A notable pattern of rapid acceleration in forecast discharge is detected, with a sharp increase in projected max values over the next few days.",
+          "forecast_outlook": "The forecast outlook for the coming days is dire, with projected max values far exceeding historical peaks. The region can expect severe flooding, especially on February 23 and 24.",
+          "recommendation": "Immediate action is recommended to prepare for severe flooding, including evacuation of low-lying areas and deployment of flood mitigation measures. Close monitoring of the situation is essential to respond to the rapidly changing conditions.",
+          "raw_response": "{\n  \"risk_level\": \"CRITICAL\",\n  \"risk_score\": 10,\n  \"confidence\": 0.95,\n  \"summary\": \"The region is at extreme risk of flooding due to significantly elevated forecast projections and a large number of risk days. The forecast max exceeds historical peaks by a substantial margin, indicating a high likelihood of severe flooding.\",\n  \"key_factors\": [\"Elevated forecast projections\", \"Multiple risk days\", \"Rapid acceleration in forecast\"],\n  \"pattern_detected\": \"A notable pattern of rapid acceleration in forecast discharge is detected, with a sharp increase in projected max values over the next few days.\",\n  \"forecast_outlook\": \"The forecast outlook for the coming days is dire, with projected max values far exceeding historical peaks. The region can expect severe flooding, especially on February 23 and 24.\",\n  \"recommendation\": \"Immediate action is recommended to prepare for severe flooding, including evacuation of low-lying areas and deployment of flood mitigation measures. Close monitoring of the situation is essential to respond to the rapidly changing conditions.\"\n}",
           "model": "llama-3.3-70b-versatile",
           "error": null
         },
@@ -416,14 +416,14 @@
             "mean_stats": {
               "min": 0.23,
               "max": 8.09,
-              "avg": 4.45,
-              "std": 2.72
+              "avg": 4.46,
+              "std": 2.74
             },
             "max_stats": {
               "min": 0.25,
               "max": 59.53,
-              "avg": 20.98,
-              "std": 15.32
+              "avg": 21.04,
+              "std": 15.34
             }
           },
           "trend_7d": {
@@ -482,8 +482,8 @@
           ]
         }
       },
-      "saved_at": "2026-02-15T12:52:46.578034+00:00"
+      "saved_at": "2026-02-15T13:14:04.538471+00:00"
     }
   ],
-  "last_updated": "2026-02-15T12:52:46.580054+00:00"
+  "last_updated": "2026-02-15T13:14:04.540488+00:00"
 }

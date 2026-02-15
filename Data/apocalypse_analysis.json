@@ -1,0 +1,150 @@
+{
+  "location": "Boston, Massachusetts",
+  "overall_threat_level": "CRITICAL",
+  "overall_summary": "An apocalypse scenario in Boston, Massachusetts could unfold with a critical flood event, potentially triggering secondary disasters such as earthquakes and pandemics. The flood event is predicted to be severe, with elevated forecast projections and multiple risk days ahead, and could lead to widespread damage and disruption.",
+  "ranking_criteria": [
+    "risk_level",
+    "risk_score",
+    "confidence"
+  ],
+  "ranked_calamities": [
+    {
+      "rank": 1,
+      "name": "flood",
+      "type": "flood",
+      "risk_level": "CRITICAL",
+      "risk_score": 10,
+      "confidence": 0.95,
+      "summary": "The region is at extreme risk of flooding due to significantly elevated forecast projections and multiple risk days ahead.",
+      "why_priority": "The flood event has the highest risk level (CRITICAL) and risk score (10), with a high confidence level (0.95). The key factors contributing to this ranking include elevated forecast projections, multiple risk days, and rapid acceleration in discharge.",
+      "key_fields_used": {
+        "risk_level": "CRITICAL",
+        "risk_score": 10,
+        "confidence": 0.95,
+        "key_factors": [
+          "Elevated forecast projections",
+          "Multiple risk days",
+          "Rapid acceleration in discharge"
+        ],
+        "other_signals": [
+          "Forecast max projections far exceed historical peaks"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "name": "earthquake",
+      "type": "earthquake",
+      "risk_level": "LOW",
+      "risk_score": 1,
+      "confidence": 0.9,
+      "summary": "The region is experiencing normal background seismicity with a single minor event, indicating a low risk of significant earthquake activity.",
+      "why_priority": "The earthquake event has a low risk level (LOW) and risk score (1), with a moderate confidence level (0.9). The key factors contributing to this ranking include a single minor event, decelerating frequency trend, and no significant clustering.",
+      "key_fields_used": {
+        "risk_level": "LOW",
+        "risk_score": 1,
+        "confidence": 0.9,
+        "key_factors": [
+          "Single minor event",
+          "Decelerating frequency trend",
+          "No significant clustering"
+        ],
+        "other_signals": [
+          "No notable seismic pattern detected"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "name": "pandemic",
+      "type": "pandemic",
+      "risk_level": "LOW",
+      "risk_score": 0,
+      "confidence": 0.7,
+      "summary": "There is no immediate pandemic threat in the region, but there are rising concerns about diseases such as Nipah virus and measles.",
+      "why_priority": "The pandemic event has a low risk level (LOW) and risk score (0), with a moderate confidence level (0.7). The key factors contributing to this ranking include rising concerns about diseases, but no immediate threat.",
+      "key_fields_used": {
+        "risk_level": "LOW",
+        "risk_score": 0,
+        "confidence": 0.7,
+        "key_factors": [
+          "Rising concerns about diseases"
+        ],
+        "other_signals": [
+          "No immediate pandemic threat"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "name": "solar_flare",
+      "type": "solar_flare",
+      "risk_level": "LOW",
+      "risk_score": 0,
+      "confidence": 0.7,
+      "summary": "Recent solar flare activity has been low to moderate, with no immediate threat to the region.",
+      "why_priority": "The solar flare event has a low risk level (LOW) and risk score (0), with a moderate confidence level (0.7). The key factors contributing to this ranking include low to moderate solar flare activity and no immediate threat.",
+      "key_fields_used": {
+        "risk_level": "LOW",
+        "risk_score": 0,
+        "confidence": 0.7,
+        "key_factors": [
+          "Low to moderate solar flare activity"
+        ],
+        "other_signals": [
+          "No immediate threat"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "name": "volcano",
+      "type": "volcano",
+      "risk_level": "LOW",
+      "risk_score": 0,
+      "confidence": 0.7,
+      "summary": "There are no nearby volcanoes, indicating a low risk of volcanic activity in the region.",
+      "why_priority": "The volcano event has a low risk level (LOW) and risk score (0), with a moderate confidence level (0.7). The key factors contributing to this ranking include no nearby volcanoes and no elevated alerts.",
+      "key_fields_used": {
+        "risk_level": "LOW",
+        "risk_score": 0,
+        "confidence": 0.7,
+        "key_factors": [
+          "No nearby volcanoes"
+        ],
+        "other_signals": [
+          "No elevated alerts"
+        ]
+      }
+    }
+  ],
+  "apocalypse_timeline": [
+    {
+      "phase": 1,
+      "title": "Initial Flood Event",
+      "description": "A severe flood event occurs in Boston, Massachusetts, causing widespread damage and disruption. The flood event is triggered by elevated forecast projections and multiple risk days ahead.",
+      "main_drivers": [
+        "flood"
+      ]
+    },
+    {
+      "phase": 2,
+      "title": "Secondary Disasters",
+      "description": "The initial flood event triggers secondary disasters such as earthquakes and pandemics. The earthquakes are triggered by the flood event, while the pandemics are triggered by the displacement of people and the disruption of healthcare services.",
+      "main_drivers": [
+        "earthquake",
+        "pandemic"
+      ]
+    },
+    {
+      "phase": 3,
+      "title": "Long-term Consequences",
+      "description": "The apocalypse scenario in Boston, Massachusetts has long-term consequences, including the displacement of people, the disruption of healthcare services, and the destruction of infrastructure. The region will take years to recover from the disaster.",
+      "main_drivers": [
+        "flood",
+        "earthquake",
+        "pandemic"
+      ]
+    }
+  ]
+}
