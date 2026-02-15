@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+from datetime import datetime, timezone
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, PROJECT_ROOT)
@@ -13,12 +14,21 @@ load_dotenv(os.path.join(PROJECT_ROOT, ".env"))
 
 from context_manager import save_to_context
 
+CONTEXT_FILE = "./Data/Context_Json.json"  # or full path if needed
+
+def clear_last_context():
+    """Delete the context file if it exists."""
+    if os.path.exists(CONTEXT_FILE):
+        os.remove(CONTEXT_FILE)
+        print(f"[context_manager] Deleted {CONTEXT_FILE}")
+    else:
+        print(f"[context_manager] No context file to delete: {CONTEXT_FILE}")
 
 def run_earthquake(lat, lng, name):
     try:
-        from earthquake_api import get_earthquakes
-        from earthquake_preprocessor import preprocess
-        from earthquake_predictor import predict_risk
+        from Earthquake.earthquake_api import get_earthquakes
+        from Earthquake.earthquake_preprocessor import preprocess
+        from Earthquake.earthquake_predictor import predict_risk
 
         raw = get_earthquakes(lat=lat, lng=lng, radius_km=500, min_mag=2.5)
         processed = preprocess(raw, location_name=name)
@@ -38,9 +48,9 @@ def run_earthquake(lat, lng, name):
 
 def run_flood(lat, lng, name):
     try:
-        from flood_api import get_flood_data
-        from flood_preprocessor import preprocess
-        from flood_predictor import predict_flood_risk
+        from Flood.flood_api import get_flood_data
+        from Flood.flood_preprocessor import preprocess
+        from Flood.flood_predictor import predict_flood_risk
 
         raw = get_flood_data(lat=lat, lng=lng, past_days=30, forecast_days=30)
         if raw.get("error"):
@@ -71,9 +81,9 @@ def run_fire(lat, lng, name):
         original_dir = os.getcwd()
         os.chdir(fire_dir)
 
-        from Api import Fire_API
-        from Predict import Predict_forest_fires
-        from model import summarize_groq_fire, process_groq_to_map
+        from Forest_fire.Api import Fire_API
+        from Forest_fire.Predict import Predict_forest_fires
+        from Forest_fire.model import summarize_groq_fire, process_groq_to_map
 
         # Step 1: Fetch fire data — needs bounding box: "minlon,minlat" and "maxlon,maxlat"
         min_lon = lng - 5
@@ -137,7 +147,7 @@ def run_volcano(lat, lng, name):
         volcano_dir = os.path.join(PROJECT_ROOT, "Volcano")
         sys.path.insert(0, volcano_dir)
 
-        from volcano_pipeline import get_nearby_volcanoes, compute_risk_score
+        from Volcano.volcano_pipeline import get_nearby_volcanoes, compute_risk_score
 
         # Load cached enriched data
         cache_path = os.path.join(volcano_dir, "volcano_data", "volcanoes_enriched.json")
@@ -170,7 +180,8 @@ def run_volcano(lat, lng, name):
             "risk_level": risk_level,
             "risk_score": round(max_score / 10),
             "confidence": 0.7,
-            "summary": f"{risk.get('nearby_count', 0)} volcanoes within 500km. "
+            "summary": 
+            # f"{risk.get('nearby_count', 0)} volcanoes within 500km. "
                        f"Nearest: {nearest['volcano_name']} ({nearest['distance_km']}km away, "
                        f"risk score {nearest['composite_risk_score']}/100)" if nearest else "No nearby volcanoes.",
             "key_factors": [
@@ -207,14 +218,31 @@ def run_volcano(lat, lng, name):
 
 def run_solar_flare():
     try:
-        from solarFlarePredict import main as solar_main
+        from solarFlare.solarFlarePredict import main as solar_main
         result = solar_main()
+        
         if result:
             print(f"  ✅ Solar Flare — {'HIGH' if result.get('outages') == 'Yes' else 'LOW'}")
         else:
             print("  ❌ Solar Flare — no result returned")
     except Exception as e:
         print(f"  ❌ Solar Flare — {e}")
+    
+    risk_level = "HIGH" if result.get("outages") == "Yes" else "LOW"
+
+    save_to_context(
+        "solar_flare",
+        {
+            "type": "solar_flare",
+            "location": "Global",
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "outages_expected": result.get("outages"),
+            "description": result.get("description"),
+            "accuracy": result.get("accuracy"),
+            "risk_level": risk_level,
+            # you can add more derived fields here later if you want
+        }
+    )
 
 
 def run_pandemic():
@@ -230,7 +258,7 @@ def run_pandemic():
             print("  ⚠️  Pandemic — no data found, run pull scripts first")
             return
 
-        from pandemic_save_context import summarize_who, summarize_gdelt, summarize_diseasesh, summarize_pytrends
+        from pandemic.pandemic_save_context import summarize_who, summarize_gdelt, summarize_diseasesh, summarize_pytrends
 
         save_to_context("pandemic", {
             "type": "pandemic",
@@ -256,13 +284,13 @@ def run_all(lat: float, lng: float, name: str):
         name: Human-readable location name (e.g. "Houston, Texas")
     """
     print(f"📍 {name} ({lat}, {lng})\n")
-
+    # clear_last_context()
     run_earthquake(lat, lng, name)
     run_flood(lat, lng, name)
-    run_fire(lat, lng, name)
-    run_volcano(lat, lng, name)
-    run_solar_flare()
-    run_pandemic()
+    # run_fire(lat, lng, name)
+    # run_volcano(lat, lng, name)
+    # run_solar_flare()
+    # run_pandemic()
 
     print(f"\n💾 Context_Json.json updated.")
 

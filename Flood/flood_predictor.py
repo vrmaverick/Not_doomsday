@@ -61,7 +61,7 @@ def predict_flood_risk(processed: dict, model: str = DEFAULT_MODEL) -> dict:
         key_factors, pattern_detected, forecast_outlook, recommendation,
         raw_response, model, error.
     """
-    api_key = os.environ.get("GROQ_API_KEY")
+    api_key = os.environ.get("GROQ_API_KEY_4")
     if not api_key:
         raise ValueError(
             "GROQ_API_KEY not set. Get your free key at https://console.groq.com/keys\n"

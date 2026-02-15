@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 !(Not)Doomsday - Solar Flare Monitor
 Fetches real-time solar flare data from NOAA SWPC and analyzes it
@@ -16,7 +17,7 @@ from langchain_core.output_parsers import JsonOutputParser
 from pydantic import BaseModel, Field
 
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
-load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
+load_dotenv()
 
 # ──────────────────────────────────────────────────────────────
 # 1. Pydantic schema for structured output
@@ -25,7 +26,6 @@ class SolarFlareReport(BaseModel):
     outages: str = Field(description="'Yes' or 'No' — whether outages are expected")
     description: str = Field(description="Plain-english summary of current solar activity and potential impact")
     accuracy: int = Field(description="Confidence score 0-100 based on data quality and event severity")
-
 
 # ──────────────────────────────────────────────────────────────
 # 2. Fetch real-time data from NOAA SWPC public JSON endpoints
@@ -37,7 +37,6 @@ NOAA_SWPC_ENDPOINTS = {
     "solar_wind_mag": "https://services.swpc.noaa.gov/products/solar-wind/mag-2-hour.json",
     "xray_flux": "https://services.swpc.noaa.gov/json/goes/primary/xray-flares-7-day.json",
 }
-
 
 def fetch_noaa_data() -> dict:
     """Fetch all NOAA SWPC endpoints and return a consolidated dict."""
@@ -61,7 +60,6 @@ def fetch_noaa_data() -> dict:
 
     return data
 
-
 # ──────────────────────────────────────────────────────────────
 # 3. Build LangChain pipeline with Groq
 # ──────────────────────────────────────────────────────────────
@@ -71,7 +69,7 @@ def build_chain():
     llm = ChatGroq(
         model="llama-3.3-70b-versatile",
         temperature=0,
-        api_key=os.environ.get("GROQ_API_KEY"),
+        api_key=os.environ.get("GROQ_API_KEY_3"),  # <── use GROQ_API_KEY
     )
 
     parser = JsonOutputParser(pydantic_object=SolarFlareReport)
@@ -86,8 +84,8 @@ solar-flare activity is likely to cause radio/GPS/power-grid outages.
 ANALYSIS GUIDELINES:
 - X-class flares (≥X1.0) with Kp ≥ 7  → High risk, outages = "Yes", accuracy 80-95
 - M-class flares (≥M5.0) with Kp ≥ 5  → Moderate risk, outages = "Yes", accuracy 60-80
-- M-class flares (<M5.0) with Kp < 5   → Low risk, outages = "No", accuracy 70-85
-- C-class or below with Kp < 4         → Minimal risk, outages = "No", accuracy 85-95
+- M-class flares (<M5.0) with Kp < 5  → Low risk, outages = "No", accuracy 70-85
+- C-class or below with Kp < 4        → Minimal risk, outages = "No", accuracy 85-95
 - If data is missing or errored, lower accuracy accordingly.
 
 {format_instructions}"""
@@ -118,7 +116,6 @@ ANALYSIS GUIDELINES:
     chain = prompt | llm | parser
     return chain
 
-
 # ──────────────────────────────────────────────────────────────
 # 4. Main execution
 # ──────────────────────────────────────────────────────────────
@@ -127,23 +124,22 @@ def main():
     print("  !(Not)Doomsday — Solar Flare Monitor")
     print("=" * 60)
 
-    if not os.environ.get("GROQ_API_KEY"):
+    if not os.environ.get("GROQ_API_KEY_3"):
         print("\n⚠  GROQ_API_KEY not set.")
         print("   Get a free key at: https://console.groq.com/keys")
         print('   Then run:  export GROQ_API_KEY="gsk_..."')
         return
 
-    # --- Step 1: Fetch real-time data ---
+    # Step 1: Fetch real-time data
     print("\n[1/3] Fetching real-time data from NOAA SWPC...")
     noaa_data = fetch_noaa_data()
 
-    # --- Step 2: Build chain ---
+    # Step 2: Build chain
     print("\n[2/3] Sending to Groq (llama-3.3-70b-versatile) via LangChain...")
     chain = build_chain()
-
     parser = JsonOutputParser(pydantic_object=SolarFlareReport)
 
-    result = chain.invoke({
+    result: SolarFlareReport = chain.invoke({
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "solar_flares": json.dumps(noaa_data.get("solar_flares", []), indent=2)[:3000],
         "kp_index": json.dumps(noaa_data.get("kp_index", []), indent=2)[:2000],
@@ -153,28 +149,28 @@ def main():
         "format_instructions": parser.get_format_instructions(),
     })
 
-    # --- Step 3: Output ---
+    # Convert Pydantic model to dict
+    result_dict = result
+
+    # Step 3: Output to console
     print("\n[3/3] Analysis complete.\n")
     print("─" * 40)
     print("  SOLAR FLARE OUTAGE REPORT")
     print("─" * 40)
-    print(json.dumps(result, indent=2))
+    print(json.dumps(result_dict, indent=2))
     print("─" * 40)
 
-    # --- Save to shared context ---
+    # Save summary.json (in same dir, or adjust path)
+    summary_path = os.path.join(os.path.dirname(__file__), "../Data/Solar_summary.json")
+    with open(summary_path, "w", encoding="utf-8") as f:
+        json.dump(result_dict, f, indent=2)
+    print(f"Saved JSON summary → {summary_path}")
+
+    # Optional: Save to shared context
     from context_manager import save_to_context
-    save_to_context("solar_flare", {
-        "type": "solar_flare",
-        "location": "Global",
-        "timestamp": datetime.now(timezone.utc).isoformat(),
-        "outages_expected": result.get("outages"),
-        "description": result.get("description"),
-        "accuracy": result.get("accuracy"),
-        "risk_level": "HIGH" if result.get("outages") == "Yes" else "LOW",
-    })
+    save_to_context("solar_flare", summary_path)
 
-    return result
-
+    return result_dict
 
 if __name__ == "__main__":
     main()
