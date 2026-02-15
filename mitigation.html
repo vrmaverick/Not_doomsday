@@ -437,17 +437,22 @@ function rdr(k){
   }
   ctx.globalAlpha=1; ctx.setLineDash([]);
 
+  // Scale node cap based on density — dense OSM graphs need smaller nodes
+  const nodeCount = g.nodes.length;
+  const maxNodePx = nodeCount > 60 ? 10 : nodeCount > 40 ? 14 : nodeCount > 20 ? 18 : 24;
+
   for(const n of g.nodes){
-    const p=w2s(g.cam,n.x,n.y,w,h), rawS=n.size*g.cam.z, s=Math.min(rawS,24);
+    const p=w2s(g.cam,n.x,n.y,w,h), rawS=n.size*g.cam.z, s=Math.min(rawS,maxNodePx);
     const hv=g.hov&&g.hov.id===n.id;
-    const glowR=Math.min(s*2.5,50);
+    const glowR=Math.min(s*2,30);
     const grad=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,glowR);
     grad.addColorStop(0,n.color+'18');grad.addColorStop(1,n.color+'00');
     ctx.fillStyle=grad;ctx.beginPath();ctx.arc(p.x,p.y,glowR,0,Math.PI*2);ctx.fill();
     drawSh(ctx,n.shape,p.x,p.y,s,n.color,hv);
+    const labelMaxPx = nodeCount > 60 ? 10 : 13;
     if(g.cam.z>.4){
-      ctx.font=`${Math.min(Math.max(8,9*g.cam.z),13)}px 'IBM Plex Mono',monospace`;
-      ctx.fillStyle=n.color+'BB';ctx.textAlign='left';ctx.fillText(n.label,p.x+s+4,p.y+3);
+      ctx.font=`${Math.min(Math.max(7,8*g.cam.z),labelMaxPx)}px 'IBM Plex Mono',monospace`;
+      ctx.fillStyle=n.color+'99';ctx.textAlign='left';ctx.fillText(n.label,p.x+s+3,p.y+3);
     }
   }
 }
@@ -464,7 +469,7 @@ function initCv(k){
     if(mx<0||my<0||mx>cv.width||my>cv.height){if(g.hov){g.hov=null;rdr(k);$('tooltip').classList.remove('vis');}return;}
     const wld=s2w(g.cam,mx,my,cv.width,cv.height);
     let cl=null, cd=Infinity;
-    for(const n of g.nodes){const d=Math.hypot(n.x-wld.x,n.y-wld.y);const th=Math.min(n.size,24)*1.5/g.cam.z;if(d<th&&d<cd){cl=n;cd=d;}}
+    for(const n of g.nodes){const d=Math.hypot(n.x-wld.x,n.y-wld.y);const th=Math.min(n.size,14)*1.5/g.cam.z;if(d<th&&d<cd){cl=n;cd=d;}}
     if(cl!==g.hov){g.hov=cl;rdr(k);}
     const tt=$('tooltip');
     if(g.hov){
