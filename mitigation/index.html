@@ -3,172 +3,143 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calamity Optimizer - Command Center</title>
+<title>Calamity Optimizer — Command Center</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Familjen+Grotesk:wght@400;500;600;700&display=swap');
-  :root {
-    --bg-0:#07090D;--bg-1:#0C1018;--bg-2:#111822;--bg-3:#18212E;
-    --border:#1E2A3A;--border-glow:#2A3A50;
-    --text-0:#E8EDF5;--text-1:#A0ADBF;--text-2:#5E6E82;
-    --red:#FF4757;--red-dim:rgba(255,71,87,.12);
-    --orange:#FF8C42;--orange-dim:rgba(255,140,66,.12);
-    --green:#26DE81;--green-dim:rgba(38,222,129,.12);
-    --cyan:#45D1E6;--cyan-dim:rgba(69,209,230,.1);
-    --yellow:#FFD32A;--yellow-dim:rgba(255,211,42,.1);
-    --purple:#A55EEA;--purple-dim:rgba(165,94,234,.1);
-    --blue:#4B7BEC;--blue-dim:rgba(75,123,236,.12);
-    --emergency:#FF6348;--emergency-dim:rgba(255,99,72,.15);
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{background:var(--bg-0);color:var(--text-0);font-family:'Familjen Grotesk',sans-serif;min-height:100vh;}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Familjen+Grotesk:wght@400;500;600;700&display=swap');
+:root{
+  --bg-0:#07090D;--bg-1:#0C1018;--bg-2:#111822;--bg-3:#18212E;
+  --border:#1E2A3A;--border-glow:#2A3A50;
+  --text-0:#E8EDF5;--text-1:#A0ADBF;--text-2:#5E6E82;
+  --red:#FF4757;--red-dim:rgba(255,71,87,.12);
+  --orange:#FF8C42;--orange-dim:rgba(255,140,66,.12);
+  --green:#26DE81;--green-dim:rgba(38,222,129,.12);
+  --cyan:#45D1E6;--cyan-dim:rgba(69,209,230,.1);
+  --yellow:#FFD32A;--yellow-dim:rgba(255,211,42,.1);
+  --purple:#A55EEA;--purple-dim:rgba(165,94,234,.1);
+  --blue:#4B7BEC;--blue-dim:rgba(75,123,236,.12);
+  --emergency:#FF6348;--emergency-dim:rgba(255,99,72,.15);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg-0);color:var(--text-0);font-family:'Familjen Grotesk',sans-serif;min-height:100vh;}
 
-  .topbar{height:52px;background:var(--bg-1);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 24px;gap:16px;position:sticky;top:0;z-index:100;}
-  .topbar-logo{display:flex;align-items:center;gap:9px;font-weight:700;font-size:14px;letter-spacing:-.3px;white-space:nowrap;}
-  .topbar-logo .icon{width:26px;height:26px;background:linear-gradient(135deg,var(--red),var(--orange));border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:13px;}
-  .topbar-status{margin-left:auto;display:flex;align-items:center;gap:7px;font-size:11px;color:var(--text-2);font-family:'IBM Plex Mono',monospace;}
-  .status-dot{width:7px;height:7px;border-radius:50%;background:var(--text-2);}
-  .status-dot.ok{background:var(--green);box-shadow:0 0 8px var(--green);}
-  .status-dot.loading{background:var(--yellow);animation:pulse .9s infinite;}
-  .status-dot.error{background:var(--red);}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+/* ── TOPBAR ── */
+.topbar{height:52px;background:var(--bg-1);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 24px;gap:16px;position:sticky;top:0;z-index:100;}
+.topbar-logo{display:flex;align-items:center;gap:9px;font-weight:700;font-size:14px;letter-spacing:-.3px;}
+.topbar-logo .icon{width:26px;height:26px;background:linear-gradient(135deg,var(--red),var(--orange));border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:13px;}
+.topbar-status{margin-left:auto;display:flex;align-items:center;gap:7px;font-size:11px;color:var(--text-2);font-family:'IBM Plex Mono',monospace;}
+.status-dot{width:7px;height:7px;border-radius:50%;background:var(--text-2);}
+.status-dot.ok{background:var(--green);box-shadow:0 0 8px var(--green);}
+.status-dot.loading{background:var(--yellow);animation:pulse .9s infinite;}
+.status-dot.error{background:var(--red);}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
 
-  .controls{background:var(--bg-1);border-bottom:1px solid var(--border);padding:18px 24px;display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;}
-  .cg{display:flex;flex-direction:column;gap:5px;}
-  .cg label{font-size:9px;text-transform:uppercase;letter-spacing:1.1px;color:var(--text-2);font-weight:600;}
-  .cg input{padding:9px 13px;background:var(--bg-0);border:1px solid var(--border);border-radius:7px;color:var(--text-0);font-family:'IBM Plex Mono',monospace;font-size:12px;outline:none;transition:border-color .2s;}
-  .cg input:focus{border-color:var(--cyan);}
-  .cg input::placeholder{color:var(--text-2);}
-  .server-g{flex:1;min-width:250px;} .server-g input{width:100%;}
-  .cal-wrap{display:flex;align-items:center;gap:5px;flex-wrap:wrap;background:var(--bg-0);border:1px solid var(--border);border-radius:7px;padding:5px 9px;min-width:320px;min-height:38px;cursor:text;transition:border-color .2s;}
-  .cal-wrap:focus-within{border-color:var(--cyan);}
-  .cal-tag{display:inline-flex;align-items:center;gap:3px;padding:2px 9px;background:var(--red-dim);border:1px solid rgba(255,71,87,.22);border-radius:4px;font-size:11px;font-weight:600;color:var(--red);font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.4px;animation:tagIn .15s ease;}
-  @keyframes tagIn{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
-  .cal-tag .tx{cursor:pointer;font-size:13px;opacity:.55;line-height:1;} .cal-tag .tx:hover{opacity:1;}
-  .cal-input{border:none;background:none;color:var(--text-0);font-family:'IBM Plex Mono',monospace;font-size:12px;outline:none;flex:1;min-width:100px;}
-  .cal-input::placeholder{color:var(--text-2);}
-  .presets{display:flex;gap:5px;flex-wrap:wrap;padding-top:2px;}
-  .preset{padding:3px 9px;background:var(--bg-2);border:1px solid var(--border);border-radius:16px;font-size:10px;color:var(--text-1);cursor:pointer;transition:all .15s;font-family:'IBM Plex Mono',monospace;}
-  .preset:hover{background:var(--bg-3);color:var(--text-0);border-color:var(--border-glow);}
-  .btn{padding:9px 22px;border:none;border-radius:7px;font-family:'Familjen Grotesk',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;white-space:nowrap;}
-  .btn-run{background:linear-gradient(135deg,var(--red),var(--orange));color:#fff;}
-  .btn-run:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(255,71,87,.3);}
-  .btn-run:disabled{opacity:.45;cursor:not-allowed;transform:none!important;box-shadow:none!important;}
-  .btn-health{background:var(--bg-2);border:1px solid var(--border);color:var(--text-1);} .btn-health:hover{background:var(--bg-3);color:var(--text-0);}
-  .load-bar{height:3px;background:var(--bg-2);position:relative;overflow:hidden;display:none;}
-  .load-bar.on{display:block;}
-  .load-bar::after{content:'';position:absolute;top:0;left:-40%;width:40%;height:100%;background:linear-gradient(90deg,transparent,var(--orange),transparent);animation:lslide 1.1s ease infinite;}
-  @keyframes lslide{0%{left:-40%}100%{left:100%}}
-  .stats-bar{display:none;gap:12px;flex-wrap:wrap;padding:14px 24px;background:var(--bg-1);border-bottom:1px solid var(--border);}
-  .stats-bar.on{display:flex;}
-  .scard{flex:1;min-width:110px;padding:10px 14px;background:var(--bg-0);border:1px solid var(--border);border-radius:7px;}
-  .scard .sl{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--text-2);font-weight:600;margin-bottom:3px;}
-  .scard .sv{font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:700;}
-  .scard .ss{font-family:'IBM Plex Mono',monospace;font-size:10px;margin-top:1px;}
-  .c-g{color:var(--green)}.c-r{color:var(--red)}.c-c{color:var(--cyan)}.c-y{color:var(--yellow)}.c-o{color:var(--orange)}.c-p{color:var(--purple)}.c-d{color:var(--text-2)}
+/* ── LOADING BAR ── */
+.load-bar{height:3px;background:var(--bg-2);position:relative;overflow:hidden;display:none;}
+.load-bar.on{display:block;}
+.load-bar::after{content:'';position:absolute;top:0;left:-40%;width:40%;height:100%;background:linear-gradient(90deg,transparent,var(--orange),transparent);animation:lslide 1.1s ease infinite;}
+@keyframes lslide{0%{left:-40%}100%{left:100%}}
 
-  .graph-row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--border);height:520px;display:none;}
-  .graph-cell{position:relative;overflow:hidden;}
-  .graph-cell+.graph-cell{border-left:1px solid var(--border);}
-  .graph-cell canvas{display:block;cursor:grab;} .graph-cell canvas:active{cursor:grabbing;}
-  .graph-label{position:absolute;top:12px;left:16px;display:flex;align-items:center;gap:8px;z-index:5;pointer-events:none;}
-  .graph-label .gl-dot{width:9px;height:9px;border-radius:3px;}
-  .graph-label .gl-text{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;text-shadow:0 1px 6px rgba(0,0,0,.7);}
-  .graph-label .gl-badge{font-family:'IBM Plex Mono',monospace;font-size:10px;padding:2px 8px;border-radius:5px;font-weight:600;}
-  .graph-zoom{position:absolute;bottom:12px;right:12px;display:flex;flex-direction:column;gap:3px;z-index:5;}
-  .gz-btn{width:30px;height:30px;background:var(--bg-1);border:1px solid var(--border);border-radius:6px;color:var(--text-1);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .12s;}
-  .gz-btn:hover{background:var(--bg-3);color:var(--text-0);}
-  .graph-tooltip{position:fixed;padding:9px 13px;background:rgba(12,16,24,.94);border:1px solid var(--border);border-radius:7px;font-size:11px;pointer-events:none;opacity:0;transition:opacity .12s;z-index:200;backdrop-filter:blur(6px);max-width:210px;}
-  .graph-tooltip.vis{opacity:1;}
-  .graph-tooltip .tt-n{font-weight:700;font-size:12px;color:var(--text-0);margin-bottom:2px;}
-  .graph-tooltip .tt-t{font-size:9px;text-transform:uppercase;letter-spacing:.7px;margin-bottom:4px;}
-  .graph-tooltip .tt-s{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-2);}
-  .legend-bar{display:none;gap:14px;flex-wrap:wrap;padding:10px 24px;background:var(--bg-1);border-bottom:1px solid var(--border);align-items:center;}
-  .legend-bar.on{display:flex;}
-  .leg-title{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--text-2);font-weight:600;margin-right:4px;}
-  .leg-item{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--text-1);font-family:'IBM Plex Mono',monospace;}
-  .leg-item .ld{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
-  .leg-item .le{width:20px;height:0;border-top:2px solid;flex-shrink:0;}
-  .tab-row{display:none;background:var(--bg-1);border-bottom:1px solid var(--border);padding:0 24px;}
-  .tab-row.on{display:flex;}
-  .tab-btn{padding:12px 20px;font-size:12px;font-weight:600;color:var(--text-2);background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;transition:all .15s;font-family:'Familjen Grotesk',sans-serif;}
-  .tab-btn:hover{color:var(--text-1);} .tab-btn.active{color:var(--cyan);border-bottom-color:var(--cyan);}
-  .tab-body{display:none;padding:20px 24px;} .tab-body.active{display:block;}
+/* ── STATS BAR ── */
+.stats-bar{display:none;gap:12px;flex-wrap:wrap;padding:14px 24px;background:var(--bg-1);border-bottom:1px solid var(--border);}
+.stats-bar.on{display:flex;}
+.scard{flex:1;min-width:110px;padding:10px 14px;background:var(--bg-0);border:1px solid var(--border);border-radius:7px;}
+.scard .sl{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--text-2);font-weight:600;margin-bottom:3px;}
+.scard .sv{font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:700;}
+.scard .ss{font-family:'IBM Plex Mono',monospace;font-size:10px;margin-top:1px;}
+.c-g{color:var(--green)}.c-r{color:var(--red)}.c-c{color:var(--cyan)}.c-y{color:var(--yellow)}.c-o{color:var(--orange)}.c-p{color:var(--purple)}.c-d{color:var(--text-2)}
 
-  .adj-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-  .adj-col h3{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--text-2);margin-bottom:12px;font-weight:600;display:flex;align-items:center;gap:8px;}
-  .adj-search{padding:7px 11px;background:var(--bg-0);border:1px solid var(--border);border-radius:5px;color:var(--text-0);font-family:'IBM Plex Mono',monospace;font-size:11px;outline:none;width:100%;margin-bottom:10px;} .adj-search:focus{border-color:var(--cyan);}
-  .anode{margin-bottom:8px;border:1px solid var(--border);border-radius:6px;overflow:hidden;}
-  .anode.highlight{border-color:rgba(255,99,72,.4);background:var(--emergency-dim);}
-  .anode-h{display:flex;align-items:center;gap:7px;padding:8px 12px;background:var(--bg-2);cursor:pointer;user-select:none;transition:background .12s;}
-  .anode-h:hover{background:var(--bg-3);}
-  .anode-h .nd{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
-  .anode-h .nn{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;}
-  .anode-h .nc{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--text-2);}
-  .anode-h .chev{color:var(--text-2);font-size:9px;transition:transform .15s;}
-  .anode.open .chev{transform:rotate(90deg);}
-  .anb{display:none;border-top:1px solid var(--border);} .anode.open .anb{display:block;}
-  .anb-r{display:flex;align-items:center;gap:6px;padding:5px 12px 5px 24px;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-1);border-bottom:1px solid rgba(30,42,58,.4);}
-  .anb-r:last-child{border-bottom:none;}
-  .anb-r .rnd{width:4px;height:4px;border-radius:50%;flex-shrink:0;}
-  .anb-r .retype{font-size:8px;padding:1px 6px;border-radius:3px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;}
-  .anb-r .rdist{margin-left:auto;color:var(--text-2);font-size:9px;}
-  .et-road{background:rgba(94,110,130,.2);color:var(--text-2);}
-  .et-power{background:var(--yellow-dim);color:var(--yellow);}
-  .et-water{background:var(--cyan-dim);color:var(--cyan);}
-  .et-emergency{background:var(--red-dim);color:var(--red);}
-  .et-emergency_path{background:var(--emergency-dim);color:var(--emergency);border:1px solid rgba(255,99,72,.2);}
-  .changes-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-  .csec h3{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--text-2);margin-bottom:10px;font-weight:600;display:flex;align-items:center;gap:7px;}
-  .csec h3 .cbg{font-family:'IBM Plex Mono',monospace;padding:2px 7px;border-radius:4px;font-size:9px;}
-  .ccard{padding:11px 14px;background:var(--bg-1);border:1px solid var(--border);border-radius:7px;margin-bottom:7px;}
-  .ccard:hover{border-color:var(--border-glow);}
-  .ccard .cr{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;color:var(--text-0);margin-bottom:3px;display:flex;align-items:center;gap:5px;}
-  .ccard .cr .ca{color:var(--text-2);font-size:9px;}
-  .ccard .ct{font-size:8px;padding:1px 6px;border-radius:3px;font-weight:600;text-transform:uppercase;display:inline-block;margin-bottom:4px;}
-  .ccard .cm{font-size:11px;color:var(--text-1);line-height:1.5;}
-  .reason-box{padding:18px 22px;background:var(--bg-1);border:1px solid var(--border);border-radius:8px;margin-bottom:20px;}
-  .reason-box h3{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--text-2);margin-bottom:8px;font-weight:600;}
-  .reason-box p{font-size:12px;color:var(--text-1);line-height:1.7;}
-  .prio-pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;}
-  .ppill{display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:5px;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;}
-  .ppill.critical{background:var(--red-dim);color:var(--red);border:1px solid rgba(255,71,87,.18);}
-  .ppill.high{background:var(--orange-dim);color:var(--orange);border:1px solid rgba(255,140,66,.18);}
-  .ppill.medium{background:var(--yellow-dim);color:var(--yellow);border:1px solid rgba(255,211,42,.18);}
-  /* ── TOAST ── */
-  .toast-container{position:fixed;top:64px;right:20px;z-index:999;display:flex;flex-direction:column;gap:8px;pointer-events:none;}
-  .toast{padding:14px 20px;border-radius:8px;font-size:12px;line-height:1.5;max-width:420px;pointer-events:all;animation:toastIn .3s ease,toastOut .4s ease 5s forwards;display:flex;align-items:flex-start;gap:10px;box-shadow:0 8px 32px rgba(0,0,0,.5);}
-  .toast .t-icon{font-size:16px;flex-shrink:0;margin-top:1px;}
-  .toast .t-body{flex:1;}
-  .toast .t-title{font-weight:700;margin-bottom:2px;}
-  .toast .t-msg{color:inherit;opacity:.85;}
-  .toast .t-close{cursor:pointer;opacity:.5;font-size:16px;flex-shrink:0;margin-left:8px;} .toast .t-close:hover{opacity:1;}
-  .toast-warn{background:rgba(255,140,66,.15);border:1px solid rgba(255,140,66,.3);color:var(--orange);}
-  .toast-error{background:rgba(255,71,87,.15);border:1px solid rgba(255,71,87,.3);color:var(--red);}
-  .toast-ok{background:rgba(38,222,129,.12);border:1px solid rgba(38,222,129,.25);color:var(--green);}
-  @keyframes toastIn{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
-  @keyframes toastOut{from{opacity:1}to{opacity:0;transform:translateY(-10px);pointer-events:none;}}
-  ::-webkit-scrollbar{width:5px;} ::-webkit-scrollbar-track{background:var(--bg-0);} ::-webkit-scrollbar-thumb{background:var(--bg-3);border-radius:3px;}
-  @media(max-width:900px){.graph-row,.adj-grid,.changes-grid{grid-template-columns:1fr;}.graph-cell{height:400px;}}
+/* ── GRAPH ── */
+.graph-row{display:none;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--border);height:520px;}
+.graph-cell{position:relative;overflow:hidden;}
+.graph-cell+.graph-cell{border-left:1px solid var(--border);}
+.graph-cell canvas{display:block;cursor:grab;}.graph-cell canvas:active{cursor:grabbing;}
+.graph-label{position:absolute;top:12px;left:16px;display:flex;align-items:center;gap:8px;z-index:5;pointer-events:none;}
+.graph-label .gl-dot{width:9px;height:9px;border-radius:3px;}
+.graph-label .gl-text{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;text-shadow:0 1px 6px rgba(0,0,0,.7);}
+.graph-label .gl-badge{font-family:'IBM Plex Mono',monospace;font-size:10px;padding:2px 8px;border-radius:5px;font-weight:600;}
+.graph-zoom{position:absolute;bottom:12px;right:12px;display:flex;flex-direction:column;gap:3px;z-index:5;}
+.gz-btn{width:30px;height:30px;background:var(--bg-1);border:1px solid var(--border);border-radius:6px;color:var(--text-1);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .12s;}
+.gz-btn:hover{background:var(--bg-3);color:var(--text-0);}
+.graph-tooltip{position:fixed;padding:9px 13px;background:rgba(12,16,24,.94);border:1px solid var(--border);border-radius:7px;font-size:11px;pointer-events:none;opacity:0;transition:opacity .12s;z-index:200;backdrop-filter:blur(6px);max-width:210px;}
+.graph-tooltip.vis{opacity:1;}
+.graph-tooltip .tt-n{font-weight:700;font-size:12px;color:var(--text-0);margin-bottom:2px;}
+.graph-tooltip .tt-t{font-size:9px;text-transform:uppercase;letter-spacing:.7px;margin-bottom:4px;}
+.graph-tooltip .tt-s{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-2);}
+
+/* ── LEGEND ── */
+.legend-bar{display:none;gap:14px;flex-wrap:wrap;padding:10px 24px;background:var(--bg-1);border-bottom:1px solid var(--border);align-items:center;}
+.legend-bar.on{display:flex;}
+.leg-title{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--text-2);font-weight:600;margin-right:4px;}
+.leg-item{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--text-1);font-family:'IBM Plex Mono',monospace;}
+.leg-item .ld{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.leg-item .le{width:20px;height:0;border-top:2px solid;flex-shrink:0;}
+
+/* ── TABS ── */
+.tab-row{display:none;background:var(--bg-1);border-bottom:1px solid var(--border);padding:0 24px;}
+.tab-row.on{display:flex;}
+.tab-btn{padding:12px 20px;font-size:12px;font-weight:600;color:var(--text-2);background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;transition:all .15s;font-family:'Familjen Grotesk',sans-serif;}
+.tab-btn:hover{color:var(--text-1);}.tab-btn.active{color:var(--cyan);border-bottom-color:var(--cyan);}
+.tab-body{display:none;padding:20px 24px;}.tab-body.active{display:block;}
+
+/* ── ADJACENCY ── */
+.adj-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.adj-col h3{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--text-2);margin-bottom:12px;font-weight:600;display:flex;align-items:center;gap:8px;}
+.adj-search{padding:7px 11px;background:var(--bg-0);border:1px solid var(--border);border-radius:5px;color:var(--text-0);font-family:'IBM Plex Mono',monospace;font-size:11px;outline:none;width:100%;margin-bottom:10px;}.adj-search:focus{border-color:var(--cyan);}
+.anode{margin-bottom:8px;border:1px solid var(--border);border-radius:6px;overflow:hidden;}
+.anode-h{display:flex;align-items:center;gap:7px;padding:8px 12px;background:var(--bg-2);cursor:pointer;user-select:none;transition:background .12s;}
+.anode-h:hover{background:var(--bg-3);}
+.anode-h .nd{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.anode-h .nn{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;}
+.anode-h .nc{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--text-2);}
+.anode-h .chev{color:var(--text-2);font-size:9px;transition:transform .15s;}
+.anode.open .chev{transform:rotate(90deg);}
+.anb{display:none;border-top:1px solid var(--border);}.anode.open .anb{display:block;}
+.anb-r{display:flex;align-items:center;gap:6px;padding:5px 12px 5px 24px;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-1);border-bottom:1px solid rgba(30,42,58,.4);}
+.anb-r:last-child{border-bottom:none;}
+.anb-r .rnd{width:4px;height:4px;border-radius:50%;flex-shrink:0;}
+.anb-r .retype{font-size:8px;padding:1px 6px;border-radius:3px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;}
+.anb-r .rdist{margin-left:auto;color:var(--text-2);font-size:9px;}
+.et-road{background:rgba(94,110,130,.2);color:var(--text-2);}
+.et-power{background:var(--yellow-dim);color:var(--yellow);}
+.et-water{background:var(--cyan-dim);color:var(--cyan);}
+.et-emergency{background:var(--red-dim);color:var(--red);}
+
+/* ── CHANGES ── */
+.changes-list{display:flex;flex-direction:column;gap:8px;}
+.ccard{padding:11px 14px;background:var(--bg-1);border:1px solid var(--border);border-radius:7px;}
+.ccard:hover{border-color:var(--border-glow);}
+.ccard .cr{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;color:var(--text-0);margin-bottom:4px;display:flex;align-items:center;gap:6px;}
+.ccard .ct{font-size:8px;padding:1px 6px;border-radius:3px;font-weight:600;text-transform:uppercase;display:inline-block;margin-bottom:4px;}
+.ccard .cm{font-size:11px;color:var(--text-1);line-height:1.5;}
+.phase-calamity{border-left:3px solid var(--red);}
+.phase-llm_mitigation{border-left:3px solid var(--green);}
+
+/* ── TOAST ── */
+.toast-container{position:fixed;top:64px;right:20px;z-index:999;display:flex;flex-direction:column;gap:8px;pointer-events:none;}
+.toast{padding:14px 20px;border-radius:8px;font-size:12px;line-height:1.5;max-width:420px;pointer-events:all;animation:toastIn .3s ease,toastOut .4s ease 5s forwards;display:flex;align-items:flex-start;gap:10px;box-shadow:0 8px 32px rgba(0,0,0,.5);}
+.toast .t-icon{font-size:16px;flex-shrink:0;margin-top:1px;}
+.toast .t-body{flex:1;}
+.toast .t-title{font-weight:700;margin-bottom:2px;}
+.toast .t-msg{color:inherit;opacity:.85;}
+.toast .t-close{cursor:pointer;opacity:.5;font-size:16px;flex-shrink:0;margin-left:8px;}.toast .t-close:hover{opacity:1;}
+.toast-error{background:rgba(255,71,87,.15);border:1px solid rgba(255,71,87,.3);color:var(--red);}
+.toast-ok{background:rgba(38,222,129,.12);border:1px solid rgba(38,222,129,.25);color:var(--green);}
+@keyframes toastIn{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+@keyframes toastOut{from{opacity:1}to{opacity:0;transform:translateY(-10px);pointer-events:none;}}
+
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:var(--bg-0);}::-webkit-scrollbar-thumb{background:var(--bg-3);border-radius:3px;}
+@media(max-width:900px){.graph-row,.adj-grid{grid-template-columns:1fr;}.graph-cell{height:400px;}}
 </style>
 </head>
 <body>
-<div class="topbar"><div class="topbar-logo"><div class="icon">⚡</div>Calamity Optimizer</div><div class="topbar-status"><span class="status-dot" id="sDot"></span><span id="sTxt">Idle</span></div></div>
-<div class="controls">
-  <div class="cg server-g"><label>Server URL</label><input id="urlIn" value="http://localhost:5000"></div>
-  <div class="cg"><label>City</label><input id="cityIn" value="Boston" placeholder="e.g. Mumbai..."></div>
-  <div class="cg" style="min-width:340px;">
-    <label>Calamities (Enter to add)</label>
-    <div class="cal-wrap" id="calWrap" onclick="document.getElementById('calIn').focus()"><input class="cal-input" id="calIn" placeholder="Type & press Enter..."></div>
-    <div class="presets"><span style="font-size:9px;color:var(--text-2)">QUICK:</span>
-      <span class="preset" onclick="addCal('earthquake')">earthquake</span><span class="preset" onclick="addCal('flood')">flood</span><span class="preset" onclick="addCal('wildfire')">wildfire</span><span class="preset" onclick="addCal('cyclone')">cyclone</span><span class="preset" onclick="addCal('tsunami')">tsunami</span><span class="preset" onclick="addCal('power_grid_failure')">power failure</span><span class="preset" onclick="addCal('pandemic')">pandemic</span>
-    </div>
-  </div>
-  <button class="btn btn-health" onclick="checkHealth()">Health</button>
-  <button class="btn btn-run" id="runBtn" onclick="runOpt()">Run Optimization</button>
-  <button class="btn" style="background:var(--purple);color:#fff;" onclick="testMock()">Test Mock Data</button>
+
+<div class="topbar">
+  <div class="topbar-logo"><div class="icon">⚡</div>Calamity Optimizer</div>
+  <div class="topbar-status"><span class="status-dot" id="sDot"></span><span id="sTxt">Loading...</span></div>
 </div>
-<div class="load-bar" id="loadBar"></div>
+<div class="load-bar on" id="loadBar"></div>
 <div class="stats-bar" id="statsBar"></div>
+
 <div class="graph-row" id="graphRow">
   <div class="graph-cell" id="cellOrig">
     <div class="graph-label"><div class="gl-dot" style="background:var(--blue)"></div><span class="gl-text" style="color:var(--blue)">Original Network</span><span class="gl-badge" id="glbO" style="background:var(--blue-dim);color:var(--blue)"></span></div>
@@ -176,15 +147,16 @@
     <div class="graph-zoom"><button class="gz-btn" onclick="zG('O',1.3)">+</button><button class="gz-btn" onclick="zG('O',1/1.3)">−</button><button class="gz-btn" onclick="rG('O')" style="font-size:11px">⟲</button></div>
   </div>
   <div class="graph-cell" id="cellOpt">
-    <div class="graph-label"><div class="gl-dot" style="background:var(--green)"></div><span class="gl-text" style="color:var(--green)">Optimized Network</span><span class="gl-badge" id="glbP" style="background:var(--green-dim);color:var(--green)"></span></div>
+    <div class="graph-label"><div class="gl-dot" style="background:var(--green)"></div><span class="gl-text" style="color:var(--green)">Mitigated Network</span><span class="gl-badge" id="glbP" style="background:var(--green-dim);color:var(--green)"></span></div>
     <canvas id="cvP"></canvas>
     <div class="graph-zoom"><button class="gz-btn" onclick="zG('P',1.3)">+</button><button class="gz-btn" onclick="zG('P',1/1.3)">−</button><button class="gz-btn" onclick="rG('P')" style="font-size:11px">⟲</button></div>
   </div>
 </div>
+
 <div class="legend-bar" id="legendBar"></div>
 <div class="tab-row" id="tabRow">
   <button class="tab-btn active" onclick="sTab('adj',this)">Adjacency Lists</button>
-  <button class="tab-btn" onclick="sTab('chg',this)">Changes & Analysis</button>
+  <button class="tab-btn" onclick="sTab('chg',this)">Changes</button>
   <button class="tab-btn" onclick="sTab('jsn',this)">Raw JSON</button>
 </div>
 <div class="tab-body active" id="tab-adj"></div>
@@ -194,48 +166,101 @@
 <div class="toast-container" id="toasts"></div>
 
 <script>
-const $=id=>document.getElementById(id);
-const NC={'Hospital':'#E63946','Fire Station':'#FF6B35','Police Station':'#1D3557','Ambulance Depot':'#E07A5F','Bunker/Shelter':'#6D6875','Evacuation Point':'#B5838D','Food Service':'#2A9D8F','Grocery Store':'#57CC99','Water Supply':'#48CAE4','Power Plant':'#FFBE0B','Substation':'#F4A261','Telecom Tower':'#7209B7','Water Treatment':'#0096C7'};
-const NS={'Hospital':'square','Fire Station':'triangle','Police Station':'diamond','Ambulance Depot':'triangle-down','Bunker/Shelter':'octagon','Evacuation Point':'pentagon','Food Service':'circle','Grocery Store':'circle','Water Supply':'hexagon','Power Plant':'star','Substation':'diamond','Telecom Tower':'triangle','Water Treatment':'hexagon'};
-const NZ={'Hospital':11,'Fire Station':10,'Police Station':10,'Ambulance Depot':9,'Bunker/Shelter':10,'Evacuation Point':9,'Food Service':8,'Grocery Store':7,'Water Supply':9,'Power Plant':14,'Substation':9,'Telecom Tower':10,'Water Treatment':12};
-const EC={road:{c:'#3D444D',w:.6,d:[],a:.2},power:{c:'#FFD32A',w:1.6,d:[8,4],a:.4},water:{c:'#45D1E6',w:1.4,d:[6,3,2,3],a:.4},emergency:{c:'#FF4757',w:1.1,d:[3,3],a:.35},emergency_path:{c:'#FF6348',w:2.4,d:[10,4],a:.75}};
-const EL={road:'Road',power:'Power',water:'Water',emergency:'Emergency',emergency_path:'Emergency Path'};
-function nC(l){for(const[t,c]of Object.entries(NC))if(l.startsWith(t))return c;return'#5E6E82';}
-function nT(l){for(const t of Object.keys(NC))if(l.startsWith(t))return t;return'';}
+/* ═══════════════════════════════════════════════════════════
+   HARDCODED CONFIG
+   ═══════════════════════════════════════════════════════════ */
+const API_URL = 'http://127.0.0.1:8000';
+const REQUEST_BODY = {
+  city_name: 'Boston',
+  calamities: ['earthquake', 'flood'],
+  llm_directions: {},
+  force_procedural: false,
+  radius_m: 15000,
+};
 
-// Calamities
-let cals=[];
-function addCal(n){n=n.trim().toLowerCase();if(!n||cals.includes(n))return;cals.push(n);rCals();}
-function rmCal(n){cals=cals.filter(c=>c!==n);rCals();}
-function rCals(){const w=$('calWrap');w.querySelectorAll('.cal-tag').forEach(t=>t.remove());const inp=$('calIn');for(const c of cals){const t=document.createElement('span');t.className='cal-tag';t.innerHTML=`${c} <span class="tx" onclick="rmCal('${c}')">&times;</span>`;w.insertBefore(t,inp);}}
-$('calIn').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();addCal(e.target.value);e.target.value='';}if(e.key==='Backspace'&&!e.target.value&&cals.length)rmCal(cals[cals.length-1]);});
+/* ═══════════════════════════════════════════════════════════
+   HELPERS
+   ═══════════════════════════════════════════════════════════ */
+const $ = id => document.getElementById(id);
+function esc(s){ return s ? String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') : ''; }
 
-function sS(s,t){$('sDot').className='status-dot '+s;$('sTxt').textContent=t;}
-async function checkHealth(){const url=$('urlIn').value.replace(/\/+$/,'');sS('loading','Checking...');try{const r=await fetch(url+'/api/health');const d=await r.json();sS('ok',`Connected — ${d.model}`);}catch(e){sS('error','Failed: '+e.message);}}
+const NC = {
+  'Hospital':'#E63946','Fire Station':'#FF6B35','Police Station':'#1D3557',
+  'Ambulance Depot':'#E07A5F','Bunker/Shelter':'#6D6875','Evacuation Point':'#B5838D',
+  'Food Service':'#2A9D8F','Grocery Store':'#57CC99','Water Supply':'#48CAE4',
+  'Power Plant':'#FFBE0B','Substation':'#F4A261','Telecom Tower':'#7209B7',
+  'Water Treatment':'#0096C7'
+};
+const NS = {
+  'Hospital':'square','Fire Station':'triangle','Police Station':'diamond',
+  'Ambulance Depot':'triangle-down','Bunker/Shelter':'octagon','Evacuation Point':'pentagon',
+  'Food Service':'circle','Grocery Store':'circle','Water Supply':'hexagon',
+  'Power Plant':'star','Substation':'diamond','Telecom Tower':'triangle',
+  'Water Treatment':'hexagon'
+};
+const NZ = {
+  'Hospital':11,'Fire Station':10,'Police Station':10,'Ambulance Depot':9,
+  'Bunker/Shelter':10,'Evacuation Point':9,'Food Service':8,'Grocery Store':7,
+  'Water Supply':9,'Power Plant':14,'Substation':9,'Telecom Tower':10,'Water Treatment':12
+};
+const EC = {
+  road:      {c:'#3D444D',w:.6,d:[],a:.2},
+  power:     {c:'#FFD32A',w:1.6,d:[8,4],a:.4},
+  water:     {c:'#45D1E6',w:1.4,d:[6,3,2,3],a:.4},
+  emergency: {c:'#FF4757',w:1.1,d:[3,3],a:.35},
+};
+const EL = {road:'Road',power:'Power',water:'Water',emergency:'Emergency'};
 
-// ═══ GRAPH ENGINE ═══
-const G={O:{cam:{x:0,y:0,z:1},nodes:[],edges:[],hov:null,dr:false,ds:{},cs:{},cityR:0,cityName:''},P:{cam:{x:0,y:0,z:1},nodes:[],edges:[],hov:null,dr:false,ds:{},cs:{},cityR:0,cityName:''}};
+function nC(l){ for(const[t,c] of Object.entries(NC)) if(l.startsWith(t)) return c; return '#5E6E82'; }
+function nT(l){ for(const t of Object.keys(NC)) if(l.startsWith(t)) return t; return ''; }
 
-function buildGD(pos,det,rmEdges,addEdges,which){
-  if(!pos||!det)return{nodes:[],edges:[]};
-  const nodes=[],edges=[],idx={};let i=0;
-  for(const[label,p]of Object.entries(pos||{})){const t=p.type||nT(label);nodes.push({id:i,label,x:p.x,y:p.y,type:t,color:NC[t]||'#5E6E82',shape:NS[t]||'circle',size:NZ[t]||8,deg:0});idx[label]=i;i++;}
-  const seen=new Set();
-  for(const[label,nbs]of Object.entries(det||{})){const fi=idx[label];if(fi===undefined)continue;
-    for(const nb of nbs){const ti=idx[nb.neighbor];if(ti===undefined)continue;const k=Math.min(fi,ti)+'-'+Math.max(fi,ti)+'-'+nb.edge_type;if(seen.has(k))continue;seen.add(k);
-      let st='normal';if(nb.edge_type==='emergency_path')st='added';
-      edges.push({from:fi,to:ti,type:nb.edge_type,dist:nb.distance,st});nodes[fi].deg++;nodes[ti].deg++;}
-  }
-  // Mark removed on original
-  if(which==='O'&&rmEdges){for(const e of edges){const fl=nodes[e.from].label,tl=nodes[e.to].label;for(const rm of rmEdges){if(((rm.from===fl&&rm.to===tl)||(rm.from===tl&&rm.to===fl))&&rm.edge_type===e.type)e.st='removed';}}}
-  return{nodes,edges};
+function sS(s,t){ $('sDot').className='status-dot '+s; $('sTxt').textContent=t; }
+
+function toast(type,title,msg,duration=6000){
+  const c=$('toasts'),icons={error:'✕',ok:'✓'};
+  const t=document.createElement('div');
+  t.className='toast toast-'+type;
+  t.innerHTML=`<span class="t-icon">${icons[type]||'ℹ'}</span><div class="t-body"><div class="t-title">${title}</div><div class="t-msg">${msg}</div></div><span class="t-close" onclick="this.parentElement.remove()">&times;</span>`;
+  c.appendChild(t);
+  setTimeout(()=>{if(t.parentElement)t.remove();},duration);
 }
 
-function w2s(cam,wx,wy,cw,ch){return{x:(wx-cam.x)*cam.z+cw/2,y:(wy-cam.y)*cam.z+ch/2};}
-function s2w(cam,sx,sy,cw,ch){return{x:(sx-cw/2)/cam.z+cam.x,y:(sy-ch/2)/cam.z+cam.y};}
+/* ═══════════════════════════════════════════════════════════
+   GRAPH ENGINE (same rendering as original)
+   ═══════════════════════════════════════════════════════════ */
+const G = {
+  O:{cam:{x:0,y:0,z:1},nodes:[],edges:[],hov:null,dr:false,ds:{},cs:{},cityR:0,cityName:''},
+  P:{cam:{x:0,y:0,z:1},nodes:[],edges:[],hov:null,dr:false,ds:{},cs:{},cityR:0,cityName:''},
+};
+
+function buildGD(pos, adj){
+  if(!pos||!adj) return {nodes:[],edges:[]};
+  const nodes=[], edges=[], idx={};
+  let i=0;
+  for(const[label,p] of Object.entries(pos)){
+    const t = p.type || nT(label);
+    nodes.push({id:i, label, x:p.x, y:p.y, type:t, color:NC[t]||'#5E6E82', shape:NS[t]||'circle', size:NZ[t]||8, deg:0});
+    idx[label]=i; i++;
+  }
+  const seen = new Set();
+  for(const[label,nbs] of Object.entries(adj)){
+    const fi = idx[label]; if(fi===undefined) continue;
+    for(const nb of nbs){
+      const ti = idx[nb.neighbor]; if(ti===undefined) continue;
+      const k = Math.min(fi,ti)+'-'+Math.max(fi,ti)+'-'+nb.edge_type;
+      if(seen.has(k)) continue; seen.add(k);
+      edges.push({from:fi, to:ti, type:nb.edge_type, dist:nb.distance});
+      nodes[fi].deg++; nodes[ti].deg++;
+    }
+  }
+  return {nodes, edges};
+}
+
+function w2s(cam,wx,wy,cw,ch){ return {x:(wx-cam.x)*cam.z+cw/2, y:(wy-cam.y)*cam.z+ch/2}; }
+function s2w(cam,sx,sy,cw,ch){ return {x:(sx-cw/2)/cam.z+cam.x, y:(sy-ch/2)/cam.z+cam.y}; }
 
 function drawSh(ctx,sh,x,y,s,col,hv){
-  ctx.fillStyle=col;ctx.strokeStyle=hv?'#F0F6FC':'rgba(255,255,255,.25)';ctx.lineWidth=hv?2.5:1;ctx.beginPath();
+  ctx.fillStyle=col; ctx.strokeStyle=hv?'#F0F6FC':'rgba(255,255,255,.25)'; ctx.lineWidth=hv?2.5:1; ctx.beginPath();
   switch(sh){
     case'circle':ctx.arc(x,y,s,0,Math.PI*2);break;
     case'square':ctx.rect(x-s,y-s,s*2,s*2);break;
@@ -252,320 +277,291 @@ function drawSh(ctx,sh,x,y,s,col,hv){
 }
 
 function rdr(k){
-  const g=G[k];const cv=$('cv'+k);if(!cv)return;
-  const ctx=cv.getContext('2d');const w=cv.width,h=cv.height;
-  ctx.clearRect(0,0,w,h);ctx.fillStyle='#07090D';ctx.fillRect(0,0,w,h);
+  const g=G[k], cv=$('cv'+k); if(!cv)return;
+  const ctx=cv.getContext('2d'), w=cv.width, h=cv.height;
+  ctx.clearRect(0,0,w,h); ctx.fillStyle='#07090D'; ctx.fillRect(0,0,w,h);
+
   // Grid
-  ctx.strokeStyle='rgba(30,42,58,.3)';ctx.lineWidth=.5;
-  const gs=50*g.cam.z;const ox=(w/2-g.cam.x*g.cam.z)%gs;const oy=(h/2-g.cam.y*g.cam.z)%gs;
+  ctx.strokeStyle='rgba(30,42,58,.3)'; ctx.lineWidth=.5;
+  const gs=50*g.cam.z, ox=(w/2-g.cam.x*g.cam.z)%gs, oy=(h/2-g.cam.y*g.cam.z)%gs;
   for(let x=ox;x<w;x+=gs){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,h);ctx.stroke();}
   for(let y=oy;y<h;y+=gs){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke();}
 
-  // ── City outline ──
+  // City boundary
   if(g.cityR>0){
-    const ctr=w2s(g.cam,0,0,w,h);
-    const rPx=g.cityR*g.cam.z;
-    // Inner zones (33% and 66% radius)
+    const ctr=w2s(g.cam,0,0,w,h), rPx=g.cityR*g.cam.z;
     for(const frac of[0.33,0.66]){
       ctx.beginPath();ctx.arc(ctr.x,ctr.y,rPx*frac,0,Math.PI*2);
-      ctx.fillStyle='rgba(22,27,34,'+(.08*(1-frac))+')';ctx.fill();
+      ctx.fillStyle='rgba(22,27,34,'+(0.08*(1-frac))+')';ctx.fill();
       ctx.strokeStyle='rgba(30,42,58,.2)';ctx.lineWidth=1;ctx.setLineDash([]);ctx.stroke();
     }
-    // Outer boundary
     ctx.beginPath();ctx.arc(ctr.x,ctr.y,rPx*1.1,0,Math.PI*2);
     ctx.strokeStyle='rgba(42,58,80,.5)';ctx.lineWidth=1.5;ctx.setLineDash([8,5]);ctx.stroke();ctx.setLineDash([]);
-    // City name at top of boundary
     if(g.cityName){
-      const labelY=ctr.y-rPx*1.1-8;
       ctx.font=`600 ${Math.min(Math.max(10,11*g.cam.z),14)}px 'IBM Plex Mono',monospace`;
       ctx.fillStyle='rgba(94,110,130,.5)';ctx.textAlign='center';
-      ctx.fillText(g.cityName.toUpperCase()+' CITY BOUNDARY',ctr.x,labelY);
+      ctx.fillText(g.cityName.toUpperCase()+' CITY BOUNDARY',ctr.x,ctr.y-rPx*1.1-8);
     }
-    // Zone labels
     ctx.font=`${Math.min(Math.max(8,9*g.cam.z),11)}px 'IBM Plex Mono',monospace`;
     ctx.fillStyle='rgba(94,110,130,.22)';ctx.textAlign='center';
-    ctx.fillText('DOWNTOWN',ctr.x,ctr.y+rPx*0.33*0.5+3);
-    ctx.fillText('URBAN',ctr.x,ctr.y+rPx*0.66-rPx*0.33*0.3);
+    ctx.fillText('DOWNTOWN',ctr.x,ctr.y+rPx*0.15);
+    ctx.fillText('URBAN',ctr.x,ctr.y+rPx*0.5);
     ctx.fillText('SUBURBS',ctr.x,ctr.y+rPx*0.88);
   }
 
   // Edges
-  for(const etype of['road','water','power','emergency','emergency_path']){
-    const cfg=EC[etype];if(!cfg)continue;
-    for(const e of g.edges){if(e.type!==etype)continue;
+  for(const etype of['road','water','power','emergency']){
+    const cfg=EC[etype]; if(!cfg) continue;
+    for(const e of g.edges){
+      if(e.type!==etype) continue;
       const a=w2s(g.cam,g.nodes[e.from].x,g.nodes[e.from].y,w,h);
       const b=w2s(g.cam,g.nodes[e.to].x,g.nodes[e.to].y,w,h);
-      ctx.strokeStyle=cfg.c;ctx.lineWidth=Math.min(cfg.w*g.cam.z,4);ctx.globalAlpha=cfg.a;
+      ctx.strokeStyle=cfg.c; ctx.lineWidth=Math.min(cfg.w*g.cam.z,4); ctx.globalAlpha=cfg.a;
       ctx.setLineDash(cfg.d.length?cfg.d.map(d=>Math.min(d*g.cam.z,16)):[]);
-      if(e.st==='removed'){ctx.strokeStyle='#FF4757';ctx.globalAlpha=.55;ctx.setLineDash([Math.min(4*g.cam.z,10),Math.min(4*g.cam.z,10)]);ctx.lineWidth=Math.min(2*g.cam.z,4);}
-      if(e.st==='added'){ctx.globalAlpha=.85;ctx.lineWidth=Math.min(2.8*g.cam.z,5);}
       ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();
-      if(e.st==='removed'){const mx=(a.x+b.x)/2,my=(a.y+b.y)/2;ctx.globalAlpha=.9;ctx.fillStyle='#FF4757';ctx.font=`bold ${Math.min(Math.max(10,12*g.cam.z),18)}px sans-serif`;ctx.textAlign='center';ctx.fillText('✕',mx,my+Math.min(4*g.cam.z,6));}
     }
   }
-  ctx.globalAlpha=1;ctx.setLineDash([]);
+  ctx.globalAlpha=1; ctx.setLineDash([]);
+
   // Nodes
   for(const n of g.nodes){
-    const p=w2s(g.cam,n.x,n.y,w,h);const rawS=n.size*g.cam.z;const s=Math.min(rawS,24);const hv=g.hov&&g.hov.id===n.id;
-    // Glow — capped to prevent blowout
+    const p=w2s(g.cam,n.x,n.y,w,h), rawS=n.size*g.cam.z, s=Math.min(rawS,24);
+    const hv=g.hov&&g.hov.id===n.id;
     const glowR=Math.min(s*2.5,50);
-    const grad=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,glowR);grad.addColorStop(0,n.color+'18');grad.addColorStop(1,n.color+'00');
+    const grad=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,glowR);
+    grad.addColorStop(0,n.color+'18');grad.addColorStop(1,n.color+'00');
     ctx.fillStyle=grad;ctx.beginPath();ctx.arc(p.x,p.y,glowR,0,Math.PI*2);ctx.fill();
     drawSh(ctx,n.shape,p.x,p.y,s,n.color,hv);
-    if(g.cam.z>.4){ctx.font=`${Math.min(Math.max(8,9*g.cam.z),13)}px 'IBM Plex Mono',monospace`;ctx.fillStyle=n.color+'BB';ctx.textAlign='left';ctx.fillText(n.label,p.x+s+4,p.y+3);}
+    if(g.cam.z>.4){
+      ctx.font=`${Math.min(Math.max(8,9*g.cam.z),13)}px 'IBM Plex Mono',monospace`;
+      ctx.fillStyle=n.color+'BB';ctx.textAlign='left';ctx.fillText(n.label,p.x+s+4,p.y+3);
+    }
   }
 }
 
 function initCv(k){
-  const cell=$('cell'+(k==='O'?'Orig':'Opt'));const cv=$('cv'+k);
+  const cell=$('cell'+(k==='O'?'Orig':'Opt')), cv=$('cv'+k), g=G[k];
   function rs(){cv.width=cell.clientWidth;cv.height=cell.clientHeight;rdr(k);}
-  window.addEventListener('resize',rs);rs();
-  const g=G[k];
+  window.addEventListener('resize',rs); rs();
+
   cv.addEventListener('mousedown',e=>{g.dr=true;g.ds={x:e.clientX,y:e.clientY};g.cs={x:g.cam.x,y:g.cam.y};});
   window.addEventListener('mousemove',e=>{
     if(g.dr){g.cam.x=g.cs.x-(e.clientX-g.ds.x)/g.cam.z;g.cam.y=g.cs.y-(e.clientY-g.ds.y)/g.cam.z;rdr(k);}
-    const rect=cv.getBoundingClientRect();const mx=e.clientX-rect.left,my=e.clientY-rect.top;
+    const rect=cv.getBoundingClientRect(), mx=e.clientX-rect.left, my=e.clientY-rect.top;
     if(mx<0||my<0||mx>cv.width||my>cv.height){if(g.hov){g.hov=null;rdr(k);$('tooltip').classList.remove('vis');}return;}
-    const wld=s2w(g.cam,mx,my,cv.width,cv.height);let cl=null,cd=Infinity;
+    const wld=s2w(g.cam,mx,my,cv.width,cv.height);
+    let cl=null, cd=Infinity;
     for(const n of g.nodes){const d=Math.hypot(n.x-wld.x,n.y-wld.y);const th=Math.min(n.size,24)*1.5/g.cam.z;if(d<th&&d<cd){cl=n;cd=d;}}
     if(cl!==g.hov){g.hov=cl;rdr(k);}
     const tt=$('tooltip');
-    if(g.hov){tt.innerHTML=`<div class="tt-n">${g.hov.label}</div><div class="tt-t" style="color:${g.hov.color}">${g.hov.type}</div><div class="tt-s">Connections: ${g.hov.deg}</div>`;tt.style.left=(e.clientX+14)+'px';tt.style.top=(e.clientY-8)+'px';tt.classList.add('vis');}else{tt.classList.remove('vis');}
+    if(g.hov){
+      tt.innerHTML=`<div class="tt-n">${g.hov.label}</div><div class="tt-t" style="color:${g.hov.color}">${g.hov.type}</div><div class="tt-s">Connections: ${g.hov.deg}</div>`;
+      tt.style.left=(e.clientX+14)+'px';tt.style.top=(e.clientY-8)+'px';tt.classList.add('vis');
+    }else{tt.classList.remove('vis');}
   });
   window.addEventListener('mouseup',()=>{g.dr=false;});
   cv.addEventListener('wheel',e=>{e.preventDefault();g.cam.z=Math.max(.1,Math.min(4,g.cam.z*(e.deltaY>0?.9:1.1)));rdr(k);},{passive:false});
 }
+
 function zG(k,f){G[k].cam.z=Math.max(.1,Math.min(4,G[k].cam.z*f));rdr(k);}
 function rG(k){G[k].cam={x:0,y:0,z:1};rdr(k);}
 
-// ═══ TOAST ═══
-function toast(type,title,msg,duration=6000){
-  const c=$('toasts');const icons={warn:'⚠',error:'✕',ok:'✓'};
-  const t=document.createElement('div');
-  t.className='toast toast-'+type;
-  t.innerHTML=`<span class="t-icon">${icons[type]||'ℹ'}</span><div class="t-body"><div class="t-title">${title}</div><div class="t-msg">${msg}</div></div><span class="t-close" onclick="this.parentElement.remove()">&times;</span>`;
-  c.appendChild(t);
-  setTimeout(()=>{if(t.parentElement)t.remove();},duration);
-}
-
-// ═══ API ═══
-let apiR=null;
-async function runOpt(){
-  const url=$('urlIn').value.replace(/\/+$/,''),city=$('cityIn').value.trim();
-  if(!city){toast('warn','Missing Input','Enter a city name');return;}
-  if(!cals.length){toast('warn','Missing Input','Add at least one calamity');return;}
-  $('runBtn').disabled=true;$('runBtn').textContent='Optimizing...';$('loadBar').classList.add('on');sS('loading',`Optimizing ${city}...`);
-  try{
-    const r=await fetch(url+'/api/optimize',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({city_name:city,calamity_list:cals})});
-    if(!r.ok){const e=await r.json().catch(()=>({}));throw new Error(e.error||`Server returned HTTP ${r.status}`);}
-    apiR=await r.json();
-
-    // Check if Groq failed (rate limit, etc.) — server still returns data with original=optimized
-    if(apiR.groq_failed && apiR.warning){
-      toast('warn','Groq Rate Limited',apiR.warning,10000);
-      sS('ok',`${apiR.city_name} — showing original (Groq unavailable)`);
-    } else {
-      sS('ok',`Done — ${apiR.city_name} optimized`);
-      toast('ok','Optimization Complete',`${(apiR.changes||{}).summary?.total_removed||0} edges removed, ${(apiR.changes||{}).summary?.total_added||0} emergency paths added`);
-    }
-    renderAll(apiR);
-
-  }catch(e){
-    sS('error','Request failed');
-    // Network error or server down — show toast, not alert
-    if(e.message.includes('Failed to fetch')||e.message.includes('NetworkError')){
-      toast('error','Connection Failed',`Cannot reach server at ${url}. Is it running?`,8000);
-    } else {
-      toast('error','Error',e.message,8000);
-    }
-  }
-  finally{$('runBtn').disabled=false;$('runBtn').textContent='Run Optimization';$('loadBar').classList.remove('on');}
-}
-
+/* ═══════════════════════════════════════════════════════════
+   RENDER ALL DATA
+   ═══════════════════════════════════════════════════════════ */
 function renderAll(d){
-  if(!d){sS('error','No data received');return;}
-  // Safe accessors
-  const pos=d.node_positions||{};
-  const origDet=(d.original||{}).detailed_adjacency||{};
-  const optDet=(d.optimized||{}).detailed_adjacency||{};
-  const origStats=(d.original||{}).stats||{};
-  const optStats=(d.optimized||{}).stats||{};
-  const changes=d.changes||{};
-  const chSum=changes.summary||{total_removed:0,total_added:0,net_edge_change:0,failed_removals:0,failed_additions:0};
-  const comp=d.comparison||{original_edges:0,optimized_edges:0,original_density:0,optimized_density:0,original_connected:false,optimized_connected:false,emergency_paths_created:0};
-  const groq=d.groq_analysis||{reasoning:'',priority_nodes:[],model_used:'unknown'};
+  const pos = d.node_positions || {};
+  const origAdj = d.original_adjacency_list || {};
+  const mitAdj = d.mitigated_adjacency_list || {};
+  const origStats = d.original_stats || {};
+  const mitStats = d.mitigated_stats || {};
+  const changes = d.changes || [];
+  const city = d.city || {};
+  const cityR = city.radius_km || 0;
 
-  // Stats
-  const b=$('statsBar');b.classList.add('on');const sgn=chSum.net_edge_change>=0?'+':'';
-  b.innerHTML=`<div class="scard"><div class="sl">City</div><div class="sv" style="font-size:15px;color:var(--text-0)">${d.city_name||'?'}</div><div class="ss c-d">${(d.calamity_list||[]).map(x=>'⚠ '+x).join(', ')}</div></div><div class="scard"><div class="sl">Removed</div><div class="sv c-r">−${chSum.total_removed}</div></div><div class="scard"><div class="sl">Added</div><div class="sv c-g">+${chSum.total_added}</div><div class="ss c-g">${comp.emergency_paths_created} emrg paths</div></div><div class="scard"><div class="sl">Net</div><div class="sv ${chSum.net_edge_change>=0?'c-c':'c-o'}">${sgn}${chSum.net_edge_change}</div><div class="ss c-d">${comp.original_edges} → ${comp.optimized_edges}</div></div><div class="scard"><div class="sl">Density</div><div class="sv c-p">${(comp.optimized_density||0).toFixed(4)}</div><div class="ss c-d">was ${(comp.original_density||0).toFixed(4)}</div></div><div class="scard"><div class="sl">Connected</div><div class="sv ${comp.optimized_connected?'c-g':'c-r'}">${comp.optimized_connected?'YES':'NO'}</div></div><div class="scard"><div class="sl">Model</div><div class="sv" style="font-size:11px">${groq.model_used}</div></div>`;
+  // Scale positions for graph (multiply by ~50 for pixel-level rendering)
+  const scaledPos = {};
+  for(const[label,p] of Object.entries(pos)){
+    scaledPos[label] = { x: p.x * 50, y: p.y * 50, type: p.type };
+  }
 
-  // Graphs
-  $('graphRow').style.display='grid';
-  const rmE=changes.edges_removed||[];const adE=changes.edges_added||[];
-  const oD=buildGD(pos,origDet,rmE,null,'O');
-  const pD=buildGD(pos,optDet,null,adE,'P');
-  G.O.nodes=oD.nodes;G.O.edges=oD.edges;G.O.cam={x:0,y:0,z:1};G.O.cityR=d.city_radius||0;G.O.cityName=d.city_name||'';
-  G.P.nodes=pD.nodes;G.P.edges=pD.edges;G.P.cam={x:0,y:0,z:1};G.P.cityR=d.city_radius||0;G.P.cityName=d.city_name||'';
-  initCv('O');initCv('P');
-  $('glbO').textContent=`${oD.nodes.length} nodes · ${oD.edges.length} edges`;
-  $('glbP').textContent=`${pD.nodes.length} nodes · ${pD.edges.length} edges`;
+  // ── Stats bar ──
+  const origEdges = origStats.total_edges || 0;
+  const mitEdges = mitStats.total_edges || 0;
+  const edgeDiff = mitEdges - origEdges;
+  const sgn = edgeDiff >= 0 ? '+' : '';
+  const origNodes = origStats.infrastructure_nodes || 0;
+  const mitNodes = mitStats.infrastructure_nodes || 0;
+  const nodeDiff = mitNodes - origNodes;
+  const nsgn = nodeDiff >= 0 ? '+' : '';
+
+  const calamitiesToShow = (REQUEST_BODY.calamities || []).map(x => '⚠ ' + x).join(', ');
+
+  const b = $('statsBar');
+  b.classList.add('on');
+  b.innerHTML = `
+    <div class="scard"><div class="sl">City</div><div class="sv" style="font-size:15px;color:var(--text-0)">${city.name||'?'}</div><div class="ss c-d">${calamitiesToShow}</div></div>
+    <div class="scard"><div class="sl">Source</div><div class="sv" style="font-size:12px;color:var(--cyan)">${d.data_source||'?'}</div></div>
+    <div class="scard"><div class="sl">Nodes</div><div class="sv c-c">${origNodes}</div><div class="ss ${nodeDiff<0?'c-r':'c-d'}">${nsgn}${nodeDiff} after</div></div>
+    <div class="scard"><div class="sl">Edges</div><div class="sv c-p">${origEdges}</div><div class="ss ${edgeDiff<0?'c-r':'c-d'}">${sgn}${edgeDiff} after</div></div>
+    <div class="scard"><div class="sl">Density</div><div class="sv c-y">${(origStats.density||0).toFixed(4)}</div><div class="ss c-d">${(mitStats.density||0).toFixed(4)} after</div></div>
+    <div class="scard"><div class="sl">Connected</div><div class="sv ${mitStats.is_connected?'c-g':'c-r'}">${origStats.is_connected?'YES':'NO'} → ${mitStats.is_connected?'YES':'NO'}</div></div>
+  `;
+
+  // ── Graphs ──
+  $('graphRow').style.display = 'grid';
+  const oD = buildGD(scaledPos, origAdj);
+  const pD = buildGD(scaledPos, mitAdj);
+  G.O.nodes=oD.nodes; G.O.edges=oD.edges; G.O.cam={x:0,y:0,z:1}; G.O.cityR=cityR*50; G.O.cityName=city.name||'';
+  G.P.nodes=pD.nodes; G.P.edges=pD.edges; G.P.cam={x:0,y:0,z:1}; G.P.cityR=cityR*50; G.P.cityName=city.name||'';
+  initCv('O'); initCv('P');
+  $('glbO').textContent = `${oD.nodes.length} nodes · ${oD.edges.length} edges`;
+  $('glbP').textContent = `${pD.nodes.length} nodes · ${pD.edges.length} edges`;
+
   // Auto-fit
-  for(const k of['O','P']){const g=G[k];if(!g.nodes.length)continue;let mnx=1e9,mny=1e9,mxx=-1e9,mxy=-1e9;for(const n of g.nodes){mnx=Math.min(mnx,n.x);mny=Math.min(mny,n.y);mxx=Math.max(mxx,n.x);mxy=Math.max(mxy,n.y);}const cv=$('cv'+k);g.cam.x=(mnx+mxx)/2;g.cam.y=(mny+mxy)/2;const spanX=mxx-mnx||1;const spanY=mxy-mny||1;g.cam.z=Math.min(cv.width/(spanX*1.25),cv.height/(spanY*1.25));g.cam.z=Math.max(0.1,Math.min(g.cam.z,3));rdr(k);}
+  for(const k of['O','P']){
+    const g=G[k]; if(!g.nodes.length) continue;
+    let mnx=1e9,mny=1e9,mxx=-1e9,mxy=-1e9;
+    for(const n of g.nodes){mnx=Math.min(mnx,n.x);mny=Math.min(mny,n.y);mxx=Math.max(mxx,n.x);mxy=Math.max(mxy,n.y);}
+    const cv=$('cv'+k);
+    g.cam.x=(mnx+mxx)/2; g.cam.y=(mny+mxy)/2;
+    g.cam.z=Math.min(cv.width/((mxx-mnx||1)*1.25), cv.height/((mxy-mny||1)*1.25));
+    g.cam.z=Math.max(0.1,Math.min(g.cam.z,3));
+    rdr(k);
+  }
 
-  // Legend
-  const lb=$('legendBar');lb.classList.add('on');
-  let lh='<span class="leg-title">Nodes</span>';for(const[t,cl]of Object.entries(NC))lh+=`<span class="leg-item"><span class="ld" style="background:${cl}"></span>${t}</span>`;
+  // ── Legend ──
+  const lb=$('legendBar'); lb.classList.add('on');
+  let lh='<span class="leg-title">Nodes</span>';
+  for(const[t,cl] of Object.entries(NC)) lh+=`<span class="leg-item"><span class="ld" style="background:${cl}"></span>${t}</span>`;
   lh+='<span style="width:1px;height:16px;background:var(--border);margin:0 6px"></span><span class="leg-title">Edges</span>';
-  for(const[t,cfg]of Object.entries(EC))lh+=`<span class="leg-item"><span class="le" style="border-color:${cfg.c};border-style:${cfg.d.length?'dashed':'solid'}"></span>${EL[t]||t}</span>`;
+  for(const[t,cfg] of Object.entries(EC)) lh+=`<span class="leg-item"><span class="le" style="border-color:${cfg.c};border-style:${cfg.d.length?'dashed':'solid'}"></span>${EL[t]||t}</span>`;
   lb.innerHTML=lh;
 
-  // Tabs
+  // ── Tabs ──
   $('tabRow').classList.add('on');
-  // Adj
-  $('tab-adj').innerHTML=`<div class="adj-grid"><div class="adj-col" id="aO"></div><div class="adj-col" id="aP"></div></div>`;
-  rAdjCol('aO','Original Network',origDet,rmE,'var(--blue)');
-  rAdjCol('aP','Optimized Network',optDet,adE,'var(--green)');
-  // Changes
-  rChg(changes,groq);
-  // JSON
-  $('tab-jsn').innerHTML=`<pre style="padding:14px;background:var(--bg-1);border:1px solid var(--border);border-radius:7px;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-1);white-space:pre-wrap;word-break:break-all;max-height:600px;overflow:auto;line-height:1.6;">${esc(JSON.stringify(d,null,2))}</pre>`;
+
+  // Adjacency tab
+  $('tab-adj').innerHTML = `<div class="adj-grid"><div class="adj-col" id="aO"></div><div class="adj-col" id="aP"></div></div>`;
+  rAdjCol('aO','Original Network', origAdj, 'var(--blue)');
+  rAdjCol('aP','Mitigated Network', mitAdj, 'var(--green)');
+
+  // Changes tab
+  rChg(changes);
+
+  // JSON tab
+  $('tab-jsn').innerHTML = `<pre style="padding:14px;background:var(--bg-1);border:1px solid var(--border);border-radius:7px;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-1);white-space:pre-wrap;word-break:break-all;max-height:600px;overflow:auto;line-height:1.6;">${esc(JSON.stringify(d,null,2))}</pre>`;
 }
 
-function rAdjCol(id,title,det,hls,dotColor){
-  const el=$(id);if(!det||!Object.keys(det).length){el.innerHTML=`<h3>${title}</h3><div style="color:var(--text-2);padding:20px;text-align:center;font-size:12px;">No adjacency data available</div>`;return;}
-  const hlSet=new Set();if(hls)for(const e of hls){hlSet.add(e.from);hlSet.add(e.to);}
-  let h=`<h3><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${dotColor}"></span>${title}</h3><input class="adj-search" placeholder="Search..." oninput="fAdj(this)">`;
-  for(const[label,nbs]of Object.entries(det).sort((a,b)=>a[0].localeCompare(b[0]))){
-    const col=nC(label),isH=hlSet.has(label);
-    h+=`<div class="anode${isH?' highlight':''}" data-label="${label.toLowerCase()}"><div class="anode-h" onclick="this.parentElement.classList.toggle('open')"><span class="nd" style="background:${col}"></span><span class="nn">${label}</span><span class="nc">${nbs.length}</span><span class="chev">▶</span></div><div class="anb">`;
-    for(const n of nbs){h+=`<div class="anb-r"><span class="rnd" style="background:${nC(n.neighbor)}"></span>${n.neighbor}<span class="retype et-${n.edge_type}">${n.edge_type}</span><span class="rdist">${n.distance.toFixed(1)}</span></div>`;}
-    h+=`</div></div>`;
+/* ── Adjacency column renderer ── */
+function rAdjCol(id, title, adj, dotColor){
+  const el = $(id);
+  if(!adj || !Object.keys(adj).length){
+    el.innerHTML = `<h3>${title}</h3><div style="color:var(--text-2);padding:20px;text-align:center;font-size:12px;">No adjacency data</div>`;
+    return;
   }
-  el.innerHTML=h;
-}
-function fAdj(inp){const q=inp.value.toLowerCase();inp.parentElement.querySelectorAll('.anode').forEach(b=>{b.style.display=b.dataset.label.includes(q)?'':'none';});}
-
-function rChg(changes,groq){
-  let h='';
-  const rmE=changes.edges_removed||[];const adE=changes.edges_added||[];const rmF=changes.removal_failures||[];const adF=changes.addition_failures||[];
-  if(groq.reasoning){h+=`<div class="reason-box"><h3>LLM Strategic Analysis</h3><p>${esc(groq.reasoning)}</p>`;
-    if(groq.priority_nodes&&groq.priority_nodes.length){h+=`<div class="prio-pills">`;for(const pn of groq.priority_nodes)h+=`<span class="ppill ${pn.priority||'medium'}" title="${esc(pn.reason||'')}"><span style="font-size:8px;opacity:.6">${(pn.priority||'MED').toUpperCase()}</span> ${pn.node}</span>`;h+=`</div>`;}
-    h+=`</div>`;}
-  h+=`<div class="changes-grid"><div class="csec"><h3><span class="cbg" style="background:var(--red-dim);color:var(--red)">${rmE.length}</span>Edges Removed</h3>`;
-  for(const e of rmE)h+=`<div class="ccard" style="border-left:3px solid var(--red)"><div class="cr">${e.from}<span class="ca">✕</span>${e.to}</div><span class="ct et-${e.edge_type}">${e.edge_type}</span><div class="cm">${esc(e.reason)}</div></div>`;
-  if(rmF.length){h+=`<h3 style="margin-top:14px;color:var(--orange)"><span class="cbg" style="background:var(--orange-dim);color:var(--orange)">${rmF.length}</span>Failed</h3>`;for(const e of rmF)h+=`<div class="ccard" style="border-left:3px solid var(--orange);opacity:.7"><div class="cr">${e.from}<span class="ca">?</span>${e.to}</div><div class="cm">${esc(e.reason)}</div></div>`;}
-  h+=`</div><div class="csec"><h3><span class="cbg" style="background:var(--green-dim);color:var(--green)">${adE.length}</span>Emergency Paths Added</h3>`;
-  for(const e of adE)h+=`<div class="ccard" style="border-left:3px solid var(--green)"><div class="cr">${e.from}<span class="ca">⟶</span>${e.to}</div><span class="ct et-emergency_path">EMERGENCY PATH</span>${e.distance?` <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--text-2)">dist:${e.distance}</span>`:''}<div class="cm">${esc(e.reason)}</div></div>`;
-  if(adF.length){h+=`<h3 style="margin-top:14px;color:var(--orange)"><span class="cbg" style="background:var(--orange-dim);color:var(--orange)">${adF.length}</span>Failed</h3>`;for(const e of adF)h+=`<div class="ccard" style="border-left:3px solid var(--orange);opacity:.7"><div class="cr">${e.from}<span class="ca">?</span>${e.to}</div><div class="cm">${esc(e.reason)}</div></div>`;}
-  h+=`</div></div>`;
-  $('tab-chg').innerHTML=h;
+  let h = `<h3><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${dotColor}"></span>${title}</h3><input class="adj-search" placeholder="Search nodes..." oninput="fAdj(this)">`;
+  for(const[label,nbs] of Object.entries(adj).sort((a,b)=>a[0].localeCompare(b[0]))){
+    const col = nC(label);
+    h += `<div class="anode" data-label="${label.toLowerCase()}"><div class="anode-h" onclick="this.parentElement.classList.toggle('open')"><span class="nd" style="background:${col}"></span><span class="nn">${esc(label)}</span><span class="nc">${nbs.length}</span><span class="chev">▶</span></div><div class="anb">`;
+    for(const n of nbs){
+      h += `<div class="anb-r"><span class="rnd" style="background:${nC(n.neighbor)}"></span>${esc(n.neighbor)}<span class="retype et-${n.edge_type}">${n.edge_type}</span><span class="rdist">${n.distance.toFixed(1)}</span></div>`;
+    }
+    h += `</div></div>`;
+  }
+  el.innerHTML = h;
 }
 
-function sTab(id,btn){document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.tab-body').forEach(b=>b.classList.remove('active'));$('tab-'+id).classList.add('active');}
-function esc(s){return s?s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'):'';}
-
-// ═══ MOCK DATA TEST (works without server) ═══
-function testMock(){
-  sS('loading','Generating mock data...');
-  // Seeded RNG
-  let _s=12345;function rng(){_s=(_s*16807+0)%2147483647;return(_s&0x7fffffff)/2147483647;}
-  function gauss(){let u=0,v=0;while(!u)u=rng();while(!v)v=rng();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);}
-
-  const types=['Hospital','Hospital','Hospital','Fire Station','Fire Station','Fire Station','Police Station','Police Station','Ambulance Depot','Bunker/Shelter','Bunker/Shelter','Bunker/Shelter','Evacuation Point','Food Service','Food Service','Food Service','Food Service','Grocery Store','Grocery Store','Grocery Store','Water Supply','Water Supply','Power Plant','Substation','Substation','Substation','Telecom Tower','Telecom Tower','Water Treatment'];
-  const positions={},origAdj={},optAdj={};
-  const R=250; // ~5 city units * 50 scale
-
-  // Place nodes
-  types.forEach((t,i)=>{
-    const label=t+' #'+(types.slice(0,i+1).filter(x=>x===t).length);
-    let x,y;
-    if(t==='Power Plant'||t==='Water Treatment'){const a=rng()*Math.PI*2;const r=R*(.7+rng()*.3);x=r*Math.cos(a);y=r*Math.sin(a);}
-    else if(t==='Bunker/Shelter'||t==='Evacuation Point'){const a=rng()*Math.PI*2;const r=(.3+rng()*.7)*R;x=r*Math.cos(a);y=r*Math.sin(a);}
-    else{x=gauss()*R*.45;y=gauss()*R*.45;}
-    positions[label]={x:Math.round(x*1e4)/1e4,y:Math.round(y*1e4)/1e4,type:t};
+function fAdj(inp){
+  const q = inp.value.toLowerCase();
+  inp.parentElement.querySelectorAll('.anode').forEach(b => {
+    b.style.display = b.dataset.label.includes(q) ? '' : 'none';
   });
-
-  const labels=Object.keys(positions);
-  // Build edges: KNN + typed
-  function dist(a,b){return Math.hypot(positions[a].x-positions[b].x,positions[a].y-positions[b].y);}
-  const edgeSet=new Set();
-  function addE(adj,a,b,et){
-    if(a===b)return;const k=[a,b].sort().join('|')+'|'+et;if(edgeSet.has(k))return;edgeSet.add(k);
-    const d=Math.round(dist(a,b)*100)/100;
-    if(!adj[a])adj[a]=[];adj[a].push({neighbor:b,edge_type:et,distance:d});
-    if(!adj[b])adj[b]=[];adj[b].push({neighbor:a,edge_type:et,distance:d});
-  }
-  // Road KNN
-  labels.forEach(l=>{
-    const sorted=[...labels].filter(x=>x!==l).sort((a,b)=>dist(l,a)-dist(l,b));
-    for(let i=0;i<Math.min(3,sorted.length);i++)addE(origAdj,l,sorted[i],'road');
-  });
-  // Power
-  const pp=labels.filter(l=>l.startsWith('Power Plant'));const subs=labels.filter(l=>l.startsWith('Substation'));const hosps=labels.filter(l=>l.startsWith('Hospital'));
-  pp.forEach(p=>{subs.forEach(s=>addE(origAdj,p,s,'power'));hosps.forEach(h=>addE(origAdj,p,h,'power'));});
-  subs.forEach(s=>{labels.forEach(l=>{if(!l.startsWith('Power')&&!l.startsWith('Substation')&&dist(s,l)<R*.5&&rng()<.35)addE(origAdj,s,l,'power');});});
-  // Water
-  const wt=labels.filter(l=>l.startsWith('Water Treatment'));const ws=labels.filter(l=>l.startsWith('Water Supply'));const fs=labels.filter(l=>l.startsWith('Food Service'));
-  wt.forEach(w=>{ws.forEach(s=>addE(origAdj,w,s,'water'));hosps.forEach(h=>addE(origAdj,w,h,'water'));fs.forEach(f=>addE(origAdj,w,f,'water'));});
-  // Emergency
-  const emTypes=['Hospital','Fire Station','Police Station','Ambulance Depot'];
-  const emNodes=labels.filter(l=>emTypes.some(t=>l.startsWith(t)));
-  for(let i=0;i<emNodes.length;i++)for(let j=i+1;j<emNodes.length;j++){if(dist(emNodes[i],emNodes[j])<R*.6)addE(origAdj,emNodes[i],emNodes[j],'emergency');}
-
-  // Build optimized: copy, remove some, add emergency_path
-  const removals=[],additions=[];
-  for(const[label,nbs]of Object.entries(origAdj))optAdj[label]=[...nbs];
-
-  // Remove some road edges
-  const roadEdges=[];
-  for(const[l,nbs]of Object.entries(origAdj))for(const n of nbs)if(n.edge_type==='road'&&l<n.neighbor)roadEdges.push({from:l,to:n.neighbor});
-  for(let i=0;i<Math.min(5,roadEdges.length);i++){
-    const e=roadEdges[Math.floor(rng()*roadEdges.length)];
-    if(optAdj[e.from])optAdj[e.from]=optAdj[e.from].filter(n=>!(n.neighbor===e.to&&n.edge_type==='road'));
-    if(optAdj[e.to])optAdj[e.to]=optAdj[e.to].filter(n=>!(n.neighbor===e.from&&n.edge_type==='road'));
-    removals.push({from:e.from,to:e.to,edge_type:'road',reason:'Road through flood-prone low-elevation zone, vulnerable to earthquake liquefaction'});
-  }
-  // Add emergency_path
-  const bunkers=labels.filter(l=>l.startsWith('Bunker')||l.startsWith('Evacuation'));
-  hosps.forEach(h=>{const nearest=bunkers.sort((a,b)=>dist(h,a)-dist(h,b))[0];if(nearest){
-    const d=Math.round(dist(h,nearest)*100)/100;
-    if(!optAdj[h])optAdj[h]=[];optAdj[h].push({neighbor:nearest,edge_type:'emergency_path',distance:d});
-    if(!optAdj[nearest])optAdj[nearest]=[];optAdj[nearest].push({neighbor:h,edge_type:'emergency_path',distance:d});
-    additions.push({from:h,to:nearest,edge_type:'emergency_path',distance:d,reason:'Direct evacuation corridor from hospital to nearest shelter for earthquake casualties'});
-  }});
-  const fires=labels.filter(l=>l.startsWith('Fire Station'));
-  fires.forEach(f=>{pp.forEach(p=>{
-    const d=Math.round(dist(f,p)*100)/100;
-    if(!optAdj[f])optAdj[f]=[];optAdj[f].push({neighbor:p,edge_type:'emergency_path',distance:d});
-    if(!optAdj[p])optAdj[p]=[];optAdj[p].push({neighbor:f,edge_type:'emergency_path',distance:d});
-    additions.push({from:f,to:p,edge_type:'emergency_path',distance:d,reason:'Rapid fire response route to seismically-damaged power infrastructure'});
-  });});
-  fs.slice(0,2).forEach(f=>{const near=bunkers.sort((a,b)=>dist(f,a)-dist(f,b))[0];if(near){
-    const d=Math.round(dist(f,near)*100)/100;
-    if(!optAdj[f])optAdj[f]=[];optAdj[f].push({neighbor:near,edge_type:'emergency_path',distance:d});
-    if(!optAdj[near])optAdj[near]=[];optAdj[near].push({neighbor:f,edge_type:'emergency_path',distance:d});
-    additions.push({from:f,to:near,edge_type:'emergency_path',distance:d,reason:'Supply route for food distribution to displaced population at shelters'});
-  }});
-
-  const origEdgeCount=[...new Set(Object.entries(origAdj).flatMap(([l,nbs])=>nbs.map(n=>[l,n.neighbor].sort().join('|'))))].length;
-  const optEdgeCount=[...new Set(Object.entries(optAdj).flatMap(([l,nbs])=>nbs.map(n=>[l,n.neighbor].sort().join('|'))))].length;
-
-  const mockResp={
-    city_name:'Boston',calamity_list:['earthquake','flood'],
-    city_radius:R*1.1, // slightly larger than placement radius
-    node_positions:positions,
-    original:{adjacency_list:{},typed_adjacency_lists:{},detailed_adjacency:origAdj,stats:{total_edges:origEdgeCount,density:.125,is_connected:true}},
-    optimized:{adjacency_list:{},typed_adjacency_lists:{},detailed_adjacency:optAdj,stats:{total_edges:optEdgeCount,density:.13,is_connected:true}},
-    changes:{edges_removed:removals,edges_added:additions,removal_failures:[],addition_failures:[],summary:{total_removed:removals.length,total_added:additions.length,net_edge_change:additions.length-removals.length,failed_removals:0,failed_additions:0}},
-    groq_analysis:{reasoning:'Given the dual threat of earthquake and flood in Boston, the optimization strategy focuses on three pillars: (1) Eliminating vulnerable road connections that pass through flood-prone low-elevation zones and earthquake liquefaction areas, (2) Establishing emergency evacuation corridors connecting hospitals directly to nearby shelters for rapid casualty transport, and (3) Creating fire response routes from fire stations to power plants, as seismic damage to power infrastructure poses severe secondary fire risks. The network has been reinforced to maintain connectivity while routing around the most vulnerable infrastructure.',priority_nodes:[{node:'Hospital #1',priority:'critical',reason:'Primary trauma center for earthquake injuries'},{node:'Hospital #2',priority:'critical',reason:'Secondary hospital with flood-resistant location'},{node:'Power Plant #1',priority:'high',reason:'Single point of failure for city power grid'},{node:'Water Treatment #1',priority:'high',reason:'Essential for clean water during flood contamination'},{node:'Fire Station #1',priority:'high',reason:'Primary responder for post-earthquake fires'},{node:'Bunker/Shelter #1',priority:'medium',reason:'Largest civilian shelter capacity'}],model_used:'mock-test (no server needed)'},
-    comparison:{original_edges:origEdgeCount,optimized_edges:optEdgeCount,original_density:.125,optimized_density:.13,original_connected:true,optimized_connected:true,emergency_paths_created:additions.length}
-  };
-
-  sS('ok','Mock data loaded — Boston (earthquake + flood)');
-  renderAll(mockResp);
 }
 
-sS('','Idle — configure & run, or click "Test Mock Data"');addCal('earthquake');addCal('flood');
+/* ── Changes tab renderer ── */
+function rChg(changes){
+  if(!changes.length){
+    $('tab-chg').innerHTML = '<div style="color:var(--text-2);padding:40px;text-align:center;">No changes applied</div>';
+    return;
+  }
+
+  let h = '<div class="changes-list">';
+  for(const c of changes){
+    const phase = c.phase || 'unknown';
+    const action = c.action || '';
+
+    h += `<div class="ccard phase-${phase}">`;
+    h += `<div class="cr"><span class="ct" style="background:${phase==='calamity'?'var(--red-dim)':'var(--green-dim)'};color:${phase==='calamity'?'var(--red)':'var(--green)'}">${phase}</span> ${esc(action)}</div>`;
+
+    if(c.calamity) h += `<div class="cm">Calamity: <strong>${esc(c.calamity)}</strong></div>`;
+    if(c.description) h += `<div class="cm">${esc(c.description)}</div>`;
+    if(c.edge_type) h += `<div class="cm">Edge type: <code>${esc(c.edge_type)}</code></div>`;
+    if(c.count !== undefined) h += `<div class="cm">Count: <strong>${c.count}</strong></div>`;
+    if(c.probability !== undefined) h += `<div class="cm">Probability: ${c.probability}</div>`;
+    if(c.node_type) h += `<div class="cm">Node type: ${esc(c.node_type)}</div>`;
+    if(c.destroyed) h += `<div class="cm">Destroyed: ${c.destroyed.map(esc).join(', ')}</div>`;
+    if(c.disabled) h += `<div class="cm">Disabled: ${c.disabled.map(esc).join(', ')}</div>`;
+    if(c.removed && Array.isArray(c.removed)) h += `<div class="cm">Removed (${c.removed.length}): ${c.removed.slice(0,8).map(esc).join(', ')}${c.removed.length>8 ? ` ... +${c.removed.length-8} more` : ''}</div>`;
+    if(c.label) h += `<div class="cm">Node: ${esc(c.label)}</div>`;
+    if(c.type) h += `<div class="cm">Type: ${esc(c.type)}</div>`;
+    if(c.connected_to) h += `<div class="cm">Connected to: ${c.connected_to.map(esc).join(', ')}</div>`;
+    if(c.from) h += `<div class="cm">${esc(c.from)} → ${esc(c.to||'')}</div>`;
+    if(c.via) h += `<div class="cm">Via: ${esc(c.via)}</div>`;
+    if(c.content) h += `<div class="cm">${esc(c.content)}</div>`;
+    if(c.reason) h += `<div class="cm" style="color:var(--text-2)">${esc(c.reason)}</div>`;
+
+    h += `</div>`;
+  }
+  h += '</div>';
+  $('tab-chg').innerHTML = h;
+}
+
+function sTab(id,btn){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.tab-body').forEach(b=>b.classList.remove('active'));
+  $('tab-'+id).classList.add('active');
+}
+
+/* ═══════════════════════════════════════════════════════════
+   AUTO-FETCH ON PAGE LOAD
+   ═══════════════════════════════════════════════════════════ */
+async function fetchData(){
+  sS('loading', `Fetching ${REQUEST_BODY.city_name}...`);
+  $('loadBar').classList.add('on');
+
+  try {
+    const r = await fetch(API_URL + '/mitigate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(REQUEST_BODY),
+    });
+
+    if(!r.ok){
+      const e = await r.json().catch(() => ({}));
+      throw new Error(e.detail || `HTTP ${r.status}`);
+    }
+
+    const data = await r.json();
+    sS('ok', `${data.city?.name || REQUEST_BODY.city_name} — ${data.data_source}`);
+    toast('ok', 'Data Loaded', `${data.original_stats?.infrastructure_nodes || '?'} nodes from ${data.data_source}`);
+    renderAll(data);
+
+  } catch(e) {
+    sS('error', 'Failed');
+    if(e.message.includes('Failed to fetch') || e.message.includes('NetworkError')){
+      toast('error', 'Connection Failed', `Cannot reach ${API_URL}. Start the server with: uvicorn backend:app --port 8000`, 12000);
+    } else {
+      toast('error', 'Error', e.message, 8000);
+    }
+  } finally {
+    $('loadBar').classList.remove('on');
+  }
+}
+
+// Fire on load
+fetchData();
 </script>
 </body>
 </html>
