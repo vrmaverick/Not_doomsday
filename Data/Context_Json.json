@@ -5,13 +5,13 @@
       "contents": {
         "type": "solar_flare",
         "location": "Global",
-        "timestamp": "2026-02-15T09:16:51.013857+00:00",
+        "timestamp": "2026-02-15T10:21:57.846046+00:00",
         "outages_expected": "No",
-        "description": "Recent solar flare activity has been low to moderate, with the most significant event being an M1.4 flare on February 11-12. However, the current Kp index is 8, indicating a moderate to high level of geomagnetic activity. Despite this, the lack of recent X-class flares and the relatively low level of solar flare activity suggest that the risk of radio/GPS/power-grid outages is low.",
-        "accuracy": "70",
+        "description": "Recent solar flare activity has been low to moderate, with the largest flare being an M1.4. The current Kp index is around 7-8, indicating a moderate geomagnetic storm. However, the data on solar flare events is incomplete due to a fetch error, which reduces the accuracy of this assessment. Given the available data, the risk of radio/GPS/power-grid outages is low.",
+        "accuracy": 60,
         "risk_level": "LOW"
       },
-      "saved_at": "2026-02-15T09:16:51.013896+00:00"
+      "saved_at": "2026-02-15T10:21:57.846076+00:00"
     },
     {
       "name": "earthquake",
@@ -24,17 +24,17 @@
         "events_analyzed": 1,
         "prediction": {
           "risk_level": "LOW",
-          "risk_score": 2,
+          "risk_score": 1,
           "confidence": 0.9,
-          "summary": "The region is experiencing normal background seismicity with a single minor event, and no concerning patterns have been detected. The decelerating frequency trend and lack of significant clustering or magnitude distribution anomalies suggest a low risk of a major earthquake.",
+          "summary": "The region is experiencing normal background seismicity with a single minor event, indicating a low risk of significant earthquake activity. The decelerating frequency trend and lack of significant clustering or magnitude distribution concerns support this assessment.",
           "key_factors": [
             "Single minor event",
             "Decelerating frequency trend",
             "No significant clustering"
           ],
           "pattern_detected": "No notable seismic pattern detected",
-          "recommendation": "Continue routine seismic monitoring, but no immediate action is required. Review and update emergency preparedness plans to ensure readiness for any potential future events.",
-          "raw_response": "{\n  \"risk_level\": \"LOW\",\n  \"risk_score\": 2,\n  \"confidence\": 0.9,\n  \"summary\": \"The region is experiencing normal background seismicity with a single minor event, and no concerning patterns have been detected. The decelerating frequency trend and lack of significant clustering or magnitude distribution anomalies suggest a low risk of a major earthquake.\",\n  \"key_factors\": [\"Single minor event\", \"Decelerating frequency trend\", \"No significant clustering\"],\n  \"pattern_detected\": \"No notable seismic pattern detected\",\n  \"recommendation\": \"Continue routine seismic monitoring, but no immediate action is required. Review and update emergency preparedness plans to ensure readiness for any potential future events.\"\n}",
+          "recommendation": "No immediate action is required, but continued monitoring of seismic activity is recommended to ensure early detection of any potential changes in the region's seismicity.",
+          "raw_response": "{\n  \"risk_level\": \"LOW\",\n  \"risk_score\": 1,\n  \"confidence\": 0.9,\n  \"summary\": \"The region is experiencing normal background seismicity with a single minor event, indicating a low risk of significant earthquake activity. The decelerating frequency trend and lack of significant clustering or magnitude distribution concerns support this assessment.\",\n  \"key_factors\": [\"Single minor event\", \"Decelerating frequency trend\", \"No significant clustering\"],\n  \"pattern_detected\": \"No notable seismic pattern detected\",\n  \"recommendation\": \"No immediate action is required, but continued monitoring of seismic activity is recommended to ensure early detection of any potential changes in the region's seismicity.\"\n}",
           "model": "llama-3.3-70b-versatile",
           "error": null
         },
@@ -79,7 +79,7 @@
           }
         }
       },
-      "saved_at": "2026-02-15T09:24:26.755326+00:00"
+      "saved_at": "2026-02-15T10:42:21.640060+00:00"
     },
     {
       "name": "flood",
@@ -179,7 +179,7 @@
           ]
         }
       },
-      "saved_at": "2026-02-15T09:24:27.260831+00:00"
+      "saved_at": "2026-02-15T10:42:22.152627+00:00"
     },
     {
       "name": "fire",
@@ -192,7 +192,7 @@
         "detections": 0,
         "summary": "No active fire detections in this area."
       },
-      "saved_at": "2026-02-15T09:24:29.296963+00:00"
+      "saved_at": "2026-02-15T10:42:23.144736+00:00"
     },
     {
       "name": "volcano",
@@ -219,7 +219,291 @@
         "nearest_volcano": null,
         "elevated_volcanoes": []
       },
-      "saved_at": "2026-02-15T09:24:29.302891+00:00"
+      "saved_at": "2026-02-15T10:42:23.152275+00:00"
+    },
+    {
+      "name": "earthquake",
+      "contents": {
+        "location": "San Francisco, CA",
+        "events_analyzed": 37,
+        "prediction": {
+          "risk_level": "MODERATE",
+          "risk_score": 4,
+          "confidence": 0.7,
+          "summary": "The region is experiencing slightly elevated seismic activity with a moderate frequency of light to moderate earthquakes, but no significant clustering or major events have occurred.",
+          "key_factors": [
+            "stable frequency trend",
+            "moderate magnitude distribution",
+            "variable depth profile"
+          ],
+          "pattern_detected": "No notable seismic pattern detected, but a few events have occurred in close proximity to each other in the Petrolia and San Ramon areas.",
+          "recommendation": "Continue monitoring seismic activity closely, and consider updating emergency preparedness plans to ensure readiness in case of a larger event.",
+          "raw_response": "{\n  \"risk_level\": \"MODERATE\",\n  \"risk_score\": 4,\n  \"confidence\": 0.7,\n  \"summary\": \"The region is experiencing slightly elevated seismic activity with a moderate frequency of light to moderate earthquakes, but no significant clustering or major events have occurred.\",\n  \"key_factors\": [\"stable frequency trend\", \"moderate magnitude distribution\", \"variable depth profile\"],\n  \"pattern_detected\": \"No notable seismic pattern detected, but a few events have occurred in close proximity to each other in the Petrolia and San Ramon areas.\",\n  \"recommendation\": \"Continue monitoring seismic activity closely, and consider updating emergency preparedness plans to ensure readiness in case of a larger event.\"\n}",
+          "model": "llama-3.3-70b-versatile",
+          "error": null
+        },
+        "data_summary": {
+          "location": "San Francisco, CA",
+          "total_events": 37,
+          "time_span_days": 29.4,
+          "magnitude": {
+            "min": 3,
+            "max": 4.68,
+            "avg": 3.43,
+            "distribution": {
+              "minor_2_3": 0,
+              "light_3_4": 33,
+              "moderate_4_5": 4,
+              "strong_5_6": 0,
+              "major_6_plus": 0
+            }
+          },
+          "depth_km": {
+            "min": -0.28,
+            "max": 21.1,
+            "avg": 7.49
+          },
+          "temporal": {
+            "events_per_day": 1.26,
+            "trend": "stable",
+            "acceleration_ratio": 0.68,
+            "avg_gap_hours": 19.6,
+            "min_gap_hours": 0.0
+          },
+          "geographic": {
+            "center": {
+              "lat": 38.774,
+              "lng": -121.6019
+            },
+            "spread": {
+              "lat_std": 1.8814,
+              "lng_std": 2.6718
+            },
+            "clustered": false
+          }
+        }
+      },
+      "saved_at": "2026-02-15T11:04:53.391584+00:00"
+    },
+    {
+      "name": "earthquake",
+      "contents": {
+        "location": "Houston, Texas",
+        "coordinates": {
+          "lat": 29.7589382,
+          "lng": -95.3676974
+        },
+        "events_analyzed": 10,
+        "prediction": {
+          "risk_level": "LOW",
+          "risk_score": 2,
+          "confidence": 0.8,
+          "summary": "The region is experiencing normal background seismicity with no concerning patterns, and the frequency trend is stable.",
+          "key_factors": [
+            "stable frequency trend",
+            "low magnitude events",
+            "no geographic clustering"
+          ],
+          "pattern_detected": "No notable seismic pattern detected, with a random distribution of small magnitude events.",
+          "recommendation": "Continue monitoring seismic activity, but no immediate action is required as the risk level is low.",
+          "raw_response": "{\n  \"risk_level\": \"LOW\",\n  \"risk_score\": 2,\n  \"confidence\": 0.8,\n  \"summary\": \"The region is experiencing normal background seismicity with no concerning patterns, and the frequency trend is stable.\",\n  \"key_factors\": [\"stable frequency trend\", \"low magnitude events\", \"no geographic clustering\"],\n  \"pattern_detected\": \"No notable seismic pattern detected, with a random distribution of small magnitude events.\",\n  \"recommendation\": \"Continue monitoring seismic activity, but no immediate action is required as the risk level is low.\"\n}",
+          "model": "llama-3.3-70b-versatile",
+          "error": null
+        },
+        "data_summary": {
+          "location": "Houston, Texas",
+          "total_events": 10,
+          "time_span_days": 25.6,
+          "magnitude": {
+            "min": 2.5,
+            "max": 2.9,
+            "avg": 2.64,
+            "distribution": {
+              "minor_2_3": 10,
+              "light_3_4": 0,
+              "moderate_4_5": 0,
+              "strong_5_6": 0,
+              "major_6_plus": 0
+            }
+          },
+          "depth_km": {
+            "min": 5,
+            "max": 8.24,
+            "avg": 6.83
+          },
+          "temporal": {
+            "events_per_day": 0.39,
+            "trend": "stable",
+            "acceleration_ratio": 1.5,
+            "avg_gap_hours": 68.2,
+            "min_gap_hours": 19.6
+          },
+          "geographic": {
+            "center": {
+              "lat": 29.191,
+              "lng": -98.0333
+            },
+            "spread": {
+              "lat_std": 1.045,
+              "lng_std": 1.7568
+            },
+            "clustered": false
+          }
+        }
+      },
+      "saved_at": "2026-02-15T11:30:11.897746+00:00"
+    },
+    {
+      "name": "flood",
+      "contents": {
+        "location": "Houston, Texas",
+        "coordinates": {
+          "lat": 29.7589382,
+          "lng": -95.3676974
+        },
+        "days_analyzed": 60,
+        "prediction": {
+          "risk_level": "HIGH",
+          "risk_score": 7,
+          "confidence": 0.85,
+          "summary": "The region is experiencing a rising trend in discharge levels, with a significant number of spikes detected and multiple forecast risk days projected, indicating a high flood risk. The forecast max projections exceed historical peaks, further supporting the high risk assessment.",
+          "key_factors": [
+            "Rising 7-day trend",
+            "Multiple spikes detected",
+            "Forecast risk days"
+          ],
+          "pattern_detected": "A notable pattern of rapid increases in discharge levels, followed by slower decreases, has been detected, suggesting a potential for flash flooding.",
+          "forecast_outlook": "The forecast outlook indicates a continued rise in discharge levels, with multiple days exceeding historical peaks, leading to a high risk of flooding in the coming days and weeks. The region should prepare for potential flooding, especially around February 24-28.",
+          "recommendation": "Residents and authorities should monitor the situation closely and take proactive measures to mitigate flood risk, such as evacuating low-lying areas and preparing emergency response plans, as the forecast suggests a high likelihood of significant flooding.",
+          "raw_response": "{\n  \"risk_level\": \"HIGH\",\n  \"risk_score\": 7,\n  \"confidence\": 0.85,\n  \"summary\": \"The region is experiencing a rising trend in discharge levels, with a significant number of spikes detected and multiple forecast risk days projected, indicating a high flood risk. The forecast max projections exceed historical peaks, further supporting the high risk assessment.\",\n  \"key_factors\": [\"Rising 7-day trend\", \"Multiple spikes detected\", \"Forecast risk days\"],\n  \"pattern_detected\": \"A notable pattern of rapid increases in discharge levels, followed by slower decreases, has been detected, suggesting a potential for flash flooding.\",\n  \"forecast_outlook\": \"The forecast outlook indicates a continued rise in discharge levels, with multiple days exceeding historical peaks, leading to a high risk of flooding in the coming days and weeks. The region should prepare for potential flooding, especially around February 24-28.\",\n  \"recommendation\": \"Residents and authorities should monitor the situation closely and take proactive measures to mitigate flood risk, such as evacuating low-lying areas and preparing emergency response plans, as the forecast suggests a high likelihood of significant flooding.\"\n}",
+          "model": "llama-3.3-70b-versatile",
+          "error": null
+        },
+        "data_summary": {
+          "location": "Houston, Texas",
+          "grid_coords": {
+            "lat": 29.775002,
+            "lng": -95.37499
+          },
+          "total_days": 60,
+          "historical": {
+            "days": 31,
+            "min": 6.55,
+            "max": 64.61,
+            "avg": 18.47,
+            "std": 14.57
+          },
+          "forecast": {
+            "days": 29,
+            "mean_stats": {
+              "min": 12.66,
+              "max": 44.6,
+              "avg": 22.78,
+              "std": 7.69
+            },
+            "max_stats": {
+              "min": 22.39,
+              "max": 243.34,
+              "avg": 110.94,
+              "std": 63.56
+            }
+          },
+          "trend_7d": {
+            "direction": "rising",
+            "slope_m3s_per_day": 0.34,
+            "pct_change_per_day": 2.78
+          },
+          "spikes_detected": 5,
+          "spikes": [
+            {
+              "date": "2026-01-25",
+              "from": 7.69,
+              "to": 50.52,
+              "pct_change": 557.0
+            },
+            {
+              "date": "2026-02-04",
+              "from": 9.59,
+              "to": 22.71,
+              "pct_change": 136.8
+            },
+            {
+              "date": "2026-02-05",
+              "from": 22.71,
+              "to": 37.46,
+              "pct_change": 64.9
+            },
+            {
+              "date": "2026-02-07",
+              "from": 34.08,
+              "to": 23.38,
+              "pct_change": -31.4
+            },
+            {
+              "date": "2026-02-15",
+              "from": 9.19,
+              "to": 19.14,
+              "pct_change": 108.3
+            }
+          ],
+          "forecast_risk_days": 19,
+          "forecast_risks": [
+            {
+              "date": "2026-02-24",
+              "projected_max": 123.74,
+              "vs_hist_peak_pct": 91.5
+            },
+            {
+              "date": "2026-02-25",
+              "projected_max": 135.77,
+              "vs_hist_peak_pct": 110.1
+            },
+            {
+              "date": "2026-02-26",
+              "projected_max": 88.95,
+              "vs_hist_peak_pct": 37.7
+            },
+            {
+              "date": "2026-02-27",
+              "projected_max": 136.4,
+              "vs_hist_peak_pct": 111.1
+            },
+            {
+              "date": "2026-02-28",
+              "projected_max": 121.46,
+              "vs_hist_peak_pct": 88.0
+            }
+          ]
+        }
+      },
+      "saved_at": "2026-02-15T11:30:13.647996+00:00"
+    },
+    {
+      "name": "volcano",
+      "contents": {
+        "location": "Houston, Texas",
+        "coordinates": {
+          "lat": 29.7589382,
+          "lng": -95.3676974
+        },
+        "prediction": {
+          "risk_level": "LOW",
+          "risk_score": 0,
+          "confidence": 0.7,
+          "summary": "No nearby volcanoes.",
+          "key_factors": [
+            "Nearby volcanoes: 0",
+            "Elevated alerts: 0",
+            "Max risk score: 0/100"
+          ],
+          "pattern_detected": "No elevated alerts",
+          "recommendation": "No immediate volcanic threat"
+        },
+        "nearby_count": 0,
+        "nearest_volcano": null,
+        "elevated_volcanoes": []
+      },
+      "saved_at": "2026-02-15T11:30:14.645908+00:00"
     },
     {
       "name": "pandemic",
@@ -460,8 +744,8 @@
           }
         }
       },
-      "saved_at": "2026-02-15T09:24:30.198581+00:00"
+      "saved_at": "2026-02-15T11:30:15.855725+00:00"
     }
   ],
-  "last_updated": "2026-02-15T09:24:30.198689+00:00"
+  "last_updated": "2026-02-15T11:30:15.855863+00:00"
 }

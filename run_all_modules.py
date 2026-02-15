@@ -1,4 +1,3 @@
-
 import os
 import sys
 import json
@@ -138,17 +137,23 @@ def run_volcano(lat, lng, name):
         volcano_dir = os.path.join(PROJECT_ROOT, "Volcano")
         sys.path.insert(0, volcano_dir)
 
-        from volcano_api import VolcanoClient
+        from volcano_pipeline import get_nearby_volcanoes, compute_risk_score
 
-        # Use existing cached data from Volcano/volcano_data/
-        client = VolcanoClient(cache_dir=os.path.join(volcano_dir, "volcano_data"))
+        # Load cached enriched data
+        cache_path = os.path.join(volcano_dir, "volcano_data", "volcanoes_enriched.json")
+        if not os.path.exists(cache_path):
+            print("  ❌ Volcano — no cached data. Run: cd Volcano && python3 volcano_pipeline.py")
+            return
+
+        with open(cache_path, encoding="utf-8") as f:
+            data = json.load(f)
         
-        # Get risk assessment for location
+        # Get nearby volcanoes
         print("  Analyzing nearby volcanoes...")
-        risk = client.get_risk(lat, lng)
+        nearby = get_nearby_volcanoes(data, lat, lng, radius_km=500, top_n=10)
 
-        # Build prediction dict matching our standard format
-        max_score = risk.get("max_risk_score", 0)
+        # Build prediction
+        max_score = max((v["composite_risk_score"] for v in nearby), default=0)
         if max_score >= 75:
             risk_level = "CRITICAL"
         elif max_score >= 50:
@@ -158,8 +163,8 @@ def run_volcano(lat, lng, name):
         else:
             risk_level = "LOW"
 
-        nearest = risk.get("nearest_volcano")
-        elevated = risk.get("elevated_volcanoes", [])
+        nearest = nearby[0] if nearby else None
+        elevated = [v for v in nearby if v.get("alert_score", 0) >= 2]
 
         prediction = {
             "risk_level": risk_level,
@@ -169,7 +174,7 @@ def run_volcano(lat, lng, name):
                        f"Nearest: {nearest['volcano_name']} ({nearest['distance_km']}km away, "
                        f"risk score {nearest['composite_risk_score']}/100)" if nearest else "No nearby volcanoes.",
             "key_factors": [
-                f"Nearby volcanoes: {risk.get('nearby_count', 0)}",
+                f"Nearby volcanoes: {len(nearby)}",
                 f"Elevated alerts: {len(elevated)}",
                 f"Max risk score: {max_score}/100",
             ],
@@ -181,12 +186,12 @@ def run_volcano(lat, lng, name):
             "location": name,
             "coordinates": {"lat": lat, "lng": lng},
             "prediction": prediction,
-            "nearby_count": risk.get("nearby_count", 0),
+            "nearby_count": len(nearby),
             "nearest_volcano": {
                 "name": nearest["volcano_name"],
-                "distance_km": nearest["distance_km"],
+                "distance_km": nearest["distance_to_user_km"],
                 "threat": nearest["nvews_threat"],
-                "alert": nearest["alert_level"],
+                "alert": nearest.get("alert_level"),
                 "risk_score": nearest["composite_risk_score"],
             } if nearest else None,
             "elevated_volcanoes": [

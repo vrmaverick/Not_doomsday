@@ -27,14 +27,22 @@ def save_to_context(name: str, data):
         "saved_at": datetime.now(timezone.utc).isoformat(),
     }
 
+    # Get location from contents for dedup key
+    location = ""
+    if isinstance(contents, dict):
+        location = contents.get("location", contents.get("type", ""))
+
     if os.path.exists(CONTEXT_FILE):
         with open(CONTEXT_FILE, 'r') as f:
             context = json.load(f)
     else:
         context = {"entries": []}
 
-    # Dedupe by name
-    context["entries"] = [e for e in context["entries"] if e["name"] != name]
+    # Dedupe by name + location (so different cities are kept)
+    context["entries"] = [
+        e for e in context["entries"]
+        if not (e["name"] == name and e.get("contents", {}).get("location", e.get("contents", {}).get("type", "")) == location)
+    ]
     context["entries"].append(entry)
     context["last_updated"] = datetime.now(timezone.utc).isoformat()
 
