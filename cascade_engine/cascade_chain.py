@@ -43,9 +43,10 @@ from langchain_groq import ChatGroq
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough, RunnableLambda
 
-from retriever import get_retriever, multi_domain_query, query_threats
+from retriever import multi_domain_query, query_threats
 from cascade_prompt import (
     CASCADE_PROMPT,
+    JSON_SCHEMA,
     format_active_threats,
     format_retrieved_context,
 )
@@ -166,6 +167,7 @@ def analyze_threats(
 
     print(f"[CASCADE] Sending to {GROQ_MODEL}...")
     raw_response = chain.invoke({
+        "json_schema": JSON_SCHEMA,
         "active_threats": threats_text,
         "historical_context": context_text,
         "location": location,

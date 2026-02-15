@@ -1,0 +1,249 @@
+{
+  "input_prediction": {
+    "location": "Boston, Massachusetts",
+    "overall_threat_level": "CRITICAL",
+    "ranked_calamities": [
+      {
+        "rank": 1,
+        "name": "flood",
+        "type": "flood",
+        "risk_level": "CRITICAL",
+        "risk_score": 10,
+        "confidence": 0.95,
+        "summary": "The region is at extreme risk of flooding due to significantly elevated forecast projections and multiple risk days ahead.",
+        "key_fields_used": {
+          "key_factors": [
+            "Elevated forecast projections",
+            "Multiple risk days",
+            "Rapid acceleration in discharge"
+          ]
+        }
+      },
+      {
+        "rank": 2,
+        "name": "earthquake",
+        "type": "earthquake",
+        "risk_level": "LOW",
+        "risk_score": 1,
+        "confidence": 0.9,
+        "summary": "The region is experiencing normal background seismicity with a single minor event, indicating a low risk of significant earthquake activity.",
+        "key_fields_used": {
+          "key_factors": [
+            "Single minor event",
+            "Decelerating frequency trend",
+            "No significant clustering"
+          ]
+        }
+      },
+      {
+        "rank": 3,
+        "name": "pandemic",
+        "type": "pandemic",
+        "risk_level": "LOW",
+        "risk_score": 0,
+        "confidence": 0.7,
+        "summary": "There is no immediate pandemic threat in the region, but there are rising concerns about diseases such as Nipah virus and measles.",
+        "key_fields_used": {
+          "key_factors": [
+            "Rising concerns about diseases"
+          ]
+        }
+      },
+      {
+        "rank": 4,
+        "name": "solar_flare",
+        "type": "solar_flare",
+        "risk_level": "LOW",
+        "risk_score": 0,
+        "confidence": 0.7,
+        "summary": "Recent solar flare activity has been low to moderate, with no immediate threat to the region.",
+        "key_fields_used": {
+          "key_factors": [
+            "Low to moderate solar flare activity"
+          ]
+        }
+      },
+      {
+        "rank": 5,
+        "name": "volcano",
+        "type": "volcano",
+        "risk_level": "LOW",
+        "risk_score": 0,
+        "confidence": 0.7,
+        "summary": "There are no nearby volcanoes, indicating a low risk of volcanic activity in the region.",
+        "key_fields_used": {
+          "key_factors": [
+            "No nearby volcanoes"
+          ]
+        }
+      }
+    ],
+    "apocalypse_timeline": [
+      {
+        "phase": 1,
+        "title": "Initial Flood Event",
+        "description": "A severe flood event occurs in Boston, Massachusetts, causing widespread damage and disruption."
+      },
+      {
+        "phase": 2,
+        "title": "Secondary Disasters",
+        "description": "The initial flood event triggers secondary disasters such as earthquakes and pandemics."
+      },
+      {
+        "phase": 3,
+        "title": "Long-term Consequences",
+        "description": "Displacement of people, disruption of healthcare services, destruction of infrastructure."
+      }
+    ]
+  },
+  "timeline_validation": [
+    {
+      "claim": "Flood triggers earthquakes (Phase 2)",
+      "historical_support": 0,
+      "total_searched": 1,
+      "verdict": "UNSUPPORTED",
+      "evidence_samples": []
+    },
+    {
+      "claim": "Flood triggers pandemic via displacement/healthcare disruption (Phase 2)",
+      "historical_support": 0,
+      "total_searched": 1,
+      "verdict": "UNSUPPORTED",
+      "evidence_samples": []
+    },
+    {
+      "claim": "Flood risk CRITICAL (score 10/10) in Boston",
+      "historical_support": 1,
+      "total_searched": 10,
+      "verdict": "CHECK_DATA",
+      "evidence_samples": [
+        "GDELT hotspot for respiratory: Finland (1 mentions)."
+      ],
+      "note": "Verify against current discharge data \u2014 score 10 implies historic levels"
+    },
+    {
+      "claim": "Earthquake risk LOW in Boston (normal background seismicity)",
+      "historical_support": 1,
+      "significant_events_found": 0,
+      "verdict": "SUPPORTED",
+      "evidence_samples": [
+        "GDELT hotspot for respiratory: Finland (1 mentions)."
+      ]
+    },
+    {
+      "claim": "No immediate pandemic threat (LOW, score 0)",
+      "historical_support": 1,
+      "active_signals_found": 0,
+      "verdict": "SUPPORTED",
+      "evidence_samples": [
+        "GDELT hotspot for respiratory: Finland (1 mentions)."
+      ]
+    }
+  ],
+  "cascade_analysis": {
+    "overall_risk_level": "HIGH",
+    "overall_risk_score": 8,
+    "situation_briefing": "A critical flood threat is impacting Boston, Massachusetts, with a high risk of significant flooding due to elevated forecast projections and multiple risk days ahead. Other threats, such as earthquake, pandemic, solar flare, and volcanic activity, are currently low. However, the flood threat has the potential to trigger cascade effects, including disruptions to critical infrastructure and potential increases in disease transmission.",
+    "active_threats_assessment": [
+      {
+        "threat_type": "flood",
+        "severity": "critical",
+        "location": "Boston, Massachusetts",
+        "summary": "The region is at extreme risk of flooding due to significantly elevated forecast projections and multiple risk days ahead.",
+        "confidence": 0.95
+      },
+      {
+        "threat_type": "earthquake",
+        "severity": "low",
+        "location": "Boston, Massachusetts",
+        "summary": "The region is experiencing normal background seismicity with a low risk of significant earthquake activity.",
+        "confidence": 0.9
+      },
+      {
+        "threat_type": "pandemic",
+        "severity": "low",
+        "location": "Boston, Massachusetts",
+        "summary": "There is no immediate pandemic threat in the region, but there are rising concerns about diseases such as Nipah virus and measles.",
+        "confidence": 0.7
+      },
+      {
+        "threat_type": "solar_flare",
+        "severity": "low",
+        "location": "Boston, Massachusetts",
+        "summary": "Recent solar flare activity has been low to moderate, with no immediate threat to the region.",
+        "confidence": 0.7
+      },
+      {
+        "threat_type": "volcano",
+        "severity": "low",
+        "location": "Boston, Massachusetts",
+        "summary": "There are no nearby volcanoes, indicating a low risk of volcanic activity in the region.",
+        "confidence": 0.7
+      }
+    ],
+    "cascade_predictions": [
+      {
+        "chain_id": 1,
+        "trigger": "Critical flood event",
+        "cascade_steps": [
+          {
+            "step": 1,
+            "event": "Disruption of critical infrastructure, including power and water treatment plants",
+            "domain": "flood",
+            "probability": "High",
+            "timeframe": "0-6 hours",
+            "mechanism": "Flooding of critical infrastructure due to elevated water levels"
+          },
+          {
+            "step": 2,
+            "event": "Increased risk of waterborne disease transmission",
+            "domain": "pandemic",
+            "probability": "Medium",
+            "timeframe": "1-3 days",
+            "mechanism": "Contamination of water sources due to flooding"
+          }
+        ],
+        "historical_precedent": "The 2010 Pakistan floods, which led to a significant increase in waterborne disease transmission",
+        "ultimate_impact": "Significant disruption to critical infrastructure and increased risk of disease transmission",
+        "affected_population": "Approximately 700,000 people in the Boston metropolitan area"
+      }
+    ],
+    "recommended_actions": [
+      {
+        "priority": 1,
+        "urgency": "IMMEDIATE",
+        "action": "Activate emergency response protocols, including evacuation plans and provision of emergency supplies",
+        "responsible_entity": "City of Boston Emergency Management Agency",
+        "addresses_cascade": 1,
+        "rationale": "To mitigate the immediate impacts of the flood event and prevent further disruptions to critical infrastructure"
+      },
+      {
+        "priority": 2,
+        "urgency": "SHORT_TERM",
+        "action": "Deploy water purification systems and distribute bottled water to affected areas",
+        "responsible_entity": "Boston Water and Sewer Commission",
+        "addresses_cascade": 1,
+        "rationale": "To reduce the risk of waterborne disease transmission and ensure access to safe drinking water"
+      }
+    ],
+    "monitoring_alerts": [
+      {
+        "indicator": "Water level measurements",
+        "threshold": "Elevation above 5 feet",
+        "data_source": "USGS stream gauges"
+      },
+      {
+        "indicator": "Power outage reports",
+        "threshold": "More than 10,000 households affected",
+        "data_source": "Utility company reports"
+      }
+    ],
+    "confidence_notes": "The confidence in the cascade prediction is based on the high confidence in the flood threat assessment and the historical precedent of the 2010 Pakistan floods. However, the probability of the pandemic threat is lower due to the current low severity of the pandemic threat in the region.",
+    "_meta": {
+      "model": "llama-3.3-70b-versatile",
+      "threats_analyzed": 5,
+      "historical_docs_used": 1,
+      "location": "Boston, Massachusetts"
+    }
+  }
+}

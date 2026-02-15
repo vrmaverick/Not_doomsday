@@ -37,7 +37,7 @@ from flask_cors import CORS
 from dotenv import load_dotenv
 
 from cascade_chain import analyze_threats, analyze_from_context_json, GROQ_MODEL
-from retriever import get_vectorstore
+from retriever import get_collection
 
 load_dotenv()
 
@@ -92,8 +92,8 @@ def cascade_from_context():
 def cascade_health():
     """Health check — verifies ChromaDB and Groq are accessible."""
     try:
-        vs = get_vectorstore()
-        doc_count = vs._collection.count()
+        col = get_collection()
+        doc_count = col.count()
 
         return jsonify({
             "status": "ok",

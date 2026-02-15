@@ -1,154 +1,116 @@
 """
 retriever.py
 ============
-Connects LangChain to the existing ChromaDB (threat_db/, 176K docs).
-Provides semantic search across all 6 threat domains.
+Connects directly to ChromaDB (no LangChain wrapper — works with chromadb 1.5.0).
+Provides semantic search across all 6 threat domains (176K docs).
 
 Usage:
-    from retriever import get_retriever, query_threats
+    from retriever import query_threats, multi_domain_query
 
-    retriever = get_retriever()
     docs = query_threats("earthquake near coastal city with flooding", n=5)
 """
 
 import os
 import chromadb
-from langchain_chroma import Chroma
-from langchain_huggingface import HuggingFaceEmbeddings
+from dotenv import load_dotenv
 
+load_dotenv()
 
-# ── Path to your existing persistent ChromaDB ──
-# Searches common locations automatically
 COLLECTION_NAME = "threat_data"
 
-def _find_threat_db() -> str:
-    """Auto-detect where threat_db/ lives."""
+def _find_chroma_db() -> str:
+    """Auto-detect where the chroma DB lives."""
     script_dir = os.path.dirname(os.path.abspath(__file__))
     candidates = [
-        os.environ.get("CHROMA_PATH", ""),          # env var override
-        os.path.join(script_dir, "threat_db"),       # same folder as this script
-        os.path.join(script_dir, "..", "threat_db"), # one level up
-        os.path.join(os.getcwd(), "threat_db"),      # current working dir
-        os.path.join(os.getcwd(), "..", "threat_db"),# one up from cwd
+        os.environ.get("CHROMA_PATH", ""),
+        os.path.join(script_dir, "chroma_db"),
+        os.path.join(script_dir, "..", "chroma_db"),
+        os.path.join(script_dir, "threat_db"),
+        os.path.join(script_dir, "..", "threat_db"),
+        os.path.join(os.getcwd(), "chroma_db"),
+        os.path.join(os.getcwd(), "..", "chroma_db"),
+        os.path.join(os.getcwd(), "threat_db"),
+        os.path.join(os.getcwd(), "..", "threat_db"),
     ]
     for path in candidates:
         if path and os.path.isdir(path):
             print(f"[RETRIEVER] Found ChromaDB at: {os.path.abspath(path)}")
             return os.path.abspath(path)
 
-    # Fallback — let the user know
-    print(f"[RETRIEVER] WARNING: Could not find threat_db/ directory!")
-    print(f"[RETRIEVER] Searched: {[c for c in candidates if c]}")
-    print(f"[RETRIEVER] Set CHROMA_PATH env var or move threat_db/ next to this script")
-    return os.path.join(script_dir, "threat_db")
-
-CHROMA_PATH = _find_threat_db()
+    print("[RETRIEVER] WARNING: Could not find chroma_db/ or threat_db/!")
+    print(f"[RETRIEVER] Set CHROMA_PATH in .env")
+    return os.path.join(script_dir, "chroma_db")
 
 
-# ── Cache the embedding model so it only loads once ──
-_embedding_model = None
+# ── Cached singleton ──
+_collection = None
 
-def get_embedding_function():
-    """
-    Use the same embedding model ChromaDB used when building the DB.
-    ChromaDB's default is 'all-MiniLM-L6-v2' — if you used something
-    else during build_chromadb.py, swap it here.
-    """
-    global _embedding_model
-    if _embedding_model is None:
-        _embedding_model = HuggingFaceEmbeddings(
-            model_name="all-MiniLM-L6-v2"
-        )
-    return _embedding_model
-
-
-# ── Cache the vectorstore so we don't reconnect every call ──
-_vectorstore = None
-
-def get_vectorstore():
-    """
-    Connect to the existing persisted ChromaDB.
-    Does NOT re-embed anything — just opens the existing DB.
-    """
-    global _vectorstore
-    if _vectorstore is None:
-        embedding_fn = get_embedding_function()
-        _vectorstore = Chroma(
-            collection_name=COLLECTION_NAME,
-            persist_directory=CHROMA_PATH,
-            embedding_function=embedding_fn,
-        )
-    return _vectorstore
-
-
-def get_retriever(k: int = 10, domain_filter: str = None):
-    """
-    Returns a LangChain retriever backed by the threat DB.
-
-    Args:
-        k: Number of documents to retrieve per query
-        domain_filter: Optional — filter to a specific domain
-                       e.g. "earthquake", "pandemic", "flood", etc.
-    """
-    vectorstore = get_vectorstore()
-
-    search_kwargs = {"k": k}
-
-    if domain_filter:
-        search_kwargs["filter"] = {"domain": domain_filter}
-
-    return vectorstore.as_retriever(search_kwargs=search_kwargs)
+def get_collection():
+    """Get the ChromaDB collection (cached)."""
+    global _collection
+    if _collection is None:
+        path = _find_chroma_db()
+        client = chromadb.PersistentClient(path=path)
+        _collection = client.get_collection(COLLECTION_NAME)
+        print(f"[RETRIEVER] Collection '{COLLECTION_NAME}' has {_collection.count():,} documents")
+    return _collection
 
 
 def query_threats(query: str, n: int = 10, domain: str = None) -> list[dict]:
     """
-    Direct query function — returns docs with metadata.
-    Useful for testing and for the cascade chain.
+    Semantic search against the threat DB.
 
     Args:
-        query: Natural language query (semantic search)
+        query: Natural language query
         n: Number of results
-        domain: Optional domain filter
+        domain: Optional domain filter (earthquake, pandemic, flood, etc.)
 
     Returns:
-        List of {"content": str, "metadata": dict} dicts
+        List of {"content": str, "metadata": dict}
     """
-    vectorstore = get_vectorstore()
+    col = get_collection()
 
-    filter_dict = {"domain": domain} if domain else None
+    kwargs = {
+        "query_texts": [query],
+        "n_results": n if not domain else n * 3,  # over-fetch if filtering
+    }
 
-    results = vectorstore.similarity_search(
-        query=query,
-        k=n,
-        filter=filter_dict,
-    )
+    results = col.query(**kwargs)
 
-    return [
-        {
-            "content": doc.page_content,
-            "metadata": doc.metadata,
-        }
-        for doc in results
-    ]
+    docs = []
+    for i in range(len(results["documents"][0])):
+        meta = results["metadatas"][0][i] if results["metadatas"] else {}
+        # Filter in Python — chromadb 1.5.0 where filter is bugged
+        if domain and meta.get("domain") != domain:
+            continue
+        docs.append({
+            "content": results["documents"][0][i],
+            "metadata": meta,
+        })
+        if domain and len(docs) >= n:
+            break
+
+    return docs
 
 
 def multi_domain_query(query: str, n_per_domain: int = 3) -> list[dict]:
     """
-    Query across multiple domains separately, then merge.
-    This ensures you get cross-domain context even if one domain
-    dominates the semantic similarity.
-
-    Returns combined results from all domains.
+    Query each domain separately then merge.
+    Prevents one domain from dominating results.
     """
     domains = ["earthquake", "pandemic", "flood", "wildfire", "eruption", "solar"]
     all_results = []
+    seen = set()
 
     for domain in domains:
         try:
             results = query_threats(query, n=n_per_domain, domain=domain)
-            all_results.extend(results)
+            for r in results:
+                key = r["content"][:200]
+                if key not in seen:
+                    seen.add(key)
+                    all_results.append(r)
         except Exception:
-            # Domain might have no matching docs — skip
             continue
 
     return all_results
@@ -158,10 +120,8 @@ def multi_domain_query(query: str, n_per_domain: int = 3) -> list[dict]:
 # Quick test
 # ──────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    print("Connecting to ChromaDB...")
-    vs = get_vectorstore()
-    count = vs._collection.count()
-    print(f"Collection '{COLLECTION_NAME}' has {count:,} documents\n")
+    col = get_collection()
+    print()
 
     print("Testing semantic search: 'earthquake near Boston'")
     results = query_threats("earthquake near Boston", n=3)

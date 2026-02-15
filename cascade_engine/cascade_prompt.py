@@ -32,8 +32,13 @@ CRITICAL RULES:
 - Recommendations must name a RESPONSIBLE ENTITY (e.g., "City water authority", "Hospital network", "FEMA")
 - If you don't have enough evidence for a cascade, say so — don't fabricate connections
 
-You MUST respond ONLY in this exact JSON format, no extra text before or after:
-{
+You MUST respond ONLY in the JSON format described below, no extra text before or after.
+
+{json_schema}"""
+
+
+# The JSON schema as a plain string — injected at runtime, not parsed by LangChain
+JSON_SCHEMA = """{
   "overall_risk_level": "LOW | MODERATE | HIGH | CRITICAL",
   "overall_risk_score": <1-10 integer>,
   "situation_briefing": "<2-3 sentence natural language summary of the threat landscape>",
