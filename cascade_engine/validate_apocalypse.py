@@ -295,7 +295,7 @@ def main():
         print(f"\n  ⚠️  CAVEATS: {result['confidence_notes']}")
 
     # Save full result
-    out_path = "validation_result.json"
+    out_path = "../Data/validation_result.json"
     with open(out_path, "w") as f:
         json.dump({
             "input_prediction": prediction,
