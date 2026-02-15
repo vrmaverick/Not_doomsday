@@ -1,4 +1,180 @@
 {
-  "generated_at": null,
-  "threats": []
+  "generated_at": "2026-02-15T02:12:06.834250+00:00",
+  "threats": [
+    {
+      "type": "earthquake",
+      "location": "San Francisco, CA",
+      "timestamp": "2026-02-15T02:10:06.928313+00:00",
+      "risk_level": "MODERATE",
+      "risk_score": 4,
+      "confidence": 0.7,
+      "summary": "The region is experiencing slightly elevated seismic activity with a moderate frequency of light to moderate earthquakes, but no significant clustering or rapid acceleration is observed. The presence of a few moderate magnitude events, such as the M4.68 event, contributes to the moderate risk level.",
+      "key_factors": [
+        "stable frequency trend",
+        "moderate magnitude distribution",
+        "variable depth profile"
+      ],
+      "pattern_detected": "No significant patterns or anomalies are detected in the seismic activity, but the occurrence of a few moderate magnitude events warrants continued monitoring.",
+      "recommendation": "Continue to monitor seismic activity closely and review emergency preparedness plans, as the region's seismic hazard is not negligible, but no immediate action is required.",
+      "metadata": {
+        "events_analyzed": 37,
+        "data_summary": {
+          "location": "San Francisco, CA",
+          "total_events": 37,
+          "time_span_days": 29.4,
+          "magnitude": {
+            "min": 3,
+            "max": 4.68,
+            "avg": 3.43,
+            "distribution": {
+              "minor_2_3": 0,
+              "light_3_4": 33,
+              "moderate_4_5": 4,
+              "strong_5_6": 0,
+              "major_6_plus": 0
+            }
+          },
+          "depth_km": {
+            "min": -0.28,
+            "max": 21.1,
+            "avg": 7.49
+          },
+          "temporal": {
+            "events_per_day": 1.26,
+            "trend": "stable",
+            "acceleration_ratio": 0.68,
+            "avg_gap_hours": 19.6,
+            "min_gap_hours": 0.0
+          },
+          "geographic": {
+            "center": {
+              "lat": 38.774,
+              "lng": -121.6019
+            },
+            "spread": {
+              "lat_std": 1.8814,
+              "lng_std": 2.6718
+            },
+            "clustered": false
+          }
+        }
+      }
+    },
+    {
+      "type": "flood",
+      "location": "Houston, TX",
+      "timestamp": "2026-02-15T02:12:06.834223+00:00",
+      "risk_level": "HIGH",
+      "risk_score": 7,
+      "confidence": 0.85,
+      "summary": "The region is experiencing a rising trend in river discharge, with forecast projections indicating a high likelihood of exceeding historical peaks, posing a significant flood risk. Multiple risk days are projected, with discharge levels expected to surpass 120% of the historical peak.",
+      "key_factors": [
+        "Rising 7-day trend",
+        "Forecast projections exceeding historical peaks",
+        "Multiple risk days"
+      ],
+      "pattern_detected": "A notable pattern of rapid increases in discharge, with 5 spikes detected in the historical data, including a 557% change on 2026-01-25.",
+      "recommendation": "Residents and authorities should be prepared for potential flooding, with evacuation plans and emergency response measures in place. Close monitoring of the river discharge levels and forecast updates is essential to ensure timely action and minimize the impact of flooding.",
+      "forecast_outlook": "The forecast outlook indicates a continued rise in discharge levels, with multiple risk days projected, including discharge levels exceeding 120% of the historical peak on 2026-02-24 and 2026-02-25. The region can expect a high flood risk over the coming days and weeks.",
+      "metadata": {
+        "days_analyzed": 60,
+        "data_summary": {
+          "location": "Houston, TX",
+          "grid_coords": {
+            "lat": 29.775002,
+            "lng": -95.37499
+          },
+          "total_days": 60,
+          "historical": {
+            "days": 31,
+            "min": 6.55,
+            "max": 64.61,
+            "avg": 18.47,
+            "std": 14.57
+          },
+          "forecast": {
+            "days": 29,
+            "mean_stats": {
+              "min": 12.66,
+              "max": 44.6,
+              "avg": 22.78,
+              "std": 7.69
+            },
+            "max_stats": {
+              "min": 22.39,
+              "max": 243.34,
+              "avg": 110.94,
+              "std": 63.56
+            }
+          },
+          "trend_7d": {
+            "direction": "rising",
+            "slope_m3s_per_day": 0.34,
+            "pct_change_per_day": 2.78
+          },
+          "spikes_detected": 5,
+          "spikes": [
+            {
+              "date": "2026-01-25",
+              "from": 7.69,
+              "to": 50.52,
+              "pct_change": 557.0
+            },
+            {
+              "date": "2026-02-04",
+              "from": 9.59,
+              "to": 22.71,
+              "pct_change": 136.8
+            },
+            {
+              "date": "2026-02-05",
+              "from": 22.71,
+              "to": 37.46,
+              "pct_change": 64.9
+            },
+            {
+              "date": "2026-02-07",
+              "from": 34.08,
+              "to": 23.38,
+              "pct_change": -31.4
+            },
+            {
+              "date": "2026-02-15",
+              "from": 9.19,
+              "to": 19.14,
+              "pct_change": 108.3
+            }
+          ],
+          "forecast_risk_days": 19,
+          "forecast_risks": [
+            {
+              "date": "2026-02-24",
+              "projected_max": 123.74,
+              "vs_hist_peak_pct": 91.5
+            },
+            {
+              "date": "2026-02-25",
+              "projected_max": 135.77,
+              "vs_hist_peak_pct": 110.1
+            },
+            {
+              "date": "2026-02-26",
+              "projected_max": 88.95,
+              "vs_hist_peak_pct": 37.7
+            },
+            {
+              "date": "2026-02-27",
+              "projected_max": 136.4,
+              "vs_hist_peak_pct": 111.1
+            },
+            {
+              "date": "2026-02-28",
+              "projected_max": 121.46,
+              "vs_hist_peak_pct": 88.0
+            }
+          ]
+        }
+      }
+    }
+  ]
 }

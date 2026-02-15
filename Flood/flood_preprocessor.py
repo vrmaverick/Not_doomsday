@@ -129,10 +129,15 @@ def preprocess(flood_data: dict, location_name: str = "Unknown") -> dict:
     # --- LLM prompt ---
     llm_prompt = _build_prompt(summary, events)
 
+    # Generate coordinate → risk map
+    from flood_mapper import generate_map
+    coord_map = generate_map(summary)
+
     return {
         "summary": summary,
         "events": events,
         "llm_prompt": llm_prompt,
+        "coordinate_map": coord_map,
     }
 
 

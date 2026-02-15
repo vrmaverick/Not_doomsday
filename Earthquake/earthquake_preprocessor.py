@@ -189,10 +189,15 @@ def preprocess(quakes: list[dict], location_name: str = "Unknown") -> dict:
     # --- LLM-ready prompt ---
     llm_prompt = _build_prompt(summary, events)
 
+    # Generate coordinate → risk map
+    from earthquake_mapper import generate_map
+    coord_map = generate_map(events)
+
     return {
         "summary": summary,
         "events": events,
         "llm_prompt": llm_prompt,
+        "coordinate_map": coord_map,
     }
 
 
