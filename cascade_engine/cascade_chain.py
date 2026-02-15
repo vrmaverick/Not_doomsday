@@ -190,6 +190,10 @@ def analyze_threats(
             "historical_docs_used": len(historical_docs),
             "location": location,
         }
+
+        # Auto-save to JSON + TXT
+        _save_result(result, location)
+
         return result
 
     except json.JSONDecodeError as e:
@@ -199,6 +203,99 @@ def analyze_threats(
             "raw_response": raw_response,
             "model": GROQ_MODEL,
         }
+
+
+def _save_result(result: dict, location: str):
+    """Save cascade result as both JSON and human-readable TXT."""
+    from datetime import datetime
+
+    # Determine output directory — cascade_engine/output/ or Data/
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    out_dir = os.path.join(script_dir, "..", "Data")
+    if not os.path.isdir(out_dir):
+        out_dir = os.path.join(script_dir, "output")
+    os.makedirs(out_dir, exist_ok=True)
+
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    base_name = f"cascade_result_{timestamp}"
+
+    # ── JSON ──
+    json_path = os.path.join(out_dir, f"{base_name}.json")
+    with open(json_path, "w") as f:
+        json.dump(result, f, indent=2)
+
+    # ── TXT (human-readable report) ──
+    txt_path = os.path.join(out_dir, f"{base_name}.txt")
+    lines = []
+    lines.append("=" * 70)
+    lines.append("  InnovAIte CASCADE PREDICTION REPORT")
+    lines.append(f"  Location: {location}")
+    lines.append(f"  Generated: {datetime.now().isoformat()}")
+    lines.append(f"  Model: {result.get('_meta', {}).get('model', 'N/A')}")
+    lines.append("=" * 70)
+
+    lines.append(f"\nOVERALL RISK: {result.get('overall_risk_level', 'N/A')} ({result.get('overall_risk_score', '?')}/10)")
+    lines.append(f"\nBRIEFING:\n  {result.get('situation_briefing', 'N/A')}")
+
+    # Active threats
+    threats_list = result.get("active_threats_assessment", [])
+    if threats_list:
+        lines.append(f"\n{'─'*70}")
+        lines.append(f"ACTIVE THREATS ({len(threats_list)})")
+        lines.append(f"{'─'*70}")
+        for t in threats_list:
+            lines.append(f"  [{t.get('severity', '?').upper()}] {t.get('threat_type', '?')} — {t.get('summary', '')}")
+
+    # Cascade chains
+    cascades = result.get("cascade_predictions", [])
+    if cascades:
+        lines.append(f"\n{'─'*70}")
+        lines.append(f"CASCADE PREDICTIONS ({len(cascades)} chains)")
+        lines.append(f"{'─'*70}")
+        for c in cascades:
+            lines.append(f"\n  Chain {c.get('chain_id', '?')}: {c.get('trigger', '')}")
+            for step in c.get("cascade_steps", []):
+                lines.append(f"    → Step {step.get('step')}: {step.get('event')}")
+                lines.append(f"      Domain: {step.get('domain')} | Probability: {step.get('probability')} | Timeframe: {step.get('timeframe')}")
+                lines.append(f"      Mechanism: {step.get('mechanism')}")
+            lines.append(f"    Historical precedent: {c.get('historical_precedent', 'None cited')}")
+            lines.append(f"    Ultimate impact: {c.get('ultimate_impact', 'N/A')}")
+            lines.append(f"    Affected: {c.get('affected_population', 'N/A')}")
+
+    # Priority actions
+    actions = result.get("recommended_actions", [])
+    if actions:
+        lines.append(f"\n{'─'*70}")
+        lines.append(f"RECOMMENDED ACTIONS ({len(actions)})")
+        lines.append(f"{'─'*70}")
+        for a in actions:
+            urgency = a.get('urgency', '?')
+            lines.append(f"  P{a.get('priority', '?')} [{urgency}]: {a.get('action')}")
+            lines.append(f"    Responsible: {a.get('responsible_entity', 'N/A')}")
+            lines.append(f"    Rationale: {a.get('rationale', 'N/A')}")
+
+    # Monitoring
+    alerts = result.get("monitoring_alerts", [])
+    if alerts:
+        lines.append(f"\n{'─'*70}")
+        lines.append(f"MONITORING ALERTS ({len(alerts)})")
+        lines.append(f"{'─'*70}")
+        for alert in alerts:
+            lines.append(f"  {alert.get('indicator')}")
+            lines.append(f"    Threshold: {alert.get('threshold')} | Source: {alert.get('data_source')}")
+
+    # Caveats
+    if result.get("confidence_notes"):
+        lines.append(f"\n{'─'*70}")
+        lines.append(f"CAVEATS:\n  {result['confidence_notes']}")
+
+    lines.append(f"\n{'='*70}")
+
+    with open(txt_path, "w") as f:
+        f.write("\n".join(lines))
+
+    print(f"[CASCADE] Saved → {json_path}")
+    print(f"[CASCADE] Saved → {txt_path}")
 
 
 # ──────────────────────────────────────────────────────────────
