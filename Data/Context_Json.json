@@ -1,0 +1,367 @@
+{
+  "entries": [
+    {
+      "name": "flood",
+      "contents": {
+        "location": "Houston, TX",
+        "days_analyzed": 60,
+        "prediction": {
+          "risk_level": "HIGH",
+          "risk_score": 7,
+          "confidence": 0.85,
+          "summary": "The region is experiencing a rising trend in discharge levels, with forecast projections exceeding historical peaks, indicating a high flood risk. Multiple risk days are projected, with discharge levels expected to surpass 120% of the historical peak.",
+          "key_factors": [
+            "Rising 7-day trend",
+            "Forecast projections exceeding historical peaks",
+            "Multiple risk days"
+          ],
+          "pattern_detected": "A notable pattern of rapid increases in discharge levels, with 5 spikes detected in the historical data, including a 557% change on 2026-01-25.",
+          "forecast_outlook": "The forecast outlook indicates a high risk of flooding, with discharge levels projected to exceed historical peaks on multiple days. The region can expect significant flooding, especially on 2026-02-24 and 2026-02-25.",
+          "recommendation": "Residents and authorities should prepare for potential flooding, with evacuation plans in place and flood mitigation measures implemented. Close monitoring of the river discharge levels is recommended to ensure timely response to changing conditions.",
+          "raw_response": "{\n  \"risk_level\": \"HIGH\",\n  \"risk_score\": 7,\n  \"confidence\": 0.85,\n  \"summary\": \"The region is experiencing a rising trend in discharge levels, with forecast projections exceeding historical peaks, indicating a high flood risk. Multiple risk days are projected, with discharge levels expected to surpass 120% of the historical peak.\",\n  \"key_factors\": [\"Rising 7-day trend\", \"Forecast projections exceeding historical peaks\", \"Multiple risk days\"],\n  \"pattern_detected\": \"A notable pattern of rapid increases in discharge levels, with 5 spikes detected in the historical data, including a 557% change on 2026-01-25.\",\n  \"forecast_outlook\": \"The forecast outlook indicates a high risk of flooding, with discharge levels projected to exceed historical peaks on multiple days. The region can expect significant flooding, especially on 2026-02-24 and 2026-02-25.\",\n  \"recommendation\": \"Residents and authorities should prepare for potential flooding, with evacuation plans in place and flood mitigation measures implemented. Close monitoring of the river discharge levels is recommended to ensure timely response to changing conditions.\"\n}",
+          "model": "llama-3.3-70b-versatile",
+          "error": null
+        },
+        "data_summary": {
+          "location": "Houston, TX",
+          "grid_coords": {
+            "lat": 29.775002,
+            "lng": -95.37499
+          },
+          "total_days": 60,
+          "historical": {
+            "days": 31,
+            "min": 6.55,
+            "max": 64.61,
+            "avg": 18.47,
+            "std": 14.57
+          },
+          "forecast": {
+            "days": 29,
+            "mean_stats": {
+              "min": 12.66,
+              "max": 44.6,
+              "avg": 22.78,
+              "std": 7.69
+            },
+            "max_stats": {
+              "min": 22.39,
+              "max": 243.34,
+              "avg": 110.94,
+              "std": 63.56
+            }
+          },
+          "trend_7d": {
+            "direction": "rising",
+            "slope_m3s_per_day": 0.34,
+            "pct_change_per_day": 2.78
+          },
+          "spikes_detected": 5,
+          "spikes": [
+            {
+              "date": "2026-01-25",
+              "from": 7.69,
+              "to": 50.52,
+              "pct_change": 557.0
+            },
+            {
+              "date": "2026-02-04",
+              "from": 9.59,
+              "to": 22.71,
+              "pct_change": 136.8
+            },
+            {
+              "date": "2026-02-05",
+              "from": 22.71,
+              "to": 37.46,
+              "pct_change": 64.9
+            },
+            {
+              "date": "2026-02-07",
+              "from": 34.08,
+              "to": 23.38,
+              "pct_change": -31.4
+            },
+            {
+              "date": "2026-02-15",
+              "from": 9.19,
+              "to": 19.14,
+              "pct_change": 108.3
+            }
+          ],
+          "forecast_risk_days": 19,
+          "forecast_risks": [
+            {
+              "date": "2026-02-24",
+              "projected_max": 123.74,
+              "vs_hist_peak_pct": 91.5
+            },
+            {
+              "date": "2026-02-25",
+              "projected_max": 135.77,
+              "vs_hist_peak_pct": 110.1
+            },
+            {
+              "date": "2026-02-26",
+              "projected_max": 88.95,
+              "vs_hist_peak_pct": 37.7
+            },
+            {
+              "date": "2026-02-27",
+              "projected_max": 136.4,
+              "vs_hist_peak_pct": 111.1
+            },
+            {
+              "date": "2026-02-28",
+              "projected_max": 121.46,
+              "vs_hist_peak_pct": 88.0
+            }
+          ]
+        }
+      },
+      "saved_at": "2026-02-15T03:38:56.236279+00:00"
+    },
+    {
+      "name": "pandemic",
+      "contents": {
+        "type": "pandemic",
+        "sources": [
+          "WHO GHO",
+          "Google Trends",
+          "GDELT",
+          "disease.sh"
+        ],
+        "who": {
+          "source": "WHO GHO",
+          "total_records": 30080,
+          "indicators_tracked": 8,
+          "countries": 226,
+          "year_range": "1974\u20132024",
+          "top_indicators": {
+            "cholera_cases": {
+              "records": 7142,
+              "latest_year": "2018"
+            },
+            "tb_incidence": {
+              "records": 5177,
+              "latest_year": "2024"
+            },
+            "measles_mcv2_coverage": {
+              "records": 5106,
+              "latest_year": "2024"
+            },
+            "tb_deaths_hiv_neg": {
+              "records": 4677,
+              "latest_year": "2024"
+            },
+            "cholera_deaths": {
+              "records": 4445,
+              "latest_year": "2024"
+            },
+            "tb_smear_treatment_success": {
+              "records": 3008,
+              "latest_year": "2011"
+            },
+            "tb_smear_detection": {
+              "records": 363,
+              "latest_year": "2008"
+            },
+            "meningitis_epidemic_districts": {
+              "records": 162,
+              "latest_year": "2014"
+            }
+          }
+        },
+        "google_trends": {
+          "source": "Google Trends (pytrends)",
+          "data_files": 55,
+          "rising_threats": [
+            {
+              "query": "nipah virus in india 2026",
+              "growth": 25050,
+              "parent_term": "virus"
+            },
+            {
+              "query": "virus nipah inde",
+              "growth": 16350,
+              "parent_term": "virus"
+            },
+            {
+              "query": "serious epidemic crossword",
+              "growth": 16200,
+              "parent_term": "epidemic"
+            },
+            {
+              "query": "nipah virus 2026",
+              "growth": 15850,
+              "parent_term": "virus"
+            },
+            {
+              "query": "nipah virus outbreak 2026",
+              "growth": 15450,
+              "parent_term": "virus"
+            },
+            {
+              "query": "serious epidemic crossword clue",
+              "growth": 14650,
+              "parent_term": "epidemic"
+            },
+            {
+              "query": "amazon warehouse disease outbreak",
+              "growth": 11500,
+              "parent_term": "disease outbreak"
+            },
+            {
+              "query": "an \u2018impossible\u2019 disease outbreak in the alps",
+              "growth": 10450,
+              "parent_term": "disease outbreak"
+            },
+            {
+              "query": "nipah virus outbreak",
+              "growth": 8350,
+              "parent_term": "virus"
+            },
+            {
+              "query": "nipah virus indien",
+              "growth": 8000,
+              "parent_term": "virus"
+            }
+          ],
+          "regional_hotspots": {
+            "fever_cough": [
+              "China",
+              "Philippines",
+              "United States",
+              "Canada",
+              "Singapore"
+            ],
+            "epidemic": [
+              "China",
+              "Ethiopia",
+              "United States",
+              "Ghana",
+              "Nigeria"
+            ],
+            "disease_outbreak": [
+              "China",
+              "Singapore",
+              "Australia",
+              "Ethiopia",
+              "United Kingdom"
+            ],
+            "dengue": [
+              "Cuba",
+              "Guyana",
+              "Maldives",
+              "Bolivia",
+              "Nicaragua"
+            ],
+            "cholera": [
+              "Zambia",
+              "Malawi",
+              "Zimbabwe",
+              "Ghana",
+              "Jamaica"
+            ]
+          }
+        },
+        "gdelt": {
+          "source": "GDELT",
+          "total_articles": 292,
+          "articles_by_disease": {
+            "measles": 250,
+            "plague": 15,
+            "bird_flu": 9,
+            "ebola": 9,
+            "meningitis": 7,
+            "respiratory": 1,
+            "general_outbreak": 1,
+            "antimicrobial_resistance": 0,
+            "dengue": 0,
+            "unknown_illness": 0
+          },
+          "geo_data_points": {
+            "dengue": 42,
+            "respiratory": 14,
+            "outbreak": 16,
+            "bird_flu": 1,
+            "cholera": 131
+          }
+        },
+        "disease_sh": {
+          "source": "disease.sh",
+          "covid_top_active": [
+            {
+              "country": "India",
+              "active": 44501823,
+              "cases": 45035393,
+              "deaths": 533570
+            },
+            {
+              "country": "Japan",
+              "active": 33728878,
+              "cases": 33803572,
+              "deaths": 74694
+            },
+            {
+              "country": "Turkey",
+              "active": 17129892,
+              "cases": 17232066,
+              "deaths": 102174
+            },
+            {
+              "country": "Iran",
+              "active": 7480375,
+              "cases": 7627186,
+              "deaths": 146811
+            },
+            {
+              "country": "Poland",
+              "active": 6541393,
+              "cases": 6661991,
+              "deaths": 120598
+            },
+            {
+              "country": "Greece",
+              "active": 6063510,
+              "cases": 6101379,
+              "deaths": 37869
+            },
+            {
+              "country": "Bangladesh",
+              "active": 2019884,
+              "cases": 2049377,
+              "deaths": 29493
+            },
+            {
+              "country": "Georgia",
+              "active": 1844533,
+              "cases": 1861665,
+              "deaths": 17132
+            },
+            {
+              "country": "Brazil",
+              "active": 1783377,
+              "cases": 38743918,
+              "deaths": 711380
+            },
+            {
+              "country": "Morocco",
+              "active": 1262689,
+              "cases": 1278992,
+              "deaths": 16303
+            }
+          ],
+          "covid_countries_tracked": 231,
+          "flu_records": 12,
+          "flu_latest": {
+            "week": "2021 - 51/52",
+            "total_ili": 71733
+          }
+        }
+      },
+      "saved_at": "2026-02-15T04:26:46.270161+00:00"
+    }
+  ],
+  "last_updated": "2026-02-15T04:26:46.270565+00:00"
+}

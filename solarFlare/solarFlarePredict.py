@@ -5,6 +5,7 @@ via Groq API (LangChain) for outage prediction.
 """
 
 import os
+import sys
 import json
 import requests
 from datetime import datetime, timezone
@@ -14,7 +15,8 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from pydantic import BaseModel, Field
 
-load_dotenv()
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
 
 # ──────────────────────────────────────────────────────────────
 # 1. Pydantic schema for structured output
@@ -29,15 +31,10 @@ class SolarFlareReport(BaseModel):
 # 2. Fetch real-time data from NOAA SWPC public JSON endpoints
 # ──────────────────────────────────────────────────────────────
 NOAA_SWPC_ENDPOINTS = {
-    # Latest solar flare events (last 7 days)
     "solar_flares": "https://services.swpc.noaa.gov/json/solar_flare/latest.json",
-    # Current planetary K-index (geomagnetic storm indicator)
     "kp_index": "https://services.swpc.noaa.gov/products/noaa-planetary-k-index.json",
-    # 3-day geomagnetic activity forecast
     "geo_forecast": "https://services.swpc.noaa.gov/products/noaa-scales.json",
-    # Solar wind magnetic field (real-time)
     "solar_wind_mag": "https://services.swpc.noaa.gov/products/solar-wind/mag-2-hour.json",
-    # X-ray flux (indicates flare intensity)
     "xray_flux": "https://services.swpc.noaa.gov/json/goes/primary/xray-flares-7-day.json",
 }
 
@@ -53,9 +50,8 @@ def fetch_noaa_data() -> dict:
             resp.raise_for_status()
             raw = resp.json()
 
-            # Trim large arrays to last N entries to stay within token limits
             if isinstance(raw, list):
-                raw = raw[-20:]  # keep latest 20 records
+                raw = raw[-20:]
 
             data[key] = raw
             print(f"  ✓ {key}: {len(raw) if isinstance(raw, list) else 'obj'} records")
@@ -72,7 +68,6 @@ def fetch_noaa_data() -> dict:
 def build_chain():
     """Create a LangChain chain: Prompt → Groq LLM → JSON parser."""
 
-    # Using llama-3.3-70b-versatile — free-tier friendly, strong analytical model
     llm = ChatGroq(
         model="llama-3.3-70b-versatile",
         temperature=0,
@@ -132,7 +127,6 @@ def main():
     print("  !(Not)Doomsday — Solar Flare Monitor")
     print("=" * 60)
 
-    # --- Validate API key ---
     if not os.environ.get("GROQ_API_KEY"):
         print("\n⚠  GROQ_API_KEY not set.")
         print("   Get a free key at: https://console.groq.com/keys")
@@ -166,6 +160,18 @@ def main():
     print("─" * 40)
     print(json.dumps(result, indent=2))
     print("─" * 40)
+
+    # --- Save to shared context ---
+    from context_manager import save_to_context
+    save_to_context("solar_flare", {
+        "type": "solar_flare",
+        "location": "Global",
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "outages_expected": result.get("outages"),
+        "description": result.get("description"),
+        "accuracy": result.get("accuracy"),
+        "risk_level": "HIGH" if result.get("outages") == "Yes" else "LOW",
+    })
 
     return result
 

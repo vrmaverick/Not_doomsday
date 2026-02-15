@@ -4,3 +4,5 @@
 venv/
 ENV/
 .python-version
+
+*.sqlite3

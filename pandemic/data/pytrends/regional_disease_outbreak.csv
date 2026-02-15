@@ -1,51 +1,47 @@
 geoName,geoCode,disease outbreak
 China,CN,100
-Ethiopia,ET,98
-Singapore,SG,94
-Ghana,GH,85
-Australia,AU,80
-United Kingdom,GB,67
-South Korea,KR,49
-Kenya,KE,45
-United States,US,45
-Canada,CA,43
-New Zealand,NZ,43
-Nigeria,NG,40
+Singapore,SG,98
+Australia,AU,79
+Ethiopia,ET,72
+United Kingdom,GB,66
+Ghana,GH,66
+Kenya,KE,55
+South Korea,KR,51
+United States,US,46
+Canada,CA,46
+Nigeria,NG,42
+New Zealand,NZ,42
 South Africa,ZA,40
-St. Helena,SH,27
-Israel,IL,25
+St. Helena,SH,37
 Ireland,IE,25
-Hong Kong,HK,23
-Malaysia,MY,23
+Malaysia,MY,24
+Israel,IL,22
+United Arab Emirates,AE,20
+Sweden,SE,20
 Philippines,PH,20
-Kazakhstan,KZ,18
+Netherlands,NL,20
 Switzerland,CH,18
 India,IN,16
-Saudi Arabia,SA,16
-Netherlands,NL,16
-Norway,NO,16
-Portugal,PT,14
-Denmark,DK,14
+Portugal,PT,16
+Saudi Arabia,SA,14
 Austria,AT,14
-Sweden,SE,12
-Spain,ES,12
-United Arab Emirates,AE,12
-Romania,RO,12
-Egypt,EG,12
-Bangladesh,BD,12
 Taiwan,TW,12
-Thailand,TH,12
-Pakistan,PK,10
-Ukraine,UA,10
-Czechia,CZ,10
-Germany,DE,10
-Mexico,MX,9
-France,FR,9
+Czechia,CZ,12
+Thailand,TH,11
+Germany,DE,11
+Ukraine,UA,11
+Pakistan,PK,11
+Belgium,BE,11
+Spain,ES,11
 Vietnam,VN,9
+Mexico,MX,9
 Japan,JP,9
-Argentina,AR,7
-Brazil,BR,7
+France,FR,9
+Egypt,EG,9
+Bangladesh,BD,9
 Poland,PL,7
 Italy,IT,7
 Türkiye,TR,7
+Brazil,BR,7
+Argentina,AR,7
 Indonesia,ID,5

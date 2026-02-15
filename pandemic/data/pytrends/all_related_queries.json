@@ -7,73 +7,69 @@
       },
       {
         "query": "who disease outbreak news",
-        "value": 47
+        "value": 42
       },
       {
         "query": "new disease outbreak",
-        "value": 44
-      },
-      {
-        "query": "india disease outbreak",
-        "value": 41
+        "value": 39
       },
       {
         "query": "disease outbreak in india",
-        "value": 23
+        "value": 20
       },
       {
         "query": "amazon warehouse disease outbreak",
-        "value": 16
+        "value": 14
       },
       {
         "query": "legionnaires disease outbreak",
-        "value": 14
+        "value": 13
       },
       {
         "query": "india disease outbreak 2026",
-        "value": 14
+        "value": 12
       },
       {
         "query": "sydney disease outbreak",
-        "value": 12
+        "value": 10
       },
       {
         "query": "new disease outbreak 2026",
-        "value": 12
+        "value": 10
       },
       {
         "query": "foot and mouth disease outbreak",
-        "value": 11
-      },
-      {
-        "query": "sydney legionnaires disease outbreak",
         "value": 9
       },
       {
-        "query": "victorian disease outbreak",
-        "value": 6
+        "query": "sydney legionnaires disease outbreak",
+        "value": 8
+      },
+      {
+        "query": "an \u2018impossible\u2019 disease outbreak in the alps",
+        "value": 0
       }
     ],
     "rising": [
       {
-        "query": "sydney legionnaires disease outbreak",
-        "value": 254950
-      },
-      {
         "query": "amazon warehouse disease outbreak",
-        "value": 9750
+        "value": 11500
       },
       {
-        "query": "victorian disease outbreak",
-        "value": 800
+        "query": "an \u2018impossible\u2019 disease outbreak in the alps",
+        "value": 10450
+      },
+      {
+        "query": "sydney legionnaires disease outbreak",
+        "value": 5800
       },
       {
         "query": "sydney disease outbreak",
-        "value": 800
+        "value": 650
       },
       {
         "query": "india disease outbreak 2026",
-        "value": 350
+        "value": 300
       },
       {
         "query": "new disease outbreak 2026",
@@ -81,7 +77,7 @@
       },
       {
         "query": "disease outbreak in india",
-        "value": 90
+        "value": 80
       }
     ]
   },
@@ -93,15 +89,15 @@
       },
       {
         "query": "what is epidemic",
-        "value": 38
-      },
-      {
-        "query": "new epidemic",
-        "value": 20
+        "value": 39
       },
       {
         "query": "what is a epidemic",
-        "value": 18
+        "value": 20
+      },
+      {
+        "query": "new epidemic",
+        "value": 19
       },
       {
         "query": "pandemic",
@@ -113,19 +109,19 @@
       },
       {
         "query": "india epidemic",
-        "value": 15
+        "value": 16
       },
       {
         "query": "epidemic meaning",
-        "value": 15
+        "value": 16
       },
       {
         "query": "loneliness epidemic",
-        "value": 14
+        "value": 15
       },
       {
         "query": "epidemic disease",
-        "value": 12
+        "value": 13
       },
       {
         "query": "aids epidemic",
@@ -136,11 +132,11 @@
         "value": 10
       },
       {
-        "query": "flu epidemic",
+        "query": "epidemic definition",
         "value": 9
       },
       {
-        "query": "epidemic definition",
+        "query": "flu epidemic",
         "value": 9
       },
       {
@@ -152,11 +148,11 @@
         "value": 8
       },
       {
-        "query": "epidemic sound free",
+        "query": "influenza epidemic",
         "value": 8
       },
       {
-        "query": "influenza epidemic",
+        "query": "epidemic sound free",
         "value": 8
       },
       {
@@ -180,7 +176,7 @@
         "value": 5
       },
       {
-        "query": "cholera epidemic",
+        "query": "artlist",
         "value": 5
       },
       {
@@ -190,99 +186,95 @@
     ],
     "rising": [
       {
+        "query": "serious epidemic crossword",
+        "value": 16200
+      },
+      {
         "query": "serious epidemic crossword clue",
-        "value": 12750
+        "value": 14650
       },
       {
         "query": "international day of epidemic preparedness",
-        "value": 300
+        "value": 350
+      },
+      {
+        "query": "when did the aids epidemic end",
+        "value": 250
       },
       {
         "query": "epidemic keratoconjunctivitis",
         "value": 180
       },
       {
-        "query": "when did the aids epidemic end",
-        "value": 140
+        "query": "what is a epidemic",
+        "value": 90
       },
       {
         "query": "serious epidemic",
-        "value": 110
-      },
-      {
-        "query": "what is a epidemic",
         "value": 80
       },
       {
         "query": "what is epidemic",
-        "value": 60
+        "value": 70
       },
       {
         "query": "is epidemic sound free",
         "value": 60
-      },
-      {
-        "query": "our epidemic of loneliness and isolation",
-        "value": 60
-      },
-      {
-        "query": "what is the male loneliness epidemic",
-        "value": 40
       }
     ]
   },
   "virus": {
     "top": [
       {
-        "query": "virus nipah",
+        "query": "nipah virus",
         "value": 100
       },
       {
         "query": "nipah",
-        "value": 100
+        "value": 95
       },
       {
-        "query": "virus india",
-        "value": 36
+        "query": "india virus",
+        "value": 33
       },
       {
         "query": "new virus",
-        "value": 25
+        "value": 23
       },
       {
         "query": "what is a virus",
-        "value": 21
-      },
-      {
-        "query": "nipah virus outbreak",
         "value": 20
       },
       {
-        "query": "india nipah virus",
-        "value": 17
+        "query": "nipah virus outbreak",
+        "value": 18
       },
       {
-        "query": "virus in india",
-        "value": 15
-      },
-      {
-        "query": "virus influenza",
-        "value": 15
+        "query": "virus nipah india",
+        "value": 16
       },
       {
         "query": "influenza",
-        "value": 15
-      },
-      {
-        "query": "herpes virus",
         "value": 14
       },
       {
-        "query": "flu virus",
-        "value": 13
+        "query": "virus in india",
+        "value": 14
+      },
+      {
+        "query": "influenza virus",
+        "value": 14
       },
       {
         "query": "total virus",
+        "value": 13
+      },
+      {
+        "query": "herpes virus",
+        "value": 13
+      },
+      {
+        "query": "flu virus",
         "value": 13
       },
       {
@@ -290,12 +282,12 @@
         "value": 11
       },
       {
-        "query": "rsv virus",
+        "query": "stomach virus",
         "value": 11
       },
       {
-        "query": "stomach virus",
-        "value": 11
+        "query": "rsv virus",
+        "value": 10
       },
       {
         "query": "anti virus",
@@ -303,7 +295,7 @@
       },
       {
         "query": "computer virus",
-        "value": 10
+        "value": 9
       },
       {
         "query": "hpv virus",
@@ -311,14 +303,10 @@
       },
       {
         "query": "virus epstein barr",
-        "value": 8
-      },
-      {
-        "query": "zika virus",
         "value": 7
       },
       {
-        "query": "new virus 2025",
+        "query": "zika virus",
         "value": 7
       },
       {
@@ -332,88 +320,100 @@
       {
         "query": "virus scan",
         "value": 6
+      },
+      {
+        "query": "nipah virus in india",
+        "value": 6
       }
     ],
     "rising": [
       {
         "query": "nipah virus in india 2026",
-        "value": 25850
+        "value": 25050
       },
       {
         "query": "virus nipah inde",
-        "value": 16100
+        "value": 16350
       },
       {
         "query": "nipah virus 2026",
-        "value": 15100
+        "value": 15850
       },
       {
         "query": "nipah virus outbreak 2026",
-        "value": 12900
-      },
-      {
-        "query": "virus inde",
-        "value": 9600
-      },
-      {
-        "query": "nipah virus outbreak australia",
-        "value": 8700
+        "value": 15450
       },
       {
         "query": "nipah virus outbreak",
-        "value": 8450
-      },
-      {
-        "query": "india nipah virus",
-        "value": 7400
-      },
-      {
-        "query": "nipah virus cases in india 2026",
-        "value": 6700
-      },
-      {
-        "query": "virus nipah pandemia",
-        "value": 6250
-      },
-      {
-        "query": "infeksi virus nipah",
-        "value": 6150
-      },
-      {
-        "query": "nipah virus in india",
-        "value": 5600
+        "value": 8350
       },
       {
         "query": "nipah virus indien",
-        "value": 5550
+        "value": 8000
       },
       {
-        "query": "nipah virus symptoms",
-        "value": 5150
+        "query": "virus inde",
+        "value": 7850
+      },
+      {
+        "query": "virus nipah india",
+        "value": 7150
       },
       {
         "query": "virus gripe h3n2",
-        "value": 5050
+        "value": 6750
       },
       {
-        "query": "virus nipah",
-        "value": 4950
+        "query": "virus nipah pandemia",
+        "value": 6650
+      },
+      {
+        "query": "deadly nipah virus outbreak",
+        "value": 6500
+      },
+      {
+        "query": "nipah virus outbreak australia",
+        "value": 6000
+      },
+      {
+        "query": "nipah virus in india",
+        "value": 5650
+      },
+      {
+        "query": "nipah virus symptoms",
+        "value": 5400
+      },
+      {
+        "query": "virus nipah doen\u00e7a",
+        "value": 5300
+      },
+      {
+        "query": "doenca nipah virus nipah",
+        "value": 5250
+      },
+      {
+        "query": "nipah virus",
+        "value": 5250
       },
       {
         "query": "virus nipah \u1ea5n \u0111\u1ed9",
-        "value": 4950
+        "value": 5100
       },
       {
-        "query": "super flu virus",
+        "query": "nipah",
         "value": 4950
       },
       {
         "query": "india nipah virus outbreak",
+        "value": 4950
+      },
+      {
+        "query": "nipah virus cases in india 2026",
         "value": 4750
       },
       {
-        "query": "nipah",
-        "value": 4650
+        "query": "super flu virus",
+        "value": 4600
       },
       {
         "query": "brote virus nipah india",
@@ -421,19 +421,11 @@
       },
       {
         "query": "x32-7 virus",
-        "value": 4250
-      },
-      {
-        "query": "virus nipah doen\u00e7a",
         "value": 4100
       },
       {
-        "query": "virus nipah adalah",
-        "value": 3700
-      },
-      {
-        "query": "deadly nipah virus outbreak",
-        "value": 3550
+        "query": "nipa virus",
+        "value": 3600
       }
     ]
   },
@@ -445,7 +437,7 @@
       },
       {
         "query": "fungal infection spreading",
-        "value": 53
+        "value": 52
       },
       {
         "query": "tooth infection spreading symptoms",
@@ -453,33 +445,7 @@
       },
       {
         "query": "symptoms of tooth infection spreading",
-        "value": 19
-      },
-      {
-        "query": "signs of a tooth infection spreading",
-        "value": 7
-      },
-      {
-        "query": "symptoms of tooth infection spreading to heart",
-        "value": 2
-      },
-      {
-        "query": "fungal infection spreading in us",
-        "value": 1
-      }
-    ],
-    "rising": [
-      {
-        "query": "symptoms of tooth infection spreading to heart",
-        "value": 24300
-      },
-      {
-        "query": "fungal infection spreading in us",
-        "value": 17150
-      },
-      {
-        "query": "signs of a tooth infection spreading",
-        "value": 70
+        "value": 23
       }
     ]
   },
@@ -491,7 +457,7 @@
       },
       {
         "query": "mental health emergency number",
-        "value": 17
+        "value": 16
       },
       {
         "query": "orlando health emergency room",
@@ -500,16 +466,24 @@
       {
         "query": "mental health emergency response line",
         "value": 1
+      },
+      {
+        "query": "peace health emergency room",
+        "value": 0
       }
     ],
     "rising": [
       {
-        "query": "orlando health emergency room",
-        "value": 50
+        "query": "peace health emergency room",
+        "value": 60
       },
       {
         "query": "mental health emergency response line",
         "value": 50
+      },
+      {
+        "query": "orlando health emergency room",
+        "value": 40
       }
     ]
   }

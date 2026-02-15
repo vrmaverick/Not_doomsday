@@ -1,70 +1,68 @@
 geoName,geoCode,cholera
 Zambia,ZM,100
-Malawi,MW,87
-Zimbabwe,ZW,56
-Namibia,NA,38
-Jamaica,JM,27
-Ghana,GH,27
-Switzerland,CH,21
-Cameroon,CM,20
+Malawi,MW,92
+Zimbabwe,ZW,52
+Ghana,GH,28
+Jamaica,JM,26
+Switzerland,CH,22
+Cameroon,CM,21
 Congo - Kinshasa,CD,18
-China,CN,18
-Ethiopia,ET,17
+Nepal,NP,17
 Nigeria,NG,17
+China,CN,17
+Ethiopia,ET,17
+Tanzania,TZ,17
 Philippines,PH,16
-Nepal,NP,16
-Tanzania,TZ,15
+Kenya,KE,15
 United States,US,15
-Kenya,KE,14
-Uganda,UG,12
-United Kingdom,GB,11
-Côte d’Ivoire,CI,11
-Canada,CA,11
+United Kingdom,GB,12
+Canada,CA,12
 Singapore,SG,11
+Poland,PL,11
+Uganda,UG,11
 Czechia,CZ,10
-Poland,PL,10
+New Zealand,NZ,9
 Australia,AU,9
 Austria,AT,9
-New Zealand,NZ,8
-Slovakia,SK,8
 Pakistan,PK,8
-Ireland,IE,8
+Lithuania,LT,8
+Slovakia,SK,8
 Malaysia,MY,8
+Ireland,IE,8
 Germany,DE,8
+St. Helena,SH,7
 Bangladesh,BD,7
-Netherlands,NL,7
 India,IN,7
-Hong Kong,HK,7
+Netherlands,NL,7
 Belgium,BE,7
-Lithuania,LT,7
-St. Helena,SH,6
-South Africa,ZA,6
+Hong Kong,HK,7
 South Korea,KR,6
+South Africa,ZA,6
 United Arab Emirates,AE,6
 France,FR,5
-Morocco,MA,4
+Iraq,IQ,4
 Norway,NO,4
-Sweden,SE,3
-Algeria,DZ,3
-Iraq,IQ,3
 Denmark,DK,3
-Finland,FI,3
 Israel,IL,3
-Portugal,PT,3
-Saudi Arabia,SA,3
+Algeria,DZ,3
+Sweden,SE,3
+Morocco,MA,3
+Greece,GR,3
+Thailand,TH,2
+Taiwan,TW,2
 Vietnam,VN,2
+Ecuador,EC,2
+Egypt,EG,2
+Spain,ES,2
+Finland,FI,2
+Saudi Arabia,SA,2
 Romania,RO,2
+Portugal,PT,2
 Hungary,HU,2
 Mexico,MX,2
-Greece,GR,2
-Egypt,EG,2
-Ecuador,EC,2
 Indonesia,ID,2
-Taiwan,TW,2
-Thailand,TH,2
-Spain,ES,2
-Argentina,AR,1
-Italy,IT,1
-Colombia,CO,1
 Türkiye,TR,1
+Colombia,CO,1
 Ukraine,UA,1
+Chile,CL,1
+Italy,IT,1

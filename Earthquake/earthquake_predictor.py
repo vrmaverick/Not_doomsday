@@ -205,12 +205,12 @@ if __name__ == "__main__":
         print(f"\nModel used: {p['model']}")
 
     # Save to shared context file
-    from context_manager import save_threat
-    save_threat(
-        threat_type="earthquake",
-        location=result["location"],
-        prediction=result["prediction"],
-        extra={"events_analyzed": result["events_analyzed"], "data_summary": result["data_summary"]},
-    )
+    from context_manager import save_to_context
+    save_to_context("earthquake", {
+        "location": result["location"],
+        "events_analyzed": result["events_analyzed"],
+        "prediction": result["prediction"],
+        "data_summary": result["data_summary"],
+    })
 
     print("\n=== Test complete ===")
