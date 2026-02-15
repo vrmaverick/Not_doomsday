@@ -4,6 +4,22 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Orange County, New York, United States",
+        "count": 3,
+        "shareimage": "https://townsquare.media/site/706/files/2026/02/attachment-jess-11-1.jpg?&format=natural",
+        "html": "<a href=\"https://wrrv.com/bird-flu-safety-pets-orange-county/\" title=\"HV SPCA Warns Pet Owners About Bird Flu Risks\" target=\"_blank\">HV SPCA Warns Pet Owners About Bird Flu Risks</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.3163,
+          41.4168
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "New York, United States",
         "count": 3,
         "shareimage": "https://townsquare.media/site/854/files/2022/02/attachment-GettyImages-57292807.jpg?&q=75&format=natural",
@@ -46,22 +62,6 @@
         "coordinates": [
           30.0,
           27.0
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Orange County, New York, United States",
-        "count": 2,
-        "shareimage": "https://townsquare.media/site/706/files/2026/02/attachment-jess-11-1.jpg?&format=natural",
-        "html": "<a href=\"https://cnynews.com/ixp/706/p/bird-flu-safety-pets-orange-county/\" title=\"HV SPCA Warns Pet Owners About Bird Flu Risks\" target=\"_blank\">HV SPCA Warns Pet Owners About Bird Flu Risks</a><br><br>"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -74.3163,
-          41.4168
         ]
       }
     },

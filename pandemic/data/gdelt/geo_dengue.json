@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "name": "Kenya",
-        "count": 15,
+        "count": 12,
         "shareimage": "https://bloximages.chicago2.vip.townnews.com/lebanondemocrat.com/content/tncms/assets/v3/editorial/b/89/b89fb7a1-cd22-5530-9c53-c221892142f6/6987ffc1217a3.image.jpg?crop=341%2C341%2C85%2C0",
         "html": "<a href=\"https://www.ghanamma.com/2026/02/08/neglected-killer-kala-azar-disease-surges-in-kenya/\" title=\"Neglected killer : kala - azar disease surges in Kenya\" target=\"_blank\">Neglected killer : kala - azar disease surges in Kenya</a><br><br><a href=\"https://economictimes.indiatimes.com/news/international/global-trends/neglected-killer-kala-azar-surge-in-kenya-leaves-record-deaths-missed-diagnoses/articleshow/128056134.cms\" title=\"Neglected killer : Kala - azar surge in Kenya leaves record deaths , missed diagnoses\" target=\"_blank\">Neglected killer : Kala - azar surge in Kenya leaves record deaths , missed diagnoses</a><br><br>"
       },
@@ -21,7 +21,7 @@
       "type": "Feature",
       "properties": {
         "name": "Cuba",
-        "count": 13,
+        "count": 10,
         "shareimage": "https://images.theconversation.com/files/717988/original/file-20260210-56-1olsq4.jpg?ixlib=rb-4.1.0&rect=0%2C1234%2C8426%2C4213&q=45&auto=format&fit=crop",
         "html": "<a href=\"https://theconversation.com/catastrophe-economique-et-sociale-a-cuba-trump-nest-pas-seul-en-cause-275880\" title=\"Catastrophe \u00e9conomique et sociale \u00e0 Cuba : Trump nest pas seul en cause\" target=\"_blank\">Catastrophe \u00e9conomique et sociale \u00e0 Cuba : Trump nest pas seul en cause</a><br><br>"
       },
@@ -30,38 +30,6 @@
         "coordinates": [
           -79.5,
           22.0
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Cook Islands",
-        "count": 11,
-        "shareimage": "http://img.scoop.co.nz/stories/images/1908/scoop_image.jpg",
-        "html": "<a href=\"https://www.scoop.co.nz/stories/WO2602/S00073/cook-islands-reports-dengue-fever-related-death.htm\" title=\"Cook Islands Reports Dengue Fever - Related Death\" target=\"_blank\">Cook Islands Reports Dengue Fever - Related Death</a><br><br><a href=\"https://www.nzherald.co.nz/talanoa/dengue-fever-outbreak-temperature-screening-for-travellers-into-rarotonga-airport-after-first-death-confirmed/W3EUXSN6LFFE7OFETS3O24WLYQ/\" title=\"Dengue fever outbreak : Temperature screening for travellers into Rarotonga airport after first death confirmed\" target=\"_blank\">Dengue fever outbreak : Temperature screening for travellers into Rarotonga airport after first death confirmed</a><br><br>"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -161.5833,
-          -16.0833
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "New Zealand",
-        "count": 9,
-        "shareimage": "http://img.scoop.co.nz/stories/images/1908/scoop_image.jpg",
-        "html": "<a href=\"https://www.scoop.co.nz/stories/WO2602/S00073/cook-islands-reports-dengue-fever-related-death.htm\" title=\"Cook Islands Reports Dengue Fever - Related Death\" target=\"_blank\">Cook Islands Reports Dengue Fever - Related Death</a><br><br><a href=\"https://waateanews.com/2026/02/10/dengue-outbreak-in-rarotonga-raises-questions-for-dr-shane-reti/\" title=\"Dengue Outbreak in Rarotonga Raises Questions for Dr Shane Reti\" target=\"_blank\">Dengue Outbreak in Rarotonga Raises Questions for Dr Shane Reti</a><br><br>"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          174.0,
-          -42.0
         ]
       }
     },
@@ -116,16 +84,16 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Sudan",
+        "name": "Cook Islands",
         "count": 6,
-        "shareimage": "https://images.euronews.com/articles/stories/09/64/58/21/1200x675_cmsv2_ca060e5a-20ae-5610-b9ad-7d3c482f41b7-9645821.jpg",
-        "html": "<a href=\"https://arabic.euronews.com/2026/02/10/the-united-nations-warns-time-is-running-out-to-save-malnourished-children-in-sudan\" title=\"\u0627\u0644\u0623\u0645\u0645 \u0627\u0644\u0645\u062a\u062d\u062f\u0629 \u062a\u062d\u0630\u0651\u0631 : \u0627\u0644\u0648\u0642\u062a \u064a\u0646\u0641\u062f \u0644\u0625\u0646\u0642\u0627\u0630 \u0623\u0637\u0641\u0627\u0644 \u064a\u0639\u0627\u0646\u0648\u0646 \u0633\u0648\u0621 \u0627\u0644\u062a\u063a\u0630\u064a\u0629 \u0641\u064a \u0627\u0644\u0633\u0648\u062f\u0627\u0646\" target=\"_blank\">\u0627\u0644\u0623\u0645\u0645 \u0627\u0644\u0645\u062a\u062d\u062f\u0629 \u062a\u062d\u0630\u0651\u0631 : \u0627\u0644\u0648\u0642\u062a \u064a\u0646\u0641\u062f \u0644\u0625\u0646\u0642\u0627\u0630 \u0623\u0637\u0641\u0627\u0644 \u064a\u0639\u0627\u0646\u0648\u0646 \u0633\u0648\u0621 \u0627\u0644\u062a\u063a\u0630\u064a\u0629 \u0641\u064a \u0627\u0644\u0633\u0648\u062f\u0627\u0646</a><br><br><a href=\"https://sudanile.com/%D8%A7%D9%84%D8%A3%D9%85%D9%85-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D8%AF%D8%A9-%D9%8A%D8%AD%D8%A8-%D8%A3%D9%86-%D9%8A%D9%83%D9%81-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85-%D8%B9%D9%86-%D8%BA%D8%B6-%D8%A7/\" title=\"\u0627\u0644\u0623\u0645\u0645 \u0627\u0644\u0645\u062a\u062d\u062f\u0629 : \u064a\u062d\u0628 \u0623\u0646 \u064a\u0643\u0641 \u0627\u0644\u0639\u0627\u0644\u0645 \u0639\u0646 \u063a\u0636 \u0627\u0644\u0637\u0631\u0641 \u0639\u0646 \u0623\u0637\u0641\u0627\u0644 \u0627\u0644\u0633\u0648\u062f\u0627\u0646\" target=\"_blank\">\u0627\u0644\u0623\u0645\u0645 \u0627\u0644\u0645\u062a\u062d\u062f\u0629 : \u064a\u062d\u0628 \u0623\u0646 \u064a\u0643\u0641 \u0627\u0644\u0639\u0627\u0644\u0645 \u0639\u0646 \u063a\u0636 \u0627\u0644\u0637\u0631\u0641 \u0639\u0646 \u0623\u0637\u0641\u0627\u0644 \u0627\u0644\u0633\u0648\u062f\u0627\u0646</a><br><br><a href=\"https://www.dostor.org/5419055\" title=\"\u0645\u0633\u0626\u0648\u0644\u0629 \u0633\u0648\u062f\u0627\u0646\u064a\u0629 : \u062a\u062d\u0633\u0646 \u062a\u062f\u0631\u064a\u062c\u0649 \u0641\u0649 \u0627\u0644\u0642\u0637\u0627\u0639 \u0627\u0644\u0635\u062d\u0649 \u0628\u0641\u0636\u0644 \u0645\u0635\u0631\" target=\"_blank\">\u0645\u0633\u0626\u0648\u0644\u0629 \u0633\u0648\u062f\u0627\u0646\u064a\u0629 : \u062a\u062d\u0633\u0646 \u062a\u062f\u0631\u064a\u062c\u0649 \u0641\u0649 \u0627\u0644\u0642\u0637\u0627\u0639 \u0627\u0644\u0635\u062d\u0649 \u0628\u0641\u0636\u0644 \u0645\u0635\u0631</a><br><br>"
+        "shareimage": "https://www.nzherald.co.nz/resizer/v2/5U2L7ACGIZEUFLZJ2OTB3QJ2WM.jpg?auth=3d99ffd8184751b58f7e3b2a99f0f163403c5bc083145c62a82c346ad38566b9&quality=70&smart=true",
+        "html": "<a href=\"https://www.nzherald.co.nz/talanoa/dengue-fever-outbreak-temperature-screening-for-travellers-into-rarotonga-airport-after-first-death-confirmed/W3EUXSN6LFFE7OFETS3O24WLYQ/\" title=\"Dengue fever outbreak : Temperature screening for travellers into Rarotonga airport after first death confirmed\" target=\"_blank\">Dengue fever outbreak : Temperature screening for travellers into Rarotonga airport after first death confirmed</a><br><br>"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          30.0,
-          16.0
+          -161.5833,
+          -16.0833
         ]
       }
     },
@@ -148,32 +116,48 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Auckland, Auckland, New Zealand",
+        "name": "Sudan",
         "count": 4,
-        "shareimage": "https://www.odt.co.nz/sites/default/files/styles/odt_story_opengraph_1200w/public/story/2026/02/cook_islands_getty.jpg?itok=WCzQ5stD",
-        "html": "<a href=\"https://www.odt.co.nz/news/world/dengue-death-cook-islands-outbreak-spreads-rnz\" title=\"Dengue death in Cook Islands as outbreak spreads\" target=\"_blank\">Dengue death in Cook Islands as outbreak spreads</a><br><br><a href=\"https://pina.com.fj/2026/02/09/cook-islands-reports-first-dengue-fever-death-amid-increase-in-outbreak/\" title=\"Cook Islands reports first dengue fever death amid increase in outbreak\" target=\"_blank\">Cook Islands reports first dengue fever death amid increase in outbreak</a><br><br><a href=\"https://www.rnz.co.nz/news/national/586225/cook-islands-reports-first-dengue-death-in-current-outbreak\" title=\"Cook Islands reports first dengue death in current outbreak\" target=\"_blank\">Cook Islands reports first dengue death in current outbreak</a><br><br>"
+        "shareimage": "https://images.euronews.com/articles/stories/09/64/58/21/1200x675_cmsv2_ca060e5a-20ae-5610-b9ad-7d3c482f41b7-9645821.jpg",
+        "html": "<a href=\"https://arabic.euronews.com/2026/02/10/the-united-nations-warns-time-is-running-out-to-save-malnourished-children-in-sudan\" title=\"\u0627\u0644\u0623\u0645\u0645 \u0627\u0644\u0645\u062a\u062d\u062f\u0629 \u062a\u062d\u0630\u0651\u0631 : \u0627\u0644\u0648\u0642\u062a \u064a\u0646\u0641\u062f \u0644\u0625\u0646\u0642\u0627\u0630 \u0623\u0637\u0641\u0627\u0644 \u064a\u0639\u0627\u0646\u0648\u0646 \u0633\u0648\u0621 \u0627\u0644\u062a\u063a\u0630\u064a\u0629 \u0641\u064a \u0627\u0644\u0633\u0648\u062f\u0627\u0646\" target=\"_blank\">\u0627\u0644\u0623\u0645\u0645 \u0627\u0644\u0645\u062a\u062d\u062f\u0629 \u062a\u062d\u0630\u0651\u0631 : \u0627\u0644\u0648\u0642\u062a \u064a\u0646\u0641\u062f \u0644\u0625\u0646\u0642\u0627\u0630 \u0623\u0637\u0641\u0627\u0644 \u064a\u0639\u0627\u0646\u0648\u0646 \u0633\u0648\u0621 \u0627\u0644\u062a\u063a\u0630\u064a\u0629 \u0641\u064a \u0627\u0644\u0633\u0648\u062f\u0627\u0646</a><br><br><a href=\"https://www.dostor.org/5419055\" title=\"\u0645\u0633\u0626\u0648\u0644\u0629 \u0633\u0648\u062f\u0627\u0646\u064a\u0629 : \u062a\u062d\u0633\u0646 \u062a\u062f\u0631\u064a\u062c\u0649 \u0641\u0649 \u0627\u0644\u0642\u0637\u0627\u0639 \u0627\u0644\u0635\u062d\u0649 \u0628\u0641\u0636\u0644 \u0645\u0635\u0631\" target=\"_blank\">\u0645\u0633\u0626\u0648\u0644\u0629 \u0633\u0648\u062f\u0627\u0646\u064a\u0629 : \u062a\u062d\u0633\u0646 \u062a\u062f\u0631\u064a\u062c\u0649 \u0641\u0649 \u0627\u0644\u0642\u0637\u0627\u0639 \u0627\u0644\u0635\u062d\u0649 \u0628\u0641\u0636\u0644 \u0645\u0635\u0631</a><br><br>"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          174.583,
-          -36.75
+          30.0,
+          16.0
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Chennai, Tamil Nadu, India",
-        "count": 4,
-        "shareimage": "https://media.dinamani.com/dinamani%2F2026-02-07%2F6yvh3wme%2F3049mosquito1075636.jpg?&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=dinamani%2F2024-05%2Fd3e7ed48-1bd4-4b2d-80df-803a2b6b70cc%2FDinamani_watermark.jpg&overlay_position=bottom&overlay_width=100",
-        "html": "<a href=\"https://www.dinamani.com/latest-news/sirappu-seithigal/2026/Feb/07/the-mosquito-menace-is-increasing-in-chennai-there-is-no-laboratory-to-identify-and-eradicate-them\" title=\"\u0b9a\u0bc6\u0ba9\u0bcd\u0ba9\u0bc8\u0baf\u0bbf\u0bb2\u0bcd \u0b85\u0ba4\u0bbf\u0b95\u0bb0\u0bbf\u0ba4\u0bcd\u0ba4\u0bc1 \u0bb5\u0bb0\u0bc1\u0bae\u0bcd \u0b95\u0bca\u0b9a\u0bc1\u0b95\u0bcd\u0b95\u0bb3\u0bcd \u0ba4\u0bca\u0bb2\u0bcd\u0bb2\u0bc8 ! \u0b95\u0ba3\u0bcd\u0b9f\u0bb1\u0bbf\u0ba8\u0bcd\u0ba4\u0bc1 \u0b85\u0bb4\u0bbf\u0baa\u0bcd\u0baa\u0ba4\u0bb1\u0bcd\u0b95\u0bbe\u0ba9 \u0b86\u0baf\u0bcd\u0bb5\u0b95\u0bae\u0bcd \u0b87\u0bb2\u0bcd\u0bb2\u0bc8 !\" target=\"_blank\">\u0b9a\u0bc6\u0ba9\u0bcd\u0ba9\u0bc8\u0baf\u0bbf\u0bb2\u0bcd \u0b85\u0ba4\u0bbf\u0b95\u0bb0\u0bbf\u0ba4\u0bcd\u0ba4\u0bc1 \u0bb5\u0bb0\u0bc1\u0bae\u0bcd \u0b95\u0bca\u0b9a\u0bc1\u0b95\u0bcd\u0b95\u0bb3\u0bcd \u0ba4\u0bca\u0bb2\u0bcd\u0bb2\u0bc8 ! \u0b95\u0ba3\u0bcd\u0b9f\u0bb1\u0bbf\u0ba8\u0bcd\u0ba4\u0bc1 \u0b85\u0bb4\u0bbf\u0baa\u0bcd\u0baa\u0ba4\u0bb1\u0bcd\u0b95\u0bbe\u0ba9 \u0b86\u0baf\u0bcd\u0bb5\u0b95\u0bae\u0bcd \u0b87\u0bb2\u0bcd\u0bb2\u0bc8 !</a><br><br>"
+        "name": "New Zealand",
+        "count": 3,
+        "shareimage": "https://waateanews.com/wp-content/uploads/2026/02/Copy-of-2026-02-10T062648.830-940x640.png",
+        "html": "<a href=\"https://waateanews.com/2026/02/10/dengue-outbreak-in-rarotonga-raises-questions-for-dr-shane-reti/\" title=\"Dengue Outbreak in Rarotonga Raises Questions for Dr Shane Reti\" target=\"_blank\">Dengue Outbreak in Rarotonga Raises Questions for Dr Shane Reti</a><br><br><a href=\"https://pina.com.fj/2026/02/09/cook-islands-reports-first-dengue-fever-death-amid-increase-in-outbreak/\" title=\"Cook Islands reports first dengue fever death amid increase in outbreak\" target=\"_blank\">Cook Islands reports first dengue fever death amid increase in outbreak</a><br><br>"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          80.2833,
-          13.0833
+          174.0,
+          -42.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "California, United States",
+        "count": 3,
+        "shareimage": "https://images.theconversation.com/files/717781/original/file-20260211-66-hxxgw9.jpg?ixlib=rb-4.1.0&rect=0%2C891%2C3800%2C1900&q=45&auto=format&fit=crop",
+        "html": "<a href=\"https://theconversation.com/trump-says-climate-change-doesnt-endanger-public-health-evidence-shows-it-does-from-extreme-heat-to-mosquito-borne-illnesses-275619\" title=\"Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses\" target=\"_blank\">Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses</a><br><br><a href=\"https://www.rawstory.com/trump-climate-change-2675268459/\" title=\"Here why Trump is dangerously wrong about how climate change threatens our health\" target=\"_blank\">Here why Trump is dangerously wrong about how climate change threatens our health</a><br><br><a href=\"http://www.koreatimes.com/article/20260212/1600998\" title=\"\uce98\ub9ac\ud3ec\ub2c8\uc544 \ub4f1 4\uac1c\uc8fc , \ud2b8\ub7fc\ud504 \ud589\uc815\ubd80 \ubcf4\uac74\uae30\uae08 \uc0ad\uac10\uc5d0 \uc18c\uc1a1\" target=\"_blank\">\uce98\ub9ac\ud3ec\ub2c8\uc544 \ub4f1 4\uac1c\uc8fc , \ud2b8\ub7fc\ud504 \ud589\uc815\ubd80 \ubcf4\uac74\uae30\uae08 \uc0ad\uac10\uc5d0 \uc18c\uc1a1</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.746,
+          36.17
         ]
       }
     },
@@ -190,6 +174,22 @@
         "coordinates": [
           -172.1783,
           -13.8031
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Auckland, Auckland, New Zealand",
+        "count": 2,
+        "shareimage": "https://www.postcourier.com.pg/wp-content/uploads/2026/02/feature-picture-2026-02-09T093117.735.png",
+        "html": "<a href=\"https://pina.com.fj/2026/02/09/cook-islands-reports-first-dengue-fever-death-amid-increase-in-outbreak/\" title=\"Cook Islands reports first dengue fever death amid increase in outbreak\" target=\"_blank\">Cook Islands reports first dengue fever death amid increase in outbreak</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.583,
+          -36.75
         ]
       }
     },
@@ -260,32 +260,64 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Japan",
+        "name": "Hawaii, United States",
         "count": 2,
-        "shareimage": "https://www.ddaily.co.kr:443/2026/02/09/2026020916135235638_l.PNG",
-        "html": "<a href=\"https://www.ddaily.co.kr:443/page/view/2026020916202825277\" title=\"\uace7 \uc124 \uc5f0\ud734 , \uac10\uc5fc\ubcd1 &apos; \ube44\uc0c1 &apos;\u2026 \uac01\ubcc4\ud788 \uc8fc\uc758\ud574\uc57c\ud560 \uc9c8\ubcd1\uc740 ?\" target=\"_blank\">\uace7 \uc124 \uc5f0\ud734 , \uac10\uc5fc\ubcd1 &apos; \ube44\uc0c1 &apos;\u2026 \uac01\ubcc4\ud788 \uc8fc\uc758\ud574\uc57c\ud560 \uc9c8\ubcd1\uc740 ?</a><br><br><a href=\"https://iz.ru/2039081/2026-02-08/indoneziiskii-vrach-predupredila-ob-ukusakh-zhukov-plavuntcov-na-bali\" title=\"\u0418\u043d\u0434\u043e\u043d\u0435\u0437\u0438\u0439\u0441\u043a\u0438\u0439 \u0432\u0440\u0430\u0447 \u043f\u0440\u0435\u0434\u0443\u043f\u0440\u0435\u0434\u0438\u043b\u0430 \u043e\u0431 \u0443\u043a\u0443\u0441\u0430\u0445 \u0436\u0443\u043a\u043e\u0432 - \u043f\u043b\u0430\u0432\u0443\u043d\u0446\u043e\u0432 \u043d\u0430 \u0411\u0430\u043b\u0438\" target=\"_blank\">\u0418\u043d\u0434\u043e\u043d\u0435\u0437\u0438\u0439\u0441\u043a\u0438\u0439 \u0432\u0440\u0430\u0447 \u043f\u0440\u0435\u0434\u0443\u043f\u0440\u0435\u0434\u0438\u043b\u0430 \u043e\u0431 \u0443\u043a\u0443\u0441\u0430\u0445 \u0436\u0443\u043a\u043e\u0432 - \u043f\u043b\u0430\u0432\u0443\u043d\u0446\u043e\u0432 \u043d\u0430 \u0411\u0430\u043b\u0438</a><br><br>"
+        "shareimage": "https://images.theconversation.com/files/717781/original/file-20260211-66-hxxgw9.jpg?ixlib=rb-4.1.0&rect=0%2C891%2C3800%2C1900&q=45&auto=format&fit=crop",
+        "html": "<a href=\"https://theconversation.com/trump-says-climate-change-doesnt-endanger-public-health-evidence-shows-it-does-from-extreme-heat-to-mosquito-borne-illnesses-275619\" title=\"Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses\" target=\"_blank\">Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses</a><br><br><a href=\"https://www.rawstory.com/trump-climate-change-2675268459/\" title=\"Here why Trump is dangerously wrong about how climate change threatens our health\" target=\"_blank\">Here why Trump is dangerously wrong about how climate change threatens our health</a><br><br>"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          138.0,
-          36.0
+          -157.531,
+          21.1098
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "California, United States",
+        "name": "Florida, United States",
         "count": 2,
         "shareimage": "https://images.theconversation.com/files/717781/original/file-20260211-66-hxxgw9.jpg?ixlib=rb-4.1.0&rect=0%2C891%2C3800%2C1900&q=45&auto=format&fit=crop",
-        "html": "<a href=\"https://theconversation.com/trump-says-climate-change-doesnt-endanger-public-health-evidence-shows-it-does-from-extreme-heat-to-mosquito-borne-illnesses-275619\" title=\"Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses\" target=\"_blank\">Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses</a><br><br><a href=\"http://www.koreatimes.com/article/20260212/1600998\" title=\"\uce98\ub9ac\ud3ec\ub2c8\uc544 \ub4f1 4\uac1c\uc8fc , \ud2b8\ub7fc\ud504 \ud589\uc815\ubd80 \ubcf4\uac74\uae30\uae08 \uc0ad\uac10\uc5d0 \uc18c\uc1a1\" target=\"_blank\">\uce98\ub9ac\ud3ec\ub2c8\uc544 \ub4f1 4\uac1c\uc8fc , \ud2b8\ub7fc\ud504 \ud589\uc815\ubd80 \ubcf4\uac74\uae30\uae08 \uc0ad\uac10\uc5d0 \uc18c\uc1a1</a><br><br>"
+        "html": "<a href=\"https://theconversation.com/trump-says-climate-change-doesnt-endanger-public-health-evidence-shows-it-does-from-extreme-heat-to-mosquito-borne-illnesses-275619\" title=\"Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses\" target=\"_blank\">Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses</a><br><br><a href=\"https://www.rawstory.com/trump-climate-change-2675268459/\" title=\"Here why Trump is dangerously wrong about how climate change threatens our health\" target=\"_blank\">Here why Trump is dangerously wrong about how climate change threatens our health</a><br><br>"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -119.746,
-          36.17
+          -81.717,
+          27.8333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Texas, United States",
+        "count": 2,
+        "shareimage": "https://images.theconversation.com/files/717781/original/file-20260211-66-hxxgw9.jpg?ixlib=rb-4.1.0&rect=0%2C891%2C3800%2C1900&q=45&auto=format&fit=crop",
+        "html": "<a href=\"https://theconversation.com/trump-says-climate-change-doesnt-endanger-public-health-evidence-shows-it-does-from-extreme-heat-to-mosquito-borne-illnesses-275619\" title=\"Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses\" target=\"_blank\">Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses</a><br><br><a href=\"https://www.rawstory.com/trump-climate-change-2675268459/\" title=\"Here why Trump is dangerously wrong about how climate change threatens our health\" target=\"_blank\">Here why Trump is dangerously wrong about how climate change threatens our health</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6475,
+          31.106
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Arizona, United States",
+        "count": 2,
+        "shareimage": "https://images.theconversation.com/files/717781/original/file-20260211-66-hxxgw9.jpg?ixlib=rb-4.1.0&rect=0%2C891%2C3800%2C1900&q=45&auto=format&fit=crop",
+        "html": "<a href=\"https://theconversation.com/trump-says-climate-change-doesnt-endanger-public-health-evidence-shows-it-does-from-extreme-heat-to-mosquito-borne-illnesses-275619\" title=\"Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses\" target=\"_blank\">Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses</a><br><br><a href=\"https://www.rawstory.com/trump-climate-change-2675268459/\" title=\"Here why Trump is dangerously wrong about how climate change threatens our health\" target=\"_blank\">Here why Trump is dangerously wrong about how climate change threatens our health</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.388,
+          33.7712
         ]
       }
     },
@@ -302,6 +334,22 @@
         "coordinates": [
           126.732,
           37.4536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "New York, United States",
+        "count": 2,
+        "shareimage": "https://images.theconversation.com/files/717781/original/file-20260211-66-hxxgw9.jpg?ixlib=rb-4.1.0&rect=0%2C891%2C3800%2C1900&q=45&auto=format&fit=crop",
+        "html": "<a href=\"https://theconversation.com/trump-says-climate-change-doesnt-endanger-public-health-evidence-shows-it-does-from-extreme-heat-to-mosquito-borne-illnesses-275619\" title=\"Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses\" target=\"_blank\">Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses</a><br><br><a href=\"https://www.rawstory.com/trump-climate-change-2675268459/\" title=\"Here why Trump is dangerously wrong about how climate change threatens our health\" target=\"_blank\">Here why Trump is dangerously wrong about how climate change threatens our health</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.9384,
+          42.1497
         ]
       }
     },
@@ -356,22 +404,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Russia",
-        "count": 2,
-        "shareimage": "https://static.life.ru/ip/unsafe/rs:fit:1200:/q:98/sh:0.5/czM6Ly9saWZlLXN0YXRpYy9wdWJsaWNhdGlvbnMvMjAyNi8yLzEwLzE2NjQ2MTMzMjA4NTcuNjc2OC5qcGc=.webp",
-        "html": "<a href=\"https://life.ru/p/1840224\" title=\"\u0418\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u0438\u0435 : \u0421\u043e\u0432\u0435\u0442\u044b \u043f\u043e \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044e \u043e\u0442 \u0418\u0418 - \u0447\u0430\u0442\u0431\u043e\u0442\u043e\u0432 \u0447\u0430\u0441\u0442\u043e \u043e\u043a\u0430\u0437\u044b\u0432\u0430\u044e\u0442\u0441\u044f \u043d\u0435\u0432\u0435\u0440\u043d\u044b\u043c\u0438\" target=\"_blank\">\u0418\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u0438\u0435 : \u0421\u043e\u0432\u0435\u0442\u044b \u043f\u043e \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044e \u043e\u0442 \u0418\u0418 - \u0447\u0430\u0442\u0431\u043e\u0442\u043e\u0432 \u0447\u0430\u0441\u0442\u043e \u043e\u043a\u0430\u0437\u044b\u0432\u0430\u044e\u0442\u0441\u044f \u043d\u0435\u0432\u0435\u0440\u043d\u044b\u043c\u0438</a><br><br><a href=\"https://iz.ru/2039081/2026-02-08/indoneziiskii-vrach-predupredila-ob-ukusakh-zhukov-plavuntcov-na-bali\" title=\"\u0418\u043d\u0434\u043e\u043d\u0435\u0437\u0438\u0439\u0441\u043a\u0438\u0439 \u0432\u0440\u0430\u0447 \u043f\u0440\u0435\u0434\u0443\u043f\u0440\u0435\u0434\u0438\u043b\u0430 \u043e\u0431 \u0443\u043a\u0443\u0441\u0430\u0445 \u0436\u0443\u043a\u043e\u0432 - \u043f\u043b\u0430\u0432\u0443\u043d\u0446\u043e\u0432 \u043d\u0430 \u0411\u0430\u043b\u0438\" target=\"_blank\">\u0418\u043d\u0434\u043e\u043d\u0435\u0437\u0438\u0439\u0441\u043a\u0438\u0439 \u0432\u0440\u0430\u0447 \u043f\u0440\u0435\u0434\u0443\u043f\u0440\u0435\u0434\u0438\u043b\u0430 \u043e\u0431 \u0443\u043a\u0443\u0441\u0430\u0445 \u0436\u0443\u043a\u043e\u0432 - \u043f\u043b\u0430\u0432\u0443\u043d\u0446\u043e\u0432 \u043d\u0430 \u0411\u0430\u043b\u0438</a><br><br>"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          100.0,
-          60.0
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "Aitutaki, Cook Islands (General), Cook Islands",
         "count": 1,
         "shareimage": "https://www.nzherald.co.nz/resizer/v2/5U2L7ACGIZEUFLZJ2OTB3QJ2WM.jpg?auth=3d99ffd8184751b58f7e3b2a99f0f163403c5bc083145c62a82c346ad38566b9&quality=70&smart=true",
@@ -414,22 +446,6 @@
         "coordinates": [
           -157.925,
           -21.925
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Chile",
-        "count": 1,
-        "shareimage": "https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/c9/3c98a5e4-826f-11ee-b83e-872c97a28eaf/65529b39d00d7.image.jpg?crop=1333%2C700%2C0%2C144",
-        "html": "<a href=\"https://www.themountainmail.com/news/childcare-funding-request-chaffee/article_64b59423-6930-4a97-b3d0-b6f98019ea6b.html\" title=\"Chaffee County discusses housing and childcare issues\" target=\"_blank\">Chaffee County discusses housing and childcare issues</a><br><br>"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -71.0,
-          -30.0
         ]
       }
     },
@@ -548,22 +564,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Hawaii, United States",
-        "count": 1,
-        "shareimage": "https://images.theconversation.com/files/717781/original/file-20260211-66-hxxgw9.jpg?ixlib=rb-4.1.0&rect=0%2C891%2C3800%2C1900&q=45&auto=format&fit=crop",
-        "html": "<a href=\"https://theconversation.com/trump-says-climate-change-doesnt-endanger-public-health-evidence-shows-it-does-from-extreme-heat-to-mosquito-borne-illnesses-275619\" title=\"Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses\" target=\"_blank\">Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses</a><br><br>"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -157.531,
-          21.1098
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "Havana, Ciudad De La Habana, Cuba",
         "count": 1,
         "shareimage": "https://images.nrc.nl/Oy3SQFKPtoipxavPeRx9Bsxme0o=/1200x627/smart/filters:no_upscale()/s3/static.nrc.nl/wp-content/uploads/2026/02/05140533/100226BUI_2030542801_1.jpg",
@@ -580,80 +580,16 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Florida, United States",
+        "name": "Japan",
         "count": 1,
-        "shareimage": "https://images.theconversation.com/files/717781/original/file-20260211-66-hxxgw9.jpg?ixlib=rb-4.1.0&rect=0%2C891%2C3800%2C1900&q=45&auto=format&fit=crop",
-        "html": "<a href=\"https://theconversation.com/trump-says-climate-change-doesnt-endanger-public-health-evidence-shows-it-does-from-extreme-heat-to-mosquito-borne-illnesses-275619\" title=\"Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses\" target=\"_blank\">Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses</a><br><br>"
+        "shareimage": "https://www.ddaily.co.kr:443/2026/02/09/2026020916135235638_l.PNG",
+        "html": "<a href=\"https://www.ddaily.co.kr:443/page/view/2026020916202825277\" title=\"\uace7 \uc124 \uc5f0\ud734 , \uac10\uc5fc\ubcd1 &apos; \ube44\uc0c1 &apos;\u2026 \uac01\ubcc4\ud788 \uc8fc\uc758\ud574\uc57c\ud560 \uc9c8\ubcd1\uc740 ?\" target=\"_blank\">\uace7 \uc124 \uc5f0\ud734 , \uac10\uc5fc\ubcd1 &apos; \ube44\uc0c1 &apos;\u2026 \uac01\ubcc4\ud788 \uc8fc\uc758\ud574\uc57c\ud560 \uc9c8\ubcd1\uc740 ?</a><br><br>"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -81.717,
-          27.8333
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Texas, United States",
-        "count": 1,
-        "shareimage": "https://images.theconversation.com/files/717781/original/file-20260211-66-hxxgw9.jpg?ixlib=rb-4.1.0&rect=0%2C891%2C3800%2C1900&q=45&auto=format&fit=crop",
-        "html": "<a href=\"https://theconversation.com/trump-says-climate-change-doesnt-endanger-public-health-evidence-shows-it-does-from-extreme-heat-to-mosquito-borne-illnesses-275619\" title=\"Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses\" target=\"_blank\">Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses</a><br><br>"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -97.6475,
-          31.106
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Arizona, United States",
-        "count": 1,
-        "shareimage": "https://images.theconversation.com/files/717781/original/file-20260211-66-hxxgw9.jpg?ixlib=rb-4.1.0&rect=0%2C891%2C3800%2C1900&q=45&auto=format&fit=crop",
-        "html": "<a href=\"https://theconversation.com/trump-says-climate-change-doesnt-endanger-public-health-evidence-shows-it-does-from-extreme-heat-to-mosquito-borne-illnesses-275619\" title=\"Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses\" target=\"_blank\">Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses</a><br><br>"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -111.388,
-          33.7712
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "South Carolina, United States",
-        "count": 1,
-        "shareimage": "https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/c9/3c98a5e4-826f-11ee-b83e-872c97a28eaf/65529b39d00d7.image.jpg?crop=1333%2C700%2C0%2C144",
-        "html": "<a href=\"https://www.themountainmail.com/news/childcare-funding-request-chaffee/article_64b59423-6930-4a97-b3d0-b6f98019ea6b.html\" title=\"Chaffee County discusses housing and childcare issues\" target=\"_blank\">Chaffee County discusses housing and childcare issues</a><br><br>"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -80.9066,
-          33.8191
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Chaffee County, Colorado, United States",
-        "count": 1,
-        "shareimage": "https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/c9/3c98a5e4-826f-11ee-b83e-872c97a28eaf/65529b39d00d7.image.jpg?crop=1333%2C700%2C0%2C144",
-        "html": "<a href=\"https://www.themountainmail.com/news/childcare-funding-request-chaffee/article_64b59423-6930-4a97-b3d0-b6f98019ea6b.html\" title=\"Chaffee County discusses housing and childcare issues\" target=\"_blank\">Chaffee County discusses housing and childcare issues</a><br><br>"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -106.184,
-          38.7667
+          138.0,
+          36.0
         ]
       }
     },
@@ -670,22 +606,6 @@
         "coordinates": [
           -77.0364,
           38.8951
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Columbine Manor, Colorado, United States",
-        "count": 1,
-        "shareimage": "https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/c9/3c98a5e4-826f-11ee-b83e-872c97a28eaf/65529b39d00d7.image.jpg?crop=1333%2C700%2C0%2C144",
-        "html": "<a href=\"https://www.themountainmail.com/news/childcare-funding-request-chaffee/article_64b59423-6930-4a97-b3d0-b6f98019ea6b.html\" title=\"Chaffee County discusses housing and childcare issues\" target=\"_blank\">Chaffee County discusses housing and childcare issues</a><br><br>"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -105.052,
-          39.5853
         ]
       }
     },
@@ -718,22 +638,6 @@
         "coordinates": [
           -87.6501,
           41.85
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "New York, United States",
-        "count": 1,
-        "shareimage": "https://images.theconversation.com/files/717781/original/file-20260211-66-hxxgw9.jpg?ixlib=rb-4.1.0&rect=0%2C891%2C3800%2C1900&q=45&auto=format&fit=crop",
-        "html": "<a href=\"https://theconversation.com/trump-says-climate-change-doesnt-endanger-public-health-evidence-shows-it-does-from-extreme-heat-to-mosquito-borne-illnesses-275619\" title=\"Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses\" target=\"_blank\">Trump says climate change doesnt endanger public health \u2013 evidence shows it does , from extreme heat to mosquito - borne illnesses</a><br><br>"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -74.9384,
-          42.1497
         ]
       }
     },

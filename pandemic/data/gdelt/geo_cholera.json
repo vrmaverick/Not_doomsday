@@ -69,7 +69,7 @@
       "type": "Feature",
       "properties": {
         "name": "Sudan",
-        "count": 35,
+        "count": 37,
         "shareimage": "https://www.africa-newsroom.com/files/large/2d61482fefedb23",
         "html": "<a href=\"http://www.bignewsnetwork.com/news/278862239/south-sudan-cuts-cholera-deaths-new-cases-amid-sustained-response\" title=\"South Sudan cuts cholera deaths , new cases amid sustained response\" target=\"_blank\">South Sudan cuts cholera deaths , new cases amid sustained response</a><br><br><a href=\"https://www.africa-newsroom.com/press/sustained-response-curbing-cholera-outbreak-in-south-sudan\" title=\"APO Group - Africa Newsroom / Press release\" target=\"_blank\">APO Group - Africa Newsroom / Press release</a><br><br>"
       },
@@ -110,22 +110,6 @@
         "coordinates": [
           32.0,
           49.0
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Haiti",
-        "count": 25,
-        "shareimage": "https://imageio.forbes.com/specials-images/imageserve/6990a4799060f4a3fbd5b62a/0x0.jpg?format=jpg&fit=bounds",
-        "html": "<a href=\"https://www.forbes.com/sites/unicefusa/2026/02/14/unicef-wont-stop-delivering-aid-for-children-in-haiti/\" title=\"UNICEF Wont Stop Delivering Aid For Children In Haiti\" target=\"_blank\">UNICEF Wont Stop Delivering Aid For Children In Haiti</a><br><br><a href=\"https://www.unionleader.com/nh/opinion/columnists/george-f-will-a-federal-judge-schools-chaotic-kristi-noem/article_28754146-e090-4a28-ba73-226014d4aef4.html\" title=\"George F . Will : A federal judge schools chaotic Kristi Noem\" target=\"_blank\">George F . Will : A federal judge schools chaotic Kristi Noem</a><br><br>"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -72.4167,
-          19.0
         ]
       }
     },
@@ -356,6 +340,22 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Haiti",
+        "count": 7,
+        "shareimage": "https://imageio.forbes.com/specials-images/imageserve/6990a4799060f4a3fbd5b62a/0x0.jpg?format=jpg&fit=bounds",
+        "html": "<a href=\"https://www.forbes.com/sites/unicefusa/2026/02/14/unicef-wont-stop-delivering-aid-for-children-in-haiti/\" title=\"UNICEF Wont Stop Delivering Aid For Children In Haiti\" target=\"_blank\">UNICEF Wont Stop Delivering Aid For Children In Haiti</a><br><br><a href=\"https://www.haitilibre.com/article-46820-haiti-actualite-zapping.html\" title=\"Ha\u00efti - Actualit\u00e9 : Zapping \u2026 - HaitiLibre . com : Toutes les nouvelles dHaiti 7 / 7\" target=\"_blank\">Ha\u00efti - Actualit\u00e9 : Zapping \u2026 - HaitiLibre . com : Toutes les nouvelles dHaiti 7 / 7</a><br><br><a href=\"https://khovar.tj/rus/2026/02/voz-prizyvaet-vydelit-1-mlrd-dollarov-dlya-okazaniya-meditsinskoj-pomoshhi-lyudyam-v-chrezvychajnyh-situatsiyah-v-2026-godu/\" title=\"\u0412\u041e\u0417 \u043f\u0440\u0438\u0437\u044b\u0432\u0430\u0435\u0442 \u0432\u044b\u0434\u0435\u043b\u0438\u0442\u044c 1 \u043c\u043b\u0440\u0434 \u0434\u043e\u043b\u043b\u0430\u0440\u043e\u0432 \u0434\u043b\u044f \u043e\u043a\u0430\u0437\u0430\u043d\u0438\u044f \u043c\u0435\u0434\u0438\u0446\u0438\u043d\u0441\u043a\u043e\u0439 \u043f\u043e\u043c\u043e\u0449\u0438 \u043b\u044e\u0434\u044f\u043c \u0432 \u0447\u0440\u0435\u0437\u0432\u044b\u0447\u0430\u0439\u043d\u044b\u0445 \u0441\u0438\u0442\u0443\u0430\u0446\u0438\u044f\u0445 \u0432 2026 \u0433\u043e\u0434\u0443\" target=\"_blank\">\u0412\u041e\u0417 \u043f\u0440\u0438\u0437\u044b\u0432\u0430\u0435\u0442 \u0432\u044b\u0434\u0435\u043b\u0438\u0442\u044c 1 \u043c\u043b\u0440\u0434 \u0434\u043e\u043b\u043b\u0430\u0440\u043e\u0432 \u0434\u043b\u044f \u043e\u043a\u0430\u0437\u0430\u043d\u0438\u044f \u043c\u0435\u0434\u0438\u0446\u0438\u043d\u0441\u043a\u043e\u0439 \u043f\u043e\u043c\u043e\u0449\u0438 \u043b\u044e\u0434\u044f\u043c \u0432 \u0447\u0440\u0435\u0437\u0432\u044b\u0447\u0430\u0439\u043d\u044b\u0445 \u0441\u0438\u0442\u0443\u0430\u0446\u0438\u044f\u0445 \u0432 2026 \u0433\u043e\u0434\u0443</a><br><br><a href=\"https://www.infobae.com/republica-dominicana/2026/02/08/republica-dominicana-reitera-respaldo-a-esfuerzos-multilaterales-para-frenar-violencia-en-haiti/\" title=\"Rep\u00fablica Dominicana reitera respaldo a esfuerzos multilaterales para frenar violencia en Hait\u00ed\" target=\"_blank\">Rep\u00fablica Dominicana reitera respaldo a esfuerzos multilaterales para frenar violencia en Hait\u00ed</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.4167,
+          19.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "Yemen",
         "count": 6,
         "shareimage": "https://california-times-brightspot.s3.amazonaws.com/06/b4/1be3492c436882576cf89f44834a/la-fg-yemen-usaid-cuts-01.jpeg",
@@ -518,8 +518,8 @@
       "properties": {
         "name": "Egypt",
         "count": 4,
-        "shareimage": "https://www.fj-p.com/wp-content/uploads/2026/02/%D8%A7%D9%84%D8%AF%D9%83%D8%AA%D9%88%D8%B1-%D9%85%D8%AD%D9%85%D9%88%D8%AF-%D8%B9%D8%B2%D8%AA-1.jpg",
-        "html": "<a href=\"https://www.fj-p.com/422334/%D8%B1%D8%B3%D8%A7%D8%A6%D9%84-%D9%81%D9%86%D9%8A%D8%A9-%D9%84%D8%AA%D8%BA%D9%8A%D9%8A%D8%A8-%D8%A7%D9%84%D9%88%D8%B9%D9%8A-%D9%85%D8%B1%D8%A7%D9%82%D8%A8%D9%88%D9%86-%D8%AF-%D9%85%D8%AD%D9%85/\" title=\"\u0631\u0633\u0627\u0626\u0644 &quot; \u0641\u0646\u064a\u0629 &quot; \u0644\u062a\u063a\u064a\u064a\u0628 \u0627\u0644\u0648\u0639\u064a .. \u0645\u0631\u0627\u0642\u0628\u0648\u0646 : \u062f . \u0645\u062d\u0645\u0648\u062f \u0639\u0632\u062a \u0631\u0645\u0632 \u062a\u0633\u062a\u0647\u062f\u0641\u0647 \u062f\u0631\u0627\u0645\u0627 \u0627\u0644\u0633\u064a\u0633\u064a\" target=\"_blank\">\u0631\u0633\u0627\u0626\u0644 &quot; \u0641\u0646\u064a\u0629 &quot; \u0644\u062a\u063a\u064a\u064a\u0628 \u0627\u0644\u0648\u0639\u064a .. \u0645\u0631\u0627\u0642\u0628\u0648\u0646 : \u062f . \u0645\u062d\u0645\u0648\u062f \u0639\u0632\u062a \u0631\u0645\u0632 \u062a\u0633\u062a\u0647\u062f\u0641\u0647 \u062f\u0631\u0627\u0645\u0627 \u0627\u0644\u0633\u064a\u0633\u064a</a><br><br><a href=\"https://www.naturalnews.com/2026-02-13-alliums-ancient-superfoods-with-modern-health-benefits.html\" title=\"The power of alliums : Ancient superfoods with modern health benefits \u2013 NaturalNews . com\" target=\"_blank\">The power of alliums : Ancient superfoods with modern health benefits \u2013 NaturalNews . com</a><br><br>"
+        "shareimage": "https://www.naturalnews.com/wp-content/uploads/sites/91/2026/02/shallots-5.jpg",
+        "html": "<a href=\"https://www.naturalnews.com/2026-02-13-alliums-ancient-superfoods-with-modern-health-benefits.html\" title=\"The power of alliums : Ancient superfoods with modern health benefits \u2013 NaturalNews . com\" target=\"_blank\">The power of alliums : Ancient superfoods with modern health benefits \u2013 NaturalNews . com</a><br><br><a href=\"https://www.fj-p.com/422334/%D8%B1%D8%B3%D8%A7%D8%A6%D9%84-%D9%81%D9%86%D9%8A%D8%A9-%D9%84%D8%AA%D8%BA%D9%8A%D9%8A%D8%A8-%D8%A7%D9%84%D9%88%D8%B9%D9%8A-%D9%85%D8%B1%D8%A7%D9%82%D8%A8%D9%88%D9%86-%D8%AF-%D9%85%D8%AD%D9%85/\" title=\"\u0631\u0633\u0627\u0626\u0644 &quot; \u0641\u0646\u064a\u0629 &quot; \u0644\u062a\u063a\u064a\u064a\u0628 \u0627\u0644\u0648\u0639\u064a .. \u0645\u0631\u0627\u0642\u0628\u0648\u0646 : \u062f . \u0645\u062d\u0645\u0648\u062f \u0639\u0632\u062a \u0631\u0645\u0632 \u062a\u0633\u062a\u0647\u062f\u0641\u0647 \u062f\u0631\u0627\u0645\u0627 \u0627\u0644\u0633\u064a\u0633\u064a\" target=\"_blank\">\u0631\u0633\u0627\u0626\u0644 &quot; \u0641\u0646\u064a\u0629 &quot; \u0644\u062a\u063a\u064a\u064a\u0628 \u0627\u0644\u0648\u0639\u064a .. \u0645\u0631\u0627\u0642\u0628\u0648\u0646 : \u062f . \u0645\u062d\u0645\u0648\u062f \u0639\u0632\u062a \u0631\u0645\u0632 \u062a\u0633\u062a\u0647\u062f\u0641\u0647 \u062f\u0631\u0627\u0645\u0627 \u0627\u0644\u0633\u064a\u0633\u064a</a><br><br>"
       },
       "geometry": {
         "type": "Point",
@@ -612,6 +612,22 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "El Fasher, Shamal Darfur, Sudan",
+        "count": 3,
+        "shareimage": "https://sudanile.com/wp-content/uploads/2026/01/adnanzahir.jpg",
+        "html": "<a href=\"https://www.dostor.org/5412426\" title=\"\u0643\u0627\u0631\u062b\u0629 \u0625\u0646\u0633\u0627\u0646\u064a\u0629 \u0641\u064a \u0627\u0644\u0641\u0627\u0634\u0631 .. 300 \u0636\u062d\u064a\u0629 \u062f\u0627\u062e\u0644 \u0633\u062c\u0646 \u0634\u0627\u0644\u0627 \u0648\u0646\u062f\u0627\u0621\u0627\u062a \u0639\u0627\u062c\u0644\u0629 \u0644\u0644\u062a\u062d\u0631\u0643\" target=\"_blank\">\u0643\u0627\u0631\u062b\u0629 \u0625\u0646\u0633\u0627\u0646\u064a\u0629 \u0641\u064a \u0627\u0644\u0641\u0627\u0634\u0631 .. 300 \u0636\u062d\u064a\u0629 \u062f\u0627\u062e\u0644 \u0633\u062c\u0646 \u0634\u0627\u0644\u0627 \u0648\u0646\u062f\u0627\u0621\u0627\u062a \u0639\u0627\u062c\u0644\u0629 \u0644\u0644\u062a\u062d\u0631\u0643</a><br><br><a href=\"https://www.dostor.org/5420346\" title=\"\u0645\u0641\u0648\u0636\u064a\u0629 \u062d\u0642\u0648\u0642 \u0627\u0644\u0625\u0646\u0633\u0627\u0646 : \u0627\u0644\u0633\u0648\u062f\u0627\u0646 \u064a\u0634\u0647\u062f \u0623\u0643\u0628\u0631 \u0623\u0632\u0645\u0629 \u0625\u0646\u0633\u0627\u0646\u064a\u0629 \u0641\u064a \u0627\u0644\u0639\u0627\u0644\u0645 \u0648\u0627\u0646\u062a\u0647\u0627\u0643\u0627\u062a \u062a\u0631\u0642\u0649 \u0644\u062c\u0631\u0627\u0626\u0645 \u062d\u0631\u0628\" target=\"_blank\">\u0645\u0641\u0648\u0636\u064a\u0629 \u062d\u0642\u0648\u0642 \u0627\u0644\u0625\u0646\u0633\u0627\u0646 : \u0627\u0644\u0633\u0648\u062f\u0627\u0646 \u064a\u0634\u0647\u062f \u0623\u0643\u0628\u0631 \u0623\u0632\u0645\u0629 \u0625\u0646\u0633\u0627\u0646\u064a\u0629 \u0641\u064a \u0627\u0644\u0639\u0627\u0644\u0645 \u0648\u0627\u0646\u062a\u0647\u0627\u0643\u0627\u062a \u062a\u0631\u0642\u0649 \u0644\u062c\u0631\u0627\u0626\u0645 \u062d\u0631\u0628</a><br><br><a href=\"https://sudanile.com/%D8%B3%D8%AC%D9%86-%D8%B4%D8%A7%D9%84%D8%A7-%D9%85%D8%B1%D8%A9-%D8%A3%D8%AE%D8%B1%D9%89/\" title=\"\u0633\u062c\u0646 &quot; \u0634\u0627\u0644\u0627 &quot; \u0645\u0631\u0629 \u0623\u062e\u0631\u0649 ! - \u0633\u0648\u062f\u0627\u0646\u0627\u064a\u0644\" target=\"_blank\">\u0633\u062c\u0646 &quot; \u0634\u0627\u0644\u0627 &quot; \u0645\u0631\u0629 \u0623\u062e\u0631\u0649 ! - \u0633\u0648\u062f\u0627\u0646\u0627\u064a\u0644</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.35,
+          13.6333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "Uganda",
         "count": 3,
         "shareimage": "https://www.ecofinagency.com/media/k2/items/cache/1ea8a8ba237b6fa43d0ed643d0e454b1_XL.jpg",
@@ -654,22 +670,6 @@
         "coordinates": [
           -77.9639,
           38.7526
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Greece",
-        "count": 3,
-        "shareimage": "https://www.naturalnews.com/wp-content/uploads/sites/91/2026/02/shallots-5.jpg",
-        "html": "<a href=\"https://www.naturalnews.com/2026-02-13-alliums-ancient-superfoods-with-modern-health-benefits.html\" title=\"The power of alliums : Ancient superfoods with modern health benefits \u2013 NaturalNews . com\" target=\"_blank\">The power of alliums : Ancient superfoods with modern health benefits \u2013 NaturalNews . com</a><br><br><a href=\"https://bbs.wenxuecity.com/advpost/3981.html\" title=\"\u7cd6\u5c3f\u75c5\u5371\u673a\u56db\u4f0f \uff0c \u9ec4\u8fde\u7a33\u7cd6\u7d20\u503c\u5f97\u7cd6\u53cb\u62e5\u6709 \uff01 - \u8d1d\u4f73\u836f\u4e1a\u53d1\u8868\u4e8e \u5546\u4e1a\u4fe1\u606f - \u8bba\u575b\" target=\"_blank\">\u7cd6\u5c3f\u75c5\u5371\u673a\u56db\u4f0f \uff0c \u9ec4\u8fde\u7a33\u7cd6\u7d20\u503c\u5f97\u7cd6\u53cb\u62e5\u6709 \uff01 - \u8d1d\u4f73\u836f\u4e1a\u53d1\u8868\u4e8e \u5546\u4e1a\u4fe1\u606f - \u8bba\u575b</a><br><br><a href=\"https://www.harvardmagazine.com/2017/10/wilderness-medicine\" title=\"Stuart Harris and wilderness medicine at Harvard\" target=\"_blank\">Stuart Harris and wilderness medicine at Harvard</a><br><br>"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          22.0,
-          39.0
         ]
       }
     },
@@ -900,22 +900,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "El Fasher, Shamal Darfur, Sudan",
-        "count": 2,
-        "shareimage": "https://sudanile.com/wp-content/uploads/2026/01/adnanzahir.jpg",
-        "html": "<a href=\"https://www.dostor.org/5412426\" title=\"\u0643\u0627\u0631\u062b\u0629 \u0625\u0646\u0633\u0627\u0646\u064a\u0629 \u0641\u064a \u0627\u0644\u0641\u0627\u0634\u0631 .. 300 \u0636\u062d\u064a\u0629 \u062f\u0627\u062e\u0644 \u0633\u062c\u0646 \u0634\u0627\u0644\u0627 \u0648\u0646\u062f\u0627\u0621\u0627\u062a \u0639\u0627\u062c\u0644\u0629 \u0644\u0644\u062a\u062d\u0631\u0643\" target=\"_blank\">\u0643\u0627\u0631\u062b\u0629 \u0625\u0646\u0633\u0627\u0646\u064a\u0629 \u0641\u064a \u0627\u0644\u0641\u0627\u0634\u0631 .. 300 \u0636\u062d\u064a\u0629 \u062f\u0627\u062e\u0644 \u0633\u062c\u0646 \u0634\u0627\u0644\u0627 \u0648\u0646\u062f\u0627\u0621\u0627\u062a \u0639\u0627\u062c\u0644\u0629 \u0644\u0644\u062a\u062d\u0631\u0643</a><br><br><a href=\"https://sudanile.com/%D8%B3%D8%AC%D9%86-%D8%B4%D8%A7%D9%84%D8%A7-%D9%85%D8%B1%D8%A9-%D8%A3%D8%AE%D8%B1%D9%89/\" title=\"\u0633\u062c\u0646 &quot; \u0634\u0627\u0644\u0627 &quot; \u0645\u0631\u0629 \u0623\u062e\u0631\u0649 ! - \u0633\u0648\u062f\u0627\u0646\u0627\u064a\u0644\" target=\"_blank\">\u0633\u062c\u0646 &quot; \u0634\u0627\u0644\u0627 &quot; \u0645\u0631\u0629 \u0623\u062e\u0631\u0649 ! - \u0633\u0648\u062f\u0627\u0646\u0627\u064a\u0644</a><br><br>"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          25.35,
-          13.6333
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "Belle-Anse, Sud-Est, Haiti",
         "count": 2,
         "shareimage": "https://imageio.forbes.com/specials-images/imageserve/6990a4799060f4a3fbd5b62a/0x0.jpg?format=jpg&fit=bounds",
@@ -942,6 +926,22 @@
         "coordinates": [
           72.8258,
           18.975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Algeria",
+        "count": 2,
+        "shareimage": "https://www.ecofinagency.com/media/k2/items/cache/1ea8a8ba237b6fa43d0ed643d0e454b1_XL.jpg",
+        "html": "<a href=\"https://www.ecofinagency.com/news-services/1402-52906-weekly-health-update-africa-cdc-advances-health-sovereignty-efforts\" title=\"Weekly Health Update\" target=\"_blank\">Weekly Health Update</a><br><br><a href=\"https://tribunadonorte.com.br/colunas/vou-de-filme/\" title=\"Vou de filme - Tribuna do Norte\" target=\"_blank\">Vou de filme - Tribuna do Norte</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.0,
+          28.0
         ]
       }
     },
@@ -1006,6 +1006,22 @@
         "coordinates": [
           -0.4877,
           38.3462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Greece",
+        "count": 2,
+        "shareimage": "https://www.naturalnews.com/wp-content/uploads/sites/91/2026/02/shallots-5.jpg",
+        "html": "<a href=\"https://www.naturalnews.com/2026-02-13-alliums-ancient-superfoods-with-modern-health-benefits.html\" title=\"The power of alliums : Ancient superfoods with modern health benefits \u2013 NaturalNews . com\" target=\"_blank\">The power of alliums : Ancient superfoods with modern health benefits \u2013 NaturalNews . com</a><br><br><a href=\"https://www.harvardmagazine.com/2017/10/wilderness-medicine\" title=\"Stuart Harris and wilderness medicine at Harvard\" target=\"_blank\">Stuart Harris and wilderness medicine at Harvard</a><br><br>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.0,
+          39.0
         ]
       }
     },
@@ -1102,22 +1118,6 @@
         "coordinates": [
           -1.4667,
           52.5167
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Lagos, Lagos, Nigeria",
-        "count": 2,
-        "shareimage": "https://cdn.punchng.com/wp-content/uploads/2026/02/07221416/Some-customers-at-a-fruit-stand-along-Ogba-road-at-night-1200x630.jpg",
-        "html": "<a href=\"https://punchng.com/hidden-dangers-how-lagos-residents-risk-health-for-cheap-street-meals/\" title=\"Lagos Street Food : The Hidden Dangers of Cheap Meals\" target=\"_blank\">Lagos Street Food : The Hidden Dangers of Cheap Meals</a><br><br><a href=\"https://www.thetimes.com/magazines/culture-magazine/article/man-on-the-run-review-why-paul-mccartney-made-an-act-of-faith-fhk5fmr9p\" title=\"How Paul McCartney juggled family and fame after the Beatles break - up\" target=\"_blank\">How Paul McCartney juggled family and fame after the Beatles break - up</a><br><br>"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          3.3958,
-          6.4531
         ]
       }
     },
@@ -1524,22 +1524,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Mali",
-        "count": 1,
-        "shareimage": "",
-        "html": "<a href=\"https://bamada.net/assainissement-au-mali-des-progres-reels-mais-des-disparites-persistantes\" title=\"Assainissement au Mali : Des progr\u00e8s r\u00e9els , mais des disparit\u00e9s persistantes\" target=\"_blank\">Assainissement au Mali : Des progr\u00e8s r\u00e9els , mais des disparit\u00e9s persistantes</a><br><br>"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.0,
-          17.0
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "Puerto Rico, United States",
         "count": 1,
         "shareimage": "https://lasillarota.com/u/fotografias/m/2026/2/9/f1280x720-832438_964113_4145.jpg",
@@ -1630,22 +1614,6 @@
         "coordinates": [
           -81.717,
           27.8333
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Algeria",
-        "count": 1,
-        "shareimage": "https://www.ecofinagency.com/media/k2/items/cache/1ea8a8ba237b6fa43d0ed643d0e454b1_XL.jpg",
-        "html": "<a href=\"https://www.ecofinagency.com/news-services/1402-52906-weekly-health-update-africa-cdc-advances-health-sovereignty-efforts\" title=\"Weekly Health Update\" target=\"_blank\">Weekly Health Update</a><br><br>"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          3.0,
-          28.0
         ]
       }
     },
@@ -1876,22 +1844,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Madrid, Madrid, Spain",
-        "count": 1,
-        "shareimage": "https://s2.abcstatics.com/abc/www/multimedia/espana/2026/02/05/grupo-san-isidro_20260206202236-U27822007718MWs-1024x512@diario_abc.jpg",
-        "html": "<a href=\"https://www.abc.es/espana/madrid/cuatrocientos-anos-historia-futuro-delante-empezo-20260205011542-nt.html\" title=\"Una cuna de premios Nobel con 400 a\u00f1os de historia : \u00ab Todo empez\u00f3 aqu\" target=\"_blank\">Una cuna de premios Nobel con 400 a\u00f1os de historia : \u00ab Todo empez\u00f3 aqu</a><br><br>"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.6833,
-          40.4
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "Switzerland",
         "count": 1,
         "shareimage": "https://i0.wp.com/africanmediaagency.com/wp-content/uploads/2026/02/WhatsApp-Image-2026-01-30-at-12.09.37-1-1-1-1024x768.jpeg?ssl=1",
@@ -2052,16 +2004,16 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Ikorodu, Lagos, Nigeria",
+        "name": "Lagos, Lagos, Nigeria",
         "count": 1,
-        "shareimage": "https://cdn.punchng.com/wp-content/uploads/2026/02/07221416/Some-customers-at-a-fruit-stand-along-Ogba-road-at-night-1200x630.jpg",
-        "html": "<a href=\"https://punchng.com/hidden-dangers-how-lagos-residents-risk-health-for-cheap-street-meals/\" title=\"Lagos Street Food : The Hidden Dangers of Cheap Meals\" target=\"_blank\">Lagos Street Food : The Hidden Dangers of Cheap Meals</a><br><br>"
+        "shareimage": "https://www.thetimes.com/imageserver/image/%2F4aa3c249-0819-4fef-b809-df4ae93c8db1.jpg?crop=3234%2C1819%2C99%2C1156",
+        "html": "<a href=\"https://www.thetimes.com/magazines/culture-magazine/article/man-on-the-run-review-why-paul-mccartney-made-an-act-of-faith-fhk5fmr9p\" title=\"How Paul McCartney juggled family and fame after the Beatles break - up\" target=\"_blank\">How Paul McCartney juggled family and fame after the Beatles break - up</a><br><br>"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          3.5087,
-          6.6155
+          3.3958,
+          6.4531
         ]
       }
     },

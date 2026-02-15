@@ -1,71 +1,71 @@
 geoName,geoCode,epidemic
 China,CN,100
-Ethiopia,ET,37
+Ethiopia,ET,38
 United States,US,37
-Ghana,GH,34
-Singapore,SG,34
-Nigeria,NG,34
+Ghana,GH,35
+Nigeria,NG,35
+Singapore,SG,35
+Canada,CA,33
 Nepal,NP,33
-Canada,CA,32
-United Kingdom,GB,29
-Sweden,SE,28
-Philippines,PH,28
+United Kingdom,GB,30
+Ireland,IE,28
+Philippines,PH,27
 South Korea,KR,27
-Ireland,IE,27
-Pakistan,PK,26
+Sweden,SE,27
+Tanzania,TZ,26
+Pakistan,PK,25
 New Zealand,NZ,25
-Tanzania,TZ,25
 Kenya,KE,24
 Australia,AU,23
+Lithuania,LT,22
 India,IN,21
-Bangladesh,BD,20
-Lithuania,LT,20
-Bulgaria,BG,20
 United Arab Emirates,AE,20
+Bangladesh,BD,20
 Norway,NO,19
-St. Helena,SH,18
+Hong Kong,HK,19
 Finland,FI,18
-Hong Kong,HK,18
-South Africa,ZA,17
+Bulgaria,BG,18
+South Africa,ZA,18
+Denmark,DK,17
 Austria,AT,17
-Portugal,PT,16
-Romania,RO,16
-Israel,IL,16
+Portugal,PT,17
 Czechia,CZ,16
+Romania,RO,16
 Malaysia,MY,16
-Denmark,DK,16
+Israel,IL,16
 Switzerland,CH,16
+Serbia,RS,15
+Netherlands,NL,15
 Iraq,IQ,15
-Netherlands,NL,14
 Ecuador,EC,14
+St. Helena,SH,14
 Hungary,HU,14
-Thailand,TH,13
-Germany,DE,13
-Vietnam,VN,13
-Slovakia,SK,13
-Serbia,RS,13
 Spain,ES,13
-Colombia,CO,12
-Greece,GR,12
-Belgium,BE,12
+Slovakia,SK,13
+Thailand,TH,13
+Vietnam,VN,13
+Greece,GR,13
+Belgium,BE,13
+Germany,DE,13
+Egypt,EG,12
 Uzbekistan,UZ,12
-Egypt,EG,11
-Ukraine,UA,11
+France,FR,12
 Morocco,MA,11
-France,FR,11
+Ukraine,UA,11
+Colombia,CO,11
 Poland,PL,11
-Kazakhstan,KZ,10
 Mexico,MX,10
 Saudi Arabia,SA,10
+Argentina,AR,10
+Kazakhstan,KZ,10
 Türkiye,TR,9
-Argentina,AR,9
 Peru,PE,9
-Algeria,DZ,8
-Brazil,BR,8
-Chile,CL,8
-Indonesia,ID,8
+Taiwan,TW,9
+Indonesia,ID,9
+Algeria,DZ,9
 Italy,IT,8
-Taiwan,TW,8
+Chile,CL,8
+Brazil,BR,8
 Japan,JP,6
 Russia,RU,5
 Iran,IR,2
