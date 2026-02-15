@@ -1,0 +1,293 @@
+{
+  "city_name": "Boston",
+  "calamity_list": [
+    "earthquake",
+    "flood"
+  ],
+  "original": {
+    "adjacency_list": {
+      "Hospital #1": [
+        "Fire Station #4",
+        "Food Service #1",
+        "Grocery Store #1",
+        "Power Plant #1",
+        "Water Treatment #1"
+      ],
+      "Hospital #2": [
+        "Telecom Tower #1",
+        "Grocery Store #3",
+        "Water Treatment #1",
+        "Power Plant #1"
+      ],
+      "Hospital #3": [
+        "Ambulance Depot #1",
+        "Food Service #2",
+        "Hospital #4",
+        "Water Treatment #1",
+        "Water Supply #2",
+        "Substation #1",
+        "Police Station #1",
+        "Fire Station #1",
+        "Power Plant #1"
+      ],
+      "Hospital #4": [
+        "Substation #1",
+        "Food Service #2",
+        "Hospital #3",
+        "Ambulance Depot #1",
+        "Substation #3",
+        "Water Treatment #1",
+        "Police Station #3",
+        "Fire Station #2",
+        "Power Plant #1"
+      ],
+      "Fire Station #1": [
+        "Police Station #1",
+        "Substation #2",
+        "Grocery Store #3",
+        "Ambulance Depot #1",
+        "Hospital #3"
+      ],
+      "Fire Station #2": [
+        "Food Service #4",
+        "Food Service #3",
+        "Water Supply #1",
+        "Fire Station #3",
+        "Police Station #3",
+        "Substation #1",
+        "Hospital #4",
+        "Police Station #2"
+      ],
+      "Fire Station #3": [
+        "Food Service #4",
+        "Bunker/Shelter #3",
+        "Police Station #3",
+        "Fire Station #2",
+        "Police Station #2"
+      ],
+      "Fire Station #4": [
+        "Hospital #1",
+        "Grocery Store #1",
+        "Food Service #1"
+      ],
+      "Police Station #1": [
+        "Fire Station #1",
+        "Substation #2",
+        "Water Treatment #1",
+        "Ambulance Depot #1",
+        "Grocery Store #3",
+        "Hospital #3"
+      ],
+      "Police Station #2": [
+        "Grocery Store #2",
+        "Police Station #3",
+        "Bunker/Shelter #3",
+        "Fire Station #3",
+        "Fire Station #2"
+      ],
+      "Police Station #3": [
+        "Bunker/Shelter #3",
+        "Police Station #2",
+        "Fire Station #3",
+        "Grocery Store #2",
+        "Fire Station #2",
+        "Substation #1",
+        "Hospital #4"
+      ],
+      "Ambulance Depot #1": [
+        "Hospital #3",
+        "Bunker/Shelter #2",
+        "Water Treatment #1",
+        "Food Service #2",
+        "Hospital #4",
+        "Police Station #1",
+        "Fire Station #1"
+      ],
+      "Bunker/Shelter #1": [
+        "Evacuation Point #1",
+        "Power Plant #1"
+      ],
+      "Bunker/Shelter #2": [
+        "Ambulance Depot #1",
+        "Substation #2"
+      ],
+      "Bunker/Shelter #3": [
+        "Police Station #3",
+        "Food Service #3",
+        "Food Service #4",
+        "Fire Station #3",
+        "Police Station #2"
+      ],
+      "Evacuation Point #1": [
+        "Bunker/Shelter #1",
+        "Power Plant #1",
+        "Substation #4"
+      ],
+      "Food Service #1": [
+        "Fire Station #4",
+        "Hospital #1",
+        "Substation #3"
+      ],
+      "Food Service #2": [
+        "Hospital #4",
+        "Hospital #3",
+        "Ambulance Depot #1",
+        "Substation #1",
+        "Water Supply #2"
+      ],
+      "Food Service #3": [
+        "Fire Station #2",
+        "Bunker/Shelter #3",
+        "Food Service #4",
+        "Substation #3"
+      ],
+      "Food Service #4": [
+        "Fire Station #2",
+        "Fire Station #3",
+        "Bunker/Shelter #3",
+        "Food Service #3",
+        "Water Supply #1",
+        "Substation #1"
+      ],
+      "Grocery Store #1": [
+        "Fire Station #4",
+        "Hospital #1"
+      ],
+      "Grocery Store #2": [
+        "Police Station #2",
+        "Police Station #3",
+        "Substation #4"
+      ],
+      "Grocery Store #3": [
+        "Substation #2",
+        "Fire Station #1",
+        "Police Station #1",
+        "Hospital #2"
+      ],
+      "Water Supply #1": [
+        "Fire Station #2",
+        "Food Service #4",
+        "Water Treatment #1"
+      ],
+      "Water Supply #2": [
+        "Food Service #2",
+        "Water Treatment #1",
+        "Hospital #3"
+      ],
+      "Power Plant #1": [
+        "Evacuation Point #1",
+        "Bunker/Shelter #1",
+        "Substation #4",
+        "Hospital #1",
+        "Substation #3",
+        "Substation #1",
+        "Hospital #4",
+        "Hospital #3",
+        "Substation #2",
+        "Hospital #2"
+      ],
+      "Substation #1": [
+        "Hospital #4",
+        "Substation #3",
+        "Food Service #2",
+        "Hospital #3",
+        "Police Station #3",
+        "Fire Station #2",
+        "Telecom Tower #1",
+        "Food Service #4",
+        "Power Plant #1"
+      ],
+      "Substation #2": [
+        "Grocery Store #3",
+        "Bunker/Shelter #2",
+        "Fire Station #1",
+        "Police Station #1",
+        "Telecom Tower #1",
+        "Power Plant #1"
+      ],
+      "Substation #3": [
+        "Substation #1",
+        "Hospital #4",
+        "Food Service #1",
+        "Food Service #3",
+        "Telecom Tower #1",
+        "Power Plant #1"
+      ],
+      "Substation #4": [
+        "Power Plant #1",
+        "Evacuation Point #1",
+        "Grocery Store #2"
+      ],
+      "Telecom Tower #1": [
+        "Telecom Tower #2",
+        "Substation #2",
+        "Hospital #2",
+        "Substation #3",
+        "Substation #1"
+      ],
+      "Telecom Tower #2": [
+        "Telecom Tower #1"
+      ],
+      "Water Treatment #1": [
+        "Ambulance Depot #1",
+        "Hospital #3",
+        "Water Supply #2",
+        "Police Station #1",
+        "Hospital #4",
+        "Water Supply #1",
+        "Hospital #2",
+        "Hospital #1"
+      ]
+    },
+    "stats": {
+      "total_edges": 215,
+      "density": 0.125658,
+      "is_connected": true
+    }
+  },
+  "optimized": {
+    "adjacency_list": "( populated after Groq optimization \u2014 includes emergency_path connections )",
+    "typed_adjacency_lists": "( includes new emergency_path key alongside road, power, water, emergency )"
+  },
+  "changes": {
+    "edges_removed": [
+      {
+        "from": "Hospital #1",
+        "to": "Food Service #1",
+        "edge_type": "road",
+        "reason": "Road through flood-prone low-elevation zone"
+      }
+    ],
+    "edges_added": [
+      {
+        "from": "Hospital #1",
+        "to": "Bunker/Shelter #2",
+        "edge_type": "emergency_path",
+        "distance": 2.34,
+        "reason": "Direct evac corridor for earthquake casualties"
+      },
+      {
+        "from": "Fire Station #1",
+        "to": "Power Plant #1",
+        "edge_type": "emergency_path",
+        "distance": 4.12,
+        "reason": "Rapid fire response to seismically-damaged power grid"
+      }
+    ],
+    "summary": {
+      "total_removed": "5-12",
+      "total_added": "8-15"
+    }
+  },
+  "groq_analysis": {
+    "reasoning": "Strategic LLM analysis of calamity-specific optimizations...",
+    "priority_nodes": [
+      {
+        "node": "Hospital #1",
+        "priority": "critical",
+        "reason": "Primary trauma center for earthquake injuries"
+      }
+    ],
+    "model_used": "llama-3.3-70b-versatile"
+  }
+}
