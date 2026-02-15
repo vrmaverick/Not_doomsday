@@ -1,0 +1,9 @@
+# Cascade Engine — InnovAIte
+langchain>=0.3.0
+langchain-groq>=0.2.0
+langchain-community>=0.3.0
+chromadb>=0.5.0
+sentence-transformers>=3.0.0
+flask>=3.0.0
+flask-cors>=4.0.0
+python-dotenv>=1.0.0
