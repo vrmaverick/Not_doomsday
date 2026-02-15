@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 """
-Volcano Data Pipeline + Groq LLM Insights
-==========================================
+Volcano Data Pipeline
+=====================
 1. Pulls ALL data from USGS HANS API
 2. Enriches with earthquake seismicity data
-3. Analyzes fields for ML relevance
-4. Provides location-based risk assessment via Groq LLM
+3. Computes composite risk scores
+4. Provides location-based risk lookup
 
 Usage:
     python volcano_pipeline.py                          # Pull all data + analyze
     python volcano_pipeline.py --location 19.4,-155.3   # Get risk for a location
-    python volcano_pipeline.py --location "Hawaii"      # Natural language location
+    python volcano_pipeline.py --location "Hawaii"       # Named location lookup
+    python volcano_pipeline.py --refresh                 # Force re-pull from APIs
 """
 
 import requests
@@ -24,9 +25,6 @@ from datetime import datetime, timedelta
 # ============================================================
 # CONFIG
 # ============================================================
-GROQ_API_KEY = "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"
-GROQ_MODEL = "llama-3.3-70b-versatile"  # fast + good for hackathon
-
 USGS_HANS_BASE = "https://volcanoes.usgs.gov/hans-public/api/volcano"
 USGS_EQ_BASE = "https://earthquake.usgs.gov/fdsnws/event/1"
 
@@ -58,6 +56,17 @@ COLOR_SCORES = {
     "GREEN": 1,
     None: 0,
     "UNASSIGNED": 0,
+}
+
+LOCATION_PRESETS = {
+    "hawaii": (19.896, -155.582),
+    "seattle": (47.606, -122.332),
+    "portland": (45.505, -122.675),
+    "anchorage": (61.217, -149.900),
+    "manila": (14.599, 120.984),
+    "tokyo": (35.682, 139.692),
+    "naples": (40.852, 14.268),
+    "mexico city": (19.432, -99.133),
 }
 
 
@@ -257,7 +266,6 @@ def enrich_with_seismicity(enriched, earthquakes):
 def compute_risk_score(enriched):
     """
     Compute a composite risk score (0-100) based on available features.
-    This is a weighted heuristic — a starting point for ML modeling.
 
     Weights:
         - Threat level (NVEWS):    25%  (long-term hazard assessment)
@@ -363,7 +371,7 @@ def run_full_pipeline(with_seismicity=True, seismic_limit=None):
     print(f"💾 Saved enriched CSV → {csv_path}")
 
     # Print summary
-    print_field_analysis(enriched_list)
+    print_data_quality(enriched_list)
     print_top_risk(enriched_list)
 
     # Save elevated details separately (these are the most important)
@@ -378,77 +386,19 @@ def run_full_pipeline(with_seismicity=True, seismic_limit=None):
 
 
 # ============================================================
-# STEP 4: FIELD ANALYSIS FOR ML
+# STEP 4: DATA QUALITY + SUMMARY
 # ============================================================
-def print_field_analysis(data):
-    """Analyze which fields are useful for ML modeling."""
-    print("\n" + "=" * 70)
-    print("  📊 FIELD ANALYSIS FOR ML MODELS")
-    print("=" * 70)
-
-    print("""
-┌─────────────────────────────────────────────────────────────────────┐
-│ FIELD                  │ ML USE           │ NOTES                   │
-├─────────────────────────────────────────────────────────────────────┤
-│ latitude, longitude    │ INPUT FEATURE    │ Core geo for distance   │
-│                        │                  │ calc to user location   │
-├─────────────────────────────────────────────────────────────────────┤
-│ elevation_meters       │ INPUT FEATURE    │ Higher = more explosive │
-│                        │                  │ potential (generally)    │
-├─────────────────────────────────────────────────────────────────────┤
-│ threat_score (1-5)     │ INPUT FEATURE    │ NVEWS long-term hazard  │
-│                        │                  │ assessment (static)     │
-├─────────────────────────────────────────────────────────────────────┤
-│ alert_score (0-4)      │ TARGET / FEATURE │ Current alert level,    │
-│                        │                  │ can be prediction target│
-├─────────────────────────────────────────────────────────────────────┤
-│ color_score (0-4)      │ TARGET / FEATURE │ Aviation color code,    │
-│                        │                  │ correlates with alert   │
-├─────────────────────────────────────────────────────────────────────┤
-│ eq_count_30d           │ INPUT FEATURE    │ Strong precursor signal │
-│                        │                  │ (more quakes = unrest)  │
-├─────────────────────────────────────────────────────────────────────┤
-│ eq_max_mag_30d         │ INPUT FEATURE    │ Intensity of seismic    │
-│                        │                  │ unrest                  │
-├─────────────────────────────────────────────────────────────────────┤
-│ eq_avg_depth_km        │ INPUT FEATURE    │ Shallow = magma moving  │
-│                        │                  │ up (key precursor!)     │
-├─────────────────────────────────────────────────────────────────────┤
-│ eq_shallow_count       │ INPUT FEATURE    │ Count of <5km depth     │
-│                        │                  │ quakes (best precursor) │
-├─────────────────────────────────────────────────────────────────────┤
-│ is_monitored           │ FILTER           │ Only monitored ones     │
-│                        │                  │ have reliable data      │
-├─────────────────────────────────────────────────────────────────────┤
-│ composite_risk_score   │ BASELINE TARGET  │ Heuristic score (0-100) │
-│                        │                  │ to bootstrap ML model   │
-├─────────────────────────────────────────────────────────────────────┤
-│ distance_to_user (km)  │ INPUT FEATURE    │ Computed at query time  │
-│                        │                  │ from user lat/lon       │
-└─────────────────────────────────────────────────────────────────────┘
-
-MODEL IDEAS:
-  1. RISK CLASSIFICATION: Given a user location, classify risk as
-     Low/Moderate/High/Critical based on nearest volcanoes + their features
-
-  2. ALERT PREDICTION: Given seismicity trends over time, predict if
-     alert level will escalate (needs historical time series)
-
-  3. IMPACT RADIUS: Given eruption parameters (VEI, elevation, type),
-     estimate affected area radius for user location
-
-  4. LLM AUGMENTED: Feed the structured data to Groq LLM for natural
-     language risk assessment + recommendations
-""")
-
-    # Data quality stats
+def print_data_quality(data):
+    """Print data quality stats."""
     total = len(data)
     monitored = sum(1 for v in data if v["is_monitored"])
     with_alert = sum(1 for v in data if v["alert_score"] > 0)
     with_eq = sum(1 for v in data if v["eq_count_30d"] > 0)
     with_coords = sum(1 for v in data if v["latitude"] and v["longitude"])
 
-    print(f"  DATA QUALITY:")
+    print("\n" + "=" * 70)
+    print("  📊 DATA QUALITY")
+    print("=" * 70)
     print(f"    Total volcanoes:     {total}")
     print(f"    With coordinates:    {with_coords}/{total}")
     print(f"    Monitored (has data):{monitored}/{total}")
@@ -472,7 +422,7 @@ def print_top_risk(data):
 
 
 # ============================================================
-# STEP 5: LOCATION-BASED RISK via GROQ LLM
+# STEP 5: LOCATION-BASED RISK LOOKUP
 # ============================================================
 def get_nearby_volcanoes(data, user_lat, user_lon, radius_km=500, top_n=10):
     """Find volcanoes near a user location, sorted by proximity."""
@@ -490,113 +440,37 @@ def get_nearby_volcanoes(data, user_lat, user_lon, radius_km=500, top_n=10):
     return within_radius[:top_n]
 
 
-def build_llm_context(nearby_volcanoes, user_lat, user_lon):
-    """Build a structured context string for the LLM."""
-    if not nearby_volcanoes:
-        return "No volcanoes found within 500km of the user's location."
-
-    lines = []
-    lines.append(f"User location: ({user_lat}, {user_lon})")
-    lines.append(f"Nearby volcanoes (within 500km):\n")
-
-    for v in nearby_volcanoes:
-        lines.append(f"- {v['volcano_name']} ({v['region']})")
-        lines.append(f"  Distance: {v['distance_to_user_km']} km")
-        lines.append(f"  Elevation: {v['elevation_meters']}m")
-        lines.append(f"  NVEWS Threat: {v['nvews_threat']}")
-        lines.append(f"  Current Alert: {v['alert_level'] or 'NORMAL'}")
-        lines.append(f"  Color Code: {v['color_code'] or 'GREEN'}")
-        lines.append(f"  Monitored: {v['is_monitored']}")
-        lines.append(f"  Earthquakes (30d): {v['eq_count_30d']} "
-                      f"(max M{v['eq_max_mag_30d']}, "
-                      f"avg depth {v['eq_avg_depth_km']}km, "
-                      f"{v['eq_shallow_count']} shallow)")
-        lines.append(f"  Risk Score: {v['composite_risk_score']}/100")
-        lines.append("")
-
-    return "\n".join(lines)
-
-
-def query_groq(user_question, volcano_context, user_lat, user_lon):
-    """Send a query to Groq LLM with volcano data context."""
-    system_prompt = """You are a volcano hazard analyst AI assistant integrated into a calamity monitoring dashboard. You have access to real-time USGS volcano monitoring data.
-
-Your role:
-1. Assess volcanic risk for the user's location based on the data provided
-2. Explain what the monitoring data means in plain language
-3. Provide actionable safety insights
-4. Be specific about distances, alert levels, and what they mean
-5. If asked about predictions, explain the precursor signals (seismicity patterns, alert escalation) and what scientists look for
-6. Always note that volcanic prediction is inherently uncertain
-
-Keep responses concise but informative. Use the actual data provided — don't make up numbers."""
-
-    user_message = f"""REAL-TIME VOLCANO DATA:
-{volcano_context}
-
-USER QUESTION: {user_question}
-
-Provide a clear, data-driven response based on the volcano data above."""
-
-    try:
-        response = requests.post(
-            "https://api.groq.com/openai/v1/chat/completions",
-            headers={
-                "Authorization": f"Bearer {GROQ_API_KEY}",
-                "Content-Type": "application/json",
-            },
-            json={
-                "model": GROQ_MODEL,
-                "messages": [
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_message},
-                ],
-                "temperature": 0.3,
-                "max_tokens": 1024,
-            },
-            timeout=30,
-        )
-        response.raise_for_status()
-        data = response.json()
-        return data["choices"][0]["message"]["content"]
-    except Exception as e:
-        return f"Error querying Groq: {e}"
-
-
-def location_risk_query(data, user_lat, user_lon, question=None):
-    """Full flow: find nearby volcanoes → build context → query LLM."""
-    print(f"\n📍 Analyzing risk for location: ({user_lat}, {user_lon})")
+def location_risk_lookup(data, user_lat, user_lon):
+    """Find nearby volcanoes and print risk summary."""
+    print(f"\n📍 Location risk lookup: ({user_lat}, {user_lon})")
 
     nearby = get_nearby_volcanoes(data, user_lat, user_lon, radius_km=500, top_n=10)
     print(f"   Found {len(nearby)} volcanoes within 500km")
 
     if nearby:
-        print(f"\n   Nearest volcanoes:")
-        for v in nearby[:5]:
+        print(f"\n   {'Volcano':<22} {'Dist (km)':<10} {'Alert':<10} "
+              f"{'Threat':<15} {'EQ/30d':<8} {'Risk':>5}")
+        print("   " + "-" * 72)
+        for v in nearby:
             alert_str = v['alert_level'] or 'Normal'
-            print(f"   → {v['volcano_name']}: {v['distance_to_user_km']}km away, "
-                  f"Alert: {alert_str}, Risk: {v['composite_risk_score']}/100")
+            print(f"   {v['volcano_name']:<22} {v['distance_to_user_km']:<10} "
+                  f"{alert_str:<10} {v['nvews_threat']:<15} "
+                  f"{v['eq_count_30d']:<8} {v['composite_risk_score']:>5}")
+    else:
+        print("   No volcanoes found within 500km.")
 
-    context = build_llm_context(nearby, user_lat, user_lon)
-
-    if not question:
-        question = ("What is the volcanic risk at my location? "
-                    "What should I be aware of? "
-                    "Are there any concerning signs in the current data?")
-
-    print(f"\n🤖 Querying Groq LLM for analysis...")
-    response = query_groq(question, context, user_lat, user_lon)
-    print(f"\n{'='*70}")
-    print(f"  🌋 VOLCANIC RISK ASSESSMENT")
-    print(f"{'='*70}")
-    print(response)
-    print(f"{'='*70}\n")
-
-    return {
+    # Save result
+    result = {
         "user_location": {"lat": user_lat, "lon": user_lon},
         "nearby_volcanoes": nearby,
-        "llm_assessment": response,
     }
+    result_path = os.path.join(OUTPUT_DIR, "risk_assessment.json")
+    ensure_output_dir()
+    with open(result_path, "w", encoding="utf-8") as f:
+        json.dump(result, f, indent=2, default=str, ensure_ascii=False)
+    print(f"\n💾 Saved assessment → {result_path}")
+
+    return result
 
 
 # ============================================================
@@ -605,13 +479,10 @@ def location_risk_query(data, user_lat, user_lon, question=None):
 def main():
     # Parse arguments
     location = None
-    question = None
 
     for i, arg in enumerate(sys.argv):
         if arg == "--location" and i + 1 < len(sys.argv):
             location = sys.argv[i + 1]
-        if arg == "--question" and i + 1 < len(sys.argv):
-            question = sys.argv[i + 1]
 
     # STEP 1: Run pipeline (or load cached data)
     json_path = os.path.join(OUTPUT_DIR, "volcanoes_enriched.json")
@@ -622,58 +493,34 @@ def main():
         with open(json_path, encoding="utf-8") as f:
             data = json.load(f)
     else:
-        # Use seismic_limit to control how many volcanoes get earthquake data
-        # Set to None for ALL monitored volcanoes (slower but complete)
         data = run_full_pipeline(with_seismicity=True, seismic_limit=None)
 
-    # STEP 2: If location given, do risk assessment
+    # STEP 2: If location given, do risk lookup
     if location:
-        # Parse location
         if "," in location:
             parts = location.split(",")
             user_lat = float(parts[0].strip())
             user_lon = float(parts[1].strip())
         else:
-            # Could add geocoding here, for now use presets
-            presets = {
-                "hawaii": (19.896, -155.582),
-                "seattle": (47.606, -122.332),
-                "portland": (45.505, -122.675),
-                "anchorage": (61.217, -149.900),
-                "manila": (14.599, 120.984),
-                "tokyo": (35.682, 139.692),
-                "naples": (40.852, 14.268),
-                "mexico city": (19.432, -99.133),
-            }
             loc_lower = location.lower().strip()
-            if loc_lower in presets:
-                user_lat, user_lon = presets[loc_lower]
+            if loc_lower in LOCATION_PRESETS:
+                user_lat, user_lon = LOCATION_PRESETS[loc_lower]
             else:
                 print(f"❌ Unknown location: {location}")
-                print(f"   Use lat,lon format or one of: {list(presets.keys())}")
+                print(f"   Use lat,lon format or one of: {list(LOCATION_PRESETS.keys())}")
                 return
 
-        result = location_risk_query(data, user_lat, user_lon, question)
-
-        # Save result
-        result_path = os.path.join(OUTPUT_DIR, "risk_assessment.json")
-        # Make serializable
-        result["llm_assessment"] = str(result["llm_assessment"])
-        with open(result_path, "w", encoding="utf-8") as f:
-            json.dump(result, f, indent=2, default=str, ensure_ascii=False)
-        print(f"💾 Saved assessment → {result_path}")
+        location_risk_lookup(data, user_lat, user_lon)
 
     elif "--analyze-only" not in sys.argv and data:
-        # Default: show a demo with Kilauea area
         print("\n" + "=" * 70)
-        print("  DEMO: Location-based risk assessment")
+        print("  Location-based risk lookup")
         print("=" * 70)
-        print("\n  Try these commands:")
+        print("\n  Usage:")
         print('    python volcano_pipeline.py --location "Hawaii"')
         print('    python volcano_pipeline.py --location "Seattle"')
         print('    python volcano_pipeline.py --location "Anchorage"')
         print('    python volcano_pipeline.py --location 19.4,-155.3')
-        print('    python volcano_pipeline.py --location 19.4,-155.3 --question "Will this volcano erupt soon?"')
         print(f"\n  Data cached in {OUTPUT_DIR}/ — use --refresh to update\n")
 
 
