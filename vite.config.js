@@ -6,6 +6,12 @@ export default {
   server: {
     host: true,
     open: true,
+    proxy: {
+      // Forward API calls to the FastAPI backend (uvicorn Backend:app --port 8000)
+      '/health': 'http://127.0.0.1:8000',
+      '/run_pipeline': 'http://127.0.0.1:8000',
+      '/mitigate': 'http://127.0.0.1:8000',
+    },
   },
   build: {
     outDir: 'dist',
@@ -16,6 +22,7 @@ export default {
         main: resolve(__dirname, 'index.html'),
         globe: resolve(__dirname, 'globe.html'),
         dashboard: resolve(__dirname, 'dashboard.html'),
+        mitigation: resolve(__dirname, 'mitigation.html'),
       },
     },
   },

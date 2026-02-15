@@ -190,6 +190,10 @@ body {
   color: #f0f2f5;
   line-height: 1.1;
   letter-spacing: -2px;
+  text-shadow:
+    0 0 20px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(0, 0, 0, 0.5),
+    0 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .hero-tagline h1 .accent {
@@ -197,6 +201,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-shadow: none;
 }
 
 @keyframes fadeInUp {
@@ -211,14 +216,21 @@ body {
   position: fixed;
   bottom: 40px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(30px);
   z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
   opacity: 0;
-  animation: fadeInUp 1s ease 1.5s forwards;
+  animation: fadeInUpCentered 1s ease 1.5s forwards;
+}
+
+@keyframes fadeInUpCentered {
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 .scroll-indicator span {
@@ -559,4 +571,127 @@ body {
   .nav-links {
     display: none;
   }
+}
+
+/* ============================================================
+   ABOUT MODAL
+   ============================================================ */
+.about-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.about-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.about-modal {
+  background: rgba(12, 14, 20, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 36px 40px;
+  max-width: 480px;
+  width: calc(100% - 40px);
+  position: relative;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.about-overlay.visible .about-modal {
+  transform: translateY(0);
+}
+
+.about-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: #6b7280;
+  font-size: 20px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.2s;
+}
+
+.about-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.about-title {
+  font-weight: 800;
+  font-size: 22px;
+  color: #f0f2f5;
+  margin-bottom: 4px;
+}
+
+.about-title span {
+  color: #ff6840;
+}
+
+.about-subtitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #5a6270;
+  margin-bottom: 16px;
+}
+
+.about-desc {
+  font-size: 14px;
+  color: #8a919c;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.about-team-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #ff6840;
+  margin-bottom: 12px;
+}
+
+.about-team {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about-member {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+}
+
+.about-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #c8cdd5;
+}
+
+.about-email {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: #4a5060;
 }

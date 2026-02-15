@@ -27,6 +27,7 @@
     <ul class="nav-links">
       <li><a href="globe.html">Globe</a></li>
       <li><a href="dashboard.html" class="active">Dashboard</a></li>
+      <li><a href="mitigation.html">Mitigation</a></li>
     </ul>
     <button class="nav-info" title="About the project">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -152,6 +153,41 @@
       </div>
     </main>
   </div>
+
+  <!-- About Modal -->
+  <div class="about-overlay" id="about-overlay">
+    <div class="about-modal">
+      <button class="about-close" id="about-close">&times;</button>
+      <div class="about-title">!(<span>Not</span>)Doomsday</div>
+      <div class="about-subtitle">AI-Powered Multi-Hazard Catastrophic Risk Monitor</div>
+      <p class="about-desc">
+        Built for the InnovAIte Hackathon 2026 at Northeastern University.
+        Aggregates real-time data from USGS, NASA, NOAA, WHO, and other authoritative
+        sources across six threat domains, then uses a Groq-powered LLM cascade engine
+        to predict how disasters compound in real time.
+      </p>
+      <div class="about-team-label">TEAM 20</div>
+      <div class="about-team">
+        <div class="about-member"><span class="about-name">Atharva Keskar</span><span class="about-email">keskar.at@northeastern.edu</span></div>
+        <div class="about-member"><span class="about-name">Soham Santra</span><span class="about-email">santra.s@northeastern.edu</span></div>
+        <div class="about-member"><span class="about-name">Vedant Ranade</span><span class="about-email">ranade.v@northeastern.edu</span></div>
+        <div class="about-member"><span class="about-name">Vashistha Pandya</span><span class="about-email">pandya.vas@northeastern.edu</span></div>
+        <div class="about-member"><span class="about-name">Viraj Paradkar</span><span class="about-email">paradkar.v@northeastern.edu</span></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('.nav-info').addEventListener('click', () => {
+      document.getElementById('about-overlay').classList.add('visible')
+    })
+    document.getElementById('about-close').addEventListener('click', () => {
+      document.getElementById('about-overlay').classList.remove('visible')
+    })
+    document.getElementById('about-overlay').addEventListener('click', (e) => {
+      if (e.target === e.currentTarget) document.getElementById('about-overlay').classList.remove('visible')
+    })
+  </script>
 
   <script type="module" src="/src/dashboard.js"></script>
 </body>
