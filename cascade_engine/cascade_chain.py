@@ -43,13 +43,23 @@ from langchain_groq import ChatGroq
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough, RunnableLambda
 
-from retriever import multi_domain_query, query_threats
-from cascade_prompt import (
+# from retriever import multi_domain_query, query_threats
+# from cascade_prompt import (
+#     CASCADE_PROMPT,
+#     JSON_SCHEMA,
+#     format_active_threats,
+#     format_retrieved_context,
+# )
+
+# from retriever import multi_domain_query, query_threats
+from .retriever import multi_domain_query, query_threats
+from .cascade_prompt import (
     CASCADE_PROMPT,
     JSON_SCHEMA,
     format_active_threats,
     format_retrieved_context,
 )
+
 
 load_dotenv()
 
@@ -57,7 +67,7 @@ load_dotenv()
 # LLM Setup — Groq (same model your team already uses)
 # ──────────────────────────────────────────────────────────────
 
-GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY_5", "")
 GROQ_MODEL = os.environ.get("GROQ_MODEL", "llama-3.3-70b-versatile")
 
 
@@ -205,9 +215,104 @@ def analyze_threats(
         }
 
 
+# def _save_result(result: dict, location: str):
+#     """Save cascade result as both JSON and human-readable TXT."""
+#     from datetime import datetime
+
+#     # Determine output directory — cascade_engine/output/ or Data/
+#     script_dir = os.path.dirname(os.path.abspath(__file__))
+#     out_dir = os.path.join(script_dir, "..", "Data")
+#     if not os.path.isdir(out_dir):
+#         out_dir = os.path.join(script_dir, "output")
+#     os.makedirs(out_dir, exist_ok=True)
+
+#     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+#     base_name = f"cascade_result_{timestamp}"
+
+#     # ── JSON ──
+#     json_path = os.path.join(out_dir, f"{base_name}.json")
+#     with open(json_path, "w") as f:
+#         json.dump(result, f, indent=2)
+
+#     # ── TXT (human-readable report) ──
+#     txt_path = os.path.join(out_dir, f"{base_name}.txt")
+#     lines = []
+#     lines.append("=" * 70)
+#     lines.append("  InnovAIte CASCADE PREDICTION REPORT")
+#     lines.append(f"  Location: {location}")
+#     lines.append(f"  Generated: {datetime.now().isoformat()}")
+#     lines.append(f"  Model: {result.get('_meta', {}).get('model', 'N/A')}")
+#     lines.append("=" * 70)
+
+#     lines.append(f"\nOVERALL RISK: {result.get('overall_risk_level', 'N/A')} ({result.get('overall_risk_score', '?')}/10)")
+#     lines.append(f"\nBRIEFING:\n  {result.get('situation_briefing', 'N/A')}")
+
+#     # Active threats
+#     threats_list = result.get("active_threats_assessment", [])
+#     if threats_list:
+#         lines.append(f"\n{'─'*70}")
+#         lines.append(f"ACTIVE THREATS ({len(threats_list)})")
+#         lines.append(f"{'─'*70}")
+#         for t in threats_list:
+#             lines.append(f"  [{t.get('severity', '?').upper()}] {t.get('threat_type', '?')} — {t.get('summary', '')}")
+
+#     # Cascade chains
+#     cascades = result.get("cascade_predictions", [])
+#     if cascades:
+#         lines.append(f"\n{'─'*70}")
+#         lines.append(f"CASCADE PREDICTIONS ({len(cascades)} chains)")
+#         lines.append(f"{'─'*70}")
+#         for c in cascades:
+#             lines.append(f"\n  Chain {c.get('chain_id', '?')}: {c.get('trigger', '')}")
+#             for step in c.get("cascade_steps", []):
+#                 lines.append(f"    → Step {step.get('step')}: {step.get('event')}")
+#                 lines.append(f"      Domain: {step.get('domain')} | Probability: {step.get('probability')} | Timeframe: {step.get('timeframe')}")
+#                 lines.append(f"      Mechanism: {step.get('mechanism')}")
+#             lines.append(f"    Historical precedent: {c.get('historical_precedent', 'None cited')}")
+#             lines.append(f"    Ultimate impact: {c.get('ultimate_impact', 'N/A')}")
+#             lines.append(f"    Affected: {c.get('affected_population', 'N/A')}")
+
+#     # Priority actions
+#     actions = result.get("recommended_actions", [])
+#     if actions:
+#         lines.append(f"\n{'─'*70}")
+#         lines.append(f"RECOMMENDED ACTIONS ({len(actions)})")
+#         lines.append(f"{'─'*70}")
+#         for a in actions:
+#             urgency = a.get('urgency', '?')
+#             lines.append(f"  P{a.get('priority', '?')} [{urgency}]: {a.get('action')}")
+#             lines.append(f"    Responsible: {a.get('responsible_entity', 'N/A')}")
+#             lines.append(f"    Rationale: {a.get('rationale', 'N/A')}")
+
+#     # Monitoring
+#     alerts = result.get("monitoring_alerts", [])
+#     if alerts:
+#         lines.append(f"\n{'─'*70}")
+#         lines.append(f"MONITORING ALERTS ({len(alerts)})")
+#         lines.append(f"{'─'*70}")
+#         for alert in alerts:
+#             lines.append(f"  {alert.get('indicator')}")
+#             lines.append(f"    Threshold: {alert.get('threshold')} | Source: {alert.get('data_source')}")
+
+#     # Caveats
+#     if result.get("confidence_notes"):
+#         lines.append(f"\n{'─'*70}")
+#         lines.append(f"CAVEATS:\n  {result['confidence_notes']}")
+
+#     lines.append(f"\n{'='*70}")
+
+#     with open(txt_path, "w") as f:
+#         f.write("\n".join(lines))
+
+#     print(f"[CASCADE] Saved → {json_path}")
+#     print(f"[CASCADE] Saved → {txt_path}")
+
+
 def _save_result(result: dict, location: str):
     """Save cascade result as both JSON and human-readable TXT."""
     from datetime import datetime
+    import json
+    import os
 
     # Determine output directory — cascade_engine/output/ or Data/
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -221,8 +326,9 @@ def _save_result(result: dict, location: str):
 
     # ── JSON ──
     json_path = os.path.join(out_dir, f"{base_name}.json")
-    with open(json_path, "w") as f:
-        json.dump(result, f, indent=2)
+    # ensure_ascii=False to keep Unicode, encoding="utf-8" to avoid cp1252 issues
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(result, f, indent=2, ensure_ascii=False)
 
     # ── TXT (human-readable report) ──
     txt_path = os.path.join(out_dir, f"{base_name}.txt")
@@ -234,7 +340,10 @@ def _save_result(result: dict, location: str):
     lines.append(f"  Model: {result.get('_meta', {}).get('model', 'N/A')}")
     lines.append("=" * 70)
 
-    lines.append(f"\nOVERALL RISK: {result.get('overall_risk_level', 'N/A')} ({result.get('overall_risk_score', '?')}/10)")
+    lines.append(
+        f"\nOVERALL RISK: {result.get('overall_risk_level', 'N/A')} "
+        f"({result.get('overall_risk_score', '?')}/10)"
+    )
     lines.append(f"\nBRIEFING:\n  {result.get('situation_briefing', 'N/A')}")
 
     # Active threats
@@ -244,7 +353,10 @@ def _save_result(result: dict, location: str):
         lines.append(f"ACTIVE THREATS ({len(threats_list)})")
         lines.append(f"{'─'*70}")
         for t in threats_list:
-            lines.append(f"  [{t.get('severity', '?').upper()}] {t.get('threat_type', '?')} — {t.get('summary', '')}")
+            lines.append(
+                f"  [{t.get('severity', '?').upper()}] "
+                f"{t.get('threat_type', '?')} — {t.get('summary', '')}"
+            )
 
     # Cascade chains
     cascades = result.get("cascade_predictions", [])
@@ -256,9 +368,17 @@ def _save_result(result: dict, location: str):
             lines.append(f"\n  Chain {c.get('chain_id', '?')}: {c.get('trigger', '')}")
             for step in c.get("cascade_steps", []):
                 lines.append(f"    → Step {step.get('step')}: {step.get('event')}")
-                lines.append(f"      Domain: {step.get('domain')} | Probability: {step.get('probability')} | Timeframe: {step.get('timeframe')}")
+                lines.append(
+                    "      Domain: {d} | Probability: {p} | Timeframe: {t}".format(
+                        d=step.get("domain"),
+                        p=step.get("probability"),
+                        t=step.get("timeframe"),
+                    )
+                )
                 lines.append(f"      Mechanism: {step.get('mechanism')}")
-            lines.append(f"    Historical precedent: {c.get('historical_precedent', 'None cited')}")
+            lines.append(
+                f"    Historical precedent: {c.get('historical_precedent', 'None cited')}"
+            )
             lines.append(f"    Ultimate impact: {c.get('ultimate_impact', 'N/A')}")
             lines.append(f"    Affected: {c.get('affected_population', 'N/A')}")
 
@@ -269,9 +389,11 @@ def _save_result(result: dict, location: str):
         lines.append(f"RECOMMENDED ACTIONS ({len(actions)})")
         lines.append(f"{'─'*70}")
         for a in actions:
-            urgency = a.get('urgency', '?')
+            urgency = a.get("urgency", "?")
             lines.append(f"  P{a.get('priority', '?')} [{urgency}]: {a.get('action')}")
-            lines.append(f"    Responsible: {a.get('responsible_entity', 'N/A')}")
+            lines.append(
+                f"    Responsible: {a.get('responsible_entity', 'N/A')}"
+            )
             lines.append(f"    Rationale: {a.get('rationale', 'N/A')}")
 
     # Monitoring
@@ -282,7 +404,10 @@ def _save_result(result: dict, location: str):
         lines.append(f"{'─'*70}")
         for alert in alerts:
             lines.append(f"  {alert.get('indicator')}")
-            lines.append(f"    Threshold: {alert.get('threshold')} | Source: {alert.get('data_source')}")
+            lines.append(
+                f"    Threshold: {alert.get('threshold')} | "
+                f"Source: {alert.get('data_source')}"
+            )
 
     # Caveats
     if result.get("confidence_notes"):
@@ -291,7 +416,8 @@ def _save_result(result: dict, location: str):
 
     lines.append(f"\n{'='*70}")
 
-    with open(txt_path, "w") as f:
+    # FIX: write TXT with UTF-8 encoding
+    with open(txt_path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
 
     print(f"[CASCADE] Saved → {json_path}")
@@ -302,7 +428,7 @@ def _save_result(result: dict, location: str):
 # Convenience: analyze from Context_Json.json directly
 # ──────────────────────────────────────────────────────────────
 
-def analyze_from_context_json(context_path: str = "./Data/Context_Json.json", location: str = "Boston, MA") -> dict:
+def analyze_from_context_json(context_path: str = "../Data/Context_Json.json", location: str = "Boston, MA") -> dict:
     """
     Reads the existing Context_Json.json (which has predictions from
     all lanes) and converts them into the standardized threat format
@@ -390,7 +516,7 @@ if __name__ == "__main__":
 
     # Check if user wants to use Context_Json.json
     if len(sys.argv) > 1 and sys.argv[1] == "--from-context":
-        path = sys.argv[2] if len(sys.argv) > 2 else "./Data/Context_Json.json"
+        path = sys.argv[2] if len(sys.argv) > 2 else ".../Data/Context_Json.json"
         print(f"[CASCADE] Loading threats from {path}...")
         result = analyze_from_context_json(path)
     else:

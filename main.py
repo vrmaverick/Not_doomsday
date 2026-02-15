@@ -21,6 +21,8 @@ import os
 import sys
 import json
 from prompt import *
+from cascade_engine.validate_apocalypse import *
+
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, PROJECT_ROOT)
@@ -32,8 +34,8 @@ load_dotenv(os.path.join(PROJECT_ROOT, ".env"))
 from groq import Groq
 from run_all_modules import run_all
 
-# CONTEXT_FILE = os.path.join(PROJECT_ROOT, "Data", "Context_Json.json")
-CONTEXT_FILE = os.path.join(PROJECT_ROOT, "Data", "temp.json")
+CONTEXT_FILE = os.path.join(PROJECT_ROOT, "Data", "Context_Json.json")
+# CONTEXT_FILE = os.path.join(PROJECT_ROOT, "Data", "temp.json")
 
 client = Groq(api_key=os.environ.get("GROQ_API_KEY_5"))
 
@@ -87,80 +89,126 @@ Prioritize and build the apocalypse scenario as instructed.
     return result
 
 
-def validate(analysis: dict) -> dict:
+def validate(analysis: dict, city_name, state, country) -> dict:
+    # """
+    # Dummy validator — takes the LLM apocalypse analysis and validates it.
+    # Replace this with real validation logic (e.g. ChromaDB lookup, historical comparison).
+
+    # Args:
+    #     analysis: The parsed LLM response dict.
+
+    # Returns:
+    #     Validation result dict.
+    # """
+    # print("\n🔍 Running validation...")
+
+    # validation = {
+    #     "status": "passed",
+    #     "checks": [],
+    # }
+
+    # # Check 1: Has required fields
+    # required = ["location", "overall_threat_level", "ranked_calamities", "apocalypse_timeline"]
+    # for field in required:
+    #     present = field in analysis
+    #     validation["checks"].append({
+    #         "check": f"has_{field}",
+    #         "passed": present,
+    #     })
+    #     if not present:
+    #         validation["status"] = "failed"
+
+    # # Check 2: Threat level is valid
+    # valid_levels = {"LOW", "MODERATE", "HIGH", "CRITICAL"}
+    # level = analysis.get("overall_threat_level", "")
+    # level_valid = level in valid_levels
+    # validation["checks"].append({
+    #     "check": "valid_threat_level",
+    #     "passed": level_valid,
+    #     "value": level,
+    # })
+    # if not level_valid:
+    #     validation["status"] = "failed"
+
+    # # Check 3: Has at least one ranked calamity
+    # ranked = analysis.get("ranked_calamities", [])
+    # has_ranked = len(ranked) > 0
+    # validation["checks"].append({
+    #     "check": "has_ranked_calamities",
+    #     "passed": has_ranked,
+    #     "count": len(ranked),
+    # })
+
+    # # Check 4: Timeline has phases
+    # timeline = analysis.get("apocalypse_timeline", [])
+    # has_timeline = len(timeline) >= 2
+    # validation["checks"].append({
+    #     "check": "has_timeline_phases",
+    #     "passed": has_timeline,
+    #     "count": len(timeline),
+    # })
+
+    # # Save validation result
+    # val_path = os.path.join(PROJECT_ROOT, "Data", "validation_result.json")
+    # with open(val_path, "w") as f:
+    #     json.dump(validation, f, indent=2)
+    # print(f"💾 Validation saved → {val_path}")
+
+    # if validation["status"] == "passed":
+    #     print("  ✅ Validation passed")
+    # else:
+    #     print("  ❌ Validation failed")
+    #     for check in validation["checks"]:
+    #         if not check["passed"]:
+    #             print(f"     — {check['check']}")
     """
-    Dummy validator — takes the LLM apocalypse analysis and validates it.
-    Replace this with real validation logic (e.g. ChromaDB lookup, historical comparison).
-
-    Args:
-        analysis: The parsed LLM response dict.
-
-    Returns:
-        Validation result dict.
+    Entry point for validation module.
+    Takes a location string and a prediction dict (LLM analysis),
+    runs validation, prints a concise summary, and returns the result.
     """
-    print("\n🔍 Running validation...")
 
-    validation = {
-        "status": "passed",
-        "checks": [],
-    }
+    location = city_name+", "+state+", "+country
+    print("\n" + "=" * 60)
+    print(f"  🔍 VALIDATION MODULE")
+    print(f"  📍 Location: {location}")
+    print("=" * 60)
 
-    # Check 1: Has required fields
-    required = ["location", "overall_threat_level", "ranked_calamities", "apocalypse_timeline"]
-    for field in required:
-        present = field in analysis
-        validation["checks"].append({
-            "check": f"has_{field}",
-            "passed": present,
-        })
-        if not present:
-            validation["status"] = "failed"
+    validation = Validation_main(location,analysis)  # reuse your existing validate()
 
-    # Check 2: Threat level is valid
-    valid_levels = {"LOW", "MODERATE", "HIGH", "CRITICAL"}
-    level = analysis.get("overall_threat_level", "")
-    level_valid = level in valid_levels
-    validation["checks"].append({
-        "check": "valid_threat_level",
-        "passed": level_valid,
-        "value": level,
-    })
-    if not level_valid:
-        validation["status"] = "failed"
-
-    # Check 3: Has at least one ranked calamity
-    ranked = analysis.get("ranked_calamities", [])
-    has_ranked = len(ranked) > 0
-    validation["checks"].append({
-        "check": "has_ranked_calamities",
-        "passed": has_ranked,
-        "count": len(ranked),
-    })
-
-    # Check 4: Timeline has phases
-    timeline = analysis.get("apocalypse_timeline", [])
-    has_timeline = len(timeline) >= 2
-    validation["checks"].append({
-        "check": "has_timeline_phases",
-        "passed": has_timeline,
-        "count": len(timeline),
-    })
-
-    # Save validation result
-    val_path = os.path.join(PROJECT_ROOT, "Data", "validation_result.json")
-    with open(val_path, "w") as f:
-        json.dump(validation, f, indent=2)
-    print(f"💾 Validation saved → {val_path}")
-
-    if validation["status"] == "passed":
-        print("  ✅ Validation passed")
-    else:
-        print("  ❌ Validation failed")
-        for check in validation["checks"]:
-            if not check["passed"]:
-                print(f"     — {check['check']}")
+    # # Optional: brief summary
+    # print("\nValidation status:", validation["status"])
+    # for check in validation.get("checks", []):
+    #     if not check["passed"]:
+    #         print(f"  ❌ {check['check']} (value: {check.get('value', check.get('count', ''))})")
 
     return validation
+
+
+    # return validation
+
+
+# def Validation_main(location: str, prediction: dict) -> dict:
+#     """
+#     Entry point for validation module.
+#     Takes a location string and a prediction dict (LLM analysis),
+#     runs validation, prints a concise summary, and returns the result.
+#     """
+#     print("\n" + "=" * 60)
+#     print(f"  🔍 VALIDATION MODULE")
+#     print(f"  📍 Location: {location}")
+#     print("=" * 60)
+
+#     validation = validate(prediction)  # reuse your existing validate()
+
+#     # Optional: brief summary
+#     print("\nValidation status:", validation["status"])
+#     for check in validation.get("checks", []):
+#         if not check["passed"]:
+#             print(f"  ❌ {check['check']} (value: {check.get('value', check.get('count', ''))})")
+
+#     return validation
+
+
 
 
 def receive(city: str):
@@ -209,7 +257,8 @@ def receive(city: str):
     analysis = analyze_context()
 
     # Step 4: Validate
-    validation = validate(analysis)
+    validation = validate(analysis,city_name, state, country)
+    # validation = validate(analysis,name)
 
     # Final summary
     print("\n" + "=" * 60)
@@ -233,8 +282,8 @@ def receive(city: str):
                 print(f"    Phase {phase['phase']}: {phase['title']}")
                 print(f"      {phase['description'][:100]}...")
 
-    print(f"\n  ✅ Validation: {validation['status']}")
-    print("=" * 60)
+    # print(f"\n  ✅ Validation: {validation['status']}")
+    # print("=" * 60)
 
     return analysis
 
@@ -244,7 +293,7 @@ if __name__ == "__main__":
     #     city = " ".join(sys.argv[1:])
     # else:
     #     city = "Houston"
-    # city = "Boston"
-    # receive(city)
+    city = "Boston"
+    receive(city)
 
-    analyze_context()
+    # analyze_context()

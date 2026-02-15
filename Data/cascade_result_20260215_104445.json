@@ -1,0 +1,27 @@
+{
+  "overall_risk_level": "LOW",
+  "overall_risk_score": 1,
+  "situation_briefing": "No active threats are currently detected in the Boston, MA area, and no historical context is available for analysis.",
+  "active_threats_assessment": [],
+  "cascade_predictions": [],
+  "recommended_actions": [],
+  "monitoring_alerts": [
+    {
+      "indicator": "Seismic activity",
+      "threshold": "M3.0 or higher",
+      "data_source": "USGS Earthquake API"
+    },
+    {
+      "indicator": "Weather alerts",
+      "threshold": "Flash flood warning or higher",
+      "data_source": "National Weather Service API"
+    }
+  ],
+  "confidence_notes": "No active threats or historical context are available, resulting in low confidence in the ability to predict cascade effects. Continuous monitoring of real-time signals is recommended.",
+  "_meta": {
+    "model": "llama-3.3-70b-versatile",
+    "threats_analyzed": 0,
+    "historical_docs_used": 0,
+    "location": "Boston, MA, USA"
+  }
+}

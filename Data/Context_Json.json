@@ -316,15 +316,15 @@
           "risk_level": "LOW",
           "risk_score": 1,
           "confidence": 0.9,
-          "summary": "The region is experiencing normal background seismicity with a single minor event, posing no significant threat. The decelerating frequency trend and lack of significant clustering or large events indicate a low risk of major seismic activity.",
+          "summary": "The region is experiencing normal background seismicity with a single minor event, indicating a low risk of significant earthquake activity. The decelerating frequency trend and lack of significant clustering or magnitude distribution concerns support this assessment.",
           "key_factors": [
-            "Single minor event",
-            "Decelerating frequency trend",
-            "No significant clustering"
+            "single minor event",
+            "decelerating frequency trend",
+            "no significant clustering"
           ],
           "pattern_detected": "No notable seismic pattern detected",
           "recommendation": "No immediate action is required, but continued monitoring of seismic activity is recommended to ensure early detection of any potential changes in the region's seismicity.",
-          "raw_response": "{\n  \"risk_level\": \"LOW\",\n  \"risk_score\": 1,\n  \"confidence\": 0.9,\n  \"summary\": \"The region is experiencing normal background seismicity with a single minor event, posing no significant threat. The decelerating frequency trend and lack of significant clustering or large events indicate a low risk of major seismic activity.\",\n  \"key_factors\": [\"Single minor event\", \"Decelerating frequency trend\", \"No significant clustering\"],\n  \"pattern_detected\": \"No notable seismic pattern detected\",\n  \"recommendation\": \"No immediate action is required, but continued monitoring of seismic activity is recommended to ensure early detection of any potential changes in the region's seismicity.\"\n}",
+          "raw_response": "{\n  \"risk_level\": \"LOW\",\n  \"risk_score\": 1,\n  \"confidence\": 0.9,\n  \"summary\": \"The region is experiencing normal background seismicity with a single minor event, indicating a low risk of significant earthquake activity. The decelerating frequency trend and lack of significant clustering or magnitude distribution concerns support this assessment.\",\n  \"key_factors\": [\"single minor event\", \"decelerating frequency trend\", \"no significant clustering\"],\n  \"pattern_detected\": \"No notable seismic pattern detected\",\n  \"recommendation\": \"No immediate action is required, but continued monitoring of seismic activity is recommended to ensure early detection of any potential changes in the region's seismicity.\"\n}",
           "model": "llama-3.3-70b-versatile",
           "error": null
         },
@@ -369,7 +369,7 @@
           }
         }
       },
-      "saved_at": "2026-02-15T13:14:03.210880+00:00"
+      "saved_at": "2026-02-15T17:02:07.994881+00:00"
     },
     {
       "name": "flood",
@@ -384,16 +384,16 @@
           "risk_level": "CRITICAL",
           "risk_score": 10,
           "confidence": 0.95,
-          "summary": "The region is at extreme risk of flooding due to significantly elevated forecast projections and a large number of risk days. The forecast max exceeds historical peaks by a substantial margin, indicating a high likelihood of severe flooding.",
+          "summary": "The region is at extreme risk of flooding due to significantly elevated forecast projections and a high number of risk days. The forecast max projections far exceed historical peaks, indicating a potentially catastrophic flood event.",
           "key_factors": [
             "Elevated forecast projections",
-            "Multiple risk days",
+            "High number of risk days",
             "Rapid acceleration in forecast"
           ],
-          "pattern_detected": "A notable pattern of rapid acceleration in forecast discharge is detected, with a sharp increase in projected max values over the next few days.",
-          "forecast_outlook": "The forecast outlook for the coming days is dire, with projected max values far exceeding historical peaks. The region can expect severe flooding, especially on February 23 and 24.",
-          "recommendation": "Immediate action is recommended to prepare for severe flooding, including evacuation of low-lying areas and deployment of flood mitigation measures. Close monitoring of the situation is essential to respond to the rapidly changing conditions.",
-          "raw_response": "{\n  \"risk_level\": \"CRITICAL\",\n  \"risk_score\": 10,\n  \"confidence\": 0.95,\n  \"summary\": \"The region is at extreme risk of flooding due to significantly elevated forecast projections and a large number of risk days. The forecast max exceeds historical peaks by a substantial margin, indicating a high likelihood of severe flooding.\",\n  \"key_factors\": [\"Elevated forecast projections\", \"Multiple risk days\", \"Rapid acceleration in forecast\"],\n  \"pattern_detected\": \"A notable pattern of rapid acceleration in forecast discharge is detected, with a sharp increase in projected max values over the next few days.\",\n  \"forecast_outlook\": \"The forecast outlook for the coming days is dire, with projected max values far exceeding historical peaks. The region can expect severe flooding, especially on February 23 and 24.\",\n  \"recommendation\": \"Immediate action is recommended to prepare for severe flooding, including evacuation of low-lying areas and deployment of flood mitigation measures. Close monitoring of the situation is essential to respond to the rapidly changing conditions.\"\n}",
+          "pattern_detected": "A notable pattern of rapid acceleration in forecast discharge is detected, with multiple days exceeding 100% of the historical peak.",
+          "forecast_outlook": "The forecast outlook for the coming days is dire, with multiple days of extreme discharge levels expected. The region should prepare for a potentially catastrophic flood event.",
+          "recommendation": "Immediate action should be taken to evacuate the area and prepare for flooding. Residents should stay informed and follow evacuation orders, and emergency services should be put on high alert.",
+          "raw_response": "{\n  \"risk_level\": \"CRITICAL\",\n  \"risk_score\": 10,\n  \"confidence\": 0.95,\n  \"summary\": \"The region is at extreme risk of flooding due to significantly elevated forecast projections and a high number of risk days. The forecast max projections far exceed historical peaks, indicating a potentially catastrophic flood event.\",\n  \"key_factors\": [\"Elevated forecast projections\", \"High number of risk days\", \"Rapid acceleration in forecast\"],\n  \"pattern_detected\": \"A notable pattern of rapid acceleration in forecast discharge is detected, with multiple days exceeding 100% of the historical peak.\",\n  \"forecast_outlook\": \"The forecast outlook for the coming days is dire, with multiple days of extreme discharge levels expected. The region should prepare for a potentially catastrophic flood event.\",\n  \"recommendation\": \"Immediate action should be taken to evacuate the area and prepare for flooding. Residents should stay informed and follow evacuation orders, and emergency services should be put on high alert.\"\n}",
           "model": "llama-3.3-70b-versatile",
           "error": null
         },
@@ -482,8 +482,8 @@
           ]
         }
       },
-      "saved_at": "2026-02-15T13:14:04.538471+00:00"
+      "saved_at": "2026-02-15T17:02:09.279966+00:00"
     }
   ],
-  "last_updated": "2026-02-15T13:14:04.540488+00:00"
+  "last_updated": "2026-02-15T17:02:09.279966+00:00"
 }

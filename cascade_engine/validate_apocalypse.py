@@ -14,8 +14,20 @@ import sys
 import json
 from dotenv import load_dotenv
 
-from cascade_chain import analyze_threats
-from retriever import query_threats, get_collection
+# from cascade_chain import analyze_threats
+# from retriever import query_threats, get_collection
+# from pathlib import Path
+
+from .cascade_chain import analyze_threats
+from .retriever import query_threats,get_collection # remove get_collection if it doesn't exist
+from pathlib import Path
+
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent          # .../cascade_engine
+PROJECT_ROOT = HERE.parent                      # .../Not_doomsday
+DATA_DIR = PROJECT_ROOT / "Data"
+
 
 load_dotenv()
 
@@ -116,19 +128,26 @@ APOCALYPSE_PREDICTION = {
 def convert_to_threats(prediction: dict) -> list[dict]:
     """Convert apocalypse prediction into standardized threat format."""
     threats = []
+    location_name = prediction.get("location", "unknown")
+
     for calamity in prediction.get("ranked_calamities", []):
+        risk_level = calamity.get("risk_level")
+        # Option A: default to "unknown" if missing / None / empty
+        severity = risk_level.lower() if isinstance(risk_level, str) else "unknown"
+
         threats.append({
-            "threat_type": calamity["type"],
-            "severity": calamity["risk_level"].lower(),
-            "location": {"name": prediction["location"]},
+            "threat_type": calamity.get("type", "unknown"),
+            "severity": severity,
+            "location": {"name": location_name},
             "timestamp": "2026-02-15T00:00:00Z",
             "data": {
-                "risk_score": calamity["risk_score"],
-                "confidence": calamity["confidence"],
+                "risk_score": calamity.get("risk_score"),
+                "confidence": calamity.get("confidence"),
                 "key_factors": calamity.get("key_fields_used", {}).get("key_factors", []),
             },
-            "summary": calamity["summary"],
+            "summary": calamity.get("summary", ""),
         })
+
     return threats
 
 
@@ -203,15 +222,35 @@ def validate_timeline_claims(prediction: dict) -> dict:
     return validation
 
 
-def main():
-    # Load from file if provided
-    if len(sys.argv) > 2 and sys.argv[1] == "--file":
-        with open(sys.argv[2]) as f:
-            prediction = json.load(f)
-    else:
-        prediction = APOCALYPSE_PREDICTION
+def Validation_main(location,prediction):
+    # # Load from file if provided
+    # if len(sys.argv) > 2 and sys.argv[1] == "--file":
+    #     with open(sys.argv[2]) as f:
+    #         prediction = json.load(f)
+    # else:
+    #     prediction = APOCALYPSE_PREDICTION
 
-    location = prediction.get("location", "Boston, Massachusetts")
+    # location = prediction.get("location", "Boston, Massachusetts")
+        # If prediction is a path string, load JSON from file
+
+    if isinstance(prediction, str):
+        path = Path(prediction)
+        if not path.is_file():
+            raise FileNotFoundError(f"Prediction file not found: {path}")
+        with path.open() as f:
+            prediction = json.load(f)  # overwrite with dict
+
+    # print("=" * 70)
+    # print("  APOCALYPSE PREDICTION VALIDATOR")
+    # print(f"  Location: {location}")
+    # print("=" * 70)
+
+    # # Now prediction is a dict
+    # print(f"  Overall Threat Level: {prediction.get('overall_threat_level', 'N/A')}")
+    # print(f"  Overall Summary     : {prediction.get('overall_summary', 'N/A')}\n")
+
+    # Call your existing validate() on the dict
+    # validation = validate(prediction)
 
     print("=" * 70)
     print("  APOCALYPSE PREDICTION VALIDATOR")
@@ -294,16 +333,30 @@ def main():
     if result.get("confidence_notes"):
         print(f"\n  ⚠️  CAVEATS: {result['confidence_notes']}")
 
-    # Save full result
-    out_path = "../Data/validation_result.json"
+    out_path = DATA_DIR / "validation_result.json"
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+
     with open(out_path, "w") as f:
         json.dump({
             "input_prediction": prediction,
             "timeline_validation": timeline_validation,
             "cascade_analysis": result,
         }, f, indent=2)
+
     print(f"\n  Full result saved to {out_path}")
+
+    
+    
+    # # Save full result
+    # out_path = "../Data/validation_result.json"
+    # with open(out_path, "w") as f:
+    #     json.dump({
+    #         "input_prediction": prediction,
+    #         "timeline_validation": timeline_validation,
+    #         "cascade_analysis": result,
+    #     }, f, indent=2)
+    # print(f"\n  Full result saved to {out_path}")
 
 
 if __name__ == "__main__":
-    main()
+    Validation_main(location = "Boston, MA, USA",prediction = '../Data/temp.json')

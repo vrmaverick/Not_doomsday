@@ -72,13 +72,82 @@ def run_flood(lat, lng, name):
         print(f"  ❌ Flood — {e}")
 
 
+# def run_fire(lat, lng, name):
+#     try:
+#         fire_dir = os.path.join(PROJECT_ROOT, "Forest_fire")
+#         sys.path.insert(0, fire_dir)
+
+#         # Fire scripts use ../Data/ relative paths, so cd into Forest_fire/
+#         original_dir = os.getcwd()
+#         os.chdir(fire_dir)
+
+#         from Forest_fire.Api import Fire_API
+#         from Forest_fire.Predict import Predict_forest_fires
+#         from Forest_fire.model import summarize_groq_fire, process_groq_to_map
+
+#         # Step 1: Fetch fire data — needs bounding box: "minlon,minlat" and "maxlon,maxlat"
+#         min_lon = lng - 5
+#         min_lat = lat - 5
+#         max_lon = lng + 5
+#         max_lat = lat + 5
+#         bbox_min = f"{min_lon},{min_lat}"
+#         bbox_max = f"{max_lon},{max_lat}"
+#         print("  Fetching fire data...")
+#         Fire_API(bbox_min, bbox_max)
+
+#         # Step 2: Check if any fires were found
+#         fires_path = os.path.join(PROJECT_ROOT, "Data", "us_fires.json")
+#         if not os.path.exists(fires_path) or os.path.getsize(fires_path) < 10:
+#             os.chdir(original_dir)
+#             save_to_context("fire", {
+#                 "location": name,
+#                 "coordinates": {"lat": lat, "lng": lng},
+#                 "detections": 0,
+#                 "summary": "No active fire detections in this area.",
+#             })
+#             print("  ✅ Fire — No active fires detected")
+#             return
+
+#         # Step 3: Extract key fields
+#         print("  Preprocessing...")
+#         Predict_forest_fires()
+
+#         # Step 4: LLM prediction
+#         print("  Running LLM prediction...")
+#         summarize_groq_fire()
+
+#         # Step 5: Generate coordinate map
+#         process_groq_to_map()
+
+#         # Step 5: Save to context
+#         os.chdir(original_dir)
+
+#         summary_path = os.path.join(PROJECT_ROOT, "Data", "fire_summary.json")
+#         if os.path.exists(summary_path):
+#             with open(summary_path, "r") as f:
+#                 fire_result = json.load(f)
+
+#             save_to_context("fire", {
+#                 "location": name,
+#                 "coordinates": {"lat": lat, "lng": lng},
+#                 "detections": fire_result.get("data_count", 0),
+#                 "summary": fire_result.get("summary", ""),
+#             })
+#             print(f"  ✅ Fire — saved")
+#         else:
+#             print("  ❌ Fire — no summary file generated")
+
+#     except Exception as e:
+#         os.chdir(original_dir)
+#         print(f"  ❌ Fire — {e}")
+
 def run_fire(lat, lng, name):
+    original_dir = os.getcwd()
     try:
         fire_dir = os.path.join(PROJECT_ROOT, "Forest_fire")
         sys.path.insert(0, fire_dir)
 
-        # Fire scripts use ../Data/ relative paths, so cd into Forest_fire/
-        original_dir = os.getcwd()
+        # Go into Forest_fire ONLY for scripts that assume ../Data
         os.chdir(fire_dir)
 
         from Forest_fire.Api import Fire_API
@@ -112,16 +181,17 @@ def run_fire(lat, lng, name):
         print("  Preprocessing...")
         Predict_forest_fires()
 
-        # Step 4: LLM prediction
+        # From here on, we don't *need* to stay in Forest_fire
+        os.chdir(original_dir)
+
+        # Step 4: LLM prediction (writes PROJECT_ROOT/Data/fire_summary.json)
         print("  Running LLM prediction...")
         summarize_groq_fire()
 
-        # Step 5: Generate coordinate map
+        # Step 5: Generate coordinate map (writes PROJECT_ROOT/Data/map_fire.json)
         process_groq_to_map()
 
-        # Step 5: Save to context
-        os.chdir(original_dir)
-
+        # Step 6: Save to context
         summary_path = os.path.join(PROJECT_ROOT, "Data", "fire_summary.json")
         if os.path.exists(summary_path):
             with open(summary_path, "r") as f:
@@ -133,13 +203,14 @@ def run_fire(lat, lng, name):
                 "detections": fire_result.get("data_count", 0),
                 "summary": fire_result.get("summary", ""),
             })
-            print(f"  ✅ Fire — saved")
+            print("  ✅ Fire — saved")
         else:
             print("  ❌ Fire — no summary file generated")
 
     except Exception as e:
         os.chdir(original_dir)
         print(f"  ❌ Fire — {e}")
+
 
 
 def run_volcano(lat, lng, name):
