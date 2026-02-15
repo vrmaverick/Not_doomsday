@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 from geopy.geocoders import Nominatim
-import argparse
 
 def get_city_lat_lon(city, state):
     geolocator = Nominatim(user_agent="citycoord")

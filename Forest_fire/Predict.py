@@ -3,6 +3,7 @@ import pandas as pd
 # from collections import defaultdict
 # import io
 import re  # For LLM output parsing
+from model import *
 
 # data_str = """{"latitude":40.26168,"longitude":-120.8863,"bright_ti4":327.49,"scan":0.78,"track":0.78,"acq_date":"2026-02-14","acq_time":852,"satellite":"N","instrument":"VIIRS","confidence":"n","version":"2.0NRT","bright_ti5":257.8,"frp":5.47,"daynight":"N"}
 # {"latitude":32.52058,"longitude":-114.93453,"bright_ti4":295.98,"scan":0.32,"track":0.55,"acq_date":"2026-02-14","acq_time":854,"satellite":"N","instrument":"VIIRS","confidence":"n","version":"2.0NRT","bright_ti5":280.06,"frp":0.4,"daynight":"N"}
@@ -44,24 +45,26 @@ def Predict_forest_fires():
     coords = df[['latitude', 'longitude']].round(4).drop_duplicates()
     map_data = {f"{row.latitude},{row.longitude}": "Low" for _, row in coords.iterrows()}
 
-    # Example: Simulate LLM (replace with real LLM call/output parse)
-    llm_output = """
-    High: 40.2617,-120.8863 (cluster heat)
-    Medium: 32.5206,-114.9345
-    """
-    for line in llm_output.strip().split('\n'):
-        if ':' in line:
-            coord_str = re.search(r'([\d.-]+),([\d.-]+)', line)
-            if coord_str:
-                lat, lon = float(coord_str.group(1)), float(coord_str.group(2))
-                key = f"{lat:.4f},{lon:.4f}"
-                map_data[key] = line.split(':')[0].strip()
 
-    with open('../Data/map.json', 'w') as f:
-        json.dump(map_data, f, indent=2)
 
-    print('Saved fire_key.json (key fields) and map.json (LLM preds)')
-    print(json.dumps(map_data, indent=2))
+    # # Example: Simulate LLM (replace with real LLM call/output parse)
+    # llm_output = """
+    # High: 40.2617,-120.8863 (cluster heat)
+    # Medium: 32.5206,-114.9345
+    # """
+    # for line in llm_output.strip().split('\n'):
+    #     if ':' in line:
+    #         coord_str = re.search(r'([\d.-]+),([\d.-]+)', line)
+    #         if coord_str:
+    #             lat, lon = float(coord_str.group(1)), float(coord_str.group(2))
+    #             key = f"{lat:.4f},{lon:.4f}"
+    #             map_data[key] = line.split(':')[0].strip()
+
+    # with open('../Data/map.json', 'w') as f:
+    #     json.dump(map_data, f, indent=2)
+
+    # print('Saved fire_key.json (key fields) and map.json (LLM preds)')
+    # print(json.dumps(map_data, indent=2))
 
 if __name__ == '__main__':
     Predict_forest_fires()
